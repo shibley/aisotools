@@ -1,3 +1,5 @@
+import { toolsBatch1 } from "./tools-batch1";
+
 export interface Tool {
   name: string;
   slug: string;
@@ -108,4 +110,5 @@ export const tools: Tool[] = [
     alternatives: ["chatgpt", "you-com", "phind"],
     addedDate: "2026-02-14",
   },
+  ...toolsBatch1,
 ];
