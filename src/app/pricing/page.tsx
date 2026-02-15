@@ -38,7 +38,7 @@ const plans = [
       "💬 Priority support",
     ],
     cta: "Get Featured",
-    ctaLink: "mailto:shibley@saasintegrate.com?subject=AISO Featured Listing",
+    ctaLink: "mailto:hello@aisotools.com?subject=AISO Featured Listing",
     highlighted: true,
   },
   {
@@ -56,7 +56,7 @@ const plans = [
       "📞 Monthly strategy call",
     ],
     cta: "Become Sponsor",
-    ctaLink: "mailto:shibley@saasintegrate.com?subject=AISO Category Sponsorship",
+    ctaLink: "mailto:hello@aisotools.com?subject=AISO Category Sponsorship",
     highlighted: false,
   },
 ];
@@ -136,7 +136,7 @@ export default function PricingPage() {
             </p>
           </div>
           <a
-            href="mailto:shibley@saasintegrate.com?subject=AISO Newsletter Sponsorship"
+            href="mailto:hello@aisotools.com?subject=AISO Newsletter Sponsorship"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition whitespace-nowrap"
           >
             Inquire About Sponsorship
@@ -184,10 +184,10 @@ export default function PricingPage() {
           Questions? Want a custom package?
         </p>
         <a
-          href="mailto:shibley@saasintegrate.com?subject=AISO Tools Custom Package"
+          href="mailto:hello@aisotools.com?subject=AISO Tools Custom Package"
           className="text-blue-400 hover:text-blue-300 font-medium"
         >
-          Contact us at shibley@saasintegrate.com →
+          Contact us at hello@aisotools.com →
         </a>
       </div>
     </div>
