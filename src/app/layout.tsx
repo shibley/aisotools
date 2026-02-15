@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-gray-950 text-gray-100 antialiased`}>
+      <body className={`${inter.className} bg-gray-950 text-gray-100 antialiased overflow-x-hidden`}>
         <nav className="border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -97,9 +97,9 @@ export default function RootLayout({
               <div>
                 <h3 className="font-semibold text-white mb-3">Newsletter</h3>
                 <p className="text-gray-400 text-sm mb-3">Get the best new AI tools in your inbox weekly.</p>
-                <form className="flex gap-2">
-                  <input type="email" placeholder="you@email.com" className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm flex-1 focus:outline-none focus:border-blue-500" />
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition">Join</button>
+                <form className="flex gap-2 max-w-xs">
+                  <input type="email" placeholder="you@email.com" className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm min-w-0 flex-1 focus:outline-none focus:border-blue-500" />
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition shrink-0">Join</button>
                 </form>
               </div>
             </div>

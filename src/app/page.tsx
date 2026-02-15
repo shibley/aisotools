@@ -12,7 +12,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/10 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
               Find the{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Best AI Tools
@@ -23,12 +23,12 @@ export default function Home() {
               Discover {tools.length}+ curated AI tools across {categories.length} categories.
               Updated daily. Find the perfect AI tool in seconds.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="relative flex-1 max-w-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-2">
+              <div className="relative w-full max-w-lg">
                 <input
                   type="text"
-                  placeholder="Search AI tools... (e.g., 'video generator', 'code assistant')"
-                  className="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-5 py-4 text-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  placeholder="Search AI tools..."
+                  className="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-5 py-4 text-base sm:text-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 />
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">🔍</span>
               </div>
@@ -96,7 +96,7 @@ export default function Home() {
       {/* Categories */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold mb-8">📂 Browse by Category</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {categories.map((cat) => (
             <Link
               key={cat.slug}
