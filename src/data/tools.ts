@@ -14,6 +14,7 @@ export interface Tool {
   tags: string[];
   pricing: "free" | "freemium" | "paid" | "open-source";
   pricingDetails?: string;
+  pricingTiers?: { name: string; price: string; features: string[] }[];
   featured: boolean;
   sponsored: boolean;
   logoUrl?: string;
@@ -22,6 +23,8 @@ export interface Tool {
   alternatives?: string[]; // slugs of alternative tools
   launchDate?: string;
   addedDate: string;
+  lastVerified?: string; // ISO date - last time data was verified/scraped
+  websiteStatus?: "active" | "dead" | "redirect";
   rating?: number; // 1-5
   reviewCount?: number;
 }
@@ -31,7 +34,7 @@ export const tools: Tool[] = [
   {
     name: "ChatGPT",
     slug: "chatgpt",
-    description: "OpenAI's conversational AI assistant powered by GPT-4. ChatGPT can help with writing, coding, analysis, math, creative projects, and more. Available as a web app, mobile app, and API.",
+    description: "ChatGPT is your AI chatbot for everyday use. Chat with the most advanced AI to explore ideas, solve problems, and learn faster."s conversational AI assistant powered by GPT-4. ChatGPT can help with writing, coding, analysis, math, creative projects, and more. Available as a web app, mobile app, and API.",
     shortDescription: "OpenAI's conversational AI assistant powered by GPT-4",
     url: "https://chat.openai.com",
     category: "chatbots",
@@ -41,8 +44,12 @@ export const tools: Tool[] = [
     pricingDetails: "Free tier available. Plus $20/mo, Team $25/user/mo, Enterprise custom",
     featured: true,
     sponsored: false,
+    logoUrl: "https://cdn.openai.com/chatgpt/share-og.png",
+    screenshotUrl: "https://cdn.openai.com/chatgpt/share-og.png",
     features: ["Natural language conversation", "Code generation", "Image generation (DALL-E)", "File analysis", "Web browsing", "Custom GPTs"],
     alternatives: ["claude", "gemini", "perplexity"],
+    websiteStatus: "redirect",
+    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -58,8 +65,11 @@ export const tools: Tool[] = [
     pricingDetails: "Free tier. Pro $20/mo, Team $25/user/mo, Enterprise custom",
     featured: true,
     sponsored: false,
+    logoUrl: "https://claude.ai/images/claude_ogimage.png",
+    screenshotUrl: "https://claude.ai/images/claude_ogimage.png",
     features: ["200K+ token context", "Document analysis", "Code generation", "Vision/image understanding", "Artifacts", "Projects"],
     alternatives: ["chatgpt", "gemini", "perplexity"],
+    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -77,6 +87,8 @@ export const tools: Tool[] = [
     sponsored: false,
     features: ["Text-to-image", "Image variations", "Upscaling", "Style control", "Web editor", "Describe feature"],
     alternatives: ["dall-e", "stable-diffusion", "leonardo-ai"],
+    websiteStatus: "error",
+    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -92,8 +104,11 @@ export const tools: Tool[] = [
     pricingDetails: "Free tier. Pro $20/mo, Business $40/user/mo",
     featured: true,
     sponsored: false,
+    logoUrl: "https://cursor.com/public/opengraph-image.png",
+    screenshotUrl: "https://cursor.com/public/opengraph-image.png",
     features: ["AI code generation", "Codebase understanding", "Multi-file editing", "Chat with codebase", "Tab completion", "Bug detection"],
     alternatives: ["github-copilot", "windsurf", "supermaven"],
+    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -111,6 +126,8 @@ export const tools: Tool[] = [
     sponsored: false,
     features: ["Real-time web search", "Source citations", "Follow-up questions", "Collections", "File upload", "API access"],
     alternatives: ["chatgpt", "you-com", "phind"],
+    websiteStatus: "error",
+    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   ...toolsBatch1,
