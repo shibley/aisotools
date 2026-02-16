@@ -1,4 +1,7 @@
 import { toolsBatch1 } from "./tools-batch1";
+import { toolsBatch2 } from "./tools-batch2";
+import { toolsBatch3 } from "./tools-batch3";
+import { toolsBatch4 } from "./tools-batch4";
 
 export interface Tool {
   name: string;
@@ -111,4 +114,7 @@ export const tools: Tool[] = [
     addedDate: "2026-02-14",
   },
   ...toolsBatch1,
+  ...toolsBatch2,
+  ...toolsBatch3,
+  ...toolsBatch4,
 ];
