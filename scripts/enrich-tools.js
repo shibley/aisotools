@@ -22,8 +22,8 @@ const __dirname = dirname(__filename);
 const PROJECT_ROOT = join(__dirname, '..');
 
 // Configuration
-const RATE_LIMIT_MS = 1000; // 1 second between requests
-const REQUEST_TIMEOUT = 10000; // 10 seconds
+const RATE_LIMIT_MS = 50; // 50ms between requests (very fast enrichment)
+const REQUEST_TIMEOUT = 5000; // 5 seconds (fail fast on slow sites)
 const ENRICHED_DATA_PATH = join(PROJECT_ROOT, 'data', 'enriched-tools.json');
 const PROGRESS_PATH = join(PROJECT_ROOT, 'data', 'enrichment-progress.json');
 
