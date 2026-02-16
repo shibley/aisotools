@@ -73,18 +73,8 @@ function updateToolInFile(filePath, slug, enrichedData) {
   
   let changes = [];
   
-  // Update description if we have a better one from meta
-  if (enrichedData.meta?.description && enrichedData.meta.description.length > 50) {
-    const currentDescMatch = /description:\s*["']([^"']*?)["']/s.exec(toolObject);
-    if (currentDescMatch && enrichedData.meta.description.length > currentDescMatch[1].length) {
-      const newDesc = enrichedData.meta.description.replace(/"/g, '\\"');
-      updatedObject = updatedObject.replace(
-        /description:\s*["']([^"']*?)["']/s,
-        `description: "${newDesc}"`
-      );
-      changes.push('description');
-    }
-  }
+  // SKIP description updates — too risky with regex on TypeScript strings
+  // The original hand-written descriptions are better than scraped meta tags anyway
   
   // Add/update logoUrl if we have one
   if (enrichedData.meta?.ogImage || enrichedData.meta?.favicon) {
@@ -150,17 +140,8 @@ function updateToolInFile(filePath, slug, enrichedData) {
     }
   }
   
-  // Update features if we have better ones
-  if (enrichedData.features && enrichedData.features.length >= 5) {
-    const formattedFeatures = formatFeatures(enrichedData.features);
-    if (formattedFeatures) {
-      updatedObject = updatedObject.replace(
-        /features:\s*\[(.*?)\]/s,
-        `features: [${formattedFeatures.join(', ')}]`
-      );
-      changes.push(`features (${enrichedData.features.length})`);
-    }
-  }
+  // SKIP features updates — scraper grabs nav items and garbage
+  // Original hand-curated features are higher quality
   
   // Add pricing tiers if we have them
   if (enrichedData.pricingTiers && enrichedData.pricingTiers.length > 0) {
