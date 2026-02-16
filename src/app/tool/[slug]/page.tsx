@@ -1,7 +1,9 @@
 import { tools } from "@/data/tools";
 import { categories } from "@/data/categories";
+import { getEnrichment } from "@/data/enrichment";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 interface Props {
@@ -33,6 +35,7 @@ export default async function ToolPage({ params }: Props) {
   if (!tool) notFound();
 
   const category = categories.find((c) => c.slug === tool.category);
+  const enrichment = getEnrichment(tool.slug);
   const alternatives = tool.alternatives
     ?.map((altSlug) => tools.find((t) => t.slug === altSlug))
     .filter(Boolean);
@@ -52,18 +55,47 @@ export default async function ToolPage({ params }: Props) {
         <span className="text-gray-300">{tool.name}</span>
       </nav>
 
+      {/* Screenshot/Preview */}
+      {enrichment?.screenshotUrl && (
+        <div className="mb-8 rounded-xl overflow-hidden border border-gray-800">
+          <img
+            src={enrichment.screenshotUrl}
+            alt={`${tool.name} preview`}
+            className="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-start justify-between mb-8">
-        <div>
-          <h1 className="text-4xl font-bold mb-2">{tool.name}</h1>
-          <p className="text-xl text-gray-400">{tool.shortDescription}</p>
-          <div className="flex items-center gap-3 mt-3">
-            <span className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
-              {tool.pricing}
-            </span>
-            {tool.pricingDetails && (
-              <span className="text-gray-500 text-sm">{tool.pricingDetails}</span>
-            )}
+        <div className="flex items-start gap-4">
+          {enrichment?.logoUrl && (
+            <img
+              src={enrichment.logoUrl}
+              alt={`${tool.name} logo`}
+              className="w-12 h-12 rounded-lg object-contain bg-gray-800 p-1 flex-shrink-0"
+              loading="lazy"
+            />
+          )}
+          <div>
+            <div className="flex items-center gap-3">
+              <h1 className="text-4xl font-bold">{tool.name}</h1>
+              {enrichment?.lastVerified && (
+                <span className="bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full text-xs font-medium">
+                  ✓ Verified
+                </span>
+              )}
+            </div>
+            <p className="text-xl text-gray-400 mt-1">{tool.shortDescription}</p>
+            <div className="flex items-center gap-3 mt-3">
+              <span className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
+                {tool.pricing}
+              </span>
+              {tool.pricingDetails && (
+                <span className="text-gray-500 text-sm">{tool.pricingDetails}</span>
+              )}
+            </div>
           </div>
         </div>
       </div>
