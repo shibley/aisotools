@@ -601,33 +601,31 @@ export default function AIImageGeneratorPage() {
                 <article
                   key={tool.slug}
                   id={tool.slug}
-                  className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 scroll-mt-24 hover:border-gray-600 transition-all"
+                  className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-4 sm:p-8 scroll-mt-24 hover:border-gray-600 transition-all"
                 >
                   {/* Header */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className="text-3xl font-bold text-gray-600">#{index + 1}</span>
-                        <h3 className="text-3xl font-bold text-white">{tool.name}</h3>
-                        <div className="flex items-center bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm font-semibold">
-                          ⭐ {tool.rating}
-                        </div>
-                        {tool.freeTier && (
-                          <span className="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
-                            Free Tier
-                          </span>
-                        )}
+                  <div className="mb-6">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+                      <span className="text-2xl sm:text-3xl font-bold text-gray-600">#{index + 1}</span>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-white">{tool.name}</h3>
+                      <div className="flex items-center bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm font-semibold">
+                        ⭐ {tool.rating}
                       </div>
-                      <p className="text-gray-400 text-lg leading-relaxed">{tool.description}</p>
+                      {tool.freeTier && (
+                        <span className="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                          Free Tier
+                        </span>
+                      )}
+                      {toolData && (
+                        <Link
+                          href={`/tool/${tool.slug}`}
+                          className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-sm font-semibold transition-all transform hover:scale-105"
+                        >
+                          View Tool →
+                        </Link>
+                      )}
                     </div>
-                    {toolData && (
-                      <Link
-                        href={`/tool/${tool.slug}`}
-                        className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all transform hover:scale-105 shrink-0 ml-4"
-                      >
-                        View Tool →
-                      </Link>
-                    )}
+                    <p className="text-gray-400 text-base sm:text-lg leading-relaxed">{tool.description}</p>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-8">
