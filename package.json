@@ -2,13 +2,17 @@
   "name": "aisotools",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "enrich": "node scripts/enrich-tools.js",
+    "apply-enrichment": "node scripts/apply-enrichment.js"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"

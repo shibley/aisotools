@@ -1,0 +1,1198 @@
+{
+  "chatgpt": {
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "scrapedAt": "2026-02-16T20:01:46.145Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "ChatGPT",
+      "description": "ChatGPT is your AI chatbot for everyday use. Chat with the most advanced AI to explore ideas, solve problems, and learn faster.",
+      "ogImage": "https://cdn.openai.com/chatgpt/share-og.png",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": [],
+    "redirectUrl": "https://chatgpt.com/"
+  },
+  "claude": {
+    "slug": "claude",
+    "name": "Claude",
+    "url": "https://claude.ai",
+    "scrapedAt": "2026-02-16T20:01:59.079Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Claude",
+      "description": "Talk with Claude, an AI assistant from Anthropic",
+      "ogImage": "https://claude.ai/images/claude_ogimage.png",
+      "favicon": "/favicon.svg"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "midjourney": {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "url": "https://midjourney.com",
+    "scrapedAt": "2026-02-16T20:02:09.292Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 403"
+    ]
+  },
+  "cursor": {
+    "slug": "cursor",
+    "name": "Cursor",
+    "url": "https://cursor.com",
+    "scrapedAt": "2026-02-16T20:02:10.427Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Cursor: The best way to code with AI",
+      "description": "Built to make you extraordinarily productive, Cursor is the best way to build software with AI.",
+      "ogImage": "https://cursor.com/public/opengraph-image.png",
+      "favicon": "/marketing-static/icon-192x192.png"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "perplexity": {
+    "slug": "perplexity",
+    "name": "Perplexity",
+    "url": "https://perplexity.ai",
+    "scrapedAt": "2026-02-16T20:02:19.170Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 403"
+    ]
+  },
+  "jasper": {
+    "slug": "jasper",
+    "name": "Jasper",
+    "url": "https://jasper.ai",
+    "scrapedAt": "2026-02-16T20:02:20.286Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Put AI agents to work for marketing | Jasper",
+      "description": "Orchestrate intelligent agents to run end-to-end marketing workflows—delivering speed, control, and measurable impact.",
+      "ogImage": "https://cdn.prod.website-files.com/6807ee8d73c233fb82842313/6846454bda26628fcf51d54c_7691ff456e72b9f4a29accf974053688_OpenGraph%20-%20Home.png",
+      "favicon": "https://cdn.prod.website-files.com/6807ee8d73c233fb82842313/681e121b52f97ed0b2098aab_Favicon.png"
+    },
+    "pricingTiers": [],
+    "features": [
+      "PlatformPlatformPlatform",
+      "SolutionsSolutionsSolutions",
+      "ResourcesResourcesResources",
+      "CompanyCompanyCompany",
+      "PricingPricingPricing",
+      "Get A DemoGet A DemoGet A Demo",
+      "AgentsApp Library",
+      "App Library",
+      "Jasper Grid",
+      "CanvasMarketing AI EditorJasper Chat",
+      "Marketing AI Editor",
+      "Jasper Chat"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.jasper.ai/"
+  },
+  "copy-ai": {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "url": "https://copy.ai",
+    "scrapedAt": "2026-02-16T20:02:30.007Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Future proof your business with GTM AI",
+      "description": "Introducing the first-ever GTM AI platform. Automate hundreds of tedious, repetitive tasks and empower your team to scale success like never before.",
+      "ogImage": "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/67111b6951504ebf1467be96_6708d064807b31c351b41284_share-og-image%20(1)-min.png",
+      "favicon": "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/6793eea386b5ac27242bb8eb_favicon_32x32px%20(1).png"
+    },
+    "pricingTiers": [
+      {
+        "name": "Enterprise",
+        "price": "Get a custom demoGet a custom demoGet a custom demo",
+        "features": [
+          "Guided Jumpstart Implementation",
+          "API Access & Bulk Workflow Runs",
+          "20+ Tech Integrations & API Access",
+          "Unlimited Customizable Workflows",
+          "Designated Account & Support Team",
+          "Enterprise Grade Security Protocols"
+        ]
+      }
+    ],
+    "features": [],
+    "errors": [],
+    "redirectUrl": "https://www.copy.ai/"
+  },
+  "writesonic": {
+    "slug": "writesonic",
+    "name": "Writesonic",
+    "url": "https://writesonic.com",
+    "scrapedAt": "2026-02-16T20:02:36.938Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Writesonic - AI Search Visibility Tracking & Optimization Platform",
+      "description": "Track AI visibility across ChatGPT and 10+ AI platforms. Monitor mentions, fix citation gaps, create and refresh content, target Reddit & UGC forums. Complete GEO platform from tracking to action to results.",
+      "ogImage": "https://cdn.prod.website-files.com/671f9e6bc06267864b5770e6/68a41085085966cad48a461c_writesonic-og-image.jpg",
+      "favicon": "https://cdn.prod.website-files.com/671f9e6bc06267864b5770e6/6724adfb8d5118301f18f599_3232.png"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "grammarly": {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "url": "https://grammarly.com",
+    "scrapedAt": "2026-02-16T20:02:44.539Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Grammarly: Free AI Writing AssistanceGrammarly HomeGrammarly HomeGrammarly Home",
+      "description": "Grammarly makes AI writing convenient. Work smarter with personalized AI guidance and text generation on any app or website.",
+      "ogImage": "https://static-web.grammarly.com/cms/master/public/open-graph/social-24.png",
+      "favicon": "https://static-web.grammarly.com/cms/master/public/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Write without mistakes",
+      "See your writing tone",
+      "Generate text with 100 AI prompts",
+      "Everything included in Free",
+      "Rewrite full sentences",
+      "Adjust your writing tone",
+      "Stay on-brand",
+      "Generate text with 2,000 AI prompts",
+      "Everything included in Pro",
+      "Unlimited members",
+      "Dedicated support",
+      "Confidential mode"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.grammarly.com/"
+  },
+  "notion-ai": {
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "url": "https://notion.so/product/ai",
+    "scrapedAt": "2026-02-16T20:02:54.247Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Meet the new Notion AI | Notion",
+      "description": "One tool that does it all. Search, generate, analyze, and chat—right inside Notion.",
+      "ogImage": "https://www.notion.com/front-static/meta/think-it-make-it.png",
+      "favicon": "/front-static/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Search across your workspace and connected apps",
+      "Automate your meeting notes and transcripts",
+      "Deep research to create detailed docs and reports",
+      "Generate and edit content",
+      "Autofill content across hundreds of database rows at once",
+      "Translate content into your language",
+      "Create a database setup from scratch",
+      "Sort and filter your email inbox (Notion Mail AI)",
+      "Terms & privacy",
+      "Your privacy rights",
+      "iOS & Android",
+      "Mac & Windows"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.notion.com/product/ai"
+  },
+  "rytr": {
+    "slug": "rytr",
+    "name": "Rytr",
+    "url": "https://rytr.me",
+    "scrapedAt": "2026-02-16T20:03:02.698Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 500"
+    ]
+  },
+  "wordtune": {
+    "slug": "wordtune",
+    "name": "Wordtune",
+    "url": "https://wordtune.com",
+    "scrapedAt": "2026-02-16T20:03:04.290Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Wordtune — Express yourself with confidence",
+      "description": "Perfect your English with a free AI writer that can paraphrase, rewrite, correct your grammar and more.",
+      "ogImage": "https://cdn.prod.website-files.com/5f7e0f9d75fee6f6f546df46/66bc50ae0f2962888d8e06a2_OG%20-%20HOME%20PAGE%20.png",
+      "favicon": "https://cdn.prod.website-files.com/5f7e0f9d75fee6f6f546df46/64edbd73b743162bd24f64bc_favicon.png"
+    },
+    "pricingTiers": [
+      {
+        "name": "Basic",
+        "price": "$0.00",
+        "features": [
+          "10 Rewrites & AI suggestions",
+          "AI generations",
+          "3 AI summarizations",
+          "Spelling corrections",
+          "Grammar checks"
+        ]
+      },
+      {
+        "name": "Advanced",
+        "price": "$6.99$4.89per month/  billed annually",
+        "features": [
+          "30 Rewrites & AI suggestions",
+          "15 AI summarizations",
+          "AI recommendations",
+          "Spelling corrections",
+          "Grammar checks"
+        ]
+      },
+      {
+        "name": "Unlimited",
+        "price": "-50%",
+        "features": [
+          "Rewrites & AI suggestions",
+          "AI summarizations",
+          "Spelling corrections",
+          "Grammar checks",
+          "Vocabulary enhancements",
+          "Clarity improvements",
+          "Fluency increases",
+          "Premium support"
+        ]
+      }
+    ],
+    "features": [
+      "Privacy policy",
+      "Terms of service",
+      "Help center",
+      "Student discount",
+      "Paraphrasing tool",
+      "Grammar checker",
+      "Proofreading tool",
+      "Chrome extension",
+      "Microsoft Edge extension",
+      "Wordtune for iOS",
+      "Wordtune for business"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.wordtune.com/"
+  },
+  "dall-e": {
+    "slug": "dall-e",
+    "name": "DALL-E 3",
+    "url": "https://openai.com/dall-e-3",
+    "scrapedAt": "2026-02-16T20:03:10.521Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "DALL·E 3 | OpenAI",
+      "description": "DALL·E 3 understands significantly more nuance and detail than our previous systems, allowing you to easily translate your ideas into exceptionally accurate images.",
+      "ogImage": "https://images.ctfassets.net/kftzwdyauwt9/oTUHVfoemkHiNasFEeEEB/101442a48b1e9ee0998a5df6bafa1e26/oai-dalle.png?w=1600&h=900&fit=fill",
+      "favicon": "/favicon.svg"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": [],
+    "redirectUrl": "https://openai.com/index/dall-e-3/"
+  },
+  "stable-diffusion": {
+    "slug": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "url": "https://stability.ai/stable-diffusion",
+    "scrapedAt": "2026-02-16T20:03:27.415Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Stability AI Image Models — Stability AI",
+      "description": "Experience unparalleled image generation capabilities with SDXL Turbo and \nStable Diffusion XL. Our models use shorter prompts and generate \ndescriptive images with enhanced composition and realistic aesthetics.",
+      "ogImage": "http://static1.squarespace.com/static/6213c340453c3f502425776e/t/67c8ab8bd73fa87a480d8a2b/1728899860281/Artboard+9.png?format=1500w",
+      "favicon": "https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/804f0e8b-0028-4262-a8b0-b9f1c5de72c0/favicon.ico?format=100w"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Versatile styles\n      \n\n      \n        \n          Generate a wide range of image styles like 3D, photography, painting, line art, and more.",
+      "Prompt Adherence\n      \n\n      \n        \n          Take advantage of market-leading prompt adherence, rivaling much larger models.",
+      "Diverse Outputs\n      \n\n      \n        \n          Produce images that represent a diversity of people and scenes around the world.",
+      "Self-Hosted License\n      \n\n      \n        \n          Deploy our models in your environment for advanced customization.\n        \n      \n\n    \n  \n\n  \n    \n\n      \n        Get license",
+      "Stability AI API\n      \n\n      \n        \n          Seamlessly integrate our models and editing tools into your custom-built applications.\n        \n      \n\n    \n  \n\n  \n    \n\n      \n        Use API",
+      "Stable Assistant\n      \n\n      \n        \n          Access all of our models and editing tools from a web-based creative platform.\n        \n      \n\n    \n  \n\n  \n    \n\n      \n        Start creating"
+    ],
+    "errors": [],
+    "redirectUrl": "https://stability.ai/stable-image"
+  },
+  "leonardo-ai": {
+    "slug": "leonardo-ai",
+    "name": "Leonardo AI",
+    "url": "https://leonardo.ai",
+    "scrapedAt": "2026-02-16T20:03:35.545Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 403"
+    ]
+  },
+  "ideogram": {
+    "slug": "ideogram",
+    "name": "Ideogram",
+    "url": "https://ideogram.ai",
+    "scrapedAt": "2026-02-16T20:03:36.664Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 403"
+    ]
+  },
+  "flux": {
+    "slug": "flux",
+    "name": "Flux",
+    "url": "https://blackforestlabs.ai",
+    "scrapedAt": "2026-02-16T20:03:37.725Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Black Forest Labs - Frontier AI Lab",
+      "description": "Black Forest Labs is the AI company behind FLUX, the state-of-the-art image generation model. Try FLUX.2, FLUX Kontext, and more via our API.",
+      "ogImage": "https://bfl.ai/opengraph-image-j8qpfc.png?47e2121a0eb4d5b0",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Open Weights",
+      "Premium Quality",
+      "Ease of Use",
+      "Built for scale",
+      "Full model access",
+      "Deploy anywhere",
+      "Customizable",
+      "Customization",
+      "Try instantly",
+      "No code required",
+      "Explore and experiment"
+    ],
+    "errors": [],
+    "redirectUrl": "https://bfl.ai/"
+  },
+  "adobe-firefly": {
+    "slug": "adobe-firefly",
+    "name": "Adobe Firefly",
+    "url": "https://firefly.adobe.com",
+    "scrapedAt": "2026-02-16T20:03:44.856Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Adobe Firefly - Generative AI - Log In",
+      "description": "Sign in to Adobe Firefly, the AI-powered app for generating image, video, and audio content that stands out.",
+      "favicon": "/fi_favicon.ico?v=3"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "canva-ai": {
+    "slug": "canva-ai",
+    "name": "Canva AI",
+    "url": "https://canva.com/ai-image-generator",
+    "scrapedAt": "2026-02-16T20:03:52.631Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 403"
+    ]
+  },
+  "runway": {
+    "slug": "runway",
+    "name": "Runway",
+    "url": "https://runwayml.com",
+    "scrapedAt": "2026-02-16T20:03:53.757Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Runway | Building AI to Simulate the World",
+      "description": "We are building foundational General World Models that will be capable of simulating all possible worlds and experiences. The next frontier of intelligence will come from models that can understand, perceive, generate and act in the world.",
+      "ogImage": "https://runwayml.com/opengraph-image.png?opengraph-image.e277c978.png",
+      "favicon": "/icon.png?icon.8128ee70.png"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Explore examples",
+      "General World Models",
+      "Robotics SDK",
+      "AI Summit 2026 ↗",
+      "AI Film Festival ↗",
+      "Telescope Magazine ↗",
+      "Creative Partners Program",
+      "The Hundred Film Fund",
+      "Our Research",
+      "Publications",
+      "Customer Stories",
+      "Talent Network ↗"
+    ],
+    "errors": []
+  },
+  "pika": {
+    "slug": "pika",
+    "name": "Pika",
+    "url": "https://pika.art",
+    "scrapedAt": "2026-02-16T20:04:00.976Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Pika",
+      "description": "The idea-to-video platform that sets your creativity in motion.",
+      "ogImage": "https://pika-9u8cxaoxu-pika-labs.vercel.app/images/og.jpeg",
+      "favicon": "/favicon.ico?favicon.3e7abfbd.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "synthesia": {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "url": "https://synthesia.io",
+    "scrapedAt": "2026-02-16T20:04:09.828Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Synthesia: #1 AI Video Platform for Business",
+      "description": "Create AI generated videos from text with the most advanced AI avatars and voiceovers in 160+ languages. Try our free AI video generator now!",
+      "ogImage": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/67dad5d5c238a51c2327e203_OG-Image_2025.jpg",
+      "favicon": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security%201.png"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Add AI Avatars: Choose from a diverse selection of AI avatars to make your videos more engaging and inclusive.",
+      "Create Instant Voiceovers: Convert your scripts into high-quality voiceovers in hundreds of natural-sounding AI voices.",
+      "Edit Videos: Use pre-designed templates and AI assistance to transform documents, PDFs, website links or ideas into polished videos.",
+      "Team Collaboration: Work together in real-time and manage projects in shared workspaces.",
+      "Translate and localize in 1 click: Automatically translate videos into 160+ languages to reach your audience worldwide."
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.synthesia.io/"
+  },
+  "heygen": {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "url": "https://heygen.com",
+    "scrapedAt": "2026-02-16T20:04:19.698Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Free AI Video Generator: Create Stunning Videos with AI",
+      "description": "Create AI videos from your ideas using HeyGen. Input text, image, or audio to create complete videos with narration, captions, visuals, and animations.",
+      "ogImage": "https://cdn.sanity.io/images/pdhqcmb1/production/579e83ff34c4c832744efaedb9681d255e58dc13-1200x630.png?fit=max&auto=format",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Pricing Plans",
+      "API Pricing",
+      "Video Avatar",
+      "Talking Photo AI",
+      "Video Translator",
+      "Localization",
+      "AI Video Generator",
+      "AI Avatar Generator",
+      "AI Voice Cloning",
+      "AI Podcast Generator",
+      "Text to Video",
+      "Image to Video"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.heygen.com/"
+  },
+  "descript": {
+    "slug": "descript",
+    "name": "Descript",
+    "url": "https://descript.com",
+    "scrapedAt": "2026-02-16T20:04:31.113Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Descript – AI Video & Podcast Editor | Free, Online",
+      "description": "Descript makes editing video and audio as easy as editing text. Record, transcribe, edit, and publish in one tool. Try for free, with powerful upgrades for creators & teams.",
+      "ogImage": "https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2Fb1cf2c175fbe4a028dff4622ee1ce727",
+      "favicon": "https://descript-website.vercel.app/images/favicon.ico"
+    },
+    "pricingTiers": [
+      {
+        "name": "$16",
+        "price": "$16.css-1hjugu5.builder-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;box-sizing:border-box;}@media only screen and (max-width:1199px){.css-1hjugu5.builder-block{margin-top:6px;}}@media only screen and (max-width:767px){.css-1hjugu5.builder-block{margin-top:16px;}}$24",
+        "features": [
+          "$16",
+          "$24"
+        ]
+      },
+      {
+        "name": "$24",
+        "price": ".css-s81g43.builder-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;box-sizing:border-box;}$24$35",
+        "features": [
+          "$24",
+          "$35"
+        ]
+      },
+      {
+        "name": "$50",
+        "price": "$50$65",
+        "features": [
+          "$50",
+          "$65"
+        ]
+      }
+    ],
+    "features": [
+      "Video editingEditing video in Descript is as easy as using docs and slides.",
+      "PodcastingMultitrack audio editing, just like editing text.",
+      "Screen recorderCapture your screen for instant sharing or polished B-roll.",
+      "RoomsRecord crystal-clear podcasts and video with anyone, anywhere.",
+      "CaptionsAdd subtitles to extend your reach in a single click.",
+      "Generate mediaCreate bespoke, custom video and images from a prompt.",
+      "TranscriptionIt’s automatic, with industry-leading accuracy & speed.",
+      "AI speechEasily create a realistic voice clone or pick from our stock AI voices.",
+      "TemplatesJumpstart your workflow with battle-tested AI templates.",
+      "AI avatarsPick an avatar from our gallery or upload a photo to create your own.",
+      "Market / Promote",
+      "Create Clips"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.descript.com/"
+  },
+  "invideo": {
+    "slug": "invideo",
+    "name": "InVideo",
+    "url": "https://invideo.io",
+    "scrapedAt": "2026-02-16T20:04:37.475Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Invideo AI - Create videos without limits",
+      "description": "Create & edit AI videos, AI Avatars, UGC product ads and much more!",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Replacing the cat",
+      "Mixing the new audio layer",
+      "Adding voiceover to the video",
+      "Adding captions",
+      "AI Video Generator",
+      "AI Avatar Generator",
+      "Text to Video",
+      "Image to Video",
+      "AI Animation Generator",
+      "AI Ad Generator",
+      "Google Veo 3.1",
+      "Pixverse AI"
+    ],
+    "errors": []
+  },
+  "capcut": {
+    "slug": "capcut",
+    "name": "CapCut",
+    "url": "https://capcut.com",
+    "scrapedAt": "2026-02-16T20:04:51.287Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "CapCut AI Video Editor: Smart Online Video Editing with Advanced AI Tools",
+      "description": "Edit YouTube and Instagram videos with CapCut's AI-powered video editor, smart templates, and creative effects. Download CapCut on desktop, mobile, or edit online.",
+      "ogImage": "https://p16-seeyou-useast5.capcutcdn-us.com/tos-useast5-i-2zwwjm3azk-tx/af60401275b14f6684c2af1f7564d717~tplv-2zwwjm3azk-image.image",
+      "favicon": "https://sf16-web-tos-buz.capcutcdn-us.com/obj/capcut-web-buz-tx/common/images/lv_web-2.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "AI video makerA quick chat with CapCut's AI video editor and it'll build a video from scratch, style, avatar, everything.",
+      "AI dialogue sceneWant your photos to talk, sing, or react? CapCut's video editor makes creating dialogue scenes effortless.",
+      "AI video generatorTurn text, images, or keyframes into videos with the smartest online video editor you've ever used.",
+      "AI image generatorTurn text or reference images into custom, stunning visuals with CapCut's powerful online photo editor.",
+      "Dreamina AIGot a simple prompt? Try CapCut's AI-powered video creation for stunning AI art and cinematic video.",
+      "Pippit AIThe viral video generator that turns text, links, images, or anything into ready-to-post videos.",
+      "AI video maker",
+      "AI dialogue scene",
+      "AI video generator",
+      "AI image generator",
+      "Dreamina AI",
+      "AI caption generatorAdd accurate, perfectly timed captions to your videos with CapCut's powerful AI caption generator."
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.capcut.com/"
+  },
+  "elevenlabs": {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "scrapedAt": "2026-02-16T20:05:01.223Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Free AI Voice Generator & Voice Agents Platform | ElevenLabs",
+      "description": "Create lifelike speech with our AI voice generator and voice agents platform. Access 5,000+ voices in 70+ languages with secure APIs and SDKs.",
+      "ogImage": "https://elevenlabs.io/cover.png",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "murf-ai": {
+    "slug": "murf-ai",
+    "name": "Murf AI",
+    "url": "https://murf.ai",
+    "scrapedAt": "2026-02-16T20:05:09.673Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Free AI Voice Generator & Text to Speech Online | Murf AIVoice Agent CarouselMail iconX icon\nDiscord icon\nInstagram iconLinkedIn iconYouTube icon",
+      "description": "Generate Ultra-realistic voiceovers with our AI Voice Generator and create podcasts, audiobooks, video voiceovers, and much more. Deploy AI Voice Agents with out fastest, most efficient text to speech API.",
+      "ogImage": "https://cdn.prod.website-files.com/66b3765153a8a0c399c70981/670584e2dab709883eed3793_Home.webp",
+      "favicon": "https://cdn.prod.website-files.com/66b3765153a8a0c399c70981/670cb2af23deffa700aa8a09_favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "suno": {
+    "slug": "suno",
+    "name": "Suno",
+    "url": "https://suno.ai",
+    "scrapedAt": "2026-02-16T20:05:17.647Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Suno | AI Music Generator",
+      "description": "Create stunning original music for free in seconds using our AI generator. Make your own masterpieces, share with friends, and discover music from artists worldwide.",
+      "ogImage": "https://cdn-o.suno.com/meta-preview.jpg",
+      "favicon": "https://cdn-o.suno.com/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": [],
+    "redirectUrl": "https://suno.com/home"
+  },
+  "udio": {
+    "slug": "udio",
+    "name": "Udio",
+    "url": "https://udio.com",
+    "scrapedAt": "2026-02-16T20:05:26.571Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Udio | AI Music Generator - Official Website",
+      "description": "Discover, create, and share music with the world. Use the latest technology to create AI music in seconds.",
+      "ogImage": "https://imagedelivery.net/C9yUr1FL21Q6JwfYYh2ozQ/1647e9a2-47d6-4d95-5ae0-02bae7a44000/public",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": [],
+    "redirectUrl": "https://www.udio.com/"
+  },
+  "speechify": {
+    "slug": "speechify",
+    "name": "Speechify",
+    "url": "https://speechify.com",
+    "scrapedAt": "2026-02-16T20:05:37.889Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Speechify: Free Text to Speech Reader | 1M+ 5-Star Reviews",
+      "description": "Speechify reads anything aloud to you. Listen to books, PDFs, or web pages anytime with natural voices. Try Speechify free.",
+      "ogImage": "https://website.cdn.speechify.com/speechify-og-image.jpg?quality=95",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Speechify is absolutely brilliant. Growing up with dyslexia this would have made a big difference. I’m so glad to have it today.Sir Richard Branson, Business Magnate",
+      "best app evaaa I use it because my head be scrambling up words, so I scan pages off books and work, and boom!!!! It works so well I love it. ♥️ ♥️ ♥️♥️K",
+      "Speechify makes it easy to learn at 2x or even 3x the speed you read with your eyes.Gwyneth Paltrow, Actress and Businesswoman",
+      "I used to hate school because I'd spend hours just trying to read the assignments. Listening has been totally life changing. This app saved my education.Ana",
+      "This made my job 10x easier. I read scripts, conversations, and other text files all day, and this made it a lot easier to retain and wayyyyy faster. Thanks y’all! SERRIANKING82",
+      "If there’s one hill I’m going to die on, it’s that speed listening is the best way forward. Speechify is a game-changer for me.Ali Abdaal, most followed Productivity Expert in the world.",
+      "Mighty be one of the GOAT apps This is probably top 5 of greatest apps ever, you can literally read alone an entire book in a day. Easily worth the cost of the app.TJV 34",
+      "Excellent for comprehending medical textbooks more quickly and thoroughly!! This is awesome for keeping up with latest surgical techniques and technology.Dr.K",
+      "I am a resident and this app saves me a ton of time. I listen to PDF’s while walking to clinic, running, making coffee in the morning. THEODOTA",
+      "Miracle reader. Been looking for a program like this to proof read my work. Allows me to develop a personalized style of reading. Love it!VACA-YOGI"
+    ],
+    "errors": []
+  },
+  "podcast-ai": {
+    "slug": "podcast-ai",
+    "name": "Podcast.ai",
+    "url": "https://podcast.ai",
+    "scrapedAt": "2026-02-16T20:05:49.350Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "fetch failed"
+    ]
+  },
+  "resemble-ai": {
+    "slug": "resemble-ai",
+    "name": "Resemble AI",
+    "url": "https://resemble.ai",
+    "scrapedAt": "2026-02-16T20:05:50.487Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "AI Voice Generator and Deepfake Detection for Enterprise | Resemble AI",
+      "description": "Resemble AI helps enterprises create ultra-realistic voices and detect deepfakes instantly. Secure, scalable, and built for production.",
+      "ogImage": "https://www.resemble.ai/wp-content/uploads/2025/06/resemble-16x9-1-scaled.jpg",
+      "favicon": "https://cdn-ikphdcf.nitrocdn.com/iWWPCWIhKvbRsOjJZAYfaYqrvBIRQglP/assets/images/optimized/rev-d8e0111/www.resemble.ai/wp-content/uploads/2022/02/cropped-abSldYYi_400x400-32x32.jpeg"
+    },
+    "pricingTiers": [
+      {
+        "name": "Flex Plan",
+        "price": "$0 to start Load credits and pay for what you use",
+        "features": [
+          "Pay per consumption based on usage Credits never expire Access to all voice models Voice cloning capabilities Deepfake detection access Full API access Add team seats & voices as needed",
+          "Pay per consumption based on usage",
+          "Credits never expire",
+          "Access to all voice models",
+          "Voice cloning capabilities",
+          "Deepfake detection access",
+          "Full API access",
+          "Add team seats & voices as needed"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom Pricing Tailored to your requirements",
+        "features": [
+          "Volume discounts up to 80% Higher concurrency limits Enterprise SLAs & SOC 2 Custom model training SSO / SAML authentication Dedicated support On-premise deployment",
+          "Volume discounts up to 80%",
+          "Higher concurrency limits",
+          "Enterprise SLAs & SOC 2",
+          "Custom model training",
+          "SSO / SAML authentication",
+          "Dedicated support",
+          "On-premise deployment"
+        ]
+      }
+    ],
+    "features": [
+      "Full API access to all models",
+      "Voice cloning & deepfake detection",
+      "Per-second billing, credits never expire",
+      "Add team seats & voices as needed",
+      "No minimums, no commitments",
+      "Volume discounts up to 80%",
+      "On-premise & air-gapped deployment",
+      "Enterprise SLAs & SOC 2",
+      "SSO / SAML & custom model training",
+      "Dedicated support & success team"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.resemble.ai/"
+  },
+  "gemini": {
+    "slug": "gemini",
+    "name": "Gemini",
+    "url": "https://gemini.google.com",
+    "scrapedAt": "2026-02-16T20:06:03.981Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "‎Google Gemini",
+      "description": "Meet Gemini, Google’s AI assistant. Get help with writing, planning, brainstorming, and more. Experience the power of generative AI.",
+      "ogImage": "https://www.gstatic.com/lamda/images/gemini_aurora_thumbnail_4g_e74822ff0ca4259beb718.png",
+      "favicon": "https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "copilot": {
+    "slug": "copilot",
+    "name": "Microsoft Copilot",
+    "url": "https://copilot.microsoft.com",
+    "scrapedAt": "2026-02-16T20:06:11.228Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Microsoft Copilot: Your AI companion",
+      "description": "Microsoft Copilot is your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers. Try Copilot now.",
+      "ogImage": "https://copilot.microsoft.com/static/cmc/images/meta-image.jpg",
+      "favicon": "/static/cmc/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "pi": {
+    "slug": "pi",
+    "name": "Pi",
+    "url": "https://pi.ai",
+    "scrapedAt": "2026-02-16T20:06:18.829Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 403"
+    ]
+  },
+  "character-ai": {
+    "slug": "character-ai",
+    "name": "Character AI",
+    "url": "https://character.ai",
+    "scrapedAt": "2026-02-16T20:06:19.921Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "character.ai | AI Chat, Reimagined–Your Words. Your World.",
+      "description": "Chat with millions of AI Characters on the #1 AI chat app. Where will your next adventure take you?",
+      "ogImage": "https://character.ai/character-ai.jpg",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "poe": {
+    "slug": "poe",
+    "name": "Poe",
+    "url": "https://poe.com",
+    "scrapedAt": "2026-02-16T20:06:27.575Z",
+    "websiteStatus": "error",
+    "meta": {},
+    "pricingTiers": [],
+    "features": [],
+    "errors": [
+      "Homepage returned 403"
+    ]
+  },
+  "replika": {
+    "slug": "replika",
+    "name": "Replika",
+    "url": "https://replika.com",
+    "scrapedAt": "2026-02-16T20:06:28.859Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Replika",
+      "description": "Always here to listen and talk. Always on your side. Join the millions growing with their AI friends now!",
+      "ogImage": "https://1716637182.rsc.cdn77.org/web/main-page/replika_og_image.png",
+      "favicon": "/android-icon-192x192.png"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Create an account",
+      "Get the app",
+      "Chat about everythingThe more you talk to Replika, the smarter it becomes",
+      "Explore your relationshipA friend, a partner, or a mentor – find the perfect companion in Replika",
+      "Explore the world together in ARShare precious moments with your AI friend in real time",
+      "VideocallsCall up anytime to see a friendly face",
+      "CoachingBuild better habits and reduce anxiety",
+      "MemoryReplika never forgets what’s important to you",
+      "Express yourselfChoose what interests and style preferences you and Replika will share",
+      "DiaryTake a glimpse into your Replika’s inner world",
+      "What is an AI?AI stands for Artificial Intelligence. It means that every time you get a reply from Replika, you interact with a sophisticated neural network machine learning algorithm.",
+      "Are my conversations private?Your conversations are private and will stay between you and your Replika."
+    ],
+    "errors": []
+  },
+  "inflection": {
+    "slug": "inflection",
+    "name": "Inflection AI",
+    "url": "https://inflection.ai",
+    "scrapedAt": "2026-02-16T20:07:14.007Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Inflection AI",
+      "description": "Inflection AI is pioneering the future with human-centered, emotionally intelligent AI that transforms interactions from transactional to reltational, creating enduring value for individuals and enterprises alike.",
+      "ogImage": "https://framerusercontent.com/assets/dELlwRcDEwEiERVeZehp3U2p7o4.png",
+      "favicon": "https://framerusercontent.com/images/cGMAFpxEYReO9BolbTcIakx59c8.svg"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": []
+  },
+  "github-copilot": {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "scrapedAt": "2026-02-16T20:07:20.853Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "GitHub Copilot · Your AI pair programmer · GitHubCoyote LogisticsDuolingoGeneral MotorsMercado LibreShopifyStripeCocaColaCoyote LogisticsDuolingoGeneral MotorsMercado LibreShopifyStripeCocaColaInstagramTikTokTwitch",
+      "description": "GitHub Copilot works alongside you directly in your editor, suggesting whole lines or entire functions for you.",
+      "ogImage": "https://images.ctfassets.net/8aevphvgewt8/5IdZ8KizWhMOGixAmVSw0g/f81f5f263a88eabe5d3e102300d44a88/github-copilot-social-img.png",
+      "favicon": "https://github.githubassets.com/favicons/favicon.svg"
+    },
+    "pricingTiers": [
+      {
+        "name": "Free",
+        "price": "$\n            0\n            USD\n        \n        \n          per month",
+        "features": []
+      },
+      {
+        "name": "Team",
+        "price": "$\n            4\n            USD\n        \n        \n          per user/month",
+        "features": [
+          "Everything included in Free, plus..."
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "$\n            21\n            USD\n        \n        \n          per user/month",
+        "features": [
+          "Everything included in Team, plus..."
+        ]
+      }
+    ],
+    "features": [
+      "50 agent mode or chat requests per month",
+      "2,000 completions per month",
+      "Access to Haiku 4.5, GPT-5 mini, and more",
+      "Copilot coding agent",
+      "Copilot code review",
+      "Unlimited agent mode and chats with GPT-5 mini",
+      "Unlimited code completions",
+      "Access to models from Anthropic, Google, OpenAI, and more",
+      "300 premium requests to use latest models, with the option to buy more",
+      "Claude and Codex on GitHub and VS Code",
+      "Access to all models, including Claude Opus 4.6 (fast mode) and more",
+      "5× as many premium requests as Pro to use the latest models, with the option to buy more"
+    ],
+    "errors": []
+  },
+  "windsurf": {
+    "slug": "windsurf",
+    "name": "Windsurf",
+    "url": "https://codeium.com/windsurf",
+    "scrapedAt": "2026-02-16T20:07:27.544Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Windsurf Editor | WindsurfDiscord",
+      "description": "Tomorrow's editor, today. Windsurf Editor is the first AI agent-powered IDE that keeps developers in the flow. Available today on Mac, Windows, and Linux.",
+      "ogImage": "https://exafunction.github.io/public/images/website_thumbnails/editor.jpg",
+      "favicon": "https://windsurf.com/favicon.png"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Windsurf Editor",
+      "Windsurf for Enterprise",
+      "JetBrains Plugin",
+      "Partnerships",
+      "Terms of Service",
+      "Privacy Policy",
+      "Windsurf for Government",
+      "Feature Requests",
+      "Windsurf vs Cursor",
+      "Windsurf vs Copilot",
+      "2025 Gartner Magic Quadrant",
+      "Upcoming Events"
+    ],
+    "errors": [],
+    "redirectUrl": "https://windsurf.com/editor"
+  },
+  "tabnine": {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "url": "https://tabnine.com",
+    "scrapedAt": "2026-02-16T20:07:36.420Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Tabnine AI Code Assistant | Smarter AI Coding Agents. Total Enterprise Control.",
+      "description": "Tabnine is the AI code assistant that accelerates and simplifies software development while keeping your code private, secure, and compliant.",
+      "favicon": "https://www.tabnine.com/wp-content/uploads/2024/09/cropped-tabnine-favicon-32x32.png"
+    },
+    "pricingTiers": [
+      {
+        "name": "Products",
+        "price": "59",
+        "features": [
+          "ProductsTabnine AI Coding PlatformEnterprise Context Engine",
+          "Tabnine AI Coding Platform",
+          "Enterprise Context Engine",
+          "The Tabnine Agentic Platform – Org-Native AI Agents that plan & execute workflows with enterprise context",
+          "Industry-leading  AI code assistant – Ship better software faster with the original AI developer tool",
+          "Al chat that supports the entire SDLC – Improve your code with AI-powered chat at every stage of development",
+          "AI personalized to you and your team – Get context-aware coding assistance fit to your org and projects",
+          "Total code privacy & zero data retention – Secure the confidentiality and integrity of your codebase"
+        ]
+      }
+    ],
+    "features": [
+      "ProductsTabnine AI Coding PlatformEnterprise Context Engine",
+      "Tabnine AI Coding Platform",
+      "Enterprise Context Engine",
+      "The Tabnine Agentic Platform – Org-Native AI Agents that plan & execute workflows with enterprise context",
+      "Industry-leading  AI code assistant – Ship better software faster with the original AI developer tool",
+      "Al chat that supports the entire SDLC – Improve your code with AI-powered chat at every stage of development",
+      "AI personalized to you and your team – Get context-aware coding assistance fit to your org and projects",
+      "Total code privacy & zero data retention – Secure the confidentiality and integrity of your codebase",
+      "Complete protection from IP issues – Ensure copyright compliance with code scanning and license-compliant models",
+      "PricingAI Coding Platform – AI chat completions and agentic workflows for software developmentEnterprise Context Engine – Organizational intelligence that gives agents system-level understanding",
+      "AI Coding Platform – AI chat completions and agentic workflows for software development",
+      "Enterprise Context Engine – Organizational intelligence that gives agents system-level understanding"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.tabnine.com/"
+  },
+  "replit": {
+    "slug": "replit",
+    "name": "Replit",
+    "url": "https://replit.com",
+    "scrapedAt": "2026-02-16T20:07:44.951Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Replit – Build apps and sites with AI - Replit",
+      "description": "Build and deploy software collaboratively with the power of AI without spending a second on setup.",
+      "ogImage": "https://replit.com/public/images/opengraph.png",
+      "favicon": "/public/icons/favicon-prompt-192.png"
+    },
+    "pricingTiers": [],
+    "features": [
+      "ProductsAgentDesignDatabasesPublish AppsSecurityIntegrationsMobile",
+      "Publish Apps",
+      "Integrations",
+      "ResourcesDocumentationCommunityExpert NetworkCustomer StoriesGalleryBlogNews",
+      "Documentation",
+      "Expert Network",
+      "Customer Stories",
+      "Vibe Coding 101",
+      "How to guides",
+      "Import from GitHub",
+      "Additional resources",
+      "Certifications"
+    ],
+    "errors": []
+  },
+  "v0": {
+    "slug": "v0",
+    "name": "v0",
+    "url": "https://v0.dev",
+    "scrapedAt": "2026-02-16T20:07:53.969Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "v0 by Vercel - Build Agents, Apps, and Websites with AI",
+      "description": "Your collaborative AI assistant to design, iterate, and scale full-stack applications for the web.",
+      "ogImage": "https://v0.app/chat/api/og",
+      "favicon": "/assets/icon-light-32x32.png"
+    },
+    "pricingTiers": [],
+    "features": [
+      "v0 for Students",
+      "Ambassadors",
+      "Vercel Community"
+    ],
+    "errors": [],
+    "redirectUrl": "https://v0.app/"
+  },
+  "bolt": {
+    "slug": "bolt",
+    "name": "Bolt",
+    "url": "https://bolt.new",
+    "scrapedAt": "2026-02-16T20:08:02.234Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Bolt AI builder: Websites, apps & prototypes",
+      "description": "Build and scale high-performing websites & apps using your words. Join millions and start building today.",
+      "ogImage": "https://bolt.new/static/social_preview_index.jpg",
+      "favicon": "/static/favicon.svg"
+    },
+    "pricingTiers": [],
+    "features": [
+      "ResourcesResourcesDocs & Help CenterBlogStatusCommunityDiscordLinkedInYouTubeTwitter/XInstagramReddit"
+    ],
+    "errors": []
+  },
+  "devin": {
+    "slug": "devin",
+    "name": "Devin",
+    "url": "https://devin.ai",
+    "scrapedAt": "2026-02-16T20:08:10.452Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Devin | The AI Software Engineer",
+      "description": "Devin is an AI coding agent and software engineer that helps developers build better software faster. Parallel cloud agents for serious engineering teams.",
+      "ogImage": "https://devin.ai/cover.png",
+      "favicon": "/favicon.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "1  Ticket Integrate Slack, Teams, Linear, and Jira",
+      "2  Plan Quickly review Devin's proposal",
+      "3  Test Devin tests changes by itself",
+      "4  PR Review changes natively",
+      "Ticket Integrate Slack, Teams, Linear, and Jira",
+      "Plan Quickly review Devin's proposal",
+      "Test Devin tests changes by itself",
+      "PR Review changes natively",
+      "Language migrations",
+      "Version upgrades",
+      "Codebase restructuring",
+      "Data warehouse migrations"
+    ],
+    "errors": []
+  },
+  "surfer-seo": {
+    "slug": "surfer-seo",
+    "name": "Surfer SEO",
+    "url": "https://surferseo.com",
+    "scrapedAt": "2026-02-16T20:08:17.313Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Surfer: SEO Content Optimization PlatformSurfer | SEO Content Optimization PlatformSurfer | SEO Content Optimization PlatformSurfer | SEO Content Optimization PlatformSurfer | SEO Content Optimization PlatformSurfer | SEO Content Optimization Platform",
+      "description": "Use Surfer to research, audit, write, optimize and generate SEO optimized articles in 20 minutes. Everything you need to create a comprehensive content strategy that yields real results is a click away with Surfer!",
+      "ogImage": "https://assets.surferseo.art/webflow-scripts/assets/og/basic.jpg",
+      "favicon": "https://assets.surferseo.art/webflow-scripts/favicon/icon.svg"
+    },
+    "pricingTiers": [],
+    "features": [
+      "AI Search Optimization Masterclass: Free, hands-on, practical course",
+      "Brand Knowledge: Teach Surfer your business context to stay on-brand",
+      "AI Tracker Upgrade: More AI visibility insights and comparison features",
+      "Refresh alerts: Never miss a quick-win opportunity to regain rankings",
+      "...and much more inside!"
+    ],
+    "errors": []
+  },
+  "semrush-ai": {
+    "slug": "semrush-ai",
+    "name": "Semrush AI",
+    "url": "https://semrush.com",
+    "scrapedAt": "2026-02-16T20:08:25.577Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "\n                \n    \n        Semrush: Data-Driven Marketing Tools to Grow Your Business\n    \n\n            ",
+      "description": "Drive growth in SEO, PPC, content, social media, and traffic with AI-powered marketing tools for every task.",
+      "ogImage": "https://static.semrush.com/wt-static/semrush-com.png",
+      "favicon": "/__static__/favicon.f8cd638f087a.ico"
+    },
+    "pricingTiers": [],
+    "features": [
+      "Uniting our leading traditional SEO tools with powerful AI search + GEO capabilities",
+      "Measure and grow everywhere you’re discovered",
+      "Analyze traffic on any website",
+      "Track and benchmark competitors",
+      "Gain actionable audience data",
+      "Find billions of keywords with AI insights",
+      "Analyze backlinks and traffic potential",
+      "Run technical audits and track rankings",
+      "Optimize your Google Business Profile",
+      "Get your business listed in top directories",
+      "Respond to customer reviews with AI",
+      "Create SEO-ready content with AI"
+    ],
+    "errors": [],
+    "redirectUrl": "https://www.semrush.com/"
+  },
+  "hubspot-ai": {
+    "slug": "hubspot-ai",
+    "name": "HubSpot AI",
+    "url": "https://hubspot.com/artificial-intelligence",
+    "scrapedAt": "2026-02-16T20:08:34.640Z",
+    "websiteStatus": "redirect",
+    "meta": {
+      "title": "Meet Breeze — HubSpot's AI tools that make impossible growth impossibly easy.Logo - Full (Color)",
+      "description": "Breeze turns complex work into compelling growth. Scale your business, boost team productivity, and uncover insights that unite your company and customers.",
+      "ogImage": "https://wtcfns.hubspot.com/wt-api/social-sharing?domain=www.hubspot.com",
+      "favicon": "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png"
+    },
+    "pricingTiers": [],
+    "features": [],
+    "errors": [],
+    "redirectUrl": "https://www.hubspot.com/products/artificial-intelligence"
+  }
+}
