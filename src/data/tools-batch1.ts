@@ -15,12 +15,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Creator $49/mo, Pro $69/mo, Business custom pricing",
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.prod.website-files.com/6807ee8d73c233fb82842313/6846454bda26628fcf51d54c_7691ff456e72b9f4a29accf974053688_OpenGraph%20-%20Home.png",
-    screenshotUrl: "https://cdn.prod.website-files.com/6807ee8d73c233fb82842313/6846454bda26628fcf51d54c_7691ff456e72b9f4a29accf974053688_OpenGraph%20-%20Home.png",
-    features: ["PlatformPlatformPlatform", "SolutionsSolutionsSolutions", "ResourcesResourcesResources", "CompanyCompanyCompany", "PricingPricingPricing", "Get A DemoGet A DemoGet A Demo", "AgentsApp Library", "App Library", "Jasper Grid", "CanvasMarketing AI EditorJasper Chat", "Marketing AI Editor", "Jasper Chat"],
+    features: ["Brand voice training", "SEO mode", "Team collaboration", "50+ templates", "Multi-language support", "Chrome extension"],
     alternatives: ["copy-ai", "writesonic", "rytr"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -34,17 +30,10 @@ export const toolsBatch1: Tool[] = [
     tags: ["copywriting", "marketing", "sales", "content", "automation"],
     pricing: "freemium",
     pricingDetails: "Free tier available. Pro $49/mo, Team $249/mo, Enterprise custom",
-  pricingTiers: [
-    { name: "Enterprise", price: "Get a custom demoGet a custom demoGet a custom demo", features: ["Guided Jumpstart Implementation", "API Access & Bulk Workflow Runs", "20+ Tech Integrations & API Access", "Unlimited Customizable Workflows", "Designated Account & Support Team", "Enterprise Grade Security Protocols"] }
-  ],
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/67111b6951504ebf1467be96_6708d064807b31c351b41284_share-og-image%20(1)-min.png",
-    screenshotUrl: "https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/67111b6951504ebf1467be96_6708d064807b31c351b41284_share-og-image%20(1)-min.png",
     features: ["90+ copywriting tools", "Brand voice", "Infobase knowledge", "Workflow automation", "Team collaboration", "Multi-language"],
     alternatives: ["jasper", "writesonic", "rytr"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -60,11 +49,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free trial. Unlimited $20/mo, Business $19/user/mo, Enterprise custom",
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.prod.website-files.com/671f9e6bc06267864b5770e6/68a41085085966cad48a461c_writesonic-og-image.jpg",
-    screenshotUrl: "https://cdn.prod.website-files.com/671f9e6bc06267864b5770e6/68a41085085966cad48a461c_writesonic-og-image.jpg",
     features: ["SEO optimizer", "Fact-checked content", "AI article writer", "Photosonic image generation", "Chatsonic chatbot", "Botsonic chatbot builder"],
     alternatives: ["jasper", "copy-ai", "rytr"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -80,12 +66,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Premium $12/mo, Business $15/user/mo, Enterprise custom",
     featured: false,
     sponsored: false,
-    logoUrl: "https://static-web.grammarly.com/cms/master/public/open-graph/social-24.png",
-    screenshotUrl: "https://static-web.grammarly.com/cms/master/public/open-graph/social-24.png",
-    features: ["Write without mistakes", "See your writing tone", "Generate text with 100 AI prompts", "Everything included in Free", "Rewrite full sentences", "Adjust your writing tone", "Stay on-brand", "Generate text with 2,000 AI prompts", "Everything included in Pro", "Unlimited members", "Dedicated support", "Confidential mode"],
+    features: ["Grammar and spelling", "Tone detection", "Clarity suggestions", "Plagiarism checker", "Browser extension", "Desktop app"],
     alternatives: ["wordtune", "prowritingaid", "quillbot"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -101,12 +83,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "$10/user/mo add-on to Notion workspace plans",
     featured: false,
     sponsored: false,
-    logoUrl: "https://www.notion.com/front-static/meta/think-it-make-it.png",
-    screenshotUrl: "https://www.notion.com/front-static/meta/think-it-make-it.png",
-    features: ["Search across your workspace and connected apps", "Automate your meeting notes and transcripts", "Deep research to create detailed docs and reports", "Generate and edit content", "Autofill content across hundreds of database rows at once", "Translate content into your language", "Create a database setup from scratch", "Sort and filter your email inbox (Notion Mail AI)", "Terms & privacy", "Your privacy rights", "iOS & Android", "Mac & Windows"],
+    features: ["Writing assistance", "Summarization", "Translation", "Brainstorming", "Action items extraction", "Inline in documents"],
     alternatives: ["chatgpt", "claude", "wordtune"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -124,8 +102,6 @@ export const toolsBatch1: Tool[] = [
     sponsored: false,
     features: ["40+ use cases", "30+ languages", "20+ tones", "Plagiarism checker", "SEO analyzer", "Chrome extension"],
     alternatives: ["jasper", "copy-ai", "writesonic"],
-    websiteStatus: "error",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -139,19 +115,10 @@ export const toolsBatch1: Tool[] = [
     tags: ["writing", "rewriting", "editing", "paraphrasing", "productivity"],
     pricing: "freemium",
     pricingDetails: "Free tier. Plus $9.99/mo, Unlimited $14.99/mo, Business custom",
-  pricingTiers: [
-    { name: "Basic", price: "$0.00", features: ["10 Rewrites & AI suggestions", "AI generations", "3 AI summarizations", "Spelling corrections", "Grammar checks"] },
-    { name: "Advanced", price: "$6.99$4.89per month/  billed annually", features: ["30 Rewrites & AI suggestions", "15 AI summarizations", "AI recommendations", "Spelling corrections", "Grammar checks"] },
-    { name: "Unlimited", price: "-50%", features: ["Rewrites & AI suggestions", "AI summarizations", "Spelling corrections", "Grammar checks", "Vocabulary enhancements", "Clarity improvements", "Fluency increases", "Premium support"] }
-  ],
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.prod.website-files.com/5f7e0f9d75fee6f6f546df46/66bc50ae0f2962888d8e06a2_OG%20-%20HOME%20PAGE%20.png",
-    screenshotUrl: "https://cdn.prod.website-files.com/5f7e0f9d75fee6f6f546df46/66bc50ae0f2962888d8e06a2_OG%20-%20HOME%20PAGE%20.png",
-    features: ["Privacy policy", "Terms of service", "Help center", "Student discount", "Paraphrasing tool", "Grammar checker", "Proofreading tool", "Chrome extension", "Microsoft Edge extension", "Wordtune for iOS", "Wordtune for business"],
+    features: ["Sentence rewriting", "Tone adjustment", "Shorten/expand", "Spices (facts)", "Browser extension", "Multi-platform"],
     alternatives: ["grammarly", "quillbot", "notion-ai"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
 
@@ -159,7 +126,7 @@ export const toolsBatch1: Tool[] = [
   {
     name: "DALL-E 3",
     slug: "dall-e",
-    description: "DALL·E 3 understands significantly more nuance and detail than our previous systems, allowing you to easily translate your ideas into exceptionally accurate images."s latest image generation model with exceptional prompt adherence and detail. DALL-E 3 creates highly accurate images from text descriptions, integrated into ChatGPT Plus and available via API.",
+    description: "OpenAI's latest image generation model with exceptional prompt adherence and detail. DALL-E 3 creates highly accurate images from text descriptions, integrated into ChatGPT Plus and available via API.",
     shortDescription: "OpenAI's advanced text-to-image generator",
     url: "https://openai.com/dall-e-3",
     category: "image-generation",
@@ -169,12 +136,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Included in ChatGPT Plus $20/mo. API $0.04-$0.12 per image",
     featured: false,
     sponsored: false,
-    logoUrl: "https://images.ctfassets.net/kftzwdyauwt9/oTUHVfoemkHiNasFEeEEB/101442a48b1e9ee0998a5df6bafa1e26/oai-dalle.png?w=1600&h=900&fit=fill",
-    screenshotUrl: "https://images.ctfassets.net/kftzwdyauwt9/oTUHVfoemkHiNasFEeEEB/101442a48b1e9ee0998a5df6bafa1e26/oai-dalle.png?w=1600&h=900&fit=fill",
     features: ["High prompt accuracy", "ChatGPT integration", "Multiple aspect ratios", "Editing via conversation", "Commercial use rights", "API access"],
     alternatives: ["midjourney", "stable-diffusion", "leonardo-ai"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -190,75 +153,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free to run locally. Cloud APIs from $0.002/image",
     featured: false,
     sponsored: false,
-    logoUrl: "http://static1.squarespace.com/static/6213c340453c3f502425776e/t/67c8ab8bd73fa87a480d8a2b/1728899860281/Artboard+9.png?format=1500w",
-    screenshotUrl: "http://static1.squarespace.com/static/6213c340453c3f502425776e/t/67c8ab8bd73fa87a480d8a2b/1728899860281/Artboard+9.png?format=1500w",
-    features: ["Versatile styles
-      
-
-      
-        
-          Generate a wide range of image styles like 3D, photography, painting, line art, and more.", "Prompt Adherence
-      
-
-      
-        
-          Take advantage of market-leading prompt adherence, rivaling much larger models.", "Diverse Outputs
-      
-
-      
-        
-          Produce images that represent a diversity of people and scenes around the world.", "Self-Hosted License
-      
-
-      
-        
-          Deploy our models in your environment for advanced customization.
-        
-      
-
-    
-  
-
-  
-    
-
-      
-        Get license", "Stability AI API
-      
-
-      
-        
-          Seamlessly integrate our models and editing tools into your custom-built applications.
-        
-      
-
-    
-  
-
-  
-    
-
-      
-        Use API", "Stable Assistant
-      
-
-      
-        
-          Access all of our models and editing tools from a web-based creative platform.
-        
-      
-
-    
-  
-
-  
-    
-
-      
-        Start creating"],
+    features: ["Run locally", "Custom models", "LoRA support", "ControlNet", "Inpainting/outpainting", "Commercial license"],
     alternatives: ["midjourney", "dall-e", "leonardo-ai"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -276,8 +172,6 @@ export const toolsBatch1: Tool[] = [
     sponsored: false,
     features: ["Consistent characters", "Game asset generation", "Custom models", "Canvas editor", "Upscaling", "Background removal"],
     alternatives: ["midjourney", "dall-e", "stable-diffusion"],
-    websiteStatus: "error",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -295,8 +189,6 @@ export const toolsBatch1: Tool[] = [
     sponsored: false,
     features: ["Text rendering", "Magic Prompt", "Image remix", "Multiple styles", "Private generation", "Commercial license"],
     alternatives: ["midjourney", "dall-e", "canva-ai"],
-    websiteStatus: "error",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -312,18 +204,14 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier on Replicate. Pro tiers from $10/mo on various platforms",
     featured: false,
     sponsored: false,
-    logoUrl: "https://bfl.ai/opengraph-image-j8qpfc.png?47e2121a0eb4d5b0",
-    screenshotUrl: "https://bfl.ai/opengraph-image-j8qpfc.png?47e2121a0eb4d5b0",
-    features: ["Open Weights", "Premium Quality", "Ease of Use", "Built for scale", "Full model access", "Deploy anywhere", "Customizable", "Customization", "Try instantly", "No code required", "Explore and experiment"],
+    features: ["Photorealistic output", "Fast generation", "Multiple variants", "Style control", "High resolution", "API access"],
     alternatives: ["midjourney", "dall-e", "stable-diffusion"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
     name: "Adobe Firefly",
     slug: "adobe-firefly",
-    description: "Sign in to Adobe Firefly, the AI-powered app for generating image, video, and audio content that stands out."s AI image generator designed for commercial safety and Creative Cloud integration. Firefly creates images, text effects, and generative fills trained only on licensed content, ensuring copyright safety.",
+    description: "Adobe's AI image generator designed for commercial safety and Creative Cloud integration. Firefly creates images, text effects, and generative fills trained only on licensed content, ensuring copyright safety.",
     shortDescription: "Adobe's commercially-safe AI image generator",
     url: "https://firefly.adobe.com",
     category: "image-generation",
@@ -333,10 +221,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 25 credits/mo. Premium $4.99/mo, Creative Cloud included",
     featured: false,
     sponsored: false,
-    logoUrl: "https://firefly.adobe.com/fi_favicon.ico?v=3",
     features: ["Generative fill", "Text effects", "Recoloring", "Licensed content training", "Photoshop integration", "Commercial safe"],
     alternatives: ["midjourney", "dall-e", "canva-ai"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -354,8 +240,6 @@ export const toolsBatch1: Tool[] = [
     sponsored: false,
     features: ["Text-to-image", "Magic Eraser", "Background remover", "Brand kit", "Templates", "Team collaboration"],
     alternatives: ["adobe-firefly", "ideogram", "leonardo-ai"],
-    websiteStatus: "error",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
 
@@ -363,7 +247,7 @@ export const toolsBatch1: Tool[] = [
   {
     name: "Runway",
     slug: "runway",
-    description: "We are building foundational General World Models that will be capable of simulating all possible worlds and experiences. The next frontier of intelligence will come from models that can understand, perceive, generate and act in the world.",
+    description: "Professional AI video generation and editing platform for filmmakers and creators. Runway offers Gen-2 video generation, motion brush, inpainting, and 30+ AI magic tools for creative video production.",
     shortDescription: "Professional AI video generation and editing suite",
     url: "https://runwayml.com",
     category: "video",
@@ -373,11 +257,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 125 credits. Standard $12/user/mo, Pro $28/user/mo, Unlimited $76/user/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://runwayml.com/opengraph-image.png?opengraph-image.e277c978.png",
-    screenshotUrl: "https://runwayml.com/opengraph-image.png?opengraph-image.e277c978.png",
-    features: ["Explore examples", "General World Models", "Robotics SDK", "AI Summit 2026 ↗", "AI Film Festival ↗", "Telescope Magazine ↗", "Creative Partners Program", "The Hundred Film Fund", "Our Research", "Publications", "Customer Stories", "Talent Network ↗"],
+    features: ["Gen-2 video generation", "Motion brush", "Inpainting", "Green screen", "Super-slow motion", "30+ AI tools"],
     alternatives: ["pika", "synthesia", "heygen"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -393,11 +274,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 30 videos/mo. Standard $10/mo, Unlimited $35/mo, Pro $70/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://pika-9u8cxaoxu-pika-labs.vercel.app/images/og.jpeg",
-    screenshotUrl: "https://pika-9u8cxaoxu-pika-labs.vercel.app/images/og.jpeg",
     features: ["Text-to-video", "Image-to-video", "Modify region", "Extend video", "Camera controls", "Lip sync"],
     alternatives: ["runway", "heygen", "synthesia"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -413,12 +291,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Starter $29/mo, Creator $89/mo, Enterprise custom pricing",
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/67dad5d5c238a51c2327e203_OG-Image_2025.jpg",
-    screenshotUrl: "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/67dad5d5c238a51c2327e203_OG-Image_2025.jpg",
-    features: ["Add AI Avatars: Choose from a diverse selection of AI avatars to make your videos more engaging and inclusive.", "Create Instant Voiceovers: Convert your scripts into high-quality voiceovers in hundreds of natural-sounding AI voices.", "Edit Videos: Use pre-designed templates and AI assistance to transform documents, PDFs, website links or ideas into polished videos.", "Team Collaboration: Work together in real-time and manage projects in shared workspaces.", "Translate and localize in 1 click: Automatically translate videos into 160+ languages to reach your audience worldwide."],
+    features: ["140+ AI avatars", "120+ languages", "Custom avatars", "Screen recording", "Video templates", "Team collaboration"],
     alternatives: ["heygen", "descript", "runway"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -434,12 +308,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 1 video/mo. Creator $29/mo, Business $89/mo, Enterprise custom",
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.sanity.io/images/pdhqcmb1/production/579e83ff34c4c832744efaedb9681d255e58dc13-1200x630.png?fit=max&auto=format",
-    screenshotUrl: "https://cdn.sanity.io/images/pdhqcmb1/production/579e83ff34c4c832744efaedb9681d255e58dc13-1200x630.png?fit=max&auto=format",
-    features: ["Pricing Plans", "API Pricing", "Video Avatar", "Talking Photo AI", "Video Translator", "Localization", "AI Video Generator", "AI Avatar Generator", "AI Voice Cloning", "AI Podcast Generator", "Text to Video", "Image to Video"],
+    features: ["100+ AI avatars", "Voice cloning", "Video translation", "Custom avatars", "Templates", "API access"],
     alternatives: ["synthesia", "descript", "runway"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -453,19 +323,10 @@ export const toolsBatch1: Tool[] = [
     tags: ["video editing", "podcast", "transcription", "audio editing", "productivity"],
     pricing: "freemium",
     pricingDetails: "Free tier 1hr transcription/mo. Hobbyist $12/mo, Creator $24/mo, Business $40/user/mo",
-  pricingTiers: [
-    { name: "pricingDetails: "Free tier 1hr transcription/mo. Hobbyist $12/mo, Creator $24/mo, Business $40/user/mo",6", price: "pricingDetails: "Free tier 1hr transcription/mo. Hobbyist $12/mo, Creator $24/mo, Business $40/user/mo",6.css-1hjugu5.builder-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;box-sizing:border-box;}@media only screen and (max-width:1199px){.css-1hjugu5.builder-block{margin-top:6px;}}@media only screen and (max-width:767px){.css-1hjugu5.builder-block{margin-top:16px;}}$24", features: ["pricingDetails: "Free tier 1hr transcription/mo. Hobbyist $12/mo, Creator $24/mo, Business $40/user/mo",6", "$24"] },
-    { name: "$24", price: ".css-s81g43.builder-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;box-sizing:border-box;}$24$35", features: ["$24", "$35"] },
-    { name: "$50", price: "$50$65", features: ["$50", "$65"] }
-  ],
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2Fb1cf2c175fbe4a028dff4622ee1ce727",
-    screenshotUrl: "https://cdn.builder.io/api/v1/image/assets%2Ffcea5005d671451e9b07839c893228d0%2Fb1cf2c175fbe4a028dff4622ee1ce727",
-    features: ["Video editingEditing video in Descript is as easy as using docs and slides.", "PodcastingMultitrack audio editing, just like editing text.", "Screen recorderCapture your screen for instant sharing or polished B-roll.", "RoomsRecord crystal-clear podcasts and video with anyone, anywhere.", "CaptionsAdd subtitles to extend your reach in a single click.", "Generate mediaCreate bespoke, custom video and images from a prompt.", "TranscriptionIt’s automatic, with industry-leading accuracy & speed.", "AI speechEasily create a realistic voice clone or pick from our stock AI voices.", "TemplatesJumpstart your workflow with battle-tested AI templates.", "AI avatarsPick an avatar from our gallery or upload a photo to create your own.", "Market / Promote", "Create Clips"],
+    features: ["Text-based editing", "Studio sound", "Filler word removal", "AI voices", "Screen recording", "Collaboration"],
     alternatives: ["runway", "capcut", "invideo"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -481,10 +342,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier with watermark. Plus $20/mo, Max $60/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://invideo.io/favicon.ico",
-    features: ["Replacing the cat", "Mixing the new audio layer", "Adding voiceover to the video", "Adding captions", "AI Video Generator", "AI Avatar Generator", "Text to Video", "Image to Video", "AI Animation Generator", "AI Ad Generator", "Google Veo 3.1", "Pixverse AI"],
+    features: ["5000+ templates", "8M+ stock media", "Text-to-video", "AI script writer", "Brand presets", "Automated subtitles"],
     alternatives: ["runway", "synthesia", "capcut"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -500,12 +359,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Pro $9.99/mo with cloud storage and premium features",
     featured: false,
     sponsored: false,
-    logoUrl: "https://p16-seeyou-useast5.capcutcdn-us.com/tos-useast5-i-2zwwjm3azk-tx/af60401275b14f6684c2af1f7564d717~tplv-2zwwjm3azk-image.image",
-    screenshotUrl: "https://p16-seeyou-useast5.capcutcdn-us.com/tos-useast5-i-2zwwjm3azk-tx/af60401275b14f6684c2af1f7564d717~tplv-2zwwjm3azk-image.image",
-    features: ["AI video makerA quick chat with CapCut's AI video editor and it'll build a video from scratch, style, avatar, everything.", "AI dialogue sceneWant your photos to talk, sing, or react? CapCut's video editor makes creating dialogue scenes effortless.", "AI video generatorTurn text, images, or keyframes into videos with the smartest online video editor you've ever used.", "AI image generatorTurn text or reference images into custom, stunning visuals with CapCut's powerful online photo editor.", "Dreamina AIGot a simple prompt? Try CapCut's AI-powered video creation for stunning AI art and cinematic video.", "Pippit AIThe viral video generator that turns text, links, images, or anything into ready-to-post videos.", "AI video maker", "AI dialogue scene", "AI video generator", "AI image generator", "Dreamina AI", "AI caption generatorAdd accurate, perfectly timed captions to your videos with CapCut's powerful AI caption generator."],
+    features: ["Auto captions", "Background removal", "AI upscaling", "Color correction", "Templates", "TikTok integration"],
     alternatives: ["descript", "runway", "invideo"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
 
@@ -523,11 +378,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 10K chars/mo. Starter $5/mo, Creator $22/mo, Pro $99/mo, Enterprise custom",
     featured: false,
     sponsored: false,
-    logoUrl: "https://elevenlabs.io/cover.png",
-    screenshotUrl: "https://elevenlabs.io/cover.png",
     features: ["Voice cloning", "29 languages", "Emotion control", "Audio projects", "API access", "Commercial license"],
     alternatives: ["murf-ai", "resemble-ai", "speechify"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -543,11 +395,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free trial. Basic $19/mo, Pro $26/mo, Enterprise $83/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn.prod.website-files.com/66b3765153a8a0c399c70981/670584e2dab709883eed3793_Home.webp",
-    screenshotUrl: "https://cdn.prod.website-files.com/66b3765153a8a0c399c70981/670584e2dab709883eed3793_Home.webp",
     features: ["120+ voices", "20+ languages", "Voice cloning", "Video sync", "Pitch control", "Collaboration"],
     alternatives: ["elevenlabs", "resemble-ai", "speechify"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -563,12 +412,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 50 credits/day. Pro $10/mo, Premier $30/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://cdn-o.suno.com/meta-preview.jpg",
-    screenshotUrl: "https://cdn-o.suno.com/meta-preview.jpg",
     features: ["Full song generation", "Vocals and lyrics", "Any music style", "2-minute songs", "Commercial license", "Extend songs"],
     alternatives: ["udio", "soundraw", "aiva"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -584,12 +429,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 1200 credits/mo. Standard $10/mo, Pro $30/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://imagedelivery.net/C9yUr1FL21Q6JwfYYh2ozQ/1647e9a2-47d6-4d95-5ae0-02bae7a44000/public",
-    screenshotUrl: "https://imagedelivery.net/C9yUr1FL21Q6JwfYYh2ozQ/1647e9a2-47d6-4d95-5ae0-02bae7a44000/public",
     features: ["High-quality music", "Vocals and lyrics", "Genre control", "Extend tracks", "Remix", "Commercial use"],
     alternatives: ["suno", "soundraw", "aiva"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -605,11 +446,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier limited voices. Premium $11.58/mo annual",
     featured: false,
     sponsored: false,
-    logoUrl: "https://website.cdn.speechify.com/speechify-og-image.jpg?quality=95",
-    screenshotUrl: "https://website.cdn.speechify.com/speechify-og-image.jpg?quality=95",
-    features: ["Speechify is absolutely brilliant. Growing up with dyslexia this would have made a big difference. I’m so glad to have it today.Sir Richard Branson, Business Magnate", "best app evaaa I use it because my head be scrambling up words, so I scan pages off books and work, and boom!!!! It works so well I love it. ♥️ ♥️ ♥️♥️K", "Speechify makes it easy to learn at 2x or even 3x the speed you read with your eyes.Gwyneth Paltrow, Actress and Businesswoman", "I used to hate school because I'd spend hours just trying to read the assignments. Listening has been totally life changing. This app saved my education.Ana", "This made my job 10x easier. I read scripts, conversations, and other text files all day, and this made it a lot easier to retain and wayyyyy faster. Thanks y’all! SERRIANKING82", "If there’s one hill I’m going to die on, it’s that speed listening is the best way forward. Speechify is a game-changer for me.Ali Abdaal, most followed Productivity Expert in the world.", "Mighty be one of the GOAT apps This is probably top 5 of greatest apps ever, you can literally read alone an entire book in a day. Easily worth the cost of the app.TJV 34", "Excellent for comprehending medical textbooks more quickly and thoroughly!! This is awesome for keeping up with latest surgical techniques and technology.Dr.K", "I am a resident and this app saves me a ton of time. I listen to PDF’s while walking to clinic, running, making coffee in the morning. THEODOTA", "Miracle reader. Been looking for a program like this to proof read my work. Allows me to develop a personalized style of reading. Love it!VACA-YOGI"],
+    features: ["Natural voices", "Speed control", "Cross-platform", "Scan documents", "PDF reading", "Chrome extension"],
     alternatives: ["elevenlabs", "murf-ai", "naturalreader"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -627,8 +465,6 @@ export const toolsBatch1: Tool[] = [
     sponsored: false,
     features: ["AI host voices", "Natural dialogue", "Topic generation", "Sound effects", "Background music", "Export ready"],
     alternatives: ["elevenlabs", "descript", "resemble-ai"],
-    websiteStatus: "error",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -642,18 +478,10 @@ export const toolsBatch1: Tool[] = [
     tags: ["voice cloning", "text-to-speech", "api", "enterprise", "real-time"],
     pricing: "paid",
     pricingDetails: "Pay-as-you-go $0.006/sec. Pro plans from $99/mo, Enterprise custom",
-  pricingTiers: [
-    { name: "Flex Plan", price: "$0 to start Load credits and pay for what you use", features: ["Pay per consumption based on usage Credits never expire Access to all voice models Voice cloning capabilities Deepfake detection access Full API access Add team seats & voices as needed", "Pay per consumption based on usage", "Credits never expire", "Access to all voice models", "Voice cloning capabilities", "Deepfake detection access", "Full API access", "Add team seats & voices as needed"] },
-    { name: "Enterprise", price: "Custom Pricing Tailored to your requirements", features: ["Volume discounts up to 80% Higher concurrency limits Enterprise SLAs & SOC 2 Custom model training SSO / SAML authentication Dedicated support On-premise deployment", "Volume discounts up to 80%", "Higher concurrency limits", "Enterprise SLAs & SOC 2", "Custom model training", "SSO / SAML authentication", "Dedicated support", "On-premise deployment"] }
-  ],
     featured: false,
     sponsored: false,
-    logoUrl: "https://www.resemble.ai/wp-content/uploads/2025/06/resemble-16x9-1-scaled.jpg",
-    screenshotUrl: "https://www.resemble.ai/wp-content/uploads/2025/06/resemble-16x9-1-scaled.jpg",
-    features: ["Full API access to all models", "Voice cloning & deepfake detection", "Per-second billing, credits never expire", "Add team seats & voices as needed", "No minimums, no commitments", "Volume discounts up to 80%", "On-premise & air-gapped deployment", "Enterprise SLAs & SOC 2", "SSO / SAML & custom model training", "Dedicated support & success team"],
+    features: ["Real-time voice cloning", "Emotion control", "API access", "Localization", "Neural audio editing", "Custom voices"],
     alternatives: ["elevenlabs", "murf-ai", "play-ht"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
 
@@ -661,7 +489,7 @@ export const toolsBatch1: Tool[] = [
   {
     name: "Gemini",
     slug: "gemini",
-    description: "Meet Gemini, Google’s AI assistant. Get help with writing, planning, brainstorming, and more. Experience the power of generative AI."s multimodal AI assistant with deep integration across Google services. Gemini handles text, images, code, and complex reasoning with access to Google Search, Gmail, Drive, and other workspace tools.",
+    description: "Google's multimodal AI assistant with deep integration across Google services. Gemini handles text, images, code, and complex reasoning with access to Google Search, Gmail, Drive, and other workspace tools.",
     shortDescription: "Google's multimodal AI with workspace integration",
     url: "https://gemini.google.com",
     category: "chatbots",
@@ -671,17 +499,14 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Advanced $19.99/mo with Gemini Ultra and 2TB storage",
     featured: false,
     sponsored: false,
-    logoUrl: "https://www.gstatic.com/lamda/images/gemini_aurora_thumbnail_4g_e74822ff0ca4259beb718.png",
-    screenshotUrl: "https://www.gstatic.com/lamda/images/gemini_aurora_thumbnail_4g_e74822ff0ca4259beb718.png",
     features: ["Google Search integration", "Gmail/Drive access", "Image understanding", "Code generation", "Multimodal input", "Extensions"],
     alternatives: ["chatgpt", "claude", "copilot"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
     name: "Microsoft Copilot",
     slug: "copilot",
-    description: "Microsoft Copilot is your companion to inform, entertain and inspire. Get advice, feedback and straightforward answers. Try Copilot now."s AI assistant integrated across Windows, Edge, and Microsoft 365. Copilot provides conversational AI with web search, image generation, and deep integration with Office apps.",
+    description: "Microsoft's AI assistant integrated across Windows, Edge, and Microsoft 365. Copilot provides conversational AI with web search, image generation, and deep integration with Office apps.",
     shortDescription: "Microsoft's AI assistant for Windows and Office",
     url: "https://copilot.microsoft.com",
     category: "chatbots",
@@ -691,11 +516,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Pro $20/mo with GPT-4 Turbo and priority access",
     featured: false,
     sponsored: false,
-    logoUrl: "https://copilot.microsoft.com/static/cmc/images/meta-image.jpg",
-    screenshotUrl: "https://copilot.microsoft.com/static/cmc/images/meta-image.jpg",
     features: ["Windows integration", "Office 365 integration", "Web search", "Image generation", "Voice input", "Edge browser"],
     alternatives: ["chatgpt", "gemini", "claude"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -713,8 +535,6 @@ export const toolsBatch1: Tool[] = [
     sponsored: false,
     features: ["Emotional intelligence", "Voice conversation", "Personal guidance", "Memory of past chats", "Mobile apps", "Always available"],
     alternatives: ["replika", "character-ai", "claude"],
-    websiteStatus: "error",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -730,11 +550,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. c.ai+ $9.99/mo with priority access and faster responses",
     featured: false,
     sponsored: false,
-    logoUrl: "https://character.ai/character-ai.jpg",
-    screenshotUrl: "https://character.ai/character-ai.jpg",
     features: ["Create characters", "Celebrity personalities", "Group chats", "Image generation", "Voice chat", "Community sharing"],
     alternatives: ["replika", "pi", "poe"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -752,8 +569,6 @@ export const toolsBatch1: Tool[] = [
     sponsored: false,
     features: ["Multiple AI models", "Model comparison", "Create custom bots", "Bot marketplace", "API access", "Mobile apps"],
     alternatives: ["chatgpt", "claude", "gemini"],
-    websiteStatus: "error",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -769,17 +584,14 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Pro $19.99/mo or $69.99/yr with voice calls and activities",
     featured: false,
     sponsored: false,
-    logoUrl: "https://1716637182.rsc.cdn77.org/web/main-page/replika_og_image.png",
-    screenshotUrl: "https://1716637182.rsc.cdn77.org/web/main-page/replika_og_image.png",
-    features: ["Create an account", "Get the app", "Chat about everythingThe more you talk to Replika, the smarter it becomes", "Explore your relationshipA friend, a partner, or a mentor – find the perfect companion in Replika", "Explore the world together in ARShare precious moments with your AI friend in real time", "VideocallsCall up anytime to see a friendly face", "CoachingBuild better habits and reduce anxiety", "MemoryReplika never forgets what’s important to you", "Express yourselfChoose what interests and style preferences you and Replika will share", "DiaryTake a glimpse into your Replika’s inner world", "What is an AI?AI stands for Artificial Intelligence. It means that every time you get a reply from Replika, you interact with a sophisticated neural network machine learning algorithm.", "Are my conversations private?Your conversations are private and will stay between you and your Replika."],
+    features: ["Personalized responses", "Voice calls", "Diary entries", "Mood tracking", "Activities", "3D avatar"],
     alternatives: ["pi", "character-ai", "claude"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
     name: "Inflection AI",
     slug: "inflection",
-    description: "Inflection AI is pioneering the future with human-centered, emotionally intelligent AI that transforms interactions from transactional to reltational, creating enduring value for individuals and enterprises alike.",
+    description: "AI studio behind Pi, focused on building emotionally intelligent AI. Inflection develops conversational AI models and products that prioritize empathy, safety, and meaningful human-AI interaction.",
     shortDescription: "Emotionally intelligent AI models and platform",
     url: "https://inflection.ai",
     category: "chatbots",
@@ -789,11 +601,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free via Pi chatbot",
     featured: false,
     sponsored: false,
-    logoUrl: "https://framerusercontent.com/assets/dELlwRcDEwEiERVeZehp3U2p7o4.png",
-    screenshotUrl: "https://framerusercontent.com/assets/dELlwRcDEwEiERVeZehp3U2p7o4.png",
     features: ["Emotional intelligence", "Safety-focused", "Multi-turn dialogue", "Personal context", "Research-driven", "Ethical AI"],
     alternatives: ["openai", "anthropic", "google-ai"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
 
@@ -809,33 +618,10 @@ export const toolsBatch1: Tool[] = [
     tags: ["coding", "ai assistant", "github", "code completion", "ide"],
     pricing: "paid",
     pricingDetails: "Individual $10/mo, Business $19/user/mo, Enterprise $39/user/mo",
-  pricingTiers: [
-    { name: "Free", price: "$
-            0
-            USD
-        
-        
-          per month", features: [] },
-    { name: "Team", price: "$
-            4
-            USD
-        
-        
-          per user/month", features: ["Everything included in Free, plus..."] },
-    { name: "Enterprise", price: "$
-            21
-            USD
-        
-        
-          per user/month", features: ["Everything included in Team, plus..."] }
-  ],
     featured: false,
     sponsored: false,
-    logoUrl: "https://images.ctfassets.net/8aevphvgewt8/5IdZ8KizWhMOGixAmVSw0g/f81f5f263a88eabe5d3e102300d44a88/github-copilot-social-img.png",
-    screenshotUrl: "https://images.ctfassets.net/8aevphvgewt8/5IdZ8KizWhMOGixAmVSw0g/f81f5f263a88eabe5d3e102300d44a88/github-copilot-social-img.png",
-    features: ["50 agent mode or chat requests per month", "2,000 completions per month", "Access to Haiku 4.5, GPT-5 mini, and more", "Copilot coding agent", "Copilot code review", "Unlimited agent mode and chats with GPT-5 mini", "Unlimited code completions", "Access to models from Anthropic, Google, OpenAI, and more", "300 premium requests to use latest models, with the option to buy more", "Claude and Codex on GitHub and VS Code", "Access to all models, including Claude Opus 4.6 (fast mode) and more", "5× as many premium requests as Pro to use the latest models, with the option to buy more"],
+    features: ["Code suggestions", "Multi-file context", "Chat in IDE", "CLI assistance", "Security scanning", "Multi-language"],
     alternatives: ["cursor", "windsurf", "tabnine"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -851,12 +637,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Pro $15/mo with unlimited AI usage",
     featured: false,
     sponsored: false,
-    logoUrl: "https://exafunction.github.io/public/images/website_thumbnails/editor.jpg",
-    screenshotUrl: "https://exafunction.github.io/public/images/website_thumbnails/editor.jpg",
-    features: ["Windsurf Editor", "Windsurf for Enterprise", "JetBrains Plugin", "Partnerships", "Terms of Service", "Privacy Policy", "Windsurf for Government", "Feature Requests", "Windsurf vs Cursor", "Windsurf vs Copilot", "2025 Gartner Magic Quadrant", "Upcoming Events"],
+    features: ["Agentic flows", "Real-time suggestions", "Multi-file edits", "Terminal integration", "Context awareness", "Fast autocomplete"],
     alternatives: ["cursor", "github-copilot", "supermaven"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -870,16 +652,10 @@ export const toolsBatch1: Tool[] = [
     tags: ["coding", "ai assistant", "enterprise", "privacy", "security"],
     pricing: "freemium",
     pricingDetails: "Free tier. Pro $12/user/mo, Enterprise custom with on-prem",
-  pricingTiers: [
-    { name: "Products", price: "59", features: ["ProductsTabnine AI Coding PlatformEnterprise Context Engine", "Tabnine AI Coding Platform", "Enterprise Context Engine", "The Tabnine Agentic Platform – Org-Native AI Agents that plan & execute workflows with enterprise context", "Industry-leading  AI code assistant – Ship better software faster with the original AI developer tool", "Al chat that supports the entire SDLC – Improve your code with AI-powered chat at every stage of development", "AI personalized to you and your team – Get context-aware coding assistance fit to your org and projects", "Total code privacy & zero data retention – Secure the confidentiality and integrity of your codebase"] }
-  ],
     featured: false,
     sponsored: false,
-    logoUrl: "https://www.tabnine.com/wp-content/uploads/2024/09/cropped-tabnine-favicon-32x32.png",
-    features: ["ProductsTabnine AI Coding PlatformEnterprise Context Engine", "Tabnine AI Coding Platform", "Enterprise Context Engine", "The Tabnine Agentic Platform – Org-Native AI Agents that plan & execute workflows with enterprise context", "Industry-leading  AI code assistant – Ship better software faster with the original AI developer tool", "Al chat that supports the entire SDLC – Improve your code with AI-powered chat at every stage of development", "AI personalized to you and your team – Get context-aware coding assistance fit to your org and projects", "Total code privacy & zero data retention – Secure the confidentiality and integrity of your codebase", "Complete protection from IP issues – Ensure copyright compliance with code scanning and license-compliant models", "PricingAI Coding Platform – AI chat completions and agentic workflows for software developmentEnterprise Context Engine – Organizational intelligence that gives agents system-level understanding", "AI Coding Platform – AI chat completions and agentic workflows for software development", "Enterprise Context Engine – Organizational intelligence that gives agents system-level understanding"],
+    features: ["Code completion", "Chat assistant", "Test generation", "On-premises option", "Permissive training data", "Multi-IDE support"],
     alternatives: ["github-copilot", "cursor", "windsurf"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -895,11 +671,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Replit Core $15/mo, Teams $33/user/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://replit.com/public/images/opengraph.png",
-    screenshotUrl: "https://replit.com/public/images/opengraph.png",
-    features: ["ProductsAgentDesignDatabasesPublish AppsSecurityIntegrationsMobile", "Publish Apps", "Integrations", "ResourcesDocumentationCommunityExpert NetworkCustomer StoriesGalleryBlogNews", "Documentation", "Expert Network", "Customer Stories", "Vibe Coding 101", "How to guides", "Import from GitHub", "Additional resources", "Certifications"],
+    features: ["AI code generation", "Instant deployment", "Collaborative coding", "Built-in database", "Ghostwriter chat", "Multi-language"],
     alternatives: ["github-copilot", "v0", "bolt"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -915,12 +688,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier 200 credits/mo. Premium $20/mo unlimited generations",
     featured: false,
     sponsored: false,
-    logoUrl: "https://v0.app/chat/api/og",
-    screenshotUrl: "https://v0.app/chat/api/og",
     features: ["React code generation", "Tailwind CSS", "shadcn/ui components", "Copy/paste ready", "Iterative refinement", "Dark mode"],
     alternatives: ["bolt", "replit", "cursor"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -936,11 +705,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier limited. Pro from $20/mo with more generations",
     featured: false,
     sponsored: false,
-    logoUrl: "https://bolt.new/static/social_preview_index.jpg",
-    screenshotUrl: "https://bolt.new/static/social_preview_index.jpg",
     features: ["Full-stack generation", "Instant preview", "Database integration", "Package installation", "Git integration", "Export code"],
     alternatives: ["v0", "replit", "cursor"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -956,11 +722,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Enterprise only - custom pricing",
     featured: false,
     sponsored: false,
-    logoUrl: "https://devin.ai/cover.png",
-    screenshotUrl: "https://devin.ai/cover.png",
-    features: ["1  Ticket Integrate Slack, Teams, Linear, and Jira", "2  Plan Quickly review Devin's proposal", "3  Test Devin tests changes by itself", "4  PR Review changes natively", "Ticket Integrate Slack, Teams, Linear, and Jira", "Plan Quickly review Devin's proposal", "Test Devin tests changes by itself", "PR Review changes natively", "Language migrations", "Version upgrades", "Codebase restructuring", "Data warehouse migrations"],
+    features: ["Autonomous coding", "End-to-end projects", "Debug and test", "Learn new technologies", "Long-term planning", "API integration"],
     alternatives: ["cursor", "github-copilot", "replit"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
 
@@ -968,7 +731,7 @@ export const toolsBatch1: Tool[] = [
   {
     name: "Surfer SEO",
     slug: "surfer-seo",
-    description: "Use Surfer to research, audit, write, optimize and generate SEO optimized articles in 20 minutes. Everything you need to create a comprehensive content strategy that yields real results is a click away with Surfer!",
+    description: "AI-powered SEO optimization platform for content creation and ranking. Surfer analyzes top-ranking pages and provides data-driven recommendations for keywords, structure, and on-page optimization.",
     shortDescription: "Data-driven SEO content optimization platform",
     url: "https://surferseo.com",
     category: "marketing",
@@ -978,11 +741,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Essential $89/mo, Scale $129/mo, Scale AI $219/mo, Enterprise custom",
     featured: false,
     sponsored: false,
-    logoUrl: "https://assets.surferseo.art/webflow-scripts/assets/og/basic.jpg",
-    screenshotUrl: "https://assets.surferseo.art/webflow-scripts/assets/og/basic.jpg",
-    features: ["AI Search Optimization Masterclass: Free, hands-on, practical course", "Brand Knowledge: Teach Surfer your business context to stay on-brand", "AI Tracker Upgrade: More AI visibility insights and comparison features", "Refresh alerts: Never miss a quick-win opportunity to regain rankings", "...and much more inside!"],
+    features: ["Content editor", "Keyword research", "SERP analyzer", "AI outline", "Content audit", "Internal linking"],
     alternatives: ["semrush-ai", "clearscope", "frase"],
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
@@ -998,18 +758,14 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Pro $129.95/mo, Guru $249.95/mo, Business $499.95/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://static.semrush.com/wt-static/semrush-com.png",
-    screenshotUrl: "https://static.semrush.com/wt-static/semrush-com.png",
-    features: ["Uniting our leading traditional SEO tools with powerful AI search + GEO capabilities", "Measure and grow everywhere you’re discovered", "Analyze traffic on any website", "Track and benchmark competitors", "Gain actionable audience data", "Find billions of keywords with AI insights", "Analyze backlinks and traffic potential", "Run technical audits and track rankings", "Optimize your Google Business Profile", "Get your business listed in top directories", "Respond to customer reviews with AI", "Create SEO-ready content with AI"],
+    features: ["Keyword research", "Competitor analysis", "Content marketing", "Rank tracking", "Site audit", "AI writing"],
     alternatives: ["surfer-seo", "ahrefs", "moz"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
     name: "HubSpot AI",
     slug: "hubspot-ai",
-    description: "Breeze turns complex work into compelling growth. Scale your business, boost team productivity, and uncover insights that unite your company and customers."s CRM and marketing platform. HubSpot AI includes content generation, email writing, sales insights, and customer service automation integrated into the full marketing suite.",
+    description: "AI-powered features across HubSpot's CRM and marketing platform. HubSpot AI includes content generation, email writing, sales insights, and customer service automation integrated into the full marketing suite.",
     shortDescription: "AI features for CRM and marketing automation",
     url: "https://hubspot.com/artificial-intelligence",
     category: "marketing",
@@ -1019,12 +775,8 @@ export const toolsBatch1: Tool[] = [
     pricingDetails: "Free tier. Starter $15/mo, Professional $800/mo, Enterprise $3600/mo",
     featured: false,
     sponsored: false,
-    logoUrl: "https://wtcfns.hubspot.com/wt-api/social-sharing?domain=www.hubspot.com",
-    screenshotUrl: "https://wtcfns.hubspot.com/wt-api/social-sharing?domain=www.hubspot.com",
     features: ["Content generation", "Email assistant", "Chat insights", "Lead scoring", "Workflow automation", "CRM integration"],
     alternatives: ["salesforce-einstein", "activecampaign", "marketo"],
-    websiteStatus: "redirect",
-    lastVerified: "2026-02-16",
     addedDate: "2026-02-14",
   },
   {
