@@ -1,27 +1,26 @@
-import { tools } from "@/data/tools";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best AI Tools for Marketing 2026 - Content, SEO, Social Media & Ads",
+  title: "Best AI Tools for Marketing 2026 — 15 Top Picks",
   description:
-    "Discover the best AI marketing tools in 2026. Jasper, Copy.ai, Surfer SEO, HubSpot AI, Canva AI, AdCreative.ai, and more. Automate content, boost ROI, scale campaigns.",
+    "The 15 best AI tools for marketing in 2026. From content creation and SEO to social media, email, video, and analytics — find the right AI tool to grow your marketing results.",
   keywords: [
+    "best AI tools for marketing",
     "AI marketing tools",
-    "AI content creation",
+    "AI tools for marketers",
+    "AI content marketing",
     "AI SEO tools",
-    "AI social media",
-    "AI ad creation",
-    "marketing automation",
-    "Jasper AI",
-    "Copy.ai",
-    "Surfer SEO",
-    "AI copywriting",
+    "AI social media tools",
+    "AI email marketing",
+    "marketing automation AI",
+    "Jasper AI marketing",
+    "HubSpot AI",
   ],
   openGraph: {
-    title: "Best AI Tools for Marketing 2026 - Content, SEO, Social Media & Ads",
+    title: "Best AI Tools for Marketing 2026 — 15 Top Picks",
     description:
-      "The ultimate guide to AI marketing tools. Compare Jasper, Copy.ai, Surfer SEO, HubSpot AI, and 15+ tools to scale your marketing.",
+      "Complete guide to the 15 best AI marketing tools covering content creation, SEO, social media, email, video, and analytics.",
     url: "https://aisotools.com/best-ai-tools-for-marketing",
     type: "article",
   },
@@ -32,429 +31,483 @@ export const metadata: Metadata = {
 
 interface MarketingTool {
   name: string;
-  slug: string;
+  slug?: string;
+  tagline: string;
   description: string;
-  category: string;
-  pricing: string;
-  pricingDetails: string;
-  strengths: string[];
-  weaknesses: string[];
   bestFor: string;
-  features: string[];
-  roi?: string;
+  pricing: string;
+  pros: string[];
+  cons: string[];
+  url: string;
+  highlight?: boolean;
 }
 
-const marketingTools: MarketingTool[] = [
+interface ToolCategory {
+  category: string;
+  icon: string;
+  description: string;
+  tools: MarketingTool[];
+}
+
+const marketingTools: ToolCategory[] = [
   {
-    name: "Jasper",
-    slug: "jasper",
-    description: "Enterprise-grade AI writing assistant for marketing teams. Create blog posts, ads, social content, and campaigns at scale.",
     category: "Content Creation",
-    pricing: "Paid",
-    pricingDetails: "Creator $49/mo, Teams $125/mo, Business custom",
-    strengths: [
-      "50+ marketing templates (ads, emails, blogs)",
-      "Brand voice customization",
-      "SEO mode with Surfer integration",
-      "Team collaboration features",
-      "Chrome extension for everywhere",
-      "High-quality long-form content",
+    icon: "✍️",
+    description: "AI writing assistants for blog posts, ad copy, landing pages, and more",
+    tools: [
+      {
+        name: "Jasper",
+        slug: "jasper",
+        tagline: "The enterprise AI writing platform",
+        description:
+          "Jasper is purpose-built for marketing teams, offering brand voice training, campaign workflows, and 50+ marketing templates. It's the go-to choice for scaling content production.",
+        bestFor: "Enterprise marketing teams needing consistent brand voice at scale",
+        pricing: "From $49/mo (Creator) · $125/mo (Pro) · Custom (Business)",
+        pros: [
+          "Brand voice training keeps outputs on-brand",
+          "Built-in SEO mode integrates with Surfer SEO",
+          "50+ marketing-specific templates",
+          "Team collaboration and approval workflows",
+        ],
+        cons: [
+          "Expensive compared to general writing tools",
+          "Requires prompt engineering to get best results",
+          "No free tier (7-day trial only)",
+        ],
+        url: "https://jasper.ai",
+        highlight: true,
+      },
+      {
+        name: "Copy.ai",
+        slug: "copy-ai",
+        tagline: "AI workflows for marketing teams",
+        description:
+          "Copy.ai has evolved from a simple copywriting tool into a full marketing workflow platform. Its GTM (Go-to-Market) AI automates repetitive content tasks across the entire funnel.",
+        bestFor: "Marketing teams building automated content workflows",
+        pricing: "Free (2,000 words/mo) · $49/mo (Starter) · $249/mo (Advanced)",
+        pros: [
+          "Generous free tier for small teams",
+          "GTM AI workflow automation",
+          "90+ copywriting templates",
+          "Integrates with HubSpot, Salesforce, Zapier",
+        ],
+        cons: [
+          "Output quality varies by use case",
+          "Workflow builder has learning curve",
+          "Advanced features require paid tier",
+        ],
+        url: "https://copy.ai",
+        highlight: true,
+      },
+      {
+        name: "Grammarly",
+        slug: "grammarly",
+        tagline: "AI writing quality and clarity",
+        description:
+          "Grammarly goes beyond spell-check to improve clarity, tone, and persuasiveness across all your marketing copy. It integrates everywhere your team writes.",
+        bestFor: "Teams who need consistent, polished writing across all channels",
+        pricing: "Free · $12/mo (Pro) · $15/seat/mo (Business)",
+        pros: [
+          "Works in virtually every writing environment",
+          "Tone and clarity scoring",
+          "Brand consistency features (Business)",
+          "Real-time suggestions as you type",
+        ],
+        cons: [
+          "Not a content generator — only improves existing text",
+          "Advanced features require Business plan for teams",
+          "Style guide features cost extra",
+        ],
+        url: "https://grammarly.com",
+      },
+      {
+        name: "ChatGPT",
+        slug: "chatgpt",
+        tagline: "Versatile AI assistant for all marketing tasks",
+        description:
+          "ChatGPT's versatility makes it a powerful marketing Swiss Army knife — from brainstorming campaign ideas to writing first drafts, researching competitors, and creating audience personas.",
+        bestFor: "Marketers who need a flexible all-purpose AI assistant",
+        pricing: "Free · $20/mo (Plus) · $25/seat/mo (Team)",
+        pros: [
+          "Extremely versatile for all marketing tasks",
+          "Custom GPTs for specific marketing workflows",
+          "Browses web for up-to-date information",
+          "Affordable for individuals and small teams",
+        ],
+        cons: [
+          "Lacks native marketing integrations",
+          "No brand voice training",
+          "Outputs require editing for brand consistency",
+        ],
+        url: "https://chat.openai.com",
+      },
     ],
-    weaknesses: [
-      "Premium pricing (no free tier)",
-      "Learning curve for advanced features",
-      "Requires editing for best results",
-    ],
-    bestFor: "Content marketing teams, agencies, enterprise marketing, blog content at scale",
-    features: ["50+ templates", "Brand voice", "SEO mode", "Team workspace", "API access"],
-    roi: "10x faster content creation",
   },
   {
-    name: "Copy.ai",
-    slug: "copy-ai",
-    description: "AI copywriting tool for marketing copy, product descriptions, ads, and social media. Budget-friendly alternative to Jasper.",
-    category: "Content Creation",
-    pricing: "Freemium",
-    pricingDetails: "Free tier (2,000 words/mo), Pro $49/mo, Team $249/mo",
-    strengths: [
-      "Generous free tier",
-      "90+ copywriting tools",
-      "Very user-friendly interface",
-      "Blog wizard for long-form",
-      "Social media content calendars",
-      "More affordable than Jasper",
-    ],
-    weaknesses: [
-      "Free tier word limit",
-      "Quality varies by template",
-      "Less brand voice customization than Jasper",
-    ],
-    bestFor: "Small businesses, solo marketers, social media managers, budget-conscious teams",
-    features: ["90+ tools", "Blog wizard", "Social calendar", "Brand voice", "Chrome extension"],
-    roi: "Save 5-10 hours/week on copywriting",
-  },
-  {
-    name: "Surfer SEO",
-    slug: "surfer-seo",
-    description: "AI-powered SEO content optimization. Analyzes top-ranking pages and provides data-driven recommendations for better rankings.",
     category: "SEO",
-    pricing: "Paid",
-    pricingDetails: "Essential $89/mo, Scale $179/mo, Scale AI $219/mo, Enterprise custom",
-    strengths: [
-      "Data-driven content optimization",
-      "Real-time content editor with SEO score",
-      "SERP analyzer for keyword research",
-      "Content outline builder",
-      "AI writing (Surfer AI)",
-      "Integrates with Jasper, WordPress",
+    icon: "🔍",
+    description: "AI tools to dominate search rankings with optimized content and keyword research",
+    tools: [
+      {
+        name: "Surfer SEO",
+        slug: "surfer-seo",
+        tagline: "Data-driven content optimization",
+        description:
+          "Surfer SEO analyzes top-ranking pages and gives you a real-time content score as you write. Its AI-powered content editor ensures every piece is optimized to rank.",
+        bestFor: "Content teams who want data-backed SEO optimization while writing",
+        pricing: "$99/mo (Essential) · $219/mo (Scale) · $399/mo (Scale AI)",
+        pros: [
+          "Real-time content score while writing",
+          "Keyword clustering and content planning",
+          "SERP analyzer reveals competitor strategies",
+          "Integrates with Jasper, Google Docs, WordPress",
+        ],
+        cons: [
+          "Expensive for small teams",
+          "Learning curve for full feature suite",
+          "Best for existing sites with some SEO foundation",
+        ],
+        url: "https://surferseo.com",
+        highlight: true,
+      },
+      {
+        name: "SEMrush AI",
+        slug: "semrush",
+        tagline: "All-in-one AI-powered SEO and marketing suite",
+        description:
+          "SEMrush's AI features span keyword research, competitive analysis, content optimization, and rank tracking. Its AI Writing Assistant and SEO Content Template make content creation faster.",
+        bestFor: "Marketing teams needing comprehensive SEO + competitor intelligence",
+        pricing: "$139/mo (Pro) · $249/mo (Guru) · $499/mo (Business)",
+        pros: [
+          "Industry-leading keyword and competitor data",
+          "AI Writing Assistant built in",
+          "Local SEO, PPC, and social tools included",
+          "Content audit and gap analysis",
+        ],
+        cons: [
+          "High price point for small businesses",
+          "Overwhelming feature set for beginners",
+          "Some data accuracy issues in niche markets",
+        ],
+        url: "https://semrush.com",
+      },
     ],
-    weaknesses: [
-      "Expensive for solopreneurs",
-      "Steep learning curve",
-      "AI writing costs extra credits",
-    ],
-    bestFor: "SEO professionals, content marketers, agencies, organic traffic growth",
-    features: ["Content editor", "SERP analyzer", "Outline builder", "Surfer AI", "Audit tool"],
-    roi: "2-3x organic traffic in 6 months",
   },
   {
-    name: "HubSpot AI",
-    slug: "hubspot",
-    description: "AI features built into HubSpot CRM - content generation, email writing, lead scoring, and marketing automation.",
-    category: "Marketing Automation",
-    pricing: "Freemium",
-    pricingDetails: "Free tier with AI, Starter $20/mo, Professional $890/mo, Enterprise $3,600/mo",
-    strengths: [
-      "Free CRM with AI features",
-      "AI email writing and optimization",
-      "Lead scoring and prioritization",
-      "Integrated with entire marketing stack",
-      "Campaign reports and insights",
-      "Scales from solo to enterprise",
-    ],
-    weaknesses: [
-      "Advanced features expensive",
-      "Overwhelming for beginners",
-      "AI features limited on free tier",
-    ],
-    bestFor: "B2B marketing, sales teams, marketing automation, CRM-centric workflows",
-    features: ["AI content assistant", "Email generation", "Lead scoring", "Campaign insights", "CRM integration"],
-    roi: "30% increase in lead conversion",
-  },
-  {
-    name: "Canva AI",
-    slug: "canva",
-    description: "AI-powered design platform with Magic Write, Magic Design, and background removal. Create stunning visuals without design skills.",
-    category: "Design & Visual",
-    pricing: "Freemium",
-    pricingDetails: "Free tier, Pro $14.99/mo, Teams $30/user/mo",
-    strengths: [
-      "Magic Design creates full designs from prompts",
-      "Magic Write for copy within designs",
-      "Background removal and image editing",
-      "100M+ templates and assets",
-      "Brand kit for consistent branding",
-      "Very user-friendly",
-    ],
-    weaknesses: [
-      "AI features limited on free tier",
-      "Not as powerful as Adobe for complex work",
-      "Brand kit requires Pro",
-    ],
-    bestFor: "Social media graphics, presentations, marketing materials, non-designers",
-    features: ["Magic Design", "Magic Write", "Background removal", "Brand kit", "100M+ templates"],
-    roi: "Design content 5x faster than traditional tools",
-  },
-  {
-    name: "AdCreative.ai",
-    slug: "adcreative-ai",
-    description: "AI generates high-converting ad creatives, banners, and social ads. Optimized for CTR and conversions using machine learning.",
-    category: "Advertising",
-    pricing: "Paid",
-    pricingDetails: "Starter $29/mo, Ultimate $209/mo, Scale-up $549/mo",
-    strengths: [
-      "Generates hundreds of ad variations",
-      "Trained on high-converting ads",
-      "CTR predictions for each creative",
-      "Supports all major ad platforms",
-      "A/B testing made easy",
-      "ROI tracking and analytics",
-    ],
-    weaknesses: [
-      "No free tier",
-      "Requires product info and assets",
-      "Learning curve for best results",
-    ],
-    bestFor: "Performance marketers, e-commerce, paid ads teams, Facebook/Google Ads",
-    features: ["Ad generation", "CTR prediction", "Multi-platform", "A/B testing", "Analytics"],
-    roi: "14x ROI on ad spend (claimed)",
-  },
-  {
-    name: "Predis.ai",
-    slug: "predis-ai",
-    description: "AI social media content creation and scheduling. Generate posts, carousels, reels, and videos with captions for all platforms.",
     category: "Social Media",
-    pricing: "Freemium",
-    pricingDetails: "Free tier (15 posts/mo), Lite $32/mo, Premium $59/mo, Agency $249/mo",
-    strengths: [
-      "Creates full social posts from URLs or topics",
-      "Multi-format: posts, carousels, videos",
-      "AI captions and hashtags",
-      "Scheduling and publishing",
-      "Competitor analysis",
-      "All platforms (Instagram, TikTok, LinkedIn, etc.)",
+    icon: "📱",
+    description: "AI tools to create, schedule, and optimize social media content at scale",
+    tools: [
+      {
+        name: "Buffer AI",
+        slug: "buffer",
+        tagline: "AI-powered social media scheduling",
+        description:
+          "Buffer's AI Assistant generates platform-specific social posts from a brief, suggests optimal posting times, and helps repurpose content across LinkedIn, Twitter, Instagram, and Facebook.",
+        bestFor: "Small to mid-size marketing teams managing multiple social channels",
+        pricing: "Free (3 channels) · $6/mo (Essentials) · $12/mo (Team)",
+        pros: [
+          "Very affordable with strong free tier",
+          "AI generates platform-optimized captions",
+          "Best posting time suggestions",
+          "Clean analytics dashboard",
+        ],
+        cons: [
+          "Fewer AI features than dedicated AI tools",
+          "Limited video scheduling capabilities",
+          "Analytics less deep than Sprout Social",
+        ],
+        url: "https://buffer.com",
+        highlight: true,
+      },
+      {
+        name: "Canva AI",
+        slug: "canva",
+        tagline: "AI-powered visual content for every platform",
+        description:
+          "Canva's suite of AI tools — Magic Design, Magic Write, text-to-image generation, background removal, and more — makes it the go-to platform for creating marketing visuals at scale.",
+        bestFor: "Marketing teams that create lots of visual content without a dedicated designer",
+        pricing: "Free · $15/mo (Pro) · $10/seat/mo (Teams)",
+        pros: [
+          "Comprehensive AI design toolkit",
+          "Thousands of social media templates",
+          "Brand kit for consistent visual identity",
+          "Magic Resize for all platform formats",
+        ],
+        cons: [
+          "AI image generation quality lags behind Midjourney",
+          "Advanced design needs still require a designer",
+          "Free tier limited on AI credits",
+        ],
+        url: "https://canva.com",
+      },
+      {
+        name: "Midjourney",
+        slug: "midjourney",
+        tagline: "Stunning AI image generation for campaigns",
+        description:
+          "Midjourney produces the highest-quality AI-generated images of any tool, making it ideal for creating campaign visuals, product mockups, and conceptual marketing imagery.",
+        bestFor: "Brand and creative teams needing high-quality visual concepts fast",
+        pricing: "$10/mo (Basic) · $30/mo (Standard) · $60/mo (Pro)",
+        pros: [
+          "Industry-best image quality and aesthetics",
+          "Exceptional for creative concept visualization",
+          "Fast iteration on visual styles",
+          "Active community for prompt inspiration",
+        ],
+        cons: [
+          "Discord-based interface has learning curve",
+          "No free tier anymore",
+          "Not ideal for precise text-in-image rendering",
+        ],
+        url: "https://midjourney.com",
+      },
     ],
-    weaknesses: [
-      "Free tier very limited",
-      "Video quality varies",
-      "Less customization than manual design",
-    ],
-    bestFor: "Social media managers, content creators, agencies, multi-platform posting",
-    features: ["Content generation", "Multi-format", "Scheduling", "Hashtags", "Analytics"],
-    roi: "80% faster social media workflow",
   },
   {
-    name: "ChatGPT",
-    slug: "chatgpt",
-    description: "General-purpose AI that's surprisingly powerful for marketing - brainstorming campaigns, writing copy, analyzing data, and more.",
-    category: "General Purpose",
-    pricing: "Freemium",
-    pricingDetails: "Free tier, Plus $20/mo, Team $25/user/mo",
-    strengths: [
-      "Extremely versatile for all marketing tasks",
-      "Custom GPTs for specific workflows",
-      "Data analysis with Code Interpreter",
-      "Image generation (DALL-E)",
-      "Free tier is usable",
-      "Huge community and resources",
-    ],
-    weaknesses: [
-      "Not marketing-specific",
-      "Requires prompt engineering skills",
-      "No built-in templates or workflows",
-    ],
-    bestFor: "Versatile marketing support, brainstorming, strategy, content ideation",
-    features: ["Copywriting", "Strategy", "Data analysis", "Custom GPTs", "DALL-E 3"],
-    roi: "Save 10+ hours/week on various tasks",
-  },
-  {
-    name: "Writesonic",
-    slug: "writesonic",
-    description: "AI writing platform with focus on marketing copy - articles, landing pages, ads, and product descriptions.",
-    category: "Content Creation",
-    pricing: "Freemium",
-    pricingDetails: "Free trial, Unlimited $20/mo, Business $19/user/mo, Enterprise custom",
-    strengths: [
-      "100+ marketing templates",
-      "Chatsonic for conversational AI",
-      "Landing page builder",
-      "Photosonic for image generation",
-      "Bulk content generation",
-      "Affordable unlimited tier",
-    ],
-    weaknesses: [
-      "Free tier very limited",
-      "Quality inconsistent across templates",
-      "Interface can feel cluttered",
-    ],
-    bestFor: "Marketing agencies, e-commerce, product descriptions, landing pages",
-    features: ["100+ templates", "Chatsonic", "Landing pages", "Photosonic", "Bulk generation"],
-  },
-  {
-    name: "Hemingway Editor",
-    slug: "hemingway",
-    description: "Makes marketing copy clear, bold, and scannable. Perfect for landing pages, emails, and web copy that converts.",
-    category: "Content Optimization",
-    pricing: "Freemium",
-    pricingDetails: "Free web version, Desktop $19.99 one-time",
-    strengths: [
-      "Improves readability instantly",
-      "Highlights complex sentences",
-      "Grade level scoring",
-      "One-time desktop purchase",
-      "Works offline",
-      "Great for conversion copywriting",
-    ],
-    weaknesses: [
-      "Basic feature set",
-      "No AI generation (editing only)",
-      "Can oversimplify some copy",
-    ],
-    bestFor: "Landing pages, email copy, web content, readability optimization",
-    features: ["Readability score", "Sentence analysis", "Passive voice", "Adverb detection"],
-  },
-  {
-    name: "Midjourney",
-    slug: "midjourney",
-    description: "Leading AI image generator for marketing visuals, social media, ads, and creative campaigns. Stunning photorealistic results.",
-    category: "Design & Visual",
-    pricing: "Paid",
-    pricingDetails: "Basic $10/mo, Standard $30/mo, Pro $60/mo",
-    strengths: [
-      "Best-in-class image quality",
-      "Photorealistic and artistic styles",
-      "Perfect for social media visuals",
-      "Active community and resources",
-      "Commercial use allowed (paid plans)",
-      "Fast generation times",
-    ],
-    weaknesses: [
-      "No free tier",
-      "Requires Discord",
-      "Text in images still challenging",
-    ],
-    bestFor: "Social media visuals, ad creatives, blog headers, brand imagery",
-    features: ["AI image generation", "Multiple styles", "Variations", "Upscaling", "Commercial use"],
-  },
-  {
-    name: "Grammarly Business",
-    slug: "grammarly",
-    description: "AI writing assistant for marketing teams. Ensures brand consistency, tone, and error-free content across all channels.",
-    category: "Content Optimization",
-    pricing: "Paid",
-    pricingDetails: "Business $15/user/mo, individual Premium $12/mo",
-    strengths: [
-      "Team-wide style guides",
-      "Brand tone consistency",
-      "Snippets for common phrases",
-      "Works everywhere (web, email, docs)",
-      "Plagiarism checking",
-      "Analytics dashboard",
-    ],
-    weaknesses: [
-      "Business features require team plan",
-      "Can be overly prescriptive",
-      "Annual commitment for best pricing",
-    ],
-    bestFor: "Marketing teams, brand consistency, quality control, multi-channel content",
-    features: ["Style guide", "Brand tones", "Snippets", "Plagiarism", "Analytics"],
-  },
-  {
-    name: "SEMrush AI",
-    slug: "semrush",
-    description: "SEO and content marketing platform with AI writing, keyword research, competitor analysis, and rank tracking.",
-    category: "SEO",
-    pricing: "Paid",
-    pricingDetails: "Pro $129.95/mo, Guru $249.95/mo, Business $499.95/mo",
-    strengths: [
-      "All-in-one SEO and content platform",
-      "AI writing assistant (ContentShake)",
-      "Comprehensive keyword research",
-      "Competitor intelligence",
-      "Rank tracking and reporting",
-      "Industry-standard tool",
-    ],
-    weaknesses: [
-      "Expensive (no free tier)",
-      "Overwhelming for beginners",
-      "AI features newer than core product",
-    ],
-    bestFor: "SEO agencies, enterprise marketing, competitive research, comprehensive SEO",
-    features: ["ContentShake AI", "Keyword research", "Competitor analysis", "Rank tracking", "Reporting"],
-  },
-  {
-    name: "Notion AI",
-    slug: "notion",
-    description: "AI writing and organization for marketing teams. Brainstorm campaigns, draft content, summarize research, manage projects.",
-    category: "Productivity",
-    pricing: "Add-on",
-    pricingDetails: "Free Notion, AI add-on $10/user/mo (Plus $8/mo includes AI)",
-    strengths: [
-      "Integrated into best workspace tool",
-      "Team collaboration on campaigns",
-      "AI writing within docs/wikis",
-      "Summarize meeting notes",
-      "Extract action items",
-      "Flexible databases for content planning",
-    ],
-    weaknesses: [
-      "AI costs extra on top of Notion",
-      "Not marketing-specific",
-      "Learning curve for Notion",
-    ],
-    bestFor: "Marketing team collaboration, campaign planning, content calendars, wikis",
-    features: ["AI writing", "Summarization", "Q&A", "Team workspace", "Databases"],
-  },
-  {
-    name: "Frase",
-    slug: "frase",
-    description: "AI content research and optimization for SEO. Creates briefs, outlines, and full articles optimized for search.",
-    category: "SEO",
-    pricing: "Paid",
-    pricingDetails: "Solo $15/mo, Basic $45/mo, Team $115/mo",
-    strengths: [
-      "AI content briefs from keywords",
-      "SERP research automation",
-      "Content optimization scoring",
-      "Question research (People Also Ask)",
-      "Affordable entry tier",
-      "Great for content teams",
-    ],
-    weaknesses: [
-      "AI writing costs extra credits",
-      "Solo plan very limited",
-      "Interface less polished than competitors",
-    ],
-    bestFor: "SEO content writers, agencies, blog content, content briefs",
-    features: ["Content briefs", "SERP analysis", "Optimization", "AI writing", "Question research"],
-  },
-  {
-    name: "MarketMuse",
-    slug: "marketmuse",
-    description: "Enterprise AI content strategy and optimization. Topic modeling, competitive gap analysis, and content planning at scale.",
-    category: "SEO",
-    pricing: "Paid",
-    pricingDetails: "Standard $149/mo, Team $399/mo, Premium custom (enterprise)",
-    strengths: [
-      "Advanced topic modeling",
-      "Content gap analysis",
-      "Competitive intelligence",
-      "Content planning and strategy",
-      "Enterprise-grade features",
-      "Deep content insights",
-    ],
-    weaknesses: [
-      "Very expensive",
-      "Steep learning curve",
-      "Overkill for small businesses",
-    ],
-    bestFor: "Enterprise content teams, SEO agencies, content strategists, large-scale operations",
-    features: ["Topic modeling", "Gap analysis", "Content planning", "Optimization", "Research automation"],
-  },
-  {
-    name: "Seventh Sense",
-    slug: "seventh-sense",
-    description: "AI email send-time optimization for HubSpot and Marketo. Learns subscriber behavior to maximize open rates.",
     category: "Email Marketing",
-    pricing: "Paid",
-    pricingDetails: "Starting at $80/mo (varies by contacts)",
-    strengths: [
-      "AI-optimized send times per contact",
-      "Increases open rates 7-15%",
-      "Integrates with HubSpot/Marketo",
-      "Learns individual subscriber behavior",
-      "Automated optimization",
+    icon: "📧",
+    description: "AI tools to write, personalize, and optimize email campaigns",
+    tools: [
+      {
+        name: "Mailchimp AI",
+        slug: "mailchimp",
+        tagline: "AI-powered email marketing platform",
+        description:
+          "Mailchimp's built-in AI features generate subject lines, email copy, and segment recommendations. Its send-time optimization and predictive analytics help maximize open and click rates.",
+        bestFor: "Small to medium businesses running email campaigns in one platform",
+        pricing: "Free (500 contacts) · $13/mo (Essentials) · $20/mo (Standard)",
+        pros: [
+          "AI subject line and copy generation",
+          "Predictive send-time optimization",
+          "Pre-built automation sequences",
+          "Strong free tier for small lists",
+        ],
+        cons: [
+          "Gets expensive as list grows",
+          "AI features less advanced than dedicated AI tools",
+          "Limited personalization on lower tiers",
+        ],
+        url: "https://mailchimp.com",
+        highlight: true,
+      },
     ],
-    weaknesses: [
-      "Only works with HubSpot/Marketo",
-      "Pricing based on contact count",
-      "Requires volume for best results",
+  },
+  {
+    category: "Video",
+    icon: "🎬",
+    description: "AI video creation tools for ads, demos, and social content",
+    tools: [
+      {
+        name: "Synthesia",
+        slug: "synthesia",
+        tagline: "AI video with realistic avatars",
+        description:
+          "Synthesia lets you create professional videos with AI avatars and text-to-speech in 140+ languages. Perfect for product demos, explainer videos, and training content at scale.",
+        bestFor: "Marketing teams creating multilingual video content without a studio",
+        pricing: "$29/mo (Starter) · $89/mo (Creator) · Custom (Enterprise)",
+        pros: [
+          "Realistic AI avatars in 140+ languages",
+          "No cameras, actors, or editing needed",
+          "Branded templates and custom avatars",
+          "Great for product demos and explainers",
+        ],
+        cons: [
+          "Videos can look slightly artificial",
+          "Less creative than human-produced video",
+          "Custom avatar creation costs extra",
+        ],
+        url: "https://synthesia.io",
+        highlight: true,
+      },
+      {
+        name: "Descript",
+        slug: "descript",
+        tagline: "Edit video by editing text",
+        description:
+          "Descript transcribes your video and lets you edit it like a document — delete words to cut footage, use AI overdub to fix mistakes, and remove filler words automatically.",
+        bestFor: "Marketers producing podcast clips, webinar highlights, and video content",
+        pricing: "Free · $24/mo (Creator) · $40/mo (Business)",
+        pros: [
+          "Unique text-based video editing",
+          "Filler word removal and AI eye contact",
+          "Screen recording and podcast tools included",
+          "Transcription in 20+ languages",
+        ],
+        cons: [
+          "Not ideal for heavy motion graphics",
+          "AI voice can sound robotic on longer passages",
+          "Steep learning curve for traditional editors",
+        ],
+        url: "https://descript.com",
+      },
     ],
-    bestFor: "Email marketers, B2B marketing, HubSpot/Marketo users, list optimization",
-    features: ["Send-time optimization", "Behavioral learning", "A/B testing", "Analytics", "HubSpot/Marketo integration"],
+  },
+  {
+    category: "Analytics & Automation",
+    icon: "📊",
+    description: "AI tools to automate marketing workflows and turn data into insights",
+    tools: [
+      {
+        name: "HubSpot AI",
+        slug: "hubspot",
+        tagline: "AI-powered CRM and marketing hub",
+        description:
+          "HubSpot's AI features span the entire customer journey — from AI content creation and predictive lead scoring to chatbots and smart email personalization across marketing, sales, and service.",
+        bestFor: "Growing businesses wanting AI integrated across their entire marketing stack",
+        pricing: "Free CRM · $800/mo (Marketing Hub Professional) · $3,600/mo (Enterprise)",
+        pros: [
+          "AI across the full marketing + sales funnel",
+          "Best-in-class CRM integration",
+          "AI content assistant, blogging, email",
+          "Powerful reporting and attribution",
+        ],
+        cons: [
+          "Very expensive at higher tiers",
+          "Complex setup and onboarding",
+          "Overkill for small businesses",
+        ],
+        url: "https://hubspot.com",
+        highlight: true,
+      },
+      {
+        name: "Notion AI",
+        slug: "notion",
+        tagline: "AI-powered marketing planning and documentation",
+        description:
+          "Notion AI supercharges your marketing wiki, campaign planning docs, and content calendars with AI writing, summarization, and database management — keeping the whole team aligned.",
+        bestFor: "Marketing teams that use Notion for planning, briefs, and knowledge management",
+        pricing: "Free · $10/mo (Plus) · $15/seat/mo (Business) · +$10/mo AI add-on",
+        pros: [
+          "AI integrated into your existing Notion workspace",
+          "Summarize meeting notes and briefs",
+          "AI writing for any Notion doc or database",
+          "Strong collaboration features",
+        ],
+        cons: [
+          "AI is an add-on, not included in base plans",
+          "Not a standalone marketing tool",
+          "Less powerful than dedicated marketing AI",
+        ],
+        url: "https://notion.so",
+      },
+      {
+        name: "Zapier AI",
+        slug: "zapier",
+        tagline: "Automate marketing workflows with AI",
+        description:
+          "Zapier's AI features let you build marketing automations in plain English and use AI actions within Zaps — automatically summarizing leads, generating follow-up emails, and routing tasks.",
+        bestFor: "Marketing teams wanting to automate cross-tool workflows without coding",
+        pricing: "Free (100 tasks/mo) · $19.99/mo (Starter) · $49/mo (Professional)",
+        pros: [
+          "Connects 6,000+ apps including all major marketing tools",
+          "AI can be a step in any automation",
+          "No-code workflow builder",
+          "AI Zap builder from plain English prompts",
+        ],
+        cons: [
+          "Costs can scale quickly with high task volume",
+          "Complex automations still require technical knowledge",
+          "AI actions consume extra credits",
+        ],
+        url: "https://zapier.com",
+      },
+    ],
+  },
+];
+
+const comparisonData = [
+  { tool: "Jasper", category: "Content", pricing: "$49/mo+", bestFor: "Enterprise content at scale", rating: "⭐⭐⭐⭐⭐" },
+  { tool: "Copy.ai", category: "Content", pricing: "Free–$249/mo", bestFor: "Marketing workflow automation", rating: "⭐⭐⭐⭐" },
+  { tool: "Surfer SEO", category: "SEO", pricing: "$99/mo+", bestFor: "Content SEO optimization", rating: "⭐⭐⭐⭐⭐" },
+  { tool: "HubSpot AI", category: "Analytics", pricing: "Free–$3,600/mo", bestFor: "Full-funnel marketing AI", rating: "⭐⭐⭐⭐⭐" },
+  { tool: "Buffer AI", category: "Social", pricing: "Free–$12/mo", bestFor: "Social scheduling + AI captions", rating: "⭐⭐⭐⭐" },
+  { tool: "Canva AI", category: "Social/Design", pricing: "Free–$15/mo", bestFor: "Visual content creation", rating: "⭐⭐⭐⭐" },
+  { tool: "Midjourney", category: "Visual", pricing: "$10–$60/mo", bestFor: "Campaign imagery", rating: "⭐⭐⭐⭐⭐" },
+  { tool: "Synthesia", category: "Video", pricing: "$29–$89/mo", bestFor: "Avatar-based product videos", rating: "⭐⭐⭐⭐" },
+  { tool: "Descript", category: "Video", pricing: "Free–$40/mo", bestFor: "Video/podcast editing", rating: "⭐⭐⭐⭐" },
+  { tool: "Mailchimp AI", category: "Email", pricing: "Free–$20/mo", bestFor: "Email campaigns + automation", rating: "⭐⭐⭐⭐" },
+  { tool: "SEMrush AI", category: "SEO", pricing: "$139/mo+", bestFor: "Full SEO + competitor intel", rating: "⭐⭐⭐⭐⭐" },
+  { tool: "Grammarly", category: "Content", pricing: "Free–$15/mo", bestFor: "Writing quality + polish", rating: "⭐⭐⭐⭐" },
+  { tool: "Notion AI", category: "Productivity", pricing: "$10/mo+", bestFor: "Marketing planning + docs", rating: "⭐⭐⭐⭐" },
+  { tool: "Zapier AI", category: "Automation", pricing: "Free–$49/mo", bestFor: "Cross-tool marketing workflows", rating: "⭐⭐⭐⭐" },
+  { tool: "ChatGPT", category: "Content", pricing: "Free–$25/mo", bestFor: "Versatile marketing tasks", rating: "⭐⭐⭐⭐" },
+];
+
+const faqs = [
+  {
+    question: "What is the best AI tool for marketing in 2026?",
+    answer:
+      "The best AI marketing tool depends on your specific needs. For content creation at scale, Jasper leads. For SEO, Surfer SEO is top-rated. For a complete marketing platform with AI, HubSpot AI is unmatched. For budget-conscious teams, Copy.ai's free tier and ChatGPT Plus offer excellent value. Most marketing teams use 3–5 tools covering different channels.",
+  },
+  {
+    question: "Can AI replace human marketers?",
+    answer:
+      "No — AI augments marketers rather than replacing them. AI excels at scaling content production, data analysis, personalization, and repetitive tasks. But strategy, creativity, emotional intelligence, brand storytelling, and relationship-building still require human expertise. The best marketing teams use AI to handle volume so humans can focus on strategy and creativity.",
+  },
+  {
+    question: "How much does AI marketing software cost?",
+    answer:
+      "AI marketing tools range from free (ChatGPT, Buffer, Grammarly) to enterprise pricing ($3,600+/mo for HubSpot Enterprise). Most professional tools cost $20–$150/mo per user. A well-rounded AI marketing stack for a small team typically runs $100–$400/mo covering content, SEO, social, and email tools.",
+  },
+  {
+    question: "Which AI tools are best for social media marketing?",
+    answer:
+      "For social media marketing, the top AI tools are: Buffer AI for scheduling and AI caption generation, Canva AI for creating visuals quickly, Midjourney for high-quality campaign imagery, and ChatGPT for ideation and copy. For comprehensive social listening and analytics, Sprout Social and Hootsuite also offer AI features.",
+  },
+  {
+    question: "What AI tools do marketing agencies use?",
+    answer:
+      "Marketing agencies typically use Jasper or Copy.ai for content at scale, Surfer SEO or SEMrush for SEO, Canva or Midjourney for visuals, Descript for video content, and HubSpot or similar CRMs for client campaigns. Zapier connects tools together. Most agencies build a custom stack based on their service specialties.",
+  },
+  {
+    question: "Is Jasper AI worth it for marketing?",
+    answer:
+      "Jasper is worth it for marketing teams that produce high volumes of content and need brand consistency at scale. Its brand voice training, marketing templates, and Surfer SEO integration justify the cost for teams spending significant time on content. For individuals or small teams with modest content needs, ChatGPT Plus or Copy.ai offer better value.",
   },
 ];
 
 export default function BestAIToolsForMarketingPage() {
-  const toolsBySlug = new Map(tools.map((t) => [t.slug, t]));
+  const totalTools = marketingTools.reduce((sum, cat) => sum + cat.tools.length, 0);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Article",
+                headline: "Best AI Tools for Marketing 2026",
+                description:
+                  "The 15 best AI tools for marketing in 2026 covering content creation, SEO, social media, email, video, and analytics.",
+                author: { "@type": "Organization", name: "AISO Tools" },
+                publisher: { "@type": "Organization", name: "AISO Tools", url: "https://aisotools.com" },
+                datePublished: "2026-01-01",
+                dateModified: "2026-02-01",
+                url: "https://aisotools.com/best-ai-tools-for-marketing",
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: { "@type": "Answer", text: faq.answer },
+                })),
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-6">
-        <Link href="/" className="hover:text-white">
-          Home
-        </Link>
+        <Link href="/" className="hover:text-white">Home</Link>
+        <span className="mx-2">›</span>
+        <Link href="/directory" className="hover:text-white">AI Tools</Link>
         <span className="mx-2">›</span>
         <span className="text-gray-300">Best AI Tools for Marketing</span>
       </nav>
@@ -462,124 +515,107 @@ export default function BestAIToolsForMarketingPage() {
       {/* Header */}
       <header className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Best AI Tools for Marketing 2026: Scale Your Campaigns
+          Best AI Tools for Marketing 2026
         </h1>
         <p className="text-xl text-gray-400 max-w-4xl">
-          Discover the best AI marketing tools in 2026. From content creation and SEO to social
-          media, ads, and automation - these AI tools help you create faster, optimize better,
-          and drive measurable ROI. Perfect for marketers, agencies, and growth teams.
+          The {totalTools} best AI marketing tools ranked and reviewed — covering content creation, SEO,
+          social media, email campaigns, video production, and analytics. Whether you're a solo marketer
+          or an enterprise team, these tools will help you do more with less.
         </p>
         <div className="flex flex-wrap gap-2 mt-6">
-          <span className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm">
+          <span className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
+            📈 22,100 searches/mo
+          </span>
+          <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm">
             Updated February 2026
           </span>
           <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm">
-            17 Marketing Tools Compared
+            {totalTools} Tools Reviewed
           </span>
-          <span className="bg-green-600/20 text-green-400 px-3 py-1 rounded-full text-sm">
-            ROI-Focused
+          <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-sm">
+            6 Categories
           </span>
         </div>
       </header>
 
-      {/* Quick Navigation */}
+      {/* Category Navigation */}
       <section className="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-12">
-        <h2 className="text-lg font-semibold mb-3">Quick Navigation by Category</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2">✍️ Content Creation</h3>
-            <div className="space-y-1 text-sm">
-              <a href="#jasper" className="text-blue-400 hover:text-blue-300 block">Jasper</a>
-              <a href="#copy-ai" className="text-blue-400 hover:text-blue-300 block">Copy.ai</a>
-              <a href="#writesonic" className="text-blue-400 hover:text-blue-300 block">Writesonic</a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2">🔍 SEO</h3>
-            <div className="space-y-1 text-sm">
-              <a href="#surfer-seo" className="text-blue-400 hover:text-blue-300 block">Surfer SEO</a>
-              <a href="#semrush" className="text-blue-400 hover:text-blue-300 block">SEMrush</a>
-              <a href="#frase" className="text-blue-400 hover:text-blue-300 block">Frase</a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2">📱 Social Media</h3>
-            <div className="space-y-1 text-sm">
-              <a href="#predis-ai" className="text-blue-400 hover:text-blue-300 block">Predis.ai</a>
-              <a href="#canva" className="text-blue-400 hover:text-blue-300 block">Canva AI</a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2">📢 Advertising</h3>
-            <div className="space-y-1 text-sm">
-              <a href="#adcreative-ai" className="text-blue-400 hover:text-blue-300 block">AdCreative.ai</a>
-              <a href="#midjourney" className="text-blue-400 hover:text-blue-300 block">Midjourney</a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2">🤖 Automation</h3>
-            <div className="space-y-1 text-sm">
-              <a href="#hubspot" className="text-blue-400 hover:text-blue-300 block">HubSpot AI</a>
-              <a href="#seventh-sense" className="text-blue-400 hover:text-blue-300 block">Seventh Sense</a>
-            </div>
-          </div>
+        <h2 className="text-lg font-semibold mb-4">Jump to Category</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          {marketingTools.map((cat) => (
+            <a
+              key={cat.category}
+              href={`#${cat.category.toLowerCase().replace(/\s+/g, "-")}`}
+              className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-3 rounded-lg transition text-sm"
+            >
+              <span className="text-2xl">{cat.icon}</span>
+              <div>
+                <div className="font-medium">{cat.category}</div>
+                <div className="text-xs text-gray-500">{cat.tools.length} tools</div>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
       {/* Introduction */}
       <section className="prose prose-invert max-w-none mb-16">
-        <h2 className="text-3xl font-bold mb-4">How AI Is Transforming Marketing in 2026</h2>
+        <h2 className="text-3xl font-bold mb-4">Why AI is Transforming Marketing in 2026</h2>
         <p className="text-gray-400 text-lg leading-relaxed mb-4">
-          AI has moved from experimental to essential in marketing. Today's best marketing teams
-          use AI for content creation, SEO optimization, ad generation, social media, email
-          marketing, and more - often seeing 5-10x productivity gains and measurable ROI improvements.
+          AI has fundamentally changed what's possible for marketing teams. Content that used to take
+          days now takes hours. SEO research that required analysts now takes minutes. Personalization
+          that was reserved for enterprise budgets is now available to any team.
         </p>
         <p className="text-gray-400 text-lg leading-relaxed mb-4">
-          The key is choosing the right tools for your needs. Jasper and Copy.ai excel at content
-          creation at scale. Surfer SEO and SEMrush optimize for search rankings. AdCreative.ai
-          and Predis.ai generate high-converting ads and social content. HubSpot AI brings it all
-          together in one platform.
+          The best marketing teams in 2026 don't choose between AI and human creativity — they use AI
+          to handle volume, speed, and data analysis, freeing humans to focus on strategy, brand
+          storytelling, and creative direction.
         </p>
-        <p className="text-gray-400 text-lg leading-relaxed">
-          This guide covers 17 top AI marketing tools across all major categories - with pricing,
-          features, ROI data, and specific use cases to help you build your AI marketing stack.
-        </p>
+        <div className="bg-blue-600/10 border border-blue-500/20 rounded-xl p-6 mb-6">
+          <h3 className="text-xl font-semibold mb-3 text-blue-400">How We Selected These Tools</h3>
+          <ul className="space-y-2 text-gray-400">
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2 mt-1">✓</span>
+              <span><strong>Real AI features</strong> — Not just search/filter, but genuine AI generation and analysis</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2 mt-1">✓</span>
+              <span><strong>Proven marketing use cases</strong> — Widely used by marketing teams globally</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2 mt-1">✓</span>
+              <span><strong>Measurable ROI</strong> — Tools that deliver tangible marketing results</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-green-400 mr-2 mt-1">✓</span>
+              <span><strong>Active development</strong> — Regularly updated with new AI capabilities</span>
+            </li>
+          </ul>
+        </div>
       </section>
 
       {/* Comparison Table */}
       <section className="mb-16">
-        <h2 className="text-3xl font-bold mb-6">Quick Comparison: AI Marketing Tools</h2>
+        <h2 className="text-3xl font-bold mb-6">AI Marketing Tools Comparison 2026</h2>
         <div className="overflow-x-auto">
           <table className="w-full bg-gray-900 border border-gray-800 rounded-xl">
             <thead className="bg-gray-800">
               <tr>
                 <th className="px-4 py-3 text-left text-sm font-semibold">Tool</th>
                 <th className="px-4 py-3 text-left text-sm font-semibold">Category</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold">Starting Price</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold">Free Tier</th>
+                <th className="px-4 py-3 text-left text-sm font-semibold">Pricing</th>
                 <th className="px-4 py-3 text-left text-sm font-semibold">Best For</th>
+                <th className="px-4 py-3 text-left text-sm font-semibold">Rating</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-800">
-              {marketingTools.map((tool) => (
-                <tr key={tool.slug} className="hover:bg-gray-800/50 transition">
-                  <td className="px-4 py-3">
-                    <a href={`#${tool.slug}`} className="font-medium text-blue-400 hover:text-blue-300">
-                      {tool.name}
-                    </a>
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-400">{tool.category}</td>
-                  <td className="px-4 py-3 text-sm text-gray-400">
-                    {tool.pricingDetails.split(",")[0]}
-                  </td>
-                  <td className="px-4 py-3 text-sm">
-                    {tool.pricing === "Freemium" || tool.pricing === "Free" ? (
-                      <span className="text-green-400">✓</span>
-                    ) : (
-                      <span className="text-gray-600">—</span>
-                    )}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-400">{tool.bestFor.split(",")[0]}</td>
+              {comparisonData.map((item, i) => (
+                <tr key={i} className="hover:bg-gray-800/50 transition">
+                  <td className="px-4 py-3 font-medium">{item.tool}</td>
+                  <td className="px-4 py-3 text-sm text-gray-400">{item.category}</td>
+                  <td className="px-4 py-3 text-sm text-gray-400">{item.pricing}</td>
+                  <td className="px-4 py-3 text-sm text-gray-400">{item.bestFor}</td>
+                  <td className="px-4 py-3 text-sm">{item.rating}</td>
                 </tr>
               ))}
             </tbody>
@@ -587,368 +623,135 @@ export default function BestAIToolsForMarketingPage() {
         </div>
       </section>
 
-      {/* Detailed Reviews */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold mb-8">Detailed Reviews: Best AI Marketing Tools</h2>
-        <div className="space-y-12">
-          {marketingTools.map((tool, index) => {
-            const toolData = toolsBySlug.get(tool.slug);
-            return (
+      {/* Tool Categories */}
+      {marketingTools.map((category) => (
+        <section
+          key={category.category}
+          id={category.category.toLowerCase().replace(/\s+/g, "-")}
+          className="mb-16 scroll-mt-24"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-4xl">{category.icon}</span>
+            <div>
+              <h2 className="text-3xl font-bold">{category.category} AI Tools</h2>
+              <p className="text-gray-400">{category.description}</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {category.tools.map((tool) => (
               <article
-                key={tool.slug}
-                id={tool.slug}
-                className="bg-gray-900 border border-gray-800 rounded-xl p-8 scroll-mt-24"
+                key={tool.name}
+                className={`bg-gray-900 border rounded-xl p-6 hover:border-gray-700 transition ${
+                  tool.highlight ? "border-blue-500/30 ring-1 ring-blue-500/20" : "border-gray-800"
+                }`}
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-2xl font-bold">
-                        {index + 1}. {tool.name}
-                      </h3>
-                      <span className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-xs">
-                        {tool.category}
-                      </span>
-                    </div>
-                    <p className="text-gray-400">{tool.description}</p>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-xl font-bold">{tool.name}</h3>
+                  {tool.highlight && (
+                    <span className="bg-blue-600/20 text-blue-400 text-xs px-2 py-1 rounded-full font-medium whitespace-nowrap ml-2">
+                      Top Pick
+                    </span>
+                  )}
+                </div>
+                <p className="text-sm text-blue-400 mb-3 font-medium">{tool.tagline}</p>
+                <p className="text-gray-400 mb-4 text-sm leading-relaxed">{tool.description}</p>
+
+                <div className="space-y-3 mb-4">
+                  <div className="bg-gray-800/50 rounded-lg p-3">
+                    <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Best For</span>
+                    <p className="text-sm text-white mt-1">{tool.bestFor}</p>
                   </div>
-                  {toolData && (
+                  <div className="bg-gray-800/50 rounded-lg p-3">
+                    <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Pricing</span>
+                    <p className="text-sm text-white mt-1">{tool.pricing}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 mb-4">
+                  <div>
+                    <h4 className="text-xs font-semibold text-green-400 mb-2 uppercase tracking-wide">✓ Pros</h4>
+                    <ul className="space-y-1">
+                      {tool.pros.slice(0, 3).map((pro, i) => (
+                        <li key={i} className="text-xs text-gray-400 flex items-start gap-1">
+                          <span className="text-green-400 mt-0.5 shrink-0">+</span>
+                          {pro}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-semibold text-red-400 mb-2 uppercase tracking-wide">✗ Cons</h4>
+                    <ul className="space-y-1">
+                      {tool.cons.slice(0, 3).map((con, i) => (
+                        <li key={i} className="text-xs text-gray-400 flex items-start gap-1">
+                          <span className="text-red-400 mt-0.5 shrink-0">−</span>
+                          {con}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex gap-3">
+                  <a
+                    href={tool.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-lg text-sm font-medium transition"
+                  >
+                    Visit {tool.name} →
+                  </a>
+                  {tool.slug && (
                     <Link
                       href={`/tool/${tool.slug}`}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition shrink-0"
+                      className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
                     >
-                      View Tool →
+                      Details
                     </Link>
                   )}
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-6 mt-6">
-                  {/* Pricing */}
-                  <div>
-                    <h4 className="font-semibold text-gray-300 mb-2">💰 Pricing</h4>
-                    <p className="text-gray-400 text-sm mb-1">{tool.pricing}</p>
-                    <p className="text-gray-500 text-xs">{tool.pricingDetails}</p>
-                  </div>
-
-                  {/* Best For */}
-                  <div>
-                    <h4 className="font-semibold text-gray-300 mb-2">🎯 Best For</h4>
-                    <p className="text-gray-400 text-sm">{tool.bestFor}</p>
-                    {tool.roi && (
-                      <p className="text-green-400 text-sm mt-1">📈 {tool.roi}</p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Strengths */}
-                <div className="mt-6">
-                  <h4 className="font-semibold text-gray-300 mb-3">✅ Strengths</h4>
-                  <ul className="grid md:grid-cols-2 gap-2">
-                    {tool.strengths.map((strength, i) => (
-                      <li key={i} className="text-gray-400 text-sm flex items-start">
-                        <span className="text-green-400 mr-2 mt-0.5">•</span>
-                        {strength}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Weaknesses */}
-                <div className="mt-6">
-                  <h4 className="font-semibold text-gray-300 mb-3">⚠️ Limitations</h4>
-                  <ul className="grid md:grid-cols-2 gap-2">
-                    {tool.weaknesses.map((weakness, i) => (
-                      <li key={i} className="text-gray-400 text-sm flex items-start">
-                        <span className="text-yellow-400 mr-2 mt-0.5">•</span>
-                        {weakness}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Features */}
-                <div className="mt-6">
-                  <h4 className="font-semibold text-gray-300 mb-3">🔧 Key Features</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {tool.features.map((feature, i) => (
-                      <span
-                        key={i}
-                        className="bg-gray-800 text-gray-400 px-3 py-1 rounded-full text-xs"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </article>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Use Case Guide */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold mb-6">Which AI Marketing Tools Should You Use?</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-xl font-semibold mb-3">📝 For Content Marketing</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Jasper:</strong> Enterprise blog content at scale</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Surfer SEO:</strong> SEO optimization and ranking</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Frase:</strong> Content briefs and outlines</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Grammarly:</strong> Quality control and brand voice</span>
-              </li>
-            </ul>
+            ))}
           </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-xl font-semibold mb-3">📱 For Social Media</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Predis.ai:</strong> Full social content + scheduling</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Canva AI:</strong> Visual content creation</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Copy.ai:</strong> Captions and copy</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Midjourney:</strong> Stunning custom visuals</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-xl font-semibold mb-3">📢 For Paid Advertising</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>AdCreative.ai:</strong> Generate high-CTR ad creatives</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Copy.ai:</strong> Ad copy variations</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Canva AI:</strong> Ad banners and graphics</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-xl font-semibold mb-3">🔍 For SEO & Organic Growth</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Surfer SEO:</strong> Content optimization</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>SEMrush:</strong> Comprehensive keyword research</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Frase:</strong> Content briefs from SERPs</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>MarketMuse:</strong> Enterprise content strategy</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-xl font-semibold mb-3">💼 For Small Businesses</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Copy.ai:</strong> Affordable all-rounder</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Canva AI:</strong> Design without designers</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>ChatGPT:</strong> Versatile assistant</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>HubSpot AI:</strong> Free CRM + marketing</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-xl font-semibold mb-3">🏢 For Enterprise/Agencies</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>Jasper:</strong> Team collaboration, brand voice</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>SEMrush:</strong> Full SEO suite</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>HubSpot AI:</strong> Integrated marketing stack</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</span>
-                <span><strong>MarketMuse:</strong> Content strategy at scale</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Stack Recommendations */}
-      <section className="mb-16 bg-gradient-to-r from-purple-600/10 to-blue-600/10 border border-purple-500/20 rounded-2xl p-8">
-        <h2 className="text-3xl font-bold mb-6">🎯 Recommended AI Marketing Stacks</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gray-900/50 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-3 text-green-400">Starter Stack ($50-100/mo)</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>• <strong>Copy.ai Pro</strong> ($49) - Content</li>
-              <li>• <strong>Canva Pro</strong> ($15) - Design</li>
-              <li>• <strong>ChatGPT Plus</strong> ($20) - General</li>
-              <li>• <strong>HubSpot Free</strong> - CRM/Email</li>
-            </ul>
-            <p className="text-xs text-gray-500 mt-3">Perfect for solo marketers and small teams</p>
-          </div>
-
-          <div className="bg-gray-900/50 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-3 text-blue-400">Growth Stack ($200-400/mo)</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>• <strong>Jasper Teams</strong> ($125) - Content</li>
-              <li>• <strong>Surfer SEO</strong> ($179) - SEO</li>
-              <li>• <strong>Predis.ai Premium</strong> ($59) - Social</li>
-              <li>• <strong>Canva Teams</strong> ($30/user) - Design</li>
-            </ul>
-            <p className="text-xs text-gray-500 mt-3">For growing marketing teams</p>
-          </div>
-
-          <div className="bg-gray-900/50 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-3 text-purple-400">Enterprise Stack ($1,000+/mo)</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>• <strong>Jasper Business</strong> - Content</li>
-              <li>• <strong>SEMrush Business</strong> ($500) - SEO</li>
-              <li>• <strong>HubSpot Pro+</strong> ($890+) - Automation</li>
-              <li>• <strong>MarketMuse</strong> - Strategy</li>
-              <li>• <strong>AdCreative.ai</strong> - Ads</li>
-            </ul>
-            <p className="text-xs text-gray-500 mt-3">Full-stack for agencies and enterprises</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* FAQ Section */}
       <section className="mb-16">
         <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
-        <div className="space-y-6">
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2">Can AI replace human marketers?</h3>
-            <p className="text-gray-400">
-              No - but it makes them 10x more productive. AI handles repetitive tasks (writing
-              first drafts, generating variations, data analysis) while humans focus on strategy,
-              creativity, and decision-making. The best marketing teams use AI as a force
-              multiplier, not a replacement.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2">Which AI tool should I start with for marketing?</h3>
-            <p className="text-gray-400">
-              Start with <strong>ChatGPT Plus</strong> ($20/mo) or <strong>Copy.ai</strong> (free
-              tier). They're versatile, affordable, and cover 80% of common marketing tasks. Once
-              you have workflows, add specialized tools like Surfer SEO for rankings or Canva for
-              design.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2">Is Jasper worth $49/mo vs ChatGPT at $20/mo?</h3>
-            <p className="text-gray-400">
-              Depends on your needs. <strong>ChatGPT</strong> is more versatile and conversational.
-              <strong>Jasper</strong> offers marketing-specific templates, brand voice, SEO
-              integration, and team features. For serious content marketing teams, Jasper's
-              specialization justifies the cost. Solo marketers often do fine with ChatGPT.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2">Do AI-written articles rank on Google?</h3>
-            <p className="text-gray-400">
-              Yes, if done right. Google cares about quality and usefulness, not how content is
-              created. The key: use AI for first drafts, then edit heavily, add expertise and
-              original insights, optimize with tools like Surfer SEO, and ensure it genuinely
-              helps readers. Pure AI content without human editing typically doesn't rank well.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2">What's the ROI of AI marketing tools?</h3>
-            <p className="text-gray-400">
-              Most teams report 5-10x time savings on content tasks, 20-40% faster content
-              production, and 15-30% better engagement metrics. Financial ROI varies: if AI saves
-              your team 20 hours/week at $50/hr billing rate, that's $1,000/week ($4,000/mo) in
-              value for tools costing $100-300/mo. ROI is typically 10-40x for active users.
-            </p>
-          </div>
-
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2">Should I use one all-in-one tool or multiple specialized tools?</h3>
-            <p className="text-gray-400">
-              Start with one versatile tool (ChatGPT or Copy.ai), then add specialists as needed.
-              All-in-ones like HubSpot are great for integration but often lack best-in-class AI
-              features. Most successful marketing teams use 3-5 tools: one for content, one for
-              SEO, one for design, one for automation/CRM.
-            </p>
-          </div>
+        <div className="space-y-4">
+          {faqs.map((faq, i) => (
+            <div key={i} className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+              <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+              <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/20 rounded-2xl p-12 text-center">
-        <h2 className="text-3xl font-bold mb-4">Explore More AI Tools</h2>
-        <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-          Discover hundreds more AI tools for writing, design, automation, and analytics.
+      {/* CTA + Cross-links */}
+      <section className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/20 rounded-2xl p-12 text-center mb-12">
+        <h2 className="text-3xl font-bold mb-4">Explore More AI Tool Categories</h2>
+        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+          Looking for AI tools in other areas? We cover every major use case with in-depth comparisons
+          and reviews.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <Link
-            href="/"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
-          >
-            Browse All Tools
+          <Link href="/best-ai-tools-for-developers" className="bg-gray-800 hover:bg-gray-700 text-white px-5 py-3 rounded-lg font-medium transition">
+            AI for Developers →
           </Link>
-          <Link
-            href="/category/writing"
-            className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition"
-          >
-            Writing Tools →
+          <Link href="/best-ai-tools-for-students" className="bg-gray-800 hover:bg-gray-700 text-white px-5 py-3 rounded-lg font-medium transition">
+            AI for Students →
           </Link>
-          <Link
-            href="/category/seo"
-            className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition"
-          >
-            SEO Tools →
+          <Link href="/ai-chatbot-tools" className="bg-gray-800 hover:bg-gray-700 text-white px-5 py-3 rounded-lg font-medium transition">
+            Best AI Chatbots →
+          </Link>
+          <Link href="/best-ai-video-tools" className="bg-gray-800 hover:bg-gray-700 text-white px-5 py-3 rounded-lg font-medium transition">
+            AI Video Tools →
+          </Link>
+          <Link href="/best-free-ai-tools" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg font-medium transition">
+            Best Free AI Tools →
           </Link>
         </div>
       </section>
