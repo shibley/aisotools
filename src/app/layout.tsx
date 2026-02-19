@@ -99,6 +99,8 @@ export default function RootLayout({
                 <h3 className="font-semibold text-white mb-3">Our Projects</h3>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><a href="https://apistatuscheck.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">API Status Check</a></li>
+                  <li><a href="https://www.usersrated.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">UsersRated</a></li>
+                  <li><a href="https://incudo.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Incudo AI</a></li>
                   <li><a href="https://www.4dayjob.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">4DayJob</a></li>
                   <li><a href="https://clockti.me" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">clockti.me</a></li>
                 </ul>
