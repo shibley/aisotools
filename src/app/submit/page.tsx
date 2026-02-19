@@ -21,7 +21,7 @@ export default function SubmitPage() {
       </p>
 
       <form
-        action="https://formspree.io/f/placeholder"
+        action="https://formsubmit.co/hello@aisotools.com"
         method="POST"
         className="space-y-6"
       >

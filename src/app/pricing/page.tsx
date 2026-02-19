@@ -77,6 +77,21 @@ export default function PricingPage() {
         </p>
       </div>
 
+      {/* Stats Bar */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        {[
+          { stat: "340+", label: "AI Tools Listed" },
+          { stat: "18", label: "Categories" },
+          { stat: "300+", label: "Pages Indexed" },
+          { stat: "100%", label: "Dofollow Backlinks" },
+        ].map((item) => (
+          <div key={item.label} className="text-center p-4 bg-gray-900/50 rounded-xl border border-gray-800">
+            <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">{item.stat}</div>
+            <div className="text-sm text-gray-400 mt-1">{item.label}</div>
+          </div>
+        ))}
+      </div>
+
       {/* Pricing Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {plans.map((plan) => (
@@ -117,6 +132,33 @@ export default function PricingPage() {
             >
               {plan.cta}
             </a>
+          </div>
+        ))}
+      </div>
+
+      {/* Why Advertise */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {[
+          {
+            icon: "🎯",
+            title: "Targeted Audience",
+            desc: "Our visitors are actively searching for AI tools — they have intent and budget. No wasted impressions.",
+          },
+          {
+            icon: "📈",
+            title: "SEO Backlink",
+            desc: "Every featured listing includes a permanent dofollow backlink from our DA-growing domain. Real SEO value.",
+          },
+          {
+            icon: "⚡",
+            title: "Instant Visibility",
+            desc: "Go live in hours, not weeks. Featured tools get top placement in their category immediately.",
+          },
+        ].map((item) => (
+          <div key={item.title} className="bg-gray-900/50 border border-gray-800 rounded-xl p-6">
+            <div className="text-2xl mb-3">{item.icon}</div>
+            <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+            <p className="text-gray-400 text-sm">{item.desc}</p>
           </div>
         ))}
       </div>
