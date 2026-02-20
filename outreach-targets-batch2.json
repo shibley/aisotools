@@ -1,0 +1,352 @@
+[
+  {
+    "company": "QuillBot",
+    "domain": "quillbot.com",
+    "contact_email": "partnerships@quillbot.com",
+    "category": "writing",
+    "description": "AI-powered paraphrasing, grammar checking, and writing enhancement tool"
+  },
+  {
+    "company": "Grammarly",
+    "domain": "grammarly.com",
+    "contact_email": "partnerships@grammarly.com",
+    "category": "writing",
+    "description": "AI writing assistant for grammar, spelling, and style improvements"
+  },
+  {
+    "company": "Anyword",
+    "domain": "anyword.com",
+    "contact_email": "partnerships@anyword.com",
+    "category": "marketing",
+    "description": "AI copywriting platform with predictive performance scoring"
+  },
+  {
+    "company": "Semrush",
+    "domain": "semrush.com",
+    "contact_email": "partnerships@semrush.com",
+    "category": "SEO",
+    "description": "All-in-one SEO and digital marketing platform with AI writing assistant"
+  },
+  {
+    "company": "Notion AI",
+    "domain": "notion.so",
+    "contact_email": "partnerships@notion.so",
+    "category": "productivity",
+    "description": "AI-powered workspace for notes, docs, and project management"
+  },
+  {
+    "company": "Paperpal",
+    "domain": "paperpal.com",
+    "contact_email": "partnerships@paperpal.com",
+    "category": "writing",
+    "description": "AI writing tool for researchers, academics, and students"
+  },
+  {
+    "company": "Descript",
+    "domain": "descript.com",
+    "contact_email": "partnerships@descript.com",
+    "category": "video",
+    "description": "AI-powered video and podcast editor with text-based editing"
+  },
+  {
+    "company": "Midjourney",
+    "domain": "midjourney.com",
+    "contact_email": "partnerships@midjourney.com",
+    "category": "image",
+    "description": "AI art generator creating high-quality images from text prompts"
+  },
+  {
+    "company": "Runway ML",
+    "domain": "runwayml.com",
+    "contact_email": "partnerships@runwayml.com",
+    "category": "video",
+    "description": "AI video generation and editing platform for creative professionals"
+  },
+  {
+    "company": "ElevenLabs",
+    "domain": "elevenlabs.io",
+    "contact_email": "affiliates@elevenlabs.io",
+    "category": "voice",
+    "description": "AI voice generation and text-to-speech with realistic voices"
+  },
+  {
+    "company": "Tabnine",
+    "domain": "tabnine.com",
+    "contact_email": "partnerships@tabnine.com",
+    "category": "coding",
+    "description": "AI code completion tool for developers across multiple IDEs"
+  },
+  {
+    "company": "Codeium",
+    "domain": "codeium.com",
+    "contact_email": "partnerships@codeium.com",
+    "category": "coding",
+    "description": "Free AI code acceleration toolkit with autocomplete and chat"
+  },
+  {
+    "company": "Replit",
+    "domain": "replit.com",
+    "contact_email": "partnerships@replit.com",
+    "category": "coding",
+    "description": "Online IDE with AI-powered Ghostwriter for collaborative coding"
+  },
+  {
+    "company": "Tidio",
+    "domain": "tidio.com",
+    "contact_email": "partnerships@tidio.com",
+    "category": "chatbot",
+    "description": "AI chatbot and live chat platform for customer service"
+  },
+  {
+    "company": "Intercom",
+    "domain": "intercom.com",
+    "contact_email": "partnerships@intercom.com",
+    "category": "chatbot",
+    "description": "AI-powered customer messaging platform with chatbots"
+  },
+  {
+    "company": "Drift",
+    "domain": "drift.com",
+    "contact_email": "partnerships@drift.com",
+    "category": "chatbot",
+    "description": "Conversational AI platform for sales and marketing teams"
+  },
+  {
+    "company": "Surfer SEO",
+    "domain": "surferseo.com",
+    "contact_email": "partnerships@surferseo.com",
+    "category": "SEO",
+    "description": "AI-powered SEO content optimization and research tool"
+  },
+  {
+    "company": "Frase",
+    "domain": "frase.io",
+    "contact_email": "partnerships@frase.io",
+    "category": "SEO",
+    "description": "AI content optimization and SEO research platform"
+  },
+  {
+    "company": "Clearscope",
+    "domain": "clearscope.io",
+    "contact_email": "partnerships@clearscope.io",
+    "category": "SEO",
+    "description": "Content optimization platform for SEO-driven content teams"
+  },
+  {
+    "company": "MarketMuse",
+    "domain": "marketmuse.com",
+    "contact_email": "partnerships@marketmuse.com",
+    "category": "SEO",
+    "description": "AI content planning and optimization for enterprise SEO"
+  },
+  {
+    "company": "Otter.ai",
+    "domain": "otter.ai",
+    "contact_email": "partnerships@otter.ai",
+    "category": "voice",
+    "description": "AI meeting transcription and note-taking assistant"
+  },
+  {
+    "company": "Murf AI",
+    "domain": "murf.ai",
+    "contact_email": "partnerships@murf.ai",
+    "category": "voice",
+    "description": "AI voice generator for professional voiceovers and narration"
+  },
+  {
+    "company": "Rytr",
+    "domain": "rytr.me",
+    "contact_email": "hello@rytr.me",
+    "category": "writing",
+    "description": "AI writing assistant for creating content quickly and affordably"
+  },
+  {
+    "company": "HyperWrite",
+    "domain": "hyperwriteai.com",
+    "contact_email": "partnerships@hyperwriteai.com",
+    "category": "writing",
+    "description": "AI writing assistant with personalized suggestions and automation"
+  },
+  {
+    "company": "Wordtune",
+    "domain": "wordtune.com",
+    "contact_email": "partnerships@wordtune.com",
+    "category": "writing",
+    "description": "AI writing companion for rewriting and rephrasing text"
+  },
+  {
+    "company": "Lumen5",
+    "domain": "lumen5.com",
+    "contact_email": "partnerships@lumen5.com",
+    "category": "video",
+    "description": "AI-powered video creation platform for social media content"
+  },
+  {
+    "company": "Synthesia",
+    "domain": "synthesia.io",
+    "contact_email": "partnerships@synthesia.io",
+    "category": "video",
+    "description": "AI video generation with synthetic avatars and voiceovers"
+  },
+  {
+    "company": "HeyGen",
+    "domain": "heygen.com",
+    "contact_email": "partnerships@heygen.com",
+    "category": "video",
+    "description": "AI video platform for creating spokesperson videos at scale"
+  },
+  {
+    "company": "Fireflies.ai",
+    "domain": "fireflies.ai",
+    "contact_email": "partnerships@fireflies.ai",
+    "category": "productivity",
+    "description": "AI meeting assistant for recording, transcribing, and summarizing"
+  },
+  {
+    "company": "Clickup",
+    "domain": "clickup.com",
+    "contact_email": "partnerships@clickup.com",
+    "category": "productivity",
+    "description": "All-in-one productivity platform with AI writing and automation"
+  },
+  {
+    "company": "Beautiful.ai",
+    "domain": "beautiful.ai",
+    "contact_email": "partnerships@beautiful.ai",
+    "category": "design",
+    "description": "AI-powered presentation software with smart slide design"
+  },
+  {
+    "company": "Canva",
+    "domain": "canva.com",
+    "contact_email": "partnerships@canva.com",
+    "category": "design",
+    "description": "Design platform with AI-powered Magic Design and content generation"
+  },
+  {
+    "company": "Looka",
+    "domain": "looka.com",
+    "contact_email": "partnerships@looka.com",
+    "category": "design",
+    "description": "AI logo maker and brand identity platform"
+  },
+  {
+    "company": "Remove.bg",
+    "domain": "remove.bg",
+    "contact_email": "partnerships@remove.bg",
+    "category": "image",
+    "description": "AI-powered background removal tool for images"
+  },
+  {
+    "company": "Topaz Labs",
+    "domain": "topazlabs.com",
+    "contact_email": "partnerships@topazlabs.com",
+    "category": "image",
+    "description": "AI-powered photo and video enhancement software"
+  },
+  {
+    "company": "Jasper Art",
+    "domain": "jasper.ai/art",
+    "contact_email": "partnerships@jasper.ai",
+    "category": "image",
+    "description": "AI art generator integrated with Jasper's content platform"
+  },
+  {
+    "company": "DALL-E (OpenAI)",
+    "domain": "openai.com",
+    "contact_email": "partnerships@openai.com",
+    "category": "image",
+    "description": "AI image generation from text descriptions by OpenAI"
+  },
+  {
+    "company": "Stable Diffusion (Stability AI)",
+    "domain": "stability.ai",
+    "contact_email": "partnerships@stability.ai",
+    "category": "image",
+    "description": "Open-source AI image generation model and platform"
+  },
+  {
+    "company": "ChatGPT (OpenAI)",
+    "domain": "openai.com/chatgpt",
+    "contact_email": "partnerships@openai.com",
+    "category": "chatbot",
+    "description": "Conversational AI chatbot for diverse tasks and queries"
+  },
+  {
+    "company": "Claude (Anthropic)",
+    "domain": "anthropic.com",
+    "contact_email": "partnerships@anthropic.com",
+    "category": "chatbot",
+    "description": "AI assistant focused on helpful, harmless, and honest interactions"
+  },
+  {
+    "company": "Perplexity AI",
+    "domain": "perplexity.ai",
+    "contact_email": "partnerships@perplexity.ai",
+    "category": "chatbot",
+    "description": "AI-powered answer engine with real-time web search"
+  },
+  {
+    "company": "Zapier",
+    "domain": "zapier.com",
+    "contact_email": "partnerships@zapier.com",
+    "category": "productivity",
+    "description": "Workflow automation platform with AI-powered integrations"
+  },
+  {
+    "company": "Superhuman",
+    "domain": "superhuman.com",
+    "contact_email": "partnerships@superhuman.com",
+    "category": "productivity",
+    "description": "AI-powered email client for productivity and speed"
+  },
+  {
+    "company": "Krisp",
+    "domain": "krisp.ai",
+    "contact_email": "partnerships@krisp.ai",
+    "category": "voice",
+    "description": "AI-powered noise cancellation for calls and recordings"
+  },
+  {
+    "company": "Speechify",
+    "domain": "speechify.com",
+    "contact_email": "partnerships@speechify.com",
+    "category": "voice",
+    "description": "AI text-to-speech app for listening to documents and articles"
+  },
+  {
+    "company": "Simplified",
+    "domain": "simplified.com",
+    "contact_email": "partnerships@simplified.com",
+    "category": "marketing",
+    "description": "All-in-one AI marketing platform for design, video, and copy"
+  },
+  {
+    "company": "Adcreative.ai",
+    "domain": "adcreative.ai",
+    "contact_email": "partnerships@adcreative.ai",
+    "category": "marketing",
+    "description": "AI-powered ad creative generation for better conversions"
+  },
+  {
+    "company": "Cohesive AI",
+    "domain": "cohesive.so",
+    "contact_email": "hello@cohesive.so",
+    "category": "writing",
+    "description": "AI editor that helps create, refine, and publish content"
+  },
+  {
+    "company": "Lex",
+    "domain": "lex.page",
+    "contact_email": "hello@lex.page",
+    "category": "writing",
+    "description": "AI-powered word processor for writers and creators"
+  },
+  {
+    "company": "Tome",
+    "domain": "tome.app",
+    "contact_email": "partnerships@tome.app",
+    "category": "design",
+    "description": "AI-powered storytelling and presentation creation platform"
+  }
+]
