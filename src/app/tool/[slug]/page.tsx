@@ -166,17 +166,26 @@ export default async function ToolPage({ params }: Props) {
           <h2 className="text-2xl font-bold mb-4">Alternatives to {tool.name}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {alternatives.map((alt) => alt && (
-              <Link
+              <div
                 key={alt.slug}
-                href={`/tool/${alt.slug}`}
                 className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition"
               >
-                <h3 className="font-semibold mb-1">{alt.name}</h3>
-                <p className="text-gray-400 text-sm">{alt.shortDescription}</p>
-                <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full mt-2 inline-block">
-                  {alt.pricing}
-                </span>
-              </Link>
+                <Link href={`/tool/${alt.slug}`}>
+                  <h3 className="font-semibold mb-1">{alt.name}</h3>
+                  <p className="text-gray-400 text-sm">{alt.shortDescription}</p>
+                </Link>
+                <div className="flex items-center gap-2 mt-3">
+                  <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">
+                    {alt.pricing}
+                  </span>
+                  <Link
+                    href={`/compare/${[tool.slug, alt.slug].sort().join("-vs-")}`}
+                    className="text-xs text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Compare {tool.name} vs {alt.name} →
+                  </Link>
+                </div>
+              </div>
             ))}
           </div>
         </section>

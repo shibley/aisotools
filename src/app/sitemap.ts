@@ -1,24 +1,7 @@
 import { tools } from "@/data/tools";
 import { categories } from "@/data/categories";
+import { getAllComparisonPairs } from "@/lib/comparisons";
 import type { MetadataRoute } from "next";
-
-const comparisons = [
-  ["chatgpt", "claude"],
-  ["midjourney", "dall-e-3"],
-  ["cursor", "github-copilot"],
-  ["runway", "pika"],
-  ["jasper", "copy-ai"],
-  ["elevenlabs", "murf-ai"],
-  ["notion-ai", "taskade"],
-  ["gemini", "chatgpt"],
-  ["stable-diffusion", "leonardo-ai"],
-  ["surfer-seo", "semrush-ai"],
-  ["perplexity", "you-com"],
-  ["synthesia", "heygen"],
-  ["suno", "udio"],
-  ["figma-ai", "framer-ai"],
-  ["make-com", "zapier-ai"],
-];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://aisotools.com";
@@ -46,11 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  const comparisonPages = comparisons.map(([a, b]) => ({
-    url: `${base}/compare/${a}-vs-${b}`,
+  const comparisonPages = getAllComparisonPairs().map((pair) => ({
+    url: `${base}/compare/${pair.slugA}-vs-${pair.slugB}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
-    priority: 0.7,
+    priority: 0.75,
   }));
 
   const pricingPages = tools.map((tool) => ({
