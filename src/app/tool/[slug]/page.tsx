@@ -163,7 +163,15 @@ export default async function ToolPage({ params }: Props) {
       {/* Alternatives */}
       {alternatives && alternatives.length > 0 && (
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Alternatives to {tool.name}</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold">Alternatives to {tool.name}</h2>
+            <Link
+              href={`/alternatives/${tool.slug}`}
+              className="text-blue-400 hover:text-blue-300 text-sm font-medium transition"
+            >
+              View all {tool.name} alternatives →
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {alternatives.map((alt) => alt && (
               <div

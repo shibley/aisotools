@@ -775,6 +775,19 @@ export default async function ToolPricingPage({ params }: Props) {
                 Full review with features, pros & cons
               </p>
             </Link>
+            {tool.alternatives && tool.alternatives.length > 0 && (
+              <Link
+                href={`/alternatives/${tool.slug}`}
+                className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition"
+              >
+                <h3 className="font-semibold mb-1">🔄 {tool.name} Alternatives</h3>
+                <p className="text-gray-400 text-sm">
+                  {tool.pricing === "paid"
+                    ? "See cheaper alternatives & free options"
+                    : `Compare ${tool.alternatives.length} alternatives`}
+                </p>
+              </Link>
+            )}
             {category && (
               <Link
                 href={`/category/${category.slug}`}

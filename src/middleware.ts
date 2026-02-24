@@ -17,10 +17,30 @@ const comparisonRedirects: Record<string, string> = {
   "/dall-e-vs-midjourney": "/compare/dall-e-vs-midjourney",
 };
 
+/**
+ * Redirect standalone static alternatives pages to the dynamic /alternatives/ versions.
+ */
+const alternativesRedirects: Record<string, string> = {
+  "/chatgpt-alternatives": "/alternatives/chatgpt",
+  "/midjourney-alternatives": "/alternatives/midjourney",
+  "/canva-alternatives": "/alternatives/canva-ai",
+  "/copilot-alternatives": "/alternatives/github-copilot",
+  "/github-copilot-alternatives": "/alternatives/github-copilot",
+  "/dall-e-alternatives": "/alternatives/dall-e",
+  "/grammarly-alternatives": "/alternatives/grammarly",
+  "/notion-ai-alternatives": "/alternatives/notion-ai",
+  "/synthesia-alternatives": "/alternatives/synthesia",
+};
+
+const allRedirects: Record<string, string> = {
+  ...comparisonRedirects,
+  ...alternativesRedirects,
+};
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const redirect = comparisonRedirects[pathname];
+  const redirect = allRedirects[pathname];
   if (redirect) {
     const url = request.nextUrl.clone();
     url.pathname = redirect;
@@ -32,6 +52,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    // Comparison redirects
     "/chatgpt-vs-claude",
     "/chatgpt-vs-gemini",
     "/cursor-vs-github-copilot",
@@ -40,5 +61,15 @@ export const config = {
     "/gemini-vs-chatgpt",
     "/github-copilot-vs-cursor",
     "/dall-e-vs-midjourney",
+    // Alternatives redirects
+    "/chatgpt-alternatives",
+    "/midjourney-alternatives",
+    "/canva-alternatives",
+    "/copilot-alternatives",
+    "/github-copilot-alternatives",
+    "/dall-e-alternatives",
+    "/grammarly-alternatives",
+    "/notion-ai-alternatives",
+    "/synthesia-alternatives",
   ],
 };

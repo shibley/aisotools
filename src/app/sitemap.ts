@@ -1,6 +1,7 @@
 import { tools } from "@/data/tools";
 import { categories } from "@/data/categories";
 import { getAllComparisonPairs } from "@/lib/comparisons";
+import { getToolsWithAlternatives } from "@/lib/alternatives";
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { url: base, lastModified: now, changeFrequency: "daily" as const, priority: 1 },
     { url: `${base}/compare`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
+    { url: `${base}/alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/submit`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${base}/pricing`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${base}/pricing/tools`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
@@ -43,5 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages, ...pricingPages, ...comparisonPages];
+  const alternativesPages = getToolsWithAlternatives().map((tool) => ({
+    url: `${base}/alternatives/${tool.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...categoryPages, ...toolPages, ...pricingPages, ...comparisonPages, ...alternativesPages];
 }
