@@ -15,7 +15,7 @@ export default function SubmitPage() {
         Get your AI tool in front of thousands of developers, marketers, and
         creators. Basic listings are <strong className="text-white">free forever</strong>.
         Want more visibility?{" "}
-        <a href="/pricing" className="text-blue-400 hover:text-blue-300">
+        <a href="/advertise" className="text-blue-400 hover:text-blue-300">
           Check our featured plans →
         </a>
       </p>
@@ -171,7 +171,7 @@ export default function SubmitPage() {
         <p className="text-gray-500 text-sm text-center">
           Submissions are reviewed within 24 hours. Want instant listing +
           featured placement?{" "}
-          <a href="/pricing" className="text-blue-400 hover:text-blue-300">
+          <a href="/advertise" className="text-blue-400 hover:text-blue-300">
             See pricing →
           </a>
         </p>
@@ -186,7 +186,7 @@ export default function SubmitPage() {
           weekly newsletter to thousands of subscribers.
         </p>
         <a
-          href="/pricing"
+          href="/advertise"
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
         >
           View Featured Plans →

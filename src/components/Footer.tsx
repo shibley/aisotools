@@ -43,7 +43,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/pricing" className="hover:text-white transition">
+                <a href="/advertise" className="hover:text-white transition">
                   Advertise
                 </a>
               </li>

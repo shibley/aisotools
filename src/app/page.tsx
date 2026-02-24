@@ -60,24 +60,36 @@ export default function Home() {
             <Link
               key={tool.slug}
               href={`/tool/${tool.slug}`}
-              className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 hover:bg-gray-900/80 transition group"
+              className={`rounded-xl p-6 transition group relative ${
+                tool.sponsored
+                  ? "bg-gradient-to-br from-blue-600/10 to-purple-600/10 border-2 border-blue-500/30 hover:border-blue-500/50 shadow-lg shadow-blue-500/5"
+                  : "bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:bg-gray-900/80"
+              }`}
             >
+              {tool.sponsored && (
+                <div className="absolute -top-2.5 right-4">
+                  <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                    ⭐ Featured
+                  </span>
+                </div>
+              )}
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <h3 className="text-lg font-semibold group-hover:text-blue-400 transition">
                     {tool.name}
                   </h3>
-                  <span className="text-xs bg-gray-800 text-gray-400 px-2 py-0.5 rounded-full">
+                  <span className={`text-xs px-2 py-0.5 rounded-full ${
+                    tool.sponsored
+                      ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                      : "bg-gray-800 text-gray-400"
+                  }`}>
                     {tool.pricing}
                   </span>
                 </div>
-                {tool.sponsored && (
-                  <span className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded-full">
-                    Sponsored
-                  </span>
-                )}
               </div>
-              <p className="text-gray-400 text-sm mb-4">{tool.shortDescription}</p>
+              <p className={`text-sm mb-4 ${tool.sponsored ? "text-gray-300" : "text-gray-400"}`}>
+                {tool.shortDescription}
+              </p>
               <div className="flex flex-wrap gap-1">
                 {tool.tags.slice(0, 3).map((tag) => (
                   <span
@@ -131,10 +143,10 @@ export default function Home() {
               Submit Your Tool (Free)
             </Link>
             <Link
-              href="/pricing"
+              href="/advertise"
               className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition"
             >
-              View Pricing
+              Get Featured ⭐
             </Link>
           </div>
         </div>

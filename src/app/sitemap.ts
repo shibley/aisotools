@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/compare`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
     { url: `${base}/alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/submit`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },
+    { url: `${base}/advertise`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${base}/pricing`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${base}/pricing/tools`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
   ];

@@ -27,6 +27,9 @@ export default function Header() {
             <a href="/compare" className="text-gray-400 hover:text-white transition">
               Compare
             </a>
+            <a href="/advertise" className="text-gray-400 hover:text-white transition">
+              Advertise
+            </a>
             <a
               href="/submit"
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
@@ -97,6 +100,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Compare
+            </a>
+            <a
+              href="/advertise"
+              className="block text-gray-400 hover:text-white transition py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Advertise
             </a>
             <a
               href="/submit"
