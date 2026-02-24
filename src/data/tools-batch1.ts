@@ -16,7 +16,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Brand voice training", "SEO mode", "Team collaboration", "50+ templates", "Multi-language support", "Chrome extension"],
-    alternatives: ["copy-ai", "writesonic", "rytr"],
+    alternatives: ["copy-ai", "writesonic", "rytr", "hyperwrite"],
     addedDate: "2026-02-14",
   },
   {
@@ -33,7 +33,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["90+ copywriting tools", "Brand voice", "Infobase knowledge", "Workflow automation", "Team collaboration", "Multi-language"],
-    alternatives: ["jasper", "writesonic", "rytr"],
+    alternatives: ["jasper", "writesonic", "rytr", "hyperwrite"],
     addedDate: "2026-02-14",
   },
   {
@@ -137,7 +137,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["High prompt accuracy", "ChatGPT integration", "Multiple aspect ratios", "Editing via conversation", "Commercial use rights", "API access"],
-    alternatives: ["midjourney", "stable-diffusion", "leonardo-ai"],
+    alternatives: ["midjourney", "stable-diffusion", "leonardo-ai", "deepai"],
     addedDate: "2026-02-14",
   },
   {
@@ -205,7 +205,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Photorealistic output", "Fast generation", "Multiple variants", "Style control", "High resolution", "API access"],
-    alternatives: ["midjourney", "dall-e", "stable-diffusion"],
+    alternatives: ["midjourney", "dall-e", "stable-diffusion", "deepai"],
     addedDate: "2026-02-14",
   },
   {
@@ -500,7 +500,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Google Search integration", "Gmail/Drive access", "Image understanding", "Code generation", "Multimodal input", "Extensions"],
-    alternatives: ["chatgpt", "claude", "copilot"],
+    alternatives: ["chatgpt", "claude", "copilot", "grok", "deepseek"],
     addedDate: "2026-02-14",
   },
   {
@@ -517,7 +517,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Windows integration", "Office 365 integration", "Web search", "Image generation", "Voice input", "Edge browser"],
-    alternatives: ["chatgpt", "gemini", "claude"],
+    alternatives: ["chatgpt", "gemini", "claude", "grok", "deepseek"],
     addedDate: "2026-02-14",
   },
   {
@@ -551,7 +551,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Create characters", "Celebrity personalities", "Group chats", "Image generation", "Voice chat", "Community sharing"],
-    alternatives: ["replika", "pi", "poe"],
+    alternatives: ["replika", "pi", "poe", "janitor-ai"],
     addedDate: "2026-02-14",
   },
   {
@@ -621,7 +621,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Code suggestions", "Multi-file context", "Chat in IDE", "CLI assistance", "Security scanning", "Multi-language"],
-    alternatives: ["cursor", "windsurf", "tabnine"],
+    alternatives: ["cursor", "windsurf", "claude-code", "amazon-q"],
     addedDate: "2026-02-14",
   },
   {
@@ -638,7 +638,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Agentic flows", "Real-time suggestions", "Multi-file edits", "Terminal integration", "Context awareness", "Fast autocomplete"],
-    alternatives: ["cursor", "github-copilot", "supermaven"],
+    alternatives: ["cursor", "github-copilot", "claude-code", "cline"],
     addedDate: "2026-02-14",
   },
   {
@@ -672,7 +672,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["AI code generation", "Instant deployment", "Collaborative coding", "Built-in database", "Ghostwriter chat", "Multi-language"],
-    alternatives: ["github-copilot", "v0", "bolt"],
+    alternatives: ["lovable", "v0", "bolt"],
     addedDate: "2026-02-14",
   },
   {
@@ -689,7 +689,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["React code generation", "Tailwind CSS", "shadcn/ui components", "Copy/paste ready", "Iterative refinement", "Dark mode"],
-    alternatives: ["bolt", "replit", "cursor"],
+    alternatives: ["bolt", "lovable", "replit", "cursor"],
     addedDate: "2026-02-14",
   },
   {
@@ -706,7 +706,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Full-stack generation", "Instant preview", "Database integration", "Package installation", "Git integration", "Export code"],
-    alternatives: ["v0", "replit", "cursor"],
+    alternatives: ["v0", "lovable", "replit", "cursor"],
     addedDate: "2026-02-14",
   },
   {

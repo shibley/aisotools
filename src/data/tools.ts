@@ -2,6 +2,7 @@ import { toolsBatch1 } from "./tools-batch1";
 import { toolsBatch2 } from "./tools-batch2";
 import { toolsBatch3 } from "./tools-batch3";
 import { toolsBatch4 } from "./tools-batch4";
+import { toolsBatch5 } from "./tools-batch5";
 
 export interface Tool {
   name: string;
@@ -45,7 +46,7 @@ export const tools: Tool[] = [
     featured: true,
     sponsored: false,
     features: ["Natural language conversation", "Code generation", "Image generation (DALL-E)", "File analysis", "Web browsing", "Custom GPTs"],
-    alternatives: ["claude", "gemini", "perplexity"],
+    alternatives: ["claude", "gemini", "perplexity", "grok", "deepseek"],
     addedDate: "2026-02-14",
   },
   {
@@ -62,7 +63,7 @@ export const tools: Tool[] = [
     featured: true,
     sponsored: false,
     features: ["200K+ token context", "Document analysis", "Code generation", "Vision/image understanding", "Artifacts", "Projects"],
-    alternatives: ["chatgpt", "gemini", "perplexity"],
+    alternatives: ["chatgpt", "gemini", "perplexity", "grok", "deepseek"],
     addedDate: "2026-02-14",
   },
   {
@@ -96,7 +97,7 @@ export const tools: Tool[] = [
     featured: true,
     sponsored: false,
     features: ["AI code generation", "Codebase understanding", "Multi-file editing", "Chat with codebase", "Tab completion", "Bug detection"],
-    alternatives: ["github-copilot", "windsurf", "supermaven"],
+    alternatives: ["github-copilot", "windsurf", "claude-code", "cline"],
     addedDate: "2026-02-14",
   },
   {
@@ -120,4 +121,5 @@ export const tools: Tool[] = [
   ...toolsBatch2,
   ...toolsBatch3,
   ...toolsBatch4,
+  ...toolsBatch5,
 ];
