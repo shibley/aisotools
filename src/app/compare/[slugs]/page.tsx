@@ -178,18 +178,30 @@ export default async function ComparisonPage({ params }: Props) {
       </div>
 
       {/* Cross-links */}
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Link
           href={`/tool/${toolA.slug}`}
-          className="flex-1 bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition text-center"
+          className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition text-center"
         >
           Read full {toolA.name} review →
         </Link>
         <Link
           href={`/tool/${toolB.slug}`}
-          className="flex-1 bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-purple-500/50 transition text-center"
+          className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-purple-500/50 transition text-center"
         >
           Read full {toolB.name} review →
+        </Link>
+        <Link
+          href={`/pricing/${toolA.slug}`}
+          className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition text-center"
+        >
+          💰 {toolA.name} Pricing Details →
+        </Link>
+        <Link
+          href={`/pricing/${toolB.slug}`}
+          className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-purple-500/50 transition text-center"
+        >
+          💰 {toolB.name} Pricing Details →
         </Link>
       </div>
     </div>

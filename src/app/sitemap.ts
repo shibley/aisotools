@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/compare`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
     { url: `${base}/submit`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },
     { url: `${base}/pricing`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${base}/pricing/tools`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
   ];
 
   const toolPages = tools.map((tool) => ({
@@ -52,5 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages, ...comparisonPages];
+  const pricingPages = tools.map((tool) => ({
+    url: `${base}/pricing/${tool.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...categoryPages, ...toolPages, ...pricingPages, ...comparisonPages];
 }

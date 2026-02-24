@@ -88,13 +88,16 @@ export default async function ToolPage({ params }: Props) {
               )}
             </div>
             <p className="text-xl text-gray-400 mt-1">{tool.shortDescription}</p>
-            <div className="flex items-center gap-3 mt-3">
+            <div className="flex items-center gap-3 mt-3 flex-wrap">
               <span className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
                 {tool.pricing}
               </span>
               {tool.pricingDetails && (
                 <span className="text-gray-500 text-sm">{tool.pricingDetails}</span>
               )}
+              <Link href={`/pricing/${tool.slug}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                View full pricing →
+              </Link>
             </div>
           </div>
         </div>
@@ -102,19 +105,27 @@ export default async function ToolPage({ params }: Props) {
 
       {/* CTA */}
       <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-8">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <p className="text-gray-400 text-sm">Visit {tool.name}</p>
             <p className="text-gray-500 text-xs">{tool.url}</p>
           </div>
-          <a
-            href={tool.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
-          >
-            Try {tool.name} →
-          </a>
+          <div className="flex gap-3">
+            <Link
+              href={`/pricing/${tool.slug}`}
+              className="bg-gray-800 hover:bg-gray-700 text-white px-5 py-3 rounded-lg font-medium transition text-sm"
+            >
+              💰 View Detailed Pricing →
+            </Link>
+            <a
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
+            >
+              Try {tool.name} →
+            </a>
+          </div>
         </div>
       </div>
 
