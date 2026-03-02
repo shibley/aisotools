@@ -693,6 +693,33 @@ export default function MidjourneyVsDalleVsStableDiffusionPage() {
         </p>
       </section>
 
+      {/* Related Articles */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">📚 Related Reading</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <Link href="/blog/midjourney-vs-dall-e" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">Midjourney vs DALL-E 3: Deep Dive</h3>
+            <p className="text-gray-500 text-sm">More detailed two-way comparison of Midjourney and DALL-E.</p>
+          </Link>
+          <Link href="/blog/best-ai-image-generators-2026" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">Best AI Image Generators 2026</h3>
+            <p className="text-gray-500 text-sm">Comprehensive guide including Flux, Ideogram, and Adobe Firefly.</p>
+          </Link>
+          <Link href="/blog/chatgpt-vs-claude" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">ChatGPT vs Claude</h3>
+            <p className="text-gray-500 text-sm">ChatGPT includes DALL-E integration for image generation.</p>
+          </Link>
+        </div>
+        <div className="flex flex-wrap gap-3 mt-6">
+          <span className="text-gray-500 text-sm">See also:</span>
+          <Link href="/midjourney-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Midjourney Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/dall-e-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">DALL-E Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/canva-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Canva Alternatives</Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-gradient-to-r from-pink-600/20 to-purple-600/20 border border-pink-500/20 rounded-2xl p-12 text-center">
         <h2 className="text-3xl font-bold mb-4">Explore More AI Image Tools</h2>

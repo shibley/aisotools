@@ -685,6 +685,35 @@ export default function GitHubCopilotAlternativesPage() {
         </div>
       </section>
 
+      {/* Related Reading */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-6">📚 Related Reading</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <Link href="/blog/github-copilot-vs-cursor-vs-codeium" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">GitHub Copilot vs Cursor vs Codeium</h3>
+            <p className="text-gray-500 text-sm">Detailed comparison of the top three AI coding assistants.</p>
+          </Link>
+          <Link href="/blog/best-ai-coding-tools-2026" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">Best AI Coding Tools 2026</h3>
+            <p className="text-gray-500 text-sm">Complete guide to Cursor, Windsurf, Replit Agent, v0, and more.</p>
+          </Link>
+          <Link href="/blog/chatgpt-vs-claude" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">ChatGPT vs Claude for Coding</h3>
+            <p className="text-gray-500 text-sm">Which AI assistant is better for development work?</p>
+          </Link>
+        </div>
+        <div className="flex flex-wrap gap-3 mt-6">
+          <span className="text-gray-500 text-sm">Related alternatives:</span>
+          <Link href="/copilot-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Copilot Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/chatgpt-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">ChatGPT Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/notion-ai-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Notion AI Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/alternatives" className="text-blue-400 hover:text-blue-300 text-sm">All Alternatives →</Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/20 rounded-2xl p-12 text-center">
         <h2 className="text-3xl font-bold mb-4">Explore More AI Tools</h2>
@@ -700,10 +729,10 @@ export default function GitHubCopilotAlternativesPage() {
             Browse All Tools
           </Link>
           <Link
-            href="/chatgpt-alternatives"
+            href="/category/coding"
             className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition"
           >
-            AI Chatbots →
+            AI Coding Tools →
           </Link>
         </div>
       </section>

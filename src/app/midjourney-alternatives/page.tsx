@@ -712,6 +712,35 @@ export default function MidjourneyAlternativesPage() {
         </div>
       </section>
 
+      {/* Related Reading */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-6">📚 Related Reading</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <Link href="/blog/midjourney-vs-dall-e" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">Midjourney vs DALL-E 3</h3>
+            <p className="text-gray-500 text-sm">Detailed comparison of image quality, pricing, and use cases.</p>
+          </Link>
+          <Link href="/blog/midjourney-vs-dalle-vs-stable-diffusion" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">Midjourney vs DALL-E vs Stable Diffusion</h3>
+            <p className="text-gray-500 text-sm">Three-way showdown of the most popular AI image generators.</p>
+          </Link>
+          <Link href="/blog/best-ai-image-generators-2026" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">Best AI Image Generators 2026</h3>
+            <p className="text-gray-500 text-sm">Complete guide to free and paid AI image generation tools.</p>
+          </Link>
+        </div>
+        <div className="flex flex-wrap gap-3 mt-6">
+          <span className="text-gray-500 text-sm">Related alternatives:</span>
+          <Link href="/dall-e-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">DALL-E Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/canva-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Canva Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/synthesia-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Synthesia Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/alternatives" className="text-blue-400 hover:text-blue-300 text-sm">All Alternatives →</Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/20 rounded-2xl p-12 text-center">
         <h2 className="text-3xl font-bold mb-4">Explore More AI Tools</h2>
@@ -727,10 +756,10 @@ export default function MidjourneyAlternativesPage() {
             Browse All Tools
           </Link>
           <Link
-            href="/chatgpt-alternatives"
+            href="/category/image-generation"
             className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition"
           >
-            AI Chatbots →
+            More Image Tools →
           </Link>
         </div>
       </section>

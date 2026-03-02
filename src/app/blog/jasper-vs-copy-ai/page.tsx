@@ -775,6 +775,33 @@ export default function JasperVsCopyAIPage() {
         </div>
       </section>
 
+      {/* Related Articles */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-6">📚 Related Reading</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          <Link href="/blog/best-ai-writing-tools-comparison-2026" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">Best AI Writing Tools 2026</h3>
+            <p className="text-gray-500 text-sm">Complete comparison including ChatGPT, Claude, and more options.</p>
+          </Link>
+          <Link href="/blog/chatgpt-vs-claude" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">ChatGPT vs Claude</h3>
+            <p className="text-gray-500 text-sm">Compare the two biggest AI assistants for writing quality.</p>
+          </Link>
+          <Link href="/blog/chatgpt-vs-claude-vs-gemini" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/40 transition group">
+            <h3 className="font-semibold group-hover:text-blue-400 transition mb-2">ChatGPT vs Claude vs Gemini</h3>
+            <p className="text-gray-500 text-sm">Three-way AI assistant comparison for marketing teams.</p>
+          </Link>
+        </div>
+        <div className="flex flex-wrap gap-3 mt-6">
+          <span className="text-gray-500 text-sm">See also:</span>
+          <Link href="/grammarly-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Grammarly Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/chatgpt-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">ChatGPT Alternatives</Link>
+          <span className="text-gray-700">·</span>
+          <Link href="/notion-ai-alternatives" className="text-blue-400 hover:text-blue-300 text-sm">Notion AI Alternatives</Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="text-center">
         <h2 className="text-2xl font-bold mb-4">Explore More AI Writing Tools</h2>
