@@ -211,7 +211,7 @@ const codingTools: CodingToolComparison[] = [
   },
   {
     name: "Continue",
-    slug: "continue-dev",
+    slug: "continue",
     description: "Open-source AI code assistant that lets you use any LLM with your IDE.",
     category: "Code Completion",
     pricing: "Free",
@@ -235,7 +235,7 @@ const codingTools: CodingToolComparison[] = [
   },
   {
     name: "Amazon CodeWhisperer",
-    slug: "amazon-codewhisperer",
+    slug: "codewhisperer",
     description: "AWS's AI code generator optimized for AWS services and cloud development.",
     category: "Code Completion",
     pricing: "Freemium",

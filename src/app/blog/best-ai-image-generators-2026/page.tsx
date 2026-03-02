@@ -67,7 +67,7 @@ const imageTools: ImageToolComparison[] = [
   },
   {
     name: "DALL-E 3",
-    slug: "dall-e-3",
+    slug: "dall-e",
     description: "OpenAI's latest image generator with exceptional prompt understanding and safety features.",
     category: "Premium",
     pricing: "Paid",
@@ -115,7 +115,7 @@ const imageTools: ImageToolComparison[] = [
   },
   {
     name: "Flux",
-    slug: "flux-ai",
+    slug: "flux",
     description: "Next-generation image model from Black Forest Labs with exceptional photorealism and detail.",
     category: "Premium",
     pricing: "Freemium",
