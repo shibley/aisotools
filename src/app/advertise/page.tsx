@@ -1,56 +1,49 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import { tools } from "@/data/tools";
 import { categories } from "@/data/categories";
-
-export const metadata: Metadata = {
-  title: "Advertise on AISO Tools — Get Your AI Tool Featured",
-  description:
-    "Get your AI tool in front of thousands of developers, marketers, and creators. Featured listings starting at $49/mo. Targeted AI audience, growing organic traffic.",
-  openGraph: {
-    title: "Advertise on AISO Tools — Featured Listings for AI Tools",
-    description:
-      "Put your AI tool at the top of the largest AI tools directory. Featured listings, sponsored badges, homepage placement, and dedicated reviews.",
-  },
-};
+import { useState } from "react";
 
 const plans = [
   {
     name: "Basic",
+    key: "basic",
     price: "$49",
-    period: "/mo",
+    priceNote: "one-time",
     description: "Stand out from the crowd",
     highlight: false,
     features: [
-      "Highlighted card with gradient border",
       "\"Featured\" badge on your listing",
       "Priority placement in category page",
       "Dofollow backlink to your site",
+      "SEO-optimized listing",
       "Listed within 24 hours",
     ],
     cta: "Get Basic",
   },
   {
     name: "Pro",
-    price: "$99",
-    period: "/mo",
+    key: "pro",
+    price: "$149",
+    priceNote: "one-time",
     description: "Maximum category visibility",
     highlight: true,
     features: [
       "Everything in Basic, plus:",
       "Top of category page placement",
-      "Featured in category sidebar",
-      "Prominent \"Sponsored\" badge",
-      "Included in weekly newsletter",
       "Comparison page priority",
+      "Prominent \"Sponsored\" badge",
       "Monthly analytics report",
+      "Featured in category sidebar",
     ],
     cta: "Get Pro",
   },
   {
     name: "Premium",
-    price: "$199",
-    period: "/mo",
+    key: "premium",
+    price: "$299",
+    priceNote: "one-time",
     description: "The full spotlight treatment",
     highlight: false,
     features: [
@@ -59,7 +52,6 @@ const plans = [
       "Dedicated review article",
       "Top placement across all categories",
       "Social media mention",
-      "Priority in comparison pages",
       "Custom badge/label on listing",
       "Direct support channel",
     ],
@@ -70,9 +62,102 @@ const plans = [
 const stats = [
   { value: `${tools.length}+`, label: "AI Tools Listed" },
   { value: `${categories.length}`, label: "Categories" },
-  { value: "10K+", label: "Monthly Visitors" },
+  { value: "Growing", label: "Monthly Visitors" },
   { value: "100%", label: "Organic Traffic" },
 ];
+
+function CheckoutButton({
+  plan,
+  highlight,
+  label,
+}: {
+  plan: string;
+  highlight: boolean;
+  label: string;
+}) {
+  const [loading, setLoading] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [toolName, setToolName] = useState("");
+  const [toolUrl, setToolUrl] = useState("");
+  const [email, setEmail] = useState("");
+
+  async function handleCheckout(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ plan, toolName, toolUrl, email }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert(data.error || "Something went wrong. Please try again.");
+        setLoading(false);
+      }
+    } catch {
+      alert("Something went wrong. Please try again.");
+      setLoading(false);
+    }
+  }
+
+  if (!showForm) {
+    return (
+      <button
+        onClick={() => setShowForm(true)}
+        className={`block w-full text-center py-3 rounded-xl font-semibold transition cursor-pointer ${
+          highlight
+            ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-600/25"
+            : "bg-gray-800 hover:bg-gray-700 text-white"
+        }`}
+      >
+        {label}
+      </button>
+    );
+  }
+
+  return (
+    <form onSubmit={handleCheckout} className="space-y-3">
+      <input
+        type="text"
+        required
+        placeholder="Tool name"
+        value={toolName}
+        onChange={(e) => setToolName(e.target.value)}
+        className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500"
+      />
+      <input
+        type="url"
+        required
+        placeholder="https://yourtool.com"
+        value={toolUrl}
+        onChange={(e) => setToolUrl(e.target.value)}
+        className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500"
+      />
+      <input
+        type="email"
+        required
+        placeholder="you@company.com"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500"
+      />
+      <button
+        type="submit"
+        disabled={loading}
+        className={`block w-full text-center py-3 rounded-xl font-semibold transition ${
+          highlight
+            ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-600/25"
+            : "bg-gray-800 hover:bg-gray-700 text-white"
+        } ${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
+      >
+        {loading ? "Redirecting to Stripe..." : `Pay & ${label}`}
+      </button>
+    </form>
+  );
+}
 
 export default function AdvertisePage() {
   return (
@@ -95,11 +180,11 @@ export default function AdvertisePage() {
             <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
               AISO Tools is one of the fastest-growing AI tool directories with{" "}
               <strong className="text-white">{tools.length}+ curated tools</strong> and{" "}
-              <strong className="text-white">100% organic traffic</strong> from developers, 
+              <strong className="text-white">100% organic traffic</strong> from developers,
               marketers, and creators actively searching for AI solutions.
             </p>
             <a
-              href="mailto:shibley@saasintegrate.com?subject=Featured%20Listing%20on%20AISO%20Tools&body=Hi%2C%0A%0AI'm%20interested%20in%20a%20featured%20listing%20for%20my%20AI%20tool%20on%20AISO%20Tools.%0A%0ATool%20Name%3A%20%0ATool%20URL%3A%20%0APlan%20interested%20in%3A%20Basic%20%2F%20Pro%20%2F%20Premium%0A%0AThanks!"
+              href="#pricing"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40"
             >
               Get Featured Today
@@ -167,10 +252,10 @@ export default function AdvertisePage() {
                 "Featured tools get priority placement in our popular comparison pages — where users are actively deciding between tools.",
             },
             {
-              icon: "📧",
-              title: "Newsletter Exposure",
+              icon: "💰",
+              title: "One-Time Investment",
               description:
-                "Pro and Premium plans include exposure in our weekly AI tools newsletter, reaching engaged subscribers who love discovering new tools.",
+                "No recurring fees or subscriptions. Pay once and your featured listing stays active. Simple, transparent, no surprises.",
             },
           ].map((benefit) => (
             <div
@@ -190,7 +275,7 @@ export default function AdvertisePage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            No hidden fees. No long-term contracts. Cancel anytime. Start getting featured today.
+            One-time payment. No subscriptions. No hidden fees. Pay once, get featured permanently.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -216,7 +301,7 @@ export default function AdvertisePage() {
               </div>
               <div className="mb-6">
                 <span className="text-4xl font-bold">{plan.price}</span>
-                <span className="text-gray-500">{plan.period}</span>
+                <span className="text-gray-500 text-sm ml-1">{plan.priceNote}</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature) => (
@@ -226,21 +311,24 @@ export default function AdvertisePage() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={`mailto:shibley@saasintegrate.com?subject=${encodeURIComponent(`${plan.name} Featured Listing — AISO Tools`)}&body=${encodeURIComponent(`Hi,\n\nI'm interested in the ${plan.name} plan (${plan.price}/mo) for a featured listing on AISO Tools.\n\nTool Name: \nTool URL: \n\nThanks!`)}`}
-                className={`block text-center py-3 rounded-xl font-semibold transition ${
-                  plan.highlight
-                    ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-600/25"
-                    : "bg-gray-800 hover:bg-gray-700 text-white"
-                }`}
-              >
-                {plan.cta}
-              </a>
+              <CheckoutButton
+                plan={plan.key}
+                highlight={plan.highlight}
+                label={plan.cta}
+              />
+              <p className="text-center text-gray-600 text-xs mt-3">
+                <a
+                  href={`mailto:shibley@saasintegrate.com?subject=${encodeURIComponent(`${plan.name} Featured Listing — AISO Tools`)}&body=${encodeURIComponent(`Hi,\n\nI'm interested in the ${plan.name} plan (${plan.price}) for a featured listing on AISO Tools.\n\nTool Name: \nTool URL: \n\nThanks!`)}`}
+                  className="hover:text-gray-400 transition"
+                >
+                  Prefer email? Contact us directly →
+                </a>
+              </p>
             </div>
           ))}
         </div>
         <p className="text-center text-gray-500 text-sm mt-8">
-          All plans are billed monthly. No setup fees. Cancel anytime.
+          All plans are one-time payments. No subscriptions. No setup fees.
           Need a custom plan?{" "}
           <a
             href="mailto:shibley@saasintegrate.com?subject=Custom%20Featured%20Listing%20—%20AISO%20Tools"
@@ -308,24 +396,24 @@ export default function AdvertisePage() {
               a: "Within 24 hours of payment. We'll set up your featured listing, add the badge, and position your tool at the top of the relevant category pages.",
             },
             {
-              q: "Can I change my plan later?",
-              a: "Absolutely. Upgrade or downgrade anytime. Changes take effect on your next billing cycle.",
-            },
-            {
-              q: "Is there a minimum commitment?",
-              a: "No. All plans are month-to-month with no long-term contracts. Cancel anytime.",
+              q: "Is this a one-time payment or subscription?",
+              a: "One-time payment. You pay once and your featured listing stays active. No recurring charges, no surprises.",
             },
             {
               q: "What's included in the dedicated review (Premium)?",
               a: "A professionally written, SEO-optimized review article (800-1200 words) published on our blog. Includes screenshots, feature breakdown, pricing analysis, and comparison with alternatives.",
             },
             {
-              q: "Do you offer discounts for annual billing?",
-              a: "Yes! Contact us for annual pricing — save 20% when you pay yearly.",
+              q: "Do I get a dofollow backlink?",
+              a: "Yes! All plans include a permanent dofollow backlink to your site, which provides real SEO value from a relevant AI tools directory.",
             },
             {
               q: "My tool is already listed. Can I upgrade to featured?",
               a: "Yes! If your tool is already in our directory, you can upgrade to any featured plan. Your existing listing will be enhanced with featured placement and badges.",
+            },
+            {
+              q: "Can I pay via invoice or bank transfer?",
+              a: "For custom payment arrangements, email us at shibley@saasintegrate.com and we'll work something out.",
             },
           ].map((faq) => (
             <div key={faq.q} className="bg-gray-900 border border-gray-800 rounded-xl p-6">
@@ -343,15 +431,15 @@ export default function AdvertisePage() {
           <div className="relative">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Get More Eyes on Your AI Tool?</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-lg">
-              Join the growing list of AI tools that are reaching their target audience through AISO Tools. 
-              Start today — no contracts, cancel anytime.
+              Join the growing list of AI tools reaching their target audience through AISO Tools.
+              One-time payment — no subscriptions, no contracts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:shibley@saasintegrate.com?subject=Featured%20Listing%20on%20AISO%20Tools&body=Hi%2C%0A%0AI'm%20interested%20in%20a%20featured%20listing%20for%20my%20AI%20tool%20on%20AISO%20Tools.%0A%0ATool%20Name%3A%20%0ATool%20URL%3A%20%0APlan%20interested%20in%3A%20Basic%20%2F%20Pro%20%2F%20Premium%0A%0AThanks!"
+                href="#pricing"
                 className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition shadow-lg shadow-blue-600/25"
               >
-                ✉️ Contact Us to Get Started
+                🚀 Get Featured Now
               </a>
               <Link
                 href="/submit"
@@ -361,7 +449,7 @@ export default function AdvertisePage() {
               </Link>
             </div>
             <p className="text-gray-500 text-sm mt-6">
-              Questions? Email{" "}
+              Prefer email?{" "}
               <a href="mailto:shibley@saasintegrate.com" className="text-blue-400 hover:text-blue-300">
                 shibley@saasintegrate.com
               </a>

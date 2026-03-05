@@ -177,20 +177,45 @@ export default function SubmitPage() {
         </p>
       </form>
 
-      {/* Featured CTA */}
+      {/* Featured Upsell — prominent after submission */}
       <div className="mt-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-xl p-8">
-        <h2 className="text-2xl font-bold mb-3">⭐ Want Featured Placement?</h2>
-        <p className="text-gray-400 mb-4">
-          Featured tools get 10x more visibility with priority placement at the
-          top of category pages, a &quot;Featured&quot; badge, and inclusion in our
-          weekly newsletter to thousands of subscribers.
-        </p>
-        <a
-          href="/advertise"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
-        >
-          View Featured Plans →
-        </a>
+        <div className="text-center mb-6">
+          <span className="text-4xl mb-3 block">🚀</span>
+          <h2 className="text-2xl font-bold mb-2">Want 10x More Visibility?</h2>
+          <p className="text-gray-400">
+            Free listings are great, but featured tools get <strong className="text-white">priority placement</strong>,{" "}
+            <strong className="text-white">Featured badges</strong>, and{" "}
+            <strong className="text-white">dofollow backlinks</strong>.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-4 text-center">
+            <div className="font-bold text-lg mb-1">Basic</div>
+            <div className="text-2xl font-bold text-blue-400">$49</div>
+            <div className="text-gray-500 text-xs">one-time</div>
+            <div className="text-gray-400 text-sm mt-2">Featured badge + priority placement</div>
+          </div>
+          <div className="bg-blue-600/10 border border-blue-500/30 rounded-lg p-4 text-center">
+            <div className="font-bold text-lg mb-1">Pro</div>
+            <div className="text-2xl font-bold text-blue-400">$149</div>
+            <div className="text-gray-500 text-xs">one-time</div>
+            <div className="text-gray-400 text-sm mt-2">Top of category + comparison pages</div>
+          </div>
+          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-4 text-center">
+            <div className="font-bold text-lg mb-1">Premium</div>
+            <div className="text-2xl font-bold text-blue-400">$299</div>
+            <div className="text-gray-500 text-xs">one-time</div>
+            <div className="text-gray-400 text-sm mt-2">Homepage + review article + social</div>
+          </div>
+        </div>
+        <div className="text-center">
+          <a
+            href="/advertise#pricing"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition shadow-md shadow-blue-600/20"
+          >
+            Upgrade to Featured →
+          </a>
+        </div>
       </div>
     </div>
   );
