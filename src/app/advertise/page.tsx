@@ -34,7 +34,7 @@ const plans = [
       "Top of category page placement",
       "Comparison page priority",
       "Prominent \"Sponsored\" badge",
-      "Monthly analytics report",
+      "Analytics report",
       "Featured in category sidebar",
     ],
     cta: "Get Pro",
@@ -62,7 +62,7 @@ const plans = [
 const stats = [
   { value: `${tools.length}+`, label: "AI Tools Listed" },
   { value: `${categories.length}`, label: "Categories" },
-  { value: "Growing", label: "Monthly Visitors" },
+  { value: "Growing Daily", label: "Traffic" },
   { value: "100%", label: "Organic Traffic" },
 ];
 

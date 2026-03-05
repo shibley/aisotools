@@ -14,9 +14,9 @@ export default function SubmitPage() {
       <p className="text-gray-400 mb-8">
         Get your AI tool in front of thousands of developers, marketers, and
         creators. Basic listings are <strong className="text-white">free forever</strong>.
-        Want more visibility?{" "}
+        Want 10x more visibility?{" "}
         <a href="/advertise" className="text-blue-400 hover:text-blue-300">
-          Check our featured plans →
+          Upgrade to Featured →
         </a>
       </p>
 

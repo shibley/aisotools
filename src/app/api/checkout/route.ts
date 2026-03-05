@@ -1,7 +1,9 @@
 import Stripe from "stripe";
 import { NextRequest, NextResponse } from "next/server";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  httpAgent: undefined,
+});
 
 const PRICE_MAP: Record<string, string> = {
   basic: "price_1T7bcFF0z7MFxZQhMwg0X6EY",
@@ -19,19 +21,29 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid plan" }, { status: 400 });
     }
 
+    if (!toolName || !toolUrl || !email) {
+      return NextResponse.json(
+        { error: "Please provide tool name, URL, and email." },
+        { status: 400 }
+      );
+    }
+
     const origin = req.headers.get("origin") || "https://aisotools.com";
+
+    const metadata = {
+      plan,
+      tool_name: toolName,
+      tool_url: toolUrl,
+      contact_email: email,
+    };
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
       line_items: [{ price: priceId, quantity: 1 }],
-      customer_email: email || undefined,
-      metadata: {
-        plan,
-        tool_name: toolName || "",
-        tool_url: toolUrl || "",
-        contact_email: email || "",
-      },
+      customer_email: email,
+      metadata,
+      payment_intent_data: { metadata },
       success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/checkout/cancel`,
     });
