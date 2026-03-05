@@ -1,9 +1,7 @@
-import Stripe from "stripe";
 import { NextRequest, NextResponse } from "next/server";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  httpAgent: undefined,
-});
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 const PRICE_MAP: Record<string, string> = {
   basic: "price_1T7bcFF0z7MFxZQhMwg0X6EY",
@@ -37,21 +35,46 @@ export async function POST(req: NextRequest) {
       contact_email: email,
     };
 
-    const session = await stripe.checkout.sessions.create({
-      mode: "payment",
-      payment_method_types: ["card"],
-      line_items: [{ price: priceId, quantity: 1 }],
-      customer_email: email,
-      metadata,
-      payment_intent_data: { metadata },
-      success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/checkout/cancel`,
+    // Use fetch directly to avoid Stripe SDK agent issues on Vercel
+    const stripeRes = await fetch("https://api.stripe.com/v1/checkout/sessions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({
+        mode: "payment",
+        "payment_method_types[0]": "card",
+        "line_items[0][price]": priceId,
+        "line_items[0][quantity]": "1",
+        customer_email: email,
+        "metadata[plan]": metadata.plan,
+        "metadata[tool_name]": metadata.tool_name,
+        "metadata[tool_url]": metadata.tool_url,
+        "metadata[contact_email]": metadata.contact_email,
+        "payment_intent_data[metadata][plan]": metadata.plan,
+        "payment_intent_data[metadata][tool_name]": metadata.tool_name,
+        "payment_intent_data[metadata][tool_url]": metadata.tool_url,
+        "payment_intent_data[metadata][contact_email]": metadata.contact_email,
+        success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${origin}/checkout/cancel`,
+      }).toString(),
     });
+
+    const session = await stripeRes.json();
+
+    if (!stripeRes.ok) {
+      console.error("Stripe error:", JSON.stringify(session));
+      return NextResponse.json(
+        { error: session.error?.message || "Stripe error" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ url: session.url });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Unknown error";
-    console.error("Stripe checkout error:", message);
+    console.error("Checkout error:", message);
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
