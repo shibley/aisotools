@@ -1,6 +1,7 @@
 import { tools, type Tool } from "@/data/tools";
 import { categories } from "@/data/categories";
 import { getEnrichment } from "@/data/enrichment";
+import { monitoredApis } from "@/data/monitored-apis";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -817,23 +818,25 @@ export default async function ToolPricingPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Status link */}
-        <section className="bg-gray-900 border border-gray-800 rounded-xl p-6">
-          <h2 className="text-lg font-semibold mb-2">
-            Is {tool.name} down right now?
-          </h2>
-          <p className="text-gray-400 text-sm mb-3">
-            Check real-time status and outage history on API Status Check.
-          </p>
-          <a
-            href={`https://apistatuscheck.com/api/${tool.slug}`}
-            target="_blank"
-            rel="noopener"
-            className="text-blue-400 hover:text-blue-300 text-sm font-medium"
-          >
-            Check {tool.name} Status →
-          </a>
-        </section>
+        {/* Status link — only for tools monitored on ASC */}
+        {monitoredApis.has(tool.slug) && (
+          <section className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+            <h2 className="text-lg font-semibold mb-2">
+              Is {tool.name} down right now?
+            </h2>
+            <p className="text-gray-400 text-sm mb-3">
+              Check real-time status and outage history on API Status Check.
+            </p>
+            <a
+              href={`https://apistatuscheck.com/api/${tool.slug}`}
+              target="_blank"
+              rel="noopener"
+              className="text-blue-400 hover:text-blue-300 text-sm font-medium"
+            >
+              Check {tool.name} Status →
+            </a>
+          </section>
+        )}
       </div>
     </>
   );
