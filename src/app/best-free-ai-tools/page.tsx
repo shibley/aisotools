@@ -330,7 +330,7 @@ const freeAITools: ToolCategory[] = [
         description: "Realistic AI voice generation",
         whatsFree: "10,000 characters monthly, voice cloning, 30+ voices",
         limitations: "Monthly character limit, attribution required",
-        url: "https://elevenlabs.io",
+        url: "https://try.elevenlabs.io/7j98rr4eeebw",
         highlight: true,
       },
       {

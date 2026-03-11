@@ -2322,9 +2322,9 @@ export default function ElevenLabsPricingPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://elevenlabs.io/pricing"
+                href="https://try.elevenlabs.io/7j98rr4eeebw"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer sponsored"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 View ElevenLabs Plans →
