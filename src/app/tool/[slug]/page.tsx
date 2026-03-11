@@ -118,9 +118,9 @@ export default async function ToolPage({ params }: Props) {
               💰 View Detailed Pricing →
             </Link>
             <a
-              href={tool.url}
+              href={tool.affiliateUrl || tool.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={`noopener noreferrer${tool.affiliateUrl ? " sponsored" : ""}`}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
             >
               Try {tool.name} →

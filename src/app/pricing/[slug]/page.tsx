@@ -279,6 +279,10 @@ export default async function ToolPricingPage({ params }: Props) {
     };
   });
 
+  // Use affiliate URL for CTAs when available, otherwise fall back to tool URL
+  const ctaUrl = tool.affiliateUrl || tool.url;
+  const isAffiliate = !!tool.affiliateUrl;
+
   // Distribute features across tiers for the feature-tier matrix
   const featureMatrix = generateFeatureMatrix(tool.features, tiers);
 
@@ -415,9 +419,9 @@ export default async function ToolPricingPage({ params }: Props) {
               not reflect current promotions, annual discounts, or regional
               pricing. Visit the{" "}
               <a
-                href={tool.url}
+                href={ctaUrl}
                 target="_blank"
-                rel="noopener noreferrer nofollow"
+                rel={`noopener noreferrer${isAffiliate ? " sponsored" : " nofollow"}`}
                 className="text-blue-400 hover:text-blue-300"
               >
                 official {tool.name} website
@@ -727,12 +731,12 @@ export default async function ToolPricingPage({ params }: Props) {
             </div>
             <div className="flex gap-3 flex-shrink-0">
               <a
-                href={tool.url}
+                href={ctaUrl}
                 target="_blank"
-                rel="noopener noreferrer nofollow"
+                rel={`noopener noreferrer${isAffiliate ? " sponsored" : " nofollow"}`}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
               >
-                Visit {tool.name} →
+                {isAffiliate ? `Try ${tool.name} Free →` : `Visit ${tool.name} →`}
               </a>
               <Link
                 href={`/tool/${tool.slug}`}

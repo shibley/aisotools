@@ -18,6 +18,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/pricing/tools`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
   ];
 
+  // Standalone comparison pages (not generated dynamically)
+  const standaloneComparisons = [
+    { url: `${base}/chatgpt-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/chatgpt-vs-claude`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/midjourney-vs-dall-e`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/cursor-vs-github-copilot`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/grok-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/deepseek-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/copilot-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/perplexity-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/grok-vs-chatgpt-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+  ];
+
   const toolPages = tools.map((tool) => ({
     url: `${base}/tool/${tool.slug}`,
     lastModified: now,
@@ -53,5 +66,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages, ...pricingPages, ...comparisonPages, ...alternativesPages];
+  return [...staticPages, ...standaloneComparisons, ...categoryPages, ...toolPages, ...pricingPages, ...comparisonPages, ...alternativesPages];
 }

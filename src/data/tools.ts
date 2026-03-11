@@ -28,6 +28,7 @@ export interface Tool {
   pricingTiers?: { name: string; price: string; features: string[] }[];
   lastVerified?: string;
   websiteStatus?: "active" | "dead" | "redirect";
+  affiliateUrl?: string; // Affiliate/referral tracking URL (use instead of url for CTAs)
 }
 
 // Seed data — initial tools to launch with

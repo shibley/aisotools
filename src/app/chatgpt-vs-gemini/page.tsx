@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   keywords: [
     "ChatGPT vs Gemini",
     "Gemini vs ChatGPT",
+    "Google Gemini vs ChatGPT",
+    "ChatGPT or Gemini",
     "Google Gemini comparison",
     "ChatGPT Gemini difference",
     "best AI chatbot",
