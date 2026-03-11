@@ -1,6 +1,7 @@
 import { categories } from "@/data/categories";
 import { tools } from "@/data/tools";
 import Link from "next/link";
+import SearchBar from "@/components/SearchBar";
 
 export default function Home() {
   const featuredTools = tools.filter((t) => t.featured);
@@ -24,14 +25,7 @@ export default function Home() {
               Updated daily. Find the perfect AI tool in seconds.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-2">
-              <div className="relative w-full max-w-lg">
-                <input
-                  type="text"
-                  placeholder="Search AI tools..."
-                  className="w-full bg-gray-800/80 border border-gray-700 rounded-xl px-5 py-4 text-base sm:text-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                />
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">🔍</span>
-              </div>
+              <SearchBar />
             </div>
             <div className="flex flex-wrap justify-center gap-2 mt-6">
               {["ChatGPT alternatives", "AI writing tools", "AI image generators", "AI coding assistants", "Free AI tools"].map((tag) => (

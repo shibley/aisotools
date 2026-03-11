@@ -371,6 +371,7 @@ export const toolsBatch1: Tool[] = [
     description: "Leading AI voice generation platform with ultra-realistic text-to-speech and voice cloning. ElevenLabs creates natural-sounding voiceovers in 29 languages with emotion control and custom voice creation.",
     shortDescription: "Ultra-realistic AI voice generation and cloning",
     url: "https://elevenlabs.io",
+    affiliateUrl: "https://try.elevenlabs.io/7j98rr4eeebw",
     category: "audio",
     subcategory: "Text-to-Speech",
     tags: ["text-to-speech", "voice cloning", "audio", "voiceover", "multilingual"],
