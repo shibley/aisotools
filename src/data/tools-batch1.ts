@@ -752,6 +752,7 @@ export const toolsBatch1: Tool[] = [
     description: "Comprehensive SEO and marketing platform with AI-powered features. Semrush offers keyword research, competitor analysis, content creation, and marketing insights all in one platform.",
     shortDescription: "All-in-one SEO and marketing platform with AI",
     url: "https://semrush.com",
+    affiliateUrl: "https://semrush.sjv.io/oNREJo",
     category: "marketing",
     subcategory: "SEO",
     tags: ["seo", "marketing", "analytics", "keywords", "competitor analysis"],
