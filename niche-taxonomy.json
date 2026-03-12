@@ -1,0 +1,960 @@
+{
+  "property": "AISO Tools",
+  "domain": "aisotools.com",
+  "mission": "The most comprehensive AI tool directory — discover, compare, and choose the right AI tools for any workflow.",
+  "total_monthly_search_volume": 850000,
+  "niches": [
+    {
+      "slug": "writing",
+      "name": "AI Writing Tools",
+      "context": {
+        "audience": "Content creators, copywriters, bloggers, marketers, students, authors, and anyone who writes professionally or academically",
+        "pain_points": [
+          "Writer's block and slow content production",
+          "Maintaining consistent brand voice across team members",
+          "SEO optimization while keeping content natural",
+          "Plagiarism and AI detection concerns",
+          "Cost of hiring writers vs AI-assisted workflows",
+          "Quality control — AI output needs heavy editing"
+        ],
+        "monetization": [
+          "Affiliate commissions from AI writing tool signups (Jasper, Copy.ai, Writesonic)",
+          "Comparison page ad placements",
+          "Sponsored tool listings and featured placements",
+          "Lead gen for enterprise content platforms"
+        ],
+        "content_that_works": [
+          "Head-to-head comparisons (ChatGPT vs Jasper for blog posts)",
+          "Use-case-specific roundups (best AI tools for email copywriting)",
+          "Workflow guides (how to write a blog post with AI in 30 minutes)",
+          "Pricing breakdowns and ROI calculators",
+          "Real output examples and quality comparisons"
+        ],
+        "keyword_themes": [
+          "best ai writing tools",
+          "ai content generator",
+          "chatgpt alternatives for writing",
+          "jasper ai review",
+          "ai copywriting tool",
+          "ai blog writer",
+          "free ai writing tools",
+          "ai for academic writing",
+          "ai paraphrasing tool",
+          "ai email writer"
+        ],
+        "subtopics": [
+          "AI for long-form content",
+          "AI for social media captions",
+          "AI email copy generators",
+          "AI for product descriptions",
+          "AI screenplay and creative writing",
+          "AI grammar and editing tools",
+          "AI for technical writing",
+          "AI resume and cover letter writers",
+          "AI for press releases",
+          "AI content detection and bypassing"
+        ]
+      }
+    },
+    {
+      "slug": "coding",
+      "name": "AI Coding Tools",
+      "context": {
+        "audience": "Software developers, data scientists, DevOps engineers, CS students, no-code builders, and technical founders",
+        "pain_points": [
+          "Context switching between docs, Stack Overflow, and IDE",
+          "Boilerplate code generation is tedious",
+          "Code review bottlenecks slow down teams",
+          "Learning new frameworks/languages takes too long",
+          "Debugging complex issues without clear error messages",
+          "Security vulnerabilities in AI-generated code"
+        ],
+        "monetization": [
+          "Affiliate for coding tools (Cursor, GitHub Copilot, Replit)",
+          "Sponsored reviews from AI coding startups",
+          "Lead gen for enterprise code platforms",
+          "Developer tool marketplace partnerships"
+        ],
+        "content_that_works": [
+          "IDE integration comparisons (Cursor vs Copilot vs Cody)",
+          "Language-specific best AI tool guides",
+          "Real coding task benchmarks (build X with Y tool)",
+          "Pricing per developer seat comparisons",
+          "Speed/accuracy shootouts with actual code examples"
+        ],
+        "keyword_themes": [
+          "best ai coding assistant",
+          "github copilot alternatives",
+          "cursor ai review",
+          "ai code generator",
+          "ai for python",
+          "ai debugging tools",
+          "free ai coding tools",
+          "ai pair programmer",
+          "ai code review tool",
+          "best ai ide"
+        ],
+        "subtopics": [
+          "AI for frontend development",
+          "AI for backend/API development",
+          "AI for mobile app development",
+          "AI code review and refactoring",
+          "AI for DevOps and infrastructure",
+          "AI for database queries (text-to-SQL)",
+          "AI for testing and QA",
+          "AI for documentation generation",
+          "No-code/low-code AI platforms",
+          "AI terminal and CLI tools"
+        ]
+      }
+    },
+    {
+      "slug": "image-generation",
+      "name": "AI Image Generation",
+      "context": {
+        "audience": "Designers, marketers, social media managers, content creators, e-commerce sellers, game developers, artists",
+        "pain_points": [
+          "Hiring designers for every asset is expensive and slow",
+          "Stock photos look generic and overused",
+          "Maintaining brand consistency in AI-generated images",
+          "Copyright and licensing concerns with AI art",
+          "Prompt engineering is a learned skill",
+          "Resolution and quality limitations"
+        ],
+        "monetization": [
+          "Affiliate for image generation tools (Midjourney, DALL-E, Leonardo)",
+          "Premium prompt library or marketplace",
+          "Sponsored featured placements",
+          "Ad revenue from high-volume comparison pages"
+        ],
+        "content_that_works": [
+          "Visual comparison galleries (same prompt across tools)",
+          "Style-specific guides (photorealistic, illustration, anime)",
+          "Prompt engineering tutorials",
+          "Commercial use licensing breakdowns",
+          "Before/after editing workflow guides"
+        ],
+        "keyword_themes": [
+          "best ai image generator",
+          "midjourney alternatives",
+          "free ai art generator",
+          "ai photo editor",
+          "text to image ai",
+          "ai headshot generator",
+          "ai logo maker",
+          "ai product photography",
+          "dall-e vs midjourney",
+          "ai background remover"
+        ],
+        "subtopics": [
+          "AI for product photography",
+          "AI headshot and portrait generation",
+          "AI logo and brand asset creation",
+          "AI for social media graphics",
+          "AI image upscaling and enhancement",
+          "AI background removal and replacement",
+          "AI for game asset creation",
+          "AI architectural visualization",
+          "AI fashion design",
+          "AI photo restoration"
+        ]
+      }
+    },
+    {
+      "slug": "video",
+      "name": "AI Video Tools",
+      "context": {
+        "audience": "Content creators, YouTubers, marketers, social media managers, educators, corporate training teams, filmmakers",
+        "pain_points": [
+          "Video production is the most time-consuming content format",
+          "Professional editing software has a steep learning curve",
+          "Talking head videos require on-camera confidence",
+          "Repurposing long-form video into clips is tedious",
+          "Subtitles and translations are manual and expensive",
+          "Stock video is expensive and limited"
+        ],
+        "monetization": [
+          "Affiliate for video AI tools (Synthesia, Runway, HeyGen, Descript)",
+          "Lead gen for enterprise video platforms",
+          "Sponsored comparisons and reviews",
+          "Ad revenue from viral comparison content"
+        ],
+        "content_that_works": [
+          "Side-by-side output quality comparisons",
+          "Workflow tutorials (create a YouTube video with AI)",
+          "Use-case guides (AI for corporate training videos)",
+          "Pricing comparisons for video generation credits",
+          "Feature comparison tables"
+        ],
+        "keyword_themes": [
+          "best ai video generator",
+          "ai video editor",
+          "text to video ai",
+          "ai avatar video maker",
+          "ai video translation",
+          "ai short form video",
+          "synthesia alternatives",
+          "runway ml review",
+          "ai video clipping tool",
+          "ai subtitle generator"
+        ],
+        "subtopics": [
+          "AI avatar and talking head generation",
+          "AI video editing and post-production",
+          "AI for short-form content (Reels, TikTok, Shorts)",
+          "AI video translation and dubbing",
+          "AI for animation and motion graphics",
+          "AI screen recording and tutorials",
+          "AI for live streaming",
+          "Text-to-video generation",
+          "AI video upscaling",
+          "AI for video SEO (thumbnails, titles)"
+        ]
+      }
+    },
+    {
+      "slug": "music",
+      "name": "AI Music & Audio",
+      "context": {
+        "audience": "Musicians, podcasters, content creators, filmmakers, game developers, advertisers needing royalty-free music",
+        "pain_points": [
+          "Royalty-free music libraries are limited and repetitive",
+          "Custom music production is expensive ($500+ per track)",
+          "Podcast editing is tedious (remove ums, normalize audio)",
+          "Copyright strikes on YouTube from music usage",
+          "Voice cloning and ethical concerns",
+          "Quality gap between AI and professional production"
+        ],
+        "monetization": [
+          "Affiliate for AI music tools (Suno, Udio, AIVA, Murf)",
+          "Sponsored reviews from emerging AI audio startups",
+          "Lead gen for enterprise audio platforms"
+        ],
+        "content_that_works": [
+          "Audio sample comparisons (listen to outputs)",
+          "Use-case guides (AI music for YouTube videos)",
+          "Copyright and licensing explainers",
+          "Tool comparison by music genre/style",
+          "Podcast workflow automation guides"
+        ],
+        "keyword_themes": [
+          "best ai music generator",
+          "ai voice generator",
+          "text to speech ai",
+          "ai podcast editing",
+          "royalty free ai music",
+          "suno ai review",
+          "ai voice cloning",
+          "ai sound effects",
+          "ai audio enhancer",
+          "ai song maker"
+        ],
+        "subtopics": [
+          "AI music composition",
+          "AI voice synthesis and cloning",
+          "AI podcast production",
+          "AI audio enhancement and noise removal",
+          "AI sound effect generation",
+          "AI for audiobook narration",
+          "AI music mastering",
+          "Text-to-speech for content",
+          "AI for jingles and ads",
+          "AI music remix and stems"
+        ]
+      }
+    },
+    {
+      "slug": "productivity",
+      "name": "AI Productivity Tools",
+      "context": {
+        "audience": "Knowledge workers, remote teams, executives, project managers, freelancers, solopreneurs",
+        "pain_points": [
+          "Information overload — too many emails, messages, documents",
+          "Meeting fatigue and lost action items",
+          "Context switching between too many tools",
+          "Manual data entry and repetitive tasks",
+          "Difficulty prioritizing work",
+          "Note-taking during meetings while staying engaged"
+        ],
+        "monetization": [
+          "Affiliate for productivity AI (Notion AI, Otter, Reclaim, Motion)",
+          "Lead gen for enterprise productivity platforms",
+          "Sponsored integrations and workflow guides"
+        ],
+        "content_that_works": [
+          "Workflow automation guides (save X hours/week)",
+          "Tool stack recommendations by role",
+          "Meeting AI comparisons (Otter vs Fireflies vs Grain)",
+          "Before/after productivity metrics",
+          "Integration guides (connect X to Y via AI)"
+        ],
+        "keyword_themes": [
+          "best ai productivity tools",
+          "ai meeting assistant",
+          "ai note taking app",
+          "ai task management",
+          "ai calendar scheduler",
+          "ai email assistant",
+          "notion ai review",
+          "ai for project management",
+          "ai automation tools",
+          "ai personal assistant"
+        ],
+        "subtopics": [
+          "AI meeting transcription and summaries",
+          "AI email management and drafting",
+          "AI calendar and scheduling optimization",
+          "AI task and project management",
+          "AI document summarization",
+          "AI workflow automation (Zapier AI, Make)",
+          "AI for spreadsheets and data",
+          "AI note-taking and knowledge management",
+          "AI time tracking",
+          "AI for presentations"
+        ]
+      }
+    },
+    {
+      "slug": "marketing",
+      "name": "AI Marketing Tools",
+      "context": {
+        "audience": "Digital marketers, growth hackers, CMOs, marketing agencies, social media managers, brand managers",
+        "pain_points": [
+          "Creating enough content to fill all channels",
+          "Personalizing campaigns at scale",
+          "Attribution and ROI measurement across channels",
+          "Ad creative testing is expensive and slow",
+          "SEO requires constant content production",
+          "Competitor analysis is time-consuming"
+        ],
+        "monetization": [
+          "Affiliate for marketing AI tools (Surfer SEO, Jasper, AdCreative.ai)",
+          "Lead gen for marketing automation platforms",
+          "Sponsored guides and reviews",
+          "Premium marketing workflow templates"
+        ],
+        "content_that_works": [
+          "Channel-specific tool roundups (best AI for Facebook ads)",
+          "ROI case studies (how X company saved Y with AI marketing)",
+          "Marketing workflow automation guides",
+          "Ad creative generation comparisons",
+          "SEO tool comparisons with actual results"
+        ],
+        "keyword_themes": [
+          "best ai marketing tools",
+          "ai ad creative generator",
+          "ai seo tools",
+          "ai social media management",
+          "ai email marketing",
+          "ai copywriting for ads",
+          "ai competitor analysis",
+          "ai for content marketing",
+          "ai landing page builder",
+          "ai analytics tools"
+        ],
+        "subtopics": [
+          "AI for paid advertising",
+          "AI for SEO and content strategy",
+          "AI for social media automation",
+          "AI for email marketing campaigns",
+          "AI for influencer marketing",
+          "AI for conversion rate optimization",
+          "AI for market research",
+          "AI for brand monitoring",
+          "AI for affiliate marketing",
+          "AI chatbots for lead generation"
+        ]
+      }
+    },
+    {
+      "slug": "students",
+      "name": "AI Tools for Students",
+      "context": {
+        "audience": "High school students, college students, graduate researchers, educators, academic professionals",
+        "pain_points": [
+          "Research is overwhelming — too many papers, too little time",
+          "Writing essays and papers is the most dreaded academic task",
+          "Study efficiency — cramming vs spaced repetition",
+          "Citation formatting is tedious and error-prone",
+          "Language barriers for international students",
+          "AI detection tools flagging legitimate AI-assisted work"
+        ],
+        "monetization": [
+          "Affiliate for student-focused AI tools (Grammarly, QuillBot, Scholarcy)",
+          "Display ads (high volume, younger demographic)",
+          "Sponsored educational tool reviews",
+          "Back-to-school seasonal campaigns"
+        ],
+        "content_that_works": [
+          "Task-specific guides (best AI for research papers)",
+          "Free vs paid tool comparisons",
+          "AI study workflow guides",
+          "How to use AI without triggering detection",
+          "Subject-specific tool recommendations"
+        ],
+        "keyword_themes": [
+          "best ai tools for students",
+          "ai essay writer",
+          "ai homework helper",
+          "ai research assistant",
+          "ai study tools",
+          "ai citation generator",
+          "ai math solver",
+          "ai flashcard maker",
+          "ai for thesis writing",
+          "free ai tools for students"
+        ],
+        "subtopics": [
+          "AI for essay writing and editing",
+          "AI research paper assistants",
+          "AI math and science solvers",
+          "AI study flashcard generators",
+          "AI for language learning",
+          "AI for presentations and projects",
+          "AI plagiarism checkers",
+          "AI for coding assignments",
+          "AI tutoring platforms",
+          "AI for test preparation"
+        ]
+      }
+    },
+    {
+      "slug": "small-business",
+      "name": "AI for Small Business",
+      "context": {
+        "audience": "Small business owners, solopreneurs, freelancers, startup founders, local business operators",
+        "pain_points": [
+          "Wearing too many hats — no dedicated marketing/design/support team",
+          "Limited budget for professional services",
+          "Competing with larger companies that have more resources",
+          "Customer support coverage outside business hours",
+          "Bookkeeping and administrative overhead",
+          "Website and social media maintenance"
+        ],
+        "monetization": [
+          "Affiliate for small-business AI tools (Tidio, Canva, Mailchimp)",
+          "Lead gen for business automation platforms",
+          "Sponsored reviews from SMB-focused AI startups",
+          "Local business tool recommendations"
+        ],
+        "content_that_works": [
+          "Budget-tier tool recommendations (free/cheap AI tools)",
+          "Role-replacement guides (AI tools that replace hiring)",
+          "Industry-specific roundups (AI for restaurants, salons, etc.)",
+          "ROI calculators for AI adoption",
+          "Step-by-step automation playbooks"
+        ],
+        "keyword_themes": [
+          "best ai tools for small business",
+          "ai chatbot for website",
+          "ai bookkeeping tools",
+          "ai customer service bot",
+          "free ai tools for business",
+          "ai for local business",
+          "ai invoice generator",
+          "ai for e-commerce",
+          "ai social media for business",
+          "ai website builder"
+        ],
+        "subtopics": [
+          "AI chatbots for customer support",
+          "AI for inventory management",
+          "AI bookkeeping and accounting",
+          "AI for appointment scheduling",
+          "AI for small business marketing",
+          "AI for e-commerce product descriptions",
+          "AI for business plan writing",
+          "AI for contract and legal documents",
+          "AI for HR and hiring",
+          "AI for local SEO"
+        ]
+      }
+    },
+    {
+      "slug": "seo",
+      "name": "AI SEO Tools",
+      "context": {
+        "audience": "SEO professionals, content marketers, agency owners, in-house SEO teams, bloggers optimizing for search",
+        "pain_points": [
+          "Keyword research at scale is tedious",
+          "Content optimization requires constant SERP analysis",
+          "Link building outreach is manual and time-consuming",
+          "Technical SEO audits need constant monitoring",
+          "Keeping up with Google algorithm changes",
+          "Producing enough content to compete on all target keywords"
+        ],
+        "monetization": [
+          "Affiliate for SEO AI tools (Surfer SEO, NeuronWriter, SE Ranking)",
+          "Lead gen for enterprise SEO platforms",
+          "Sponsored comparisons between SEO tools",
+          "Premium SEO workflow templates"
+        ],
+        "content_that_works": [
+          "Tool comparison by SEO function (keyword research, content, technical)",
+          "Ranking improvement case studies",
+          "AI SEO workflow guides with specific tools",
+          "Free vs paid SEO tool comparisons",
+          "Integration guides (AI SEO + CMS)"
+        ],
+        "keyword_themes": [
+          "best ai seo tools",
+          "ai content optimization",
+          "ai keyword research tool",
+          "surfer seo alternatives",
+          "ai link building",
+          "ai for technical seo",
+          "ai serp analysis",
+          "ai content brief generator",
+          "ai meta description generator",
+          "ai schema markup generator"
+        ],
+        "subtopics": [
+          "AI for keyword research and clustering",
+          "AI content optimization and scoring",
+          "AI for link building and outreach",
+          "AI for technical SEO audits",
+          "AI for SERP tracking and analysis",
+          "AI for content briefs and outlines",
+          "AI for internal linking",
+          "AI for local SEO optimization",
+          "AI for programmatic SEO",
+          "AI for competitor analysis"
+        ]
+      }
+    },
+    {
+      "slug": "design",
+      "name": "AI Design Tools",
+      "context": {
+        "audience": "Graphic designers, UI/UX designers, brand managers, marketing teams, non-designers who need visuals",
+        "pain_points": [
+          "Professional design requires expensive software and skills",
+          "Design iteration cycles are slow",
+          "Maintaining brand consistency across touchpoints",
+          "Resizing and reformatting for different platforms",
+          "Creating design systems from scratch",
+          "Quick mockup and prototype needs"
+        ],
+        "monetization": [
+          "Affiliate for AI design tools (Canva AI, Adobe Firefly, Looka)",
+          "Sponsored reviews from design AI startups",
+          "Lead gen for enterprise design platforms",
+          "Premium design template marketplaces"
+        ],
+        "content_that_works": [
+          "Before/after design improvement examples",
+          "Non-designer workflow guides",
+          "Tool comparisons by design type (logos, social, UI)",
+          "Feature-by-feature comparison tables",
+          "Integration guides with design workflows"
+        ],
+        "keyword_themes": [
+          "best ai design tools",
+          "ai logo generator",
+          "ai graphic design",
+          "canva ai features",
+          "ai ui design tool",
+          "ai presentation maker",
+          "ai infographic generator",
+          "ai mockup tool",
+          "ai brand kit generator",
+          "ai for web design"
+        ],
+        "subtopics": [
+          "AI for logo and brand identity",
+          "AI for social media design",
+          "AI for UI/UX design",
+          "AI for presentation design",
+          "AI for print and packaging design",
+          "AI for photo editing and retouching",
+          "AI for 3D design and modeling",
+          "AI for web design and prototyping",
+          "AI for icon and illustration generation",
+          "AI for design system management"
+        ]
+      }
+    },
+    {
+      "slug": "data-analysis",
+      "name": "AI Data Analysis",
+      "context": {
+        "audience": "Data analysts, business intelligence teams, researchers, product managers, non-technical decision makers",
+        "pain_points": [
+          "Data analysis requires technical skills most teams lack",
+          "Extracting insights from large datasets is slow",
+          "Building dashboards and reports is repetitive",
+          "Natural language querying of databases isn't widely available",
+          "Data cleaning takes 80% of analysis time",
+          "Communicating insights to non-technical stakeholders"
+        ],
+        "monetization": [
+          "Affiliate for AI data tools (Julius AI, Rows, Obviously AI)",
+          "Lead gen for enterprise BI platforms",
+          "Sponsored reviews from data AI startups"
+        ],
+        "content_that_works": [
+          "Use-case demos (analyze CSV with AI)",
+          "Tool comparisons for specific data tasks",
+          "No-code data analysis tutorials",
+          "Integration guides with existing data stacks",
+          "ROI calculations for AI-assisted analytics"
+        ],
+        "keyword_themes": [
+          "best ai data analysis tools",
+          "ai for spreadsheets",
+          "ai data visualization",
+          "text to sql ai",
+          "ai business intelligence",
+          "ai for excel",
+          "ai data cleaning tool",
+          "chatgpt for data analysis",
+          "ai dashboard builder",
+          "ai for google sheets"
+        ],
+        "subtopics": [
+          "AI for spreadsheet analysis",
+          "Natural language to SQL tools",
+          "AI data visualization generators",
+          "AI for data cleaning and prep",
+          "AI for predictive analytics",
+          "AI business intelligence platforms",
+          "AI for financial analysis",
+          "AI for survey and research data",
+          "AI for web scraping and collection",
+          "AI for reporting automation"
+        ]
+      }
+    },
+    {
+      "slug": "customer-service",
+      "name": "AI Customer Service",
+      "context": {
+        "audience": "Customer support leaders, CX managers, e-commerce operators, SaaS companies, help desk admins",
+        "pain_points": [
+          "Support ticket volume growing faster than team capacity",
+          "24/7 coverage is expensive with human agents",
+          "Repetitive tier-1 questions consume skilled agents' time",
+          "Slow response times hurt customer satisfaction scores",
+          "Training new support agents is costly and slow",
+          "Multilingual support is difficult to staff"
+        ],
+        "monetization": [
+          "Affiliate for AI customer service tools (Intercom, Zendesk AI, Ada)",
+          "Lead gen for enterprise customer service platforms",
+          "Sponsored comparisons and reviews",
+          "Integration guide partnerships"
+        ],
+        "content_that_works": [
+          "ROI calculators (cost savings from AI support)",
+          "Implementation case studies",
+          "Chatbot platform comparisons",
+          "Industry-specific recommendations",
+          "Human vs AI support quality analysis"
+        ],
+        "keyword_themes": [
+          "best ai chatbot for customer service",
+          "ai help desk",
+          "ai customer support tool",
+          "intercom ai review",
+          "zendesk ai features",
+          "ai for live chat",
+          "ai ticket routing",
+          "ai knowledge base",
+          "ai voice agent for support",
+          "chatbot for website"
+        ],
+        "subtopics": [
+          "AI chatbots for websites",
+          "AI for email support automation",
+          "AI for ticket classification and routing",
+          "AI knowledge base generators",
+          "AI for voice/phone support",
+          "AI for customer sentiment analysis",
+          "AI for self-service portals",
+          "AI for support agent assist",
+          "AI for multilingual support",
+          "AI for returns and refund handling"
+        ]
+      }
+    },
+    {
+      "slug": "research",
+      "name": "AI Research Tools",
+      "context": {
+        "audience": "Academic researchers, R&D professionals, analysts, journalists, consultants, due diligence teams",
+        "pain_points": [
+          "Literature review across thousands of papers is overwhelming",
+          "Synthesizing findings from multiple sources takes weeks",
+          "Staying current with new publications in your field",
+          "Finding relevant papers across disciplines",
+          "Extracting structured data from unstructured research",
+          "Fact-checking and source verification"
+        ],
+        "monetization": [
+          "Affiliate for research AI tools (Elicit, Consensus, Semantic Scholar)",
+          "Lead gen for enterprise research platforms",
+          "Sponsored academic tool reviews"
+        ],
+        "content_that_works": [
+          "Research workflow guides by discipline",
+          "Tool comparisons for specific research tasks",
+          "Academic use case demonstrations",
+          "Free research tool roundups",
+          "Integration guides with reference managers"
+        ],
+        "keyword_themes": [
+          "best ai research tools",
+          "ai literature review",
+          "ai paper summarizer",
+          "ai for academic research",
+          "ai citation finder",
+          "ai for market research",
+          "ai fact checker",
+          "ai for due diligence",
+          "consensus ai review",
+          "elicit ai review"
+        ],
+        "subtopics": [
+          "AI for literature review and synthesis",
+          "AI for paper discovery and recommendation",
+          "AI for data extraction from papers",
+          "AI for market research and analysis",
+          "AI for patent research",
+          "AI for competitive intelligence",
+          "AI for legal research",
+          "AI for medical/scientific research",
+          "AI for fact-checking and verification",
+          "AI for survey design and analysis"
+        ]
+      }
+    }
+  ],
+  "content_types": [
+    {
+      "type": "tool-page",
+      "description": "Individual enriched listing page for a specific AI tool. Includes overview, features, pricing, pros/cons, use cases, alternatives, and user reviews. The core directory content.",
+      "current_count": 267,
+      "schema_fields": [
+        "tool_name",
+        "tool_slug",
+        "tool_url",
+        "logo_url",
+        "tagline",
+        "description",
+        "categories",
+        "features",
+        "pricing_tiers",
+        "pros",
+        "cons",
+        "use_cases",
+        "alternatives",
+        "screenshots",
+        "ratings",
+        "affiliate_url",
+        "last_updated"
+      ],
+      "expansion_potential": "high"
+    },
+    {
+      "type": "category-page",
+      "description": "Category landing page aggregating all tools in a specific niche. Filters, sorting, and curated highlights. Internal linking hub.",
+      "current_count": 15,
+      "schema_fields": [
+        "category_name",
+        "category_slug",
+        "category_description",
+        "tools_list",
+        "featured_tools",
+        "buyer_guide_content",
+        "related_categories",
+        "faq"
+      ],
+      "expansion_potential": "high"
+    },
+    {
+      "type": "comparison-page",
+      "description": "Head-to-head comparison of two AI tools. Detailed feature, pricing, and use-case comparison with a verdict. Targets 'X vs Y' keywords.",
+      "current_count": 12,
+      "schema_fields": [
+        "tool_a_name",
+        "tool_a_slug",
+        "tool_b_name",
+        "tool_b_slug",
+        "comparison_criteria",
+        "feature_comparison_table",
+        "pricing_comparison",
+        "use_case_recommendations",
+        "verdict",
+        "related_comparisons"
+      ],
+      "expansion_potential": "high"
+    },
+    {
+      "type": "alternatives-page",
+      "description": "Listicle of alternatives to a popular AI tool. Targets 'X alternatives' keywords with high commercial intent.",
+      "current_count": 8,
+      "schema_fields": [
+        "primary_tool_name",
+        "primary_tool_slug",
+        "why_look_for_alternatives",
+        "alternatives_list",
+        "comparison_table",
+        "best_for_summary",
+        "faq"
+      ],
+      "expansion_potential": "high"
+    },
+    {
+      "type": "best-of-roundup",
+      "description": "Curated listicle of the best AI tools for a specific category or use case. Targets 'best X' keywords.",
+      "current_count": 10,
+      "schema_fields": [
+        "roundup_title",
+        "roundup_slug",
+        "category",
+        "year",
+        "tools_ranked",
+        "selection_criteria",
+        "comparison_table",
+        "buyers_guide",
+        "faq",
+        "last_updated"
+      ],
+      "expansion_potential": "high"
+    },
+    {
+      "type": "blog-post",
+      "description": "Educational and informational content about AI tools, workflows, and trends. Builds topical authority and targets informational keywords.",
+      "current_count": 15,
+      "schema_fields": [
+        "title",
+        "slug",
+        "meta_description",
+        "category",
+        "content_body",
+        "related_tools",
+        "related_posts",
+        "publish_date",
+        "last_updated"
+      ],
+      "expansion_potential": "high"
+    }
+  ],
+  "expansion_opportunities": [
+    {
+      "idea": "X-for-Y Pages — 'Best AI Tools for [Profession/Industry]' pages targeting specific professional audiences (lawyers, doctors, teachers, real estate agents, accountants, HR professionals, etc.)",
+      "estimated_pages": 50,
+      "difficulty": "low",
+      "priority": "high",
+      "rationale": "Massive untapped keyword space. 'Best AI tools for lawyers' has 2.4K MSV, 'best AI tools for teachers' 1.9K, etc. Template-driven production. High commercial intent from professional audiences with budget."
+    },
+    {
+      "idea": "Pricing Pages — Dedicated pricing comparison pages for the top 100 AI tools, showing all tiers, features per tier, annual vs monthly, and cost-per-output metrics",
+      "estimated_pages": 100,
+      "difficulty": "low",
+      "priority": "high",
+      "rationale": "Captures extremely high-intent 'X pricing' and 'X cost' keywords. Users searching pricing are close to purchase = high affiliate conversion. Data changes frequently = reason to keep content fresh."
+    },
+    {
+      "idea": "Workflow/Use-Case Guides — Step-by-step guides for completing specific tasks with AI tools (e.g., 'How to create a logo with AI', 'How to write a business plan with AI')",
+      "estimated_pages": 75,
+      "difficulty": "medium",
+      "priority": "high",
+      "rationale": "Targets long-tail 'how to' keywords with clear tool recommendations. Natural affiliate placement within tutorials. Builds topical authority. High time-on-page and engagement."
+    },
+    {
+      "idea": "AI Tool Stacks — Curated tool combinations for specific workflows ('The AI Marketing Stack', 'The AI Developer Stack', 'The AI Content Creator Stack')",
+      "estimated_pages": 20,
+      "difficulty": "medium",
+      "priority": "high",
+      "rationale": "Unique content format that competitors don't have. Multiple affiliate opportunities per page. Targets 'best AI tools for X workflow' keywords. Highly shareable."
+    },
+    {
+      "idea": "Expanded Comparison Pages — Systematically generate comparisons for the top 50 tools × their top 3 competitors = 150 comparison pages",
+      "estimated_pages": 150,
+      "difficulty": "low",
+      "priority": "high",
+      "rationale": "'X vs Y' keywords have strong commercial intent and are template-driven. Current 12 pages barely scratch the surface. Programmatic generation with niche context injection makes this highly scalable."
+    },
+    {
+      "idea": "AI Tool Reviews with Real Output Examples — In-depth reviews of top 50 tools including actual generated outputs (text, images, code) with quality analysis",
+      "estimated_pages": 50,
+      "difficulty": "medium",
+      "priority": "medium",
+      "rationale": "Unique first-party content that can't be replicated by aggregators. Builds E-E-A-T signals. Targets '[tool] review' keywords. Visual content earns backlinks."
+    },
+    {
+      "idea": "AI Tools by Feature Pages — Pages organized by specific capability rather than category ('AI tools with API access', 'AI tools with free tiers', 'AI tools with offline mode')",
+      "estimated_pages": 30,
+      "difficulty": "low",
+      "priority": "medium",
+      "rationale": "Captures feature-specific search intent. Unique filtering angle. Creates internal linking opportunities. Template-driven from existing tool data."
+    },
+    {
+      "idea": "Integration Comparison Pages — Pages comparing how different AI tools integrate with popular platforms (Slack, Notion, Google Workspace, Zapier)",
+      "estimated_pages": 25,
+      "difficulty": "medium",
+      "priority": "medium",
+      "rationale": "Targets 'X integration with Y' keywords. Helps users evaluate tools based on their existing stack. Creates partnership opportunities with integration platforms."
+    },
+    {
+      "idea": "AI Tool Update Tracker — Pages tracking feature updates, pricing changes, and new releases for popular AI tools",
+      "estimated_pages": 50,
+      "difficulty": "medium",
+      "priority": "medium",
+      "rationale": "Creates recurring content freshness. Targets '[tool] update' and '[tool] new features' keywords. Positions AISO as the source of truth for AI tool news."
+    },
+    {
+      "idea": "Free AI Tools Directory — Dedicated section highlighting genuinely free AI tools with no credit card required, organized by category",
+      "estimated_pages": 15,
+      "difficulty": "low",
+      "priority": "medium",
+      "rationale": "Captures massive 'free AI [tool type]' keyword volume. High traffic but lower commercial intent — monetize with ads and freemium upgrade paths. Great for backlinks."
+    },
+    {
+      "idea": "AI Tools Glossary — Comprehensive glossary of AI terms, technologies, and concepts with related tool recommendations",
+      "estimated_pages": 100,
+      "difficulty": "low",
+      "priority": "low",
+      "rationale": "Builds topical authority for AI-related terms. Targets definitional queries. Internal linking hub. Low effort per page but creates SEO foundation."
+    }
+  ],
+  "competitors": [
+    {
+      "name": "There's An AI For That",
+      "domain": "theresanaiforthat.com",
+      "strengths": "First-mover advantage, massive directory (10K+ tools), strong domain authority, community submissions",
+      "weaknesses": "Quantity over quality, thin tool descriptions, cluttered UI, limited comparison content"
+    },
+    {
+      "name": "Futurepedia",
+      "domain": "futurepedia.io",
+      "strengths": "Large directory, daily updates, newsletter, YouTube channel, strong social presence",
+      "weaknesses": "Low editorial depth, many tools are outdated/dead, limited comparison and buyer-guide content"
+    },
+    {
+      "name": "AI Tool Guru",
+      "domain": "aitoolguru.com",
+      "strengths": "Clean design, good category organization, decent reviews",
+      "weaknesses": "Smaller directory, limited comparison pages, less brand recognition"
+    },
+    {
+      "name": "G2 (AI categories)",
+      "domain": "g2.com",
+      "strengths": "Massive review database, enterprise credibility, strong SEO authority",
+      "weaknesses": "Not AI-focused, complex UI, gated content, enterprise-heavy pricing"
+    },
+    {
+      "name": "Product Hunt (AI launches)",
+      "domain": "producthunt.com",
+      "strengths": "Launch platform authority, community voting, wide coverage",
+      "weaknesses": "Not a directory — discovery-focused, tools disappear from view after launch day"
+    },
+    {
+      "name": "Toolify.ai",
+      "domain": "toolify.ai",
+      "strengths": "Large AI directory, traffic analytics features, GPTs directory",
+      "weaknesses": "Thin descriptions, SEO-focused quantity play, limited editorial depth"
+    }
+  ]
+}
