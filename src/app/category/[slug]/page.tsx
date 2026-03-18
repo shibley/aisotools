@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import CategoryIcon from "@/components/CategoryIcon";
+import ToolLogo from "@/components/ToolLogo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -74,11 +75,16 @@ export default async function CategoryPage({ params }: Props) {
                 href={`/tool/${tool.slug}`}
                 className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-xl p-6 hover:border-blue-500/50 transition"
               >
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-lg font-semibold">{tool.name}</h3>
-                  <span className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded-full">Featured</span>
+                <div className="flex items-start gap-3 mb-2">
+                  <ToolLogo name={tool.name} url={tool.url} logoUrl={tool.logoUrl} size={36} />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-semibold">{tool.name}</h3>
+                      <span className="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded-full">Featured</span>
+                    </div>
+                    <p className="text-gray-400 text-sm mt-1">{tool.shortDescription}</p>
+                  </div>
                 </div>
-                <p className="text-gray-400 text-sm mb-3">{tool.shortDescription}</p>
                 <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">{tool.pricing}</span>
               </Link>
             ))}
@@ -109,10 +115,15 @@ export default async function CategoryPage({ params }: Props) {
                 href={`/tool/${tool.slug}`}
                 className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition group"
               >
-                <h3 className="text-lg font-semibold group-hover:text-blue-400 transition mb-2">
-                  {tool.name}
-                </h3>
-                <p className="text-gray-400 text-sm mb-3">{tool.shortDescription}</p>
+                <div className="flex items-start gap-3 mb-3">
+                  <ToolLogo name={tool.name} url={tool.url} logoUrl={tool.logoUrl} size={36} />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-semibold group-hover:text-blue-400 transition">
+                      {tool.name}
+                    </h3>
+                    <p className="text-gray-400 text-sm mt-1">{tool.shortDescription}</p>
+                  </div>
+                </div>
                 <div className="flex items-center justify-between">
                   <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">{tool.pricing}</span>
                   <div className="flex gap-1">

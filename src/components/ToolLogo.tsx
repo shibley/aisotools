@@ -1,68 +1,67 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 interface ToolLogoProps {
   name: string;
   url: string;
   logoUrl?: string;
   size?: number;
+  className?: string;
 }
 
-const fallbackColors = [
-  "from-sky-500/40 to-blue-500/40",
-  "from-emerald-500/40 to-teal-500/40",
-  "from-amber-500/40 to-orange-500/40",
-  "from-pink-500/40 to-rose-500/40",
-  "from-violet-500/40 to-purple-500/40",
-];
+function getDomain(url: string): string {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return url.replace(/^https?:\/\//, "").split("/")[0];
+  }
+}
 
-export default function ToolLogo({ name, url, logoUrl, size = 44 }: ToolLogoProps) {
-  const domain = useMemo(() => {
-    try {
-      return new URL(url).hostname;
-    } catch {
-      return "";
-    }
-  }, [url]);
+export default function ToolLogo({ name, url, logoUrl, size = 32, className = "" }: ToolLogoProps) {
+  const [error, setError] = useState(false);
+  const domain = getDomain(url);
 
-  const fallbackSrc = domain
-    ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64`
-    : "";
+  // Priority: logoUrl > Google favicon API > fallback initial
+  const src = logoUrl
+    ? logoUrl
+    : `https://www.google.com/s2/favicons?domain=${domain}&sz=${size * 2}`;
 
-  const [currentSrc, setCurrentSrc] = useState<string | null>(logoUrl || fallbackSrc || null);
-  const [triedFallback, setTriedFallback] = useState(false);
+  if (error) {
+    // Fallback: colored initial
+    const colors = [
+      "bg-blue-500/20 text-blue-400",
+      "bg-purple-500/20 text-purple-400",
+      "bg-emerald-500/20 text-emerald-400",
+      "bg-orange-500/20 text-orange-400",
+      "bg-pink-500/20 text-pink-400",
+      "bg-cyan-500/20 text-cyan-400",
+      "bg-amber-500/20 text-amber-400",
+    ];
+    const colorIndex = name.charCodeAt(0) % colors.length;
 
-  const initial = name?.trim()?.[0]?.toUpperCase() || "?";
-  const colorIndex = (name?.charCodeAt(0) || 0) % fallbackColors.length;
-
-  if (!currentSrc) {
     return (
       <div
-        className={`flex items-center justify-center rounded-2xl bg-gradient-to-br ${fallbackColors[colorIndex]} text-white font-semibold shadow-inner`}
-        style={{ width: size, height: size }}
-        aria-label={`${name} logo`}
+        className={`inline-flex items-center justify-center rounded-lg ${colors[colorIndex]} ${className}`}
+        style={{ width: size, height: size, minWidth: size }}
       >
-        {initial}
+        <span className="font-bold" style={{ fontSize: size * 0.45 }}>
+          {name.charAt(0).toUpperCase()}
+        </span>
       </div>
     );
   }
 
   return (
     <img
-      src={currentSrc}
+      src={src}
       alt={`${name} logo`}
       width={size}
       height={size}
-      className="rounded-2xl bg-gray-900 object-contain shadow-sm"
-      onError={() => {
-        if (!triedFallback && logoUrl && fallbackSrc) {
-          setCurrentSrc(fallbackSrc);
-          setTriedFallback(true);
-        } else {
-          setCurrentSrc(null);
-        }
-      }}
+      className={`rounded-lg ${className}`}
+      style={{ minWidth: size }}
+      onError={() => setError(true)}
+      loading="lazy"
     />
   );
 }
