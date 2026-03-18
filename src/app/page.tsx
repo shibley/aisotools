@@ -2,15 +2,28 @@ import { categories } from "@/data/categories";
 import { tools } from "@/data/tools";
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
+import HomeToolTabs from "@/components/HomeToolTabs";
 
 export default function Home() {
-  const featuredTools = tools.filter((t) => t.featured);
+  const featuredTools = tools.filter((t) => t.featured || t.sponsored);
+  const toolCount = tools.length;
+  const categoryCount = categories.length;
+
+  const categoryLabels = categories.reduce<Record<string, string>>((acc, category) => {
+    acc[category.slug] = category.name;
+    return acc;
+  }, {});
+
+  const categoryToolCounts = tools.reduce<Record<string, number>>((acc, tool) => {
+    acc[tool.category] = (acc[tool.category] || 0) + 1;
+    return acc;
+  }, {});
 
   return (
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/10 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.15),_transparent_55%),radial-gradient(circle_at_20%_20%,_rgba(168,85,247,0.12),_transparent_40%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
@@ -20,15 +33,23 @@ export default function Home() {
               </span>{" "}
               for Any Task
             </h1>
-            <p className="text-xl text-gray-400 mb-8">
-              Discover {tools.length}+ curated AI tools across {categories.length} categories.
-              Updated daily. Find the perfect AI tool in seconds.
+            <p className="text-lg sm:text-xl text-gray-400 mb-6">
+              Curated, fast, and trusted. Discover the right AI tool in seconds.
             </p>
+            <div className="mb-6 text-sm sm:text-base text-gray-300 font-medium">
+              {toolCount}+ AI tools across {categoryCount} categories
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-2">
               <SearchBar />
             </div>
             <div className="flex flex-wrap justify-center gap-2 mt-6">
-              {["ChatGPT alternatives", "AI writing tools", "AI image generators", "AI coding assistants", "Free AI tools"].map((tag) => (
+              {[
+                "ChatGPT alternatives",
+                "AI writing tools",
+                "AI image generators",
+                "AI coding assistants",
+                "Free AI tools",
+              ].map((tag) => (
                 <span
                   key={tag}
                   className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-gray-700 cursor-pointer transition"
@@ -41,61 +62,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Tools */}
+      {/* Tool Tabs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl font-bold">⭐ Featured Tools</h2>
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-3xl font-bold">Explore AI Tools</h2>
+            <p className="text-gray-400 mt-2">
+              Hand-picked tools with clear pricing, categories, and fast comparisons.
+            </p>
+          </div>
           <Link href="/category" className="text-blue-400 hover:text-blue-300 text-sm">
             View all →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredTools.map((tool) => (
-            <Link
-              key={tool.slug}
-              href={`/tool/${tool.slug}`}
-              className={`rounded-xl p-6 transition group relative ${
-                tool.sponsored
-                  ? "bg-gradient-to-br from-blue-600/10 to-purple-600/10 border-2 border-blue-500/30 hover:border-blue-500/50 shadow-lg shadow-blue-500/5"
-                  : "bg-gray-900 border border-gray-800 hover:border-blue-500/50 hover:bg-gray-900/80"
-              }`}
+        <HomeToolTabs tools={tools} featuredTools={featuredTools} categoryLabels={categoryLabels} />
+      </section>
+
+      {/* Newsletter */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="rounded-2xl border border-gray-800 bg-gradient-to-r from-gray-900 via-gray-900 to-gray-950 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="text-2xl font-bold">Get the best new AI tools in your inbox weekly</h2>
+            <p className="text-gray-400 mt-2">
+              One concise email with fresh launches, trending picks, and featured standouts.
+            </p>
+          </div>
+          <form
+            className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
+            action="/api/subscribe"
+            method="post"
+          >
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="you@company.com"
+              className="w-full sm:w-72 bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
+            />
+            <button
+              type="submit"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl text-sm font-semibold transition"
             >
-              {tool.sponsored && (
-                <div className="absolute -top-2.5 right-4">
-                  <span className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                    ⭐ Featured
-                  </span>
-                </div>
-              )}
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <h3 className="text-lg font-semibold group-hover:text-blue-400 transition">
-                    {tool.name}
-                  </h3>
-                  <span className={`text-xs px-2 py-0.5 rounded-full ${
-                    tool.sponsored
-                      ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                      : "bg-gray-800 text-gray-400"
-                  }`}>
-                    {tool.pricing}
-                  </span>
-                </div>
-              </div>
-              <p className={`text-sm mb-4 ${tool.sponsored ? "text-gray-300" : "text-gray-400"}`}>
-                {tool.shortDescription}
-              </p>
-              <div className="flex flex-wrap gap-1">
-                {tool.tags.slice(0, 3).map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </Link>
-          ))}
+              Subscribe
+            </button>
+          </form>
         </div>
       </section>
 
@@ -114,7 +124,7 @@ export default function Home() {
                 {cat.name}
               </h3>
               <p className="text-gray-500 text-xs mt-1">
-                {cat.subcategories.length} subcategories
+                {categoryToolCounts[cat.slug] || 0} tools
               </p>
             </Link>
           ))}
