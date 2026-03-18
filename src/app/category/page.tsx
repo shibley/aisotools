@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { categories } from "@/data/categories";
 import { tools } from "@/data/tools";
+import CategoryIcon from "@/components/CategoryIcon";
 
 export const metadata: Metadata = {
   title: "AI Tool Categories | AISO Tools",
@@ -44,7 +45,7 @@ export default function CategoriesPage() {
               className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition group"
             >
               <div className="flex items-start gap-4">
-                <span className="text-4xl">{cat.icon}</span>
+                <CategoryIcon slug={cat.slug} size={32} />
                 <div className="flex-1 min-w-0">
                   <h2 className="text-lg font-semibold group-hover:text-blue-400 transition mb-1">
                     {cat.name}

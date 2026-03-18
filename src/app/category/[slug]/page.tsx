@@ -3,6 +3,7 @@ import { tools } from "@/data/tools";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
+import CategoryIcon from "@/components/CategoryIcon";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -46,7 +47,7 @@ export default async function CategoryPage({ params }: Props) {
       {/* Header */}
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-3">
-          <span className="text-4xl">{category.icon}</span>
+          <CategoryIcon slug={category.slug} size={36} />
           <h1 className="text-4xl font-bold">Best AI {category.name} Tools</h1>
         </div>
         <p className="text-xl text-gray-400 max-w-3xl">{category.description}</p>

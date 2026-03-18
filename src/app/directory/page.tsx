@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import CategoryIcon from "@/components/CategoryIcon";
 
 export const metadata: Metadata = {
   title: "AI Tools Directory — Browse 300+ AI Tools by Category | AISO Tools",
@@ -303,7 +304,7 @@ export default function DirectoryPage() {
             >
               <div className={`bg-gradient-to-br ${category.bgGradient} border border-gray-800 hover:border-gray-700 rounded-xl p-6 h-full transition`}>
                 <div className="flex items-start justify-between mb-3">
-                  <span className="text-4xl">{category.icon}</span>
+                  <CategoryIcon slug={category.slug} size={32} />
                   <span className="bg-black/30 text-gray-300 px-3 py-1 rounded-full text-sm font-medium">
                     {category.toolCount} tools
                   </span>

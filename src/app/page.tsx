@@ -3,6 +3,7 @@ import { tools } from "@/data/tools";
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 import HomeToolTabs from "@/components/HomeToolTabs";
+import CategoryIcon from "@/components/CategoryIcon";
 
 export default function Home() {
   const featuredTools = tools.filter((t) => t.featured || t.sponsored);
@@ -119,7 +120,9 @@ export default function Home() {
               href={`/category/${cat.slug}`}
               className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition group text-center"
             >
-              <span className="text-3xl mb-2 block">{cat.icon}</span>
+              <div className="mb-2 flex justify-center">
+                <CategoryIcon slug={cat.slug} size={28} />
+              </div>
               <h3 className="font-semibold group-hover:text-blue-400 transition">
                 {cat.name}
               </h3>
