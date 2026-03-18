@@ -53,15 +53,20 @@ export default function ToolLogo({ name, url, logoUrl, size = 32, className = ""
   }
 
   return (
-    <img
-      src={src}
-      alt={`${name} logo`}
-      width={size}
-      height={size}
-      className={`rounded-lg ${className}`}
-      style={{ minWidth: size }}
-      onError={() => setError(true)}
-      loading="lazy"
-    />
+    <div
+      className={`inline-flex items-center justify-center rounded-lg bg-gray-800/50 overflow-hidden flex-shrink-0 ${className}`}
+      style={{ width: size, height: size, minWidth: size }}
+    >
+      <img
+        src={src}
+        alt={`${name} logo`}
+        width={size}
+        height={size}
+        className="object-contain"
+        style={{ maxWidth: size, maxHeight: size }}
+        onError={() => setError(true)}
+        loading="lazy"
+      />
+    </div>
   );
 }
