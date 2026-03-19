@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/replicate-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/runway-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/synthesia-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/copyai-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     // Standalone pricing pages
     { url: `${base}/chatgpt-plus-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
