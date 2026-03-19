@@ -29,6 +29,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/copilot-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/perplexity-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/grok-vs-chatgpt-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    // Standalone alternatives pages
+    { url: `${base}/chatgpt-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/midjourney-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/canva-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/copilot-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/dall-e-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/elevenlabs-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/github-copilot-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/grammarly-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/hugging-face-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/jasper-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/notion-ai-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/perplexity-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/replicate-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/runway-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/synthesia-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    // Standalone pricing pages
+    { url: `${base}/chatgpt-plus-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/midjourney-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/jasper-ai-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/notion-ai-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/copyai-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/grammarly-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/synthesia-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/runway-ml-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/elevenlabs-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/perplexity-pro-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({
