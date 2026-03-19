@@ -4,6 +4,7 @@ import { toolsBatch3 } from "./tools-batch3";
 import { toolsBatch4 } from "./tools-batch4";
 import { toolsBatch5 } from "./tools-batch5";
 import { toolsBatch6 } from "./tools-batch6";
+import { toolsBatch7 } from "./tools-batch7";
 
 export interface Tool {
   name: string;
@@ -125,4 +126,5 @@ export const tools: Tool[] = [
   ...toolsBatch4,
   ...toolsBatch5,
   ...toolsBatch6,
+  ...toolsBatch7,
 ];
