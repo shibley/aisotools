@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/copilot-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/perplexity-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/grok-vs-chatgpt-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/grammarly-vs-quillbot`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone alternatives pages
     { url: `${base}/chatgpt-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
