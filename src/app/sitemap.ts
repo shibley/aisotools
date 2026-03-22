@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/grok-vs-chatgpt-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/grammarly-vs-quillbot`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-vs-runway`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/midjourney-vs-stable-diffusion`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/jasper-vs-copyai`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/claude-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/cursor-vs-windsurf`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
