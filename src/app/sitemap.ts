@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/midjourney-vs-runway`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/jasper-vs-copyai`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/claude-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/cursor-vs-windsurf`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone alternatives pages
     { url: `${base}/chatgpt-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
