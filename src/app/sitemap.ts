@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/kling-vs-runway`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/github-copilot-vs-claude-code`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/flux-vs-midjourney`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/deepseek-vs-claude`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone alternatives pages
     { url: `${base}/chatgpt-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
