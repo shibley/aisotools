@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/deepseek-vs-claude`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/claude-code-vs-cursor`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/perplexity-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/v0-vs-lovable`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone alternatives pages
     { url: `${base}/chatgpt-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
