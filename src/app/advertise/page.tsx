@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { tools } from "@/data/tools";
 import { categories } from "@/data/categories";
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 
 const plans = [
   {
@@ -70,14 +71,16 @@ function CheckoutButton({
   plan,
   highlight,
   label,
+  initialToolName,
 }: {
   plan: string;
   highlight: boolean;
   label: string;
+  initialToolName?: string;
 }) {
   const [loading, setLoading] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [toolName, setToolName] = useState("");
+  const [toolName, setToolName] = useState(initialToolName || "");
   const [toolUrl, setToolUrl] = useState("");
   const [email, setEmail] = useState("");
 
@@ -161,7 +164,32 @@ function CheckoutButton({
 
 export default function AdvertisePage() {
   return (
+    <Suspense>
+      <AdvertiseContent />
+    </Suspense>
+  );
+}
+
+function AdvertiseContent() {
+  const searchParams = useSearchParams();
+  const toolSlug = searchParams.get("tool") || "";
+  const prefillTool = tools.find((t) => t.slug === toolSlug);
+  const prefillToolName = prefillTool?.name || "";
+
+  return (
     <div>
+      {/* Claim Banner */}
+      {prefillTool && (
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="bg-blue-600/10 border border-blue-500/20 rounded-xl px-6 py-4 flex items-center gap-3">
+            <span className="text-xl">✨</span>
+            <p className="text-gray-300 text-sm">
+              Claiming the listing for <strong className="text-white">{prefillTool.name}</strong>? Choose a plan below to get featured placement, a dofollow backlink, and a sponsored badge.
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/15 to-amber-500/10" />
@@ -315,6 +343,7 @@ export default function AdvertisePage() {
                 plan={plan.key}
                 highlight={plan.highlight}
                 label={plan.cta}
+                initialToolName={prefillToolName}
               />
               <p className="text-center text-gray-600 text-xs mt-3">
                 <a

@@ -749,6 +749,20 @@ export default async function ToolPricingPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Claim Listing CTA */}
+        <div className="bg-gray-800/50 border border-gray-700 rounded-xl px-6 py-4 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <p className="text-gray-300 text-sm">
+            ✨ Want featured placement for <strong className="text-white">{tool.name}</strong>? Get a Sponsored badge and priority visibility.
+          </p>
+          <a
+            href={`/advertise?tool=${tool.slug}&ref=pricing-claim`}
+            rel="nofollow"
+            className="text-blue-400 hover:text-blue-300 text-sm font-medium whitespace-nowrap transition"
+          >
+            Get a Sponsored Badge →
+          </a>
+        </div>
+
         {/* FAQ Section */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold mb-6">

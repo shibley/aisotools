@@ -161,6 +161,28 @@ export default async function ToolPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Claim Your Listing CTA */}
+      <section className="mb-8">
+        <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+          <div className="flex items-start gap-4">
+            <span className="text-2xl flex-shrink-0 mt-0.5">✨</span>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold mb-1">Do you work at {tool.name}?</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                Claim your listing to get a Featured badge, priority placement, and a dofollow backlink. Trusted by 518+ AI tools.
+              </p>
+              <a
+                href={`/advertise?tool=${tool.slug}&ref=claim`}
+                rel="nofollow"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition"
+              >
+                Claim This Listing →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Alternatives */}
       {alternatives && alternatives.length > 0 && (
         <section className="mb-8">
