@@ -47,6 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/bolt-vs-v0`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/synthesia-vs-heygen`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/sora-vs-kling`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/notebooklm-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone alternatives pages
     { url: `${base}/chatgpt-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
