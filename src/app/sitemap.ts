@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/perplexity-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/v0-vs-lovable`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/bolt-vs-lovable`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/bolt-vs-v0`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/synthesia-vs-heygen`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/sora-vs-kling`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone alternatives pages
