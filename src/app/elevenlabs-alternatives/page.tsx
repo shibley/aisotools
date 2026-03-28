@@ -124,6 +124,16 @@ export default function ElevenLabsAlternativesPage() {
           <p className="text-sm text-gray-500 mt-3">
             Last updated: March 18, 2026 · 25 min read
           </p>
+          <div className="mt-4">
+            <a
+              href="https://try.elevenlabs.io/7j98rr4eeebw"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-indigo-700 transition"
+            >
+              Still prefer ElevenLabs? Try it free →
+            </a>
+          </div>
         </header>
 
         {/* TL;DR */}

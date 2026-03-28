@@ -633,9 +633,9 @@ export default async function ComparisonPage({ params }: Props) {
                 ))}
               </ul>
               <a
-                href={toolA.url}
+                href={toolA.affiliateUrl || toolA.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel={`noopener noreferrer${toolA.affiliateUrl ? " sponsored" : ""}`}
                 className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
               >
                 Try {toolA.name} →
@@ -663,9 +663,9 @@ export default async function ComparisonPage({ params }: Props) {
                 ))}
               </ul>
               <a
-                href={toolB.url}
+                href={toolB.affiliateUrl || toolB.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel={`noopener noreferrer${toolB.affiliateUrl ? " sponsored" : ""}`}
                 className="inline-block mt-4 bg-purple-600 hover:bg-purple-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
               >
                 Try {toolB.name} →

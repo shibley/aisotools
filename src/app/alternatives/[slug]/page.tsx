@@ -492,6 +492,18 @@ export default async function AlternativesPage({ params }: Props) {
               </span>
             )}
           </div>
+          {tool.affiliateUrl && (
+            <div className="mt-4">
+              <a
+                href={tool.affiliateUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
+              >
+                Still prefer {tool.name}? Try it here →
+              </a>
+            </div>
+          )}
         </div>
 
         {/* ============================================================ */}
@@ -721,7 +733,17 @@ export default async function AlternativesPage({ params }: Props) {
                   </div>
 
                   {/* Action links */}
-                  <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-800">
+                  <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-gray-800">
+                    {alt.affiliateUrl && (
+                      <a
+                        href={alt.affiliateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+                      >
+                        Try {alt.name} →
+                      </a>
+                    )}
                     <Link
                       href={`/tool/${alt.slug}`}
                       className="text-blue-400 hover:text-blue-300 text-sm font-medium transition"
