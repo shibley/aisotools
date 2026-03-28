@@ -101,8 +101,26 @@ export const AFFILIATE_LINKS: Record<string, {
   // TO APPLY — Programs identified, not yet applied
   // ═══════════════════════════════════════════
 
-  // Grammarly — Impact.com (need account setup)
-  // Surfer SEO — Direct program (surferseo.com/affiliate)
+  "grammarly": {
+    url: "", // Apply via Impact.com: grammarly.com/affiliates
+    program: "Impact.com",
+    commission: "High CPA + activation bonus, 90-day cookie, 20-30% conversion",
+    status: "pending",
+  },
+  "surfer-seo": {
+    url: "", // Apply at surferseo.com/affiliate-program/
+    program: "Surfer Direct",
+    commission: "75-125% CPA on monthly, 15-25% on yearly (tiered)",
+    status: "pending",
+  },
+  "copy-ai": {
+    url: "", // Check PartnerStack marketplace
+    program: "PartnerStack (likely)",
+    commission: "TBD — need to confirm",
+    status: "pending",
+  },
+
+  // ── No public affiliate program ──────────
   // Jasper — No public affiliate program found
   // Synthesia — No partner page found
   // Notion — Not accepting new affiliates

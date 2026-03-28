@@ -1,4 +1,5 @@
 import { tools } from "@/data/tools";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 import Link from "next/link";
 import type { Metadata } from "next";
 

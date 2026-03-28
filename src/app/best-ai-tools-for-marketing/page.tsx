@@ -1,4 +1,5 @@
 import { tools } from "@/data/tools";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -611,14 +612,30 @@ export default function BestAIToolsForMarketingPage() {
                     </div>
                     <p className="text-gray-400">{tool.description}</p>
                   </div>
-                  {toolData && (
-                    <Link
-                      href={`/tool/${tool.slug}`}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition shrink-0"
-                    >
-                      View Tool →
-                    </Link>
-                  )}
+                  <div className="flex gap-2 shrink-0">
+                      {(() => {
+                        const affUrl = getAffiliateUrl(tool.slug) || (toolData?.affiliateUrl);
+                        return affUrl ? (
+                          <a
+                            href={affUrl}
+                            target="_blank"
+                            rel="noopener noreferrer sponsored"
+                            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+                          >
+                            Try {tool.name} →
+                          </a>
+                        ) : null;
+                      })()}
+                      {toolData && (
+                        <Link
+                          href={`/tool/${tool.slug}`}
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+                        >
+                          View Tool →
+                        </Link>
+                      )}
+
+                  </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-6">
