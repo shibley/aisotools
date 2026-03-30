@@ -30,6 +30,12 @@ export const AFFILIATE_LINKS: Record<string, {
     commission: "$200 per sale, $10 per trial",
     status: "active",
   },
+  "activecampaign": {
+    url: "https://try.activecampaign.com/vw1jw6s8z6qi",
+    program: "PartnerStack",
+    commission: "30% recurring for up to 12 months",
+    status: "active",
+  },
 
   // ═══════════════════════════════════════════
   // PENDING — Applied, awaiting approval
@@ -43,10 +49,10 @@ export const AFFILIATE_LINKS: Record<string, {
     status: "applied",
   },
   "murf-ai": {
-    url: "",
+    url: "https://get.murf.ai/kveyd98v1qu6",
     program: "PartnerStack",
     commission: "20% per commission",
-    status: "applied",
+    status: "active",
   },
   "quillbot": {
     url: "",
@@ -55,16 +61,16 @@ export const AFFILIATE_LINKS: Record<string, {
     status: "applied",
   },
   "adcreative": {
-    url: "",
+    url: "https://free-trial.adcreative.ai/yh4dtwq3dst0",
     program: "PartnerStack",
-    commission: "30% + $2000 rewards",
-    status: "applied",
+    commission: "30% revenue sharing",
+    status: "active",
   },
   "gamma": {
-    url: "",
+    url: "https://try.gamma.app/iu7k55m0qa0c",
     program: "PartnerStack",
     commission: "30% first year",
-    status: "applied",
+    status: "active",
   },
   "consensus": {
     url: "",
