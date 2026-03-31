@@ -235,6 +235,53 @@ export default function GrammarlyPricingPage() {
             </ul>
           </section>
 
+          {/* Compare Alternatives CTA */}
+          <section className="mb-12 p-6 bg-gradient-to-r from-green-50 to-purple-50 rounded-lg border-2 border-green-200">
+            <div className="flex items-start gap-4">
+              <div className="text-4xl">🔍</div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold mb-3">
+                  Not sure if Grammarly is right for you?
+                </h2>
+                <p className="text-gray-700 mb-4">
+                  Compare Grammarly with other AI writing tools before you commit.
+                  See side-by-side feature breakdowns, pricing differences, and
+                  which tool fits your workflow best.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <Link
+                    href="/grammarly-alternatives"
+                    className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-green-300 hover:border-green-500 hover:shadow-md transition-all"
+                  >
+                    <span className="text-xl">✍️</span>
+                    <div>
+                      <div className="font-semibold text-green-700">
+                        Grammarly Alternatives
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        12 tools compared
+                      </div>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/grammarly-vs-quillbot"
+                    className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-purple-300 hover:border-purple-500 hover:shadow-md transition-all"
+                  >
+                    <span className="text-xl">📝</span>
+                    <div>
+                      <div className="font-semibold text-purple-700">
+                        Grammarly vs QuillBot
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        Full comparison
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Table of Contents */}
           <nav className="bg-white border border-gray-200 rounded-lg p-6 mb-12">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">

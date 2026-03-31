@@ -151,6 +151,81 @@ export default function ChatGPTPlusPricingPage() {
           </p>
         </div>
 
+        {/* Compare Alternatives CTA */}
+        <div className="mb-8 p-6 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-2 border-green-200">
+          <div className="flex items-start gap-4">
+            <div className="text-4xl">🔍</div>
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold mb-3">
+                Not sure if ChatGPT is right for you?
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Compare ChatGPT with other AI assistants before you commit.
+                See side-by-side feature breakdowns, pricing differences, and
+                which tool fits your workflow best.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <Link
+                  href="/chatgpt-vs-claude"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-purple-300 hover:border-purple-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">🤖</span>
+                  <div>
+                    <div className="font-semibold text-purple-700">
+                      ChatGPT vs Claude
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Full comparison
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/chatgpt-vs-gemini"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-blue-300 hover:border-blue-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">✨</span>
+                  <div>
+                    <div className="font-semibold text-blue-700">
+                      ChatGPT vs Gemini
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Google's alternative
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/perplexity-vs-chatgpt"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-teal-300 hover:border-teal-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">🔎</span>
+                  <div>
+                    <div className="font-semibold text-teal-700">
+                      Perplexity vs ChatGPT
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Research-focused
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/chatgpt-vs-deepseek"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-indigo-300 hover:border-indigo-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">🚀</span>
+                  <div>
+                    <div className="font-semibold text-indigo-700">
+                      ChatGPT vs DeepSeek
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Free alternative
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Table of Contents */}
         <div className="bg-gray-50 p-6 rounded-lg mb-8">
           <h2 className="text-xl font-bold mb-3">Quick Navigation</h2>

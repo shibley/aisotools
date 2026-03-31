@@ -148,6 +148,81 @@ export default function RunwayPricingPage() {
           </p>
         </section>
 
+        {/* Compare Alternatives CTA */}
+        <section className="mb-12 p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg border-2 border-purple-200">
+          <div className="flex items-start gap-4">
+            <div className="text-4xl">🔍</div>
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold mb-3">
+                Not sure if Runway is right for you?
+              </h2>
+              <p className="text-gray-700 mb-4">
+                Compare Runway with other AI video tools before you commit.
+                See side-by-side feature breakdowns, pricing differences, and
+                which tool fits your workflow best.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <Link
+                  href="/runway-alternatives"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-purple-300 hover:border-purple-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">⚡</span>
+                  <div>
+                    <div className="font-semibold text-purple-700">
+                      Runway Alternatives
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      12 tools compared
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/sora-vs-runway"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-blue-300 hover:border-blue-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">🎬</span>
+                  <div>
+                    <div className="font-semibold text-blue-700">
+                      Sora vs Runway
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Full comparison
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/kling-vs-runway"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-green-300 hover:border-green-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">💰</span>
+                  <div>
+                    <div className="font-semibold text-green-700">
+                      Kling vs Runway
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Budget alternative
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/midjourney-vs-runway"
+                  className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border-2 border-pink-300 hover:border-pink-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">🎨</span>
+                  <div>
+                    <div className="font-semibold text-pink-700">
+                      Midjourney vs Runway
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      Image vs video
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Table of Contents */}
         <nav className="mb-12 p-6 bg-gray-50 rounded-lg">
           <h2 className="text-xl font-bold mb-4">Table of Contents</h2>

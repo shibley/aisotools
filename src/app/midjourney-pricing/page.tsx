@@ -157,6 +157,53 @@ export default function MidjourneyPricingPage() {
           </p>
         </section>
 
+        {/* Compare Alternatives CTA */}
+        <section className="mb-12 p-6 bg-gradient-to-r from-pink-900/20 to-purple-900/20 rounded-lg border-2 border-pink-500/30">
+          <div className="flex items-start gap-4">
+            <div className="text-4xl">🔍</div>
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold mb-3">
+                Not sure if Midjourney is right for you?
+              </h2>
+              <p className="text-gray-300 mb-4">
+                Compare Midjourney with other AI image generators before you commit.
+                See side-by-side feature breakdowns, pricing differences, and
+                which tool fits your workflow best.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <Link
+                  href="/midjourney-vs-runway"
+                  className="flex items-center gap-2 px-4 py-3 bg-gray-800 rounded-lg border-2 border-purple-500/30 hover:border-purple-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">🎬</span>
+                  <div>
+                    <div className="font-semibold text-purple-400">
+                      Midjourney vs Runway
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Image vs video
+                    </div>
+                  </div>
+                </Link>
+                <Link
+                  href="/dall-e-alternatives"
+                  className="flex items-center gap-2 px-4 py-3 bg-gray-800 rounded-lg border-2 border-pink-500/30 hover:border-pink-500 hover:shadow-md transition-all"
+                >
+                  <span className="text-xl">🎨</span>
+                  <div>
+                    <div className="font-semibold text-pink-400">
+                      DALL-E Alternatives
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Midjourney included
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Table */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6">Midjourney Subscription Plans Comparison</h2>
