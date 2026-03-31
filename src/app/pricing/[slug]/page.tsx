@@ -393,6 +393,73 @@ export default async function ToolPricingPage({ params }: Props) {
           </p>
         </div>
 
+        {/* Compare Before You Buy */}
+        {alternatives && alternatives.length > 0 && (
+          <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/30 rounded-xl p-6 mb-10">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold">
+                🔍 Compare Before You Buy
+              </h2>
+              {alternatives.length > 3 && (
+                <Link
+                  href={`/alternatives/${tool.slug}`}
+                  className="text-blue-400 hover:text-blue-300 text-sm font-medium transition"
+                >
+                  See all {alternatives.length} alternatives →
+                </Link>
+              )}
+            </div>
+            <p className="text-gray-400 text-sm mb-5">
+              Comparing {tool.name} to similar tools helps you make the best choice for your budget and needs:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {alternatives.slice(0, 3).map((alt) => {
+                const altSummary = getPricingSummary(alt.pricing, alt.pricingDetails);
+                const compareUrl = `/compare/${[tool.slug, alt.slug].sort().join("-vs-")}`;
+                return (
+                  <div
+                    key={alt.slug}
+                    className="bg-gray-900/50 border border-gray-700 rounded-lg p-4 hover:border-blue-500/50 transition"
+                  >
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h3 className="font-semibold text-white">{alt.name}</h3>
+                      <span
+                        className={`px-2 py-0.5 rounded text-xs font-medium flex-shrink-0 ${
+                          alt.pricing === "free" || alt.pricing === "open-source"
+                            ? "bg-green-500/10 text-green-400"
+                            : alt.pricing === "freemium"
+                            ? "bg-blue-500/10 text-blue-400"
+                            : "bg-orange-500/10 text-orange-400"
+                        }`}
+                      >
+                        {alt.pricing === "free"
+                          ? "Free"
+                          : alt.pricing === "open-source"
+                          ? "Open Source"
+                          : alt.pricing === "freemium"
+                          ? "Freemium"
+                          : "Paid"}
+                      </span>
+                    </div>
+                    <p className="text-gray-400 text-xs mb-3 line-clamp-2">
+                      {alt.shortDescription}
+                    </p>
+                    <p className="text-gray-500 text-xs mb-3">
+                      {altSummary}
+                    </p>
+                    <Link
+                      href={compareUrl}
+                      className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-lg text-sm font-medium transition"
+                    >
+                      Compare with {tool.name} →
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Pricing Cards */}
         {tiers.length > 0 && (
           <section className="mb-12">
