@@ -4,6 +4,7 @@ import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 import HomeToolTabs from "@/components/HomeToolTabs";
 import CategoryIcon from "@/components/CategoryIcon";
+import NewsletterInline from "@/components/NewsletterInline";
 
 export default function Home() {
   const featuredTools = tools.filter((t) => t.featured || t.sponsored);
@@ -45,18 +46,19 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap justify-center gap-2 mt-6">
               {[
-                "ChatGPT alternatives",
-                "AI writing tools",
-                "AI image generators",
-                "AI coding assistants",
-                "Free AI tools",
+                { label: "ChatGPT alternatives", href: "/chatgpt-alternatives" },
+                { label: "AI writing tools", href: "/category/writing" },
+                { label: "AI image generators", href: "/category/image-generation" },
+                { label: "AI coding assistants", href: "/category/coding" },
+                { label: "Free AI tools", href: "/best-free-ai-tools" },
               ].map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-gray-700 cursor-pointer transition"
+                <Link
+                  key={tag.label}
+                  href={tag.href}
+                  className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-gray-700 hover:text-white transition"
                 >
-                  {tag}
-                </span>
+                  {tag.label}
+                </Link>
               ))}
             </div>
           </div>
@@ -88,25 +90,7 @@ export default function Home() {
               One concise email with fresh launches, trending picks, and featured standouts.
             </p>
           </div>
-          <form
-            className="flex flex-col sm:flex-row gap-3 w-full md:w-auto"
-            action="/api/subscribe"
-            method="post"
-          >
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="you@company.com"
-              className="w-full sm:w-72 bg-gray-900 border border-gray-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500"
-            />
-            <button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl text-sm font-semibold transition"
-            >
-              Subscribe
-            </button>
-          </form>
+          <NewsletterInline />
         </div>
       </section>
 
