@@ -31,10 +31,10 @@ export default function CheckoutSuccessPage() {
             <p className="text-gray-500 text-sm mt-6">
               Need help?{" "}
               <a
-                href="mailto:shibley@apistatuscheck.com"
+                href="mailto:shibley@aisotools.com"
                 className="text-blue-400 hover:text-blue-300"
               >
-                shibley@apistatuscheck.com
+                shibley@aisotools.com
               </a>
             </p>
           </div>

@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "slug": "jasper",
+      "name": "Jasper",
+      "email": "(no email)",
+      "sentAt": "2026-04-01T15:11:17.547Z",
+      "status": "dry-run"
+    }
+  ],
+  "lastRun": "2026-04-01T15:11:17.547Z",
+  "totalSent": 0
+}
