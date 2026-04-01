@@ -12,6 +12,7 @@ import {
   getPricingTypeLabel,
   type PricingTier,
 } from "@/lib/pricing-parser";
+import { RecommendedToolsCTA } from "@/components/pricing/RecommendedToolsCTA";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -458,6 +459,14 @@ export default async function ToolPricingPage({ params }: Props) {
               })}
             </div>
           </div>
+        )}
+
+        {/* Recommended Tools (for non-affiliate pricing pages) */}
+        {!isAffiliate && (
+          <RecommendedToolsCTA
+            currentToolCategory={tool.category}
+            currentToolName={tool.name}
+          />
         )}
 
         {/* Pricing Cards */}
