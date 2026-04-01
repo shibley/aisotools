@@ -347,7 +347,7 @@ function AdvertiseContent() {
               />
               <p className="text-center text-gray-600 text-xs mt-3">
                 <a
-                  href={`mailto:shibley@saasintegrate.com?subject=${encodeURIComponent(`${plan.name} Featured Listing — AISO Tools`)}&body=${encodeURIComponent(`Hi,\n\nI'm interested in the ${plan.name} plan (${plan.price}) for a featured listing on AISO Tools.\n\nTool Name: \nTool URL: \n\nThanks!`)}`}
+                  href={`mailto:shibley@apistatuscheck.com?subject=${encodeURIComponent(`${plan.name} Featured Listing — AISO Tools`)}&body=${encodeURIComponent(`Hi,\n\nI'm interested in the ${plan.name} plan (${plan.price}) for a featured listing on AISO Tools.\n\nTool Name: \nTool URL: \n\nThanks!`)}`}
                   className="hover:text-gray-400 transition"
                 >
                   Prefer email? Contact us directly →
@@ -360,7 +360,7 @@ function AdvertiseContent() {
           All plans are one-time payments. No subscriptions. No setup fees.
           Need a custom plan?{" "}
           <a
-            href="mailto:shibley@saasintegrate.com?subject=Custom%20Featured%20Listing%20—%20AISO%20Tools"
+            href="mailto:shibley@apistatuscheck.com?subject=Custom%20Featured%20Listing%20—%20AISO%20Tools"
             className="text-blue-400 hover:text-blue-300"
           >
             Let&apos;s talk →
@@ -442,7 +442,7 @@ function AdvertiseContent() {
             },
             {
               q: "Can I pay via invoice or bank transfer?",
-              a: "For custom payment arrangements, email us at shibley@saasintegrate.com and we'll work something out.",
+              a: "For custom payment arrangements, email us at shibley@apistatuscheck.com and we'll work something out.",
             },
           ].map((faq) => (
             <div key={faq.q} className="bg-gray-900 border border-gray-800 rounded-xl p-6">
@@ -479,8 +479,8 @@ function AdvertiseContent() {
             </div>
             <p className="text-gray-500 text-sm mt-6">
               Prefer email?{" "}
-              <a href="mailto:shibley@saasintegrate.com" className="text-blue-400 hover:text-blue-300">
-                shibley@saasintegrate.com
+              <a href="mailto:shibley@apistatuscheck.com" className="text-blue-400 hover:text-blue-300">
+                shibley@apistatuscheck.com
               </a>
             </p>
           </div>
