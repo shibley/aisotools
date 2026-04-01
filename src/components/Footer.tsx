@@ -1,3 +1,65 @@
+"use client";
+
+import { useState } from "react";
+
+function NewsletterForm() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("success");
+        setMessage("You're in! Check your inbox 🎉");
+        setEmail("");
+      } else {
+        setStatus("error");
+        setMessage(data.error || "Something went wrong.");
+      }
+    } catch {
+      setStatus("error");
+      setMessage("Something went wrong. Please try again.");
+    }
+  }
+
+  if (status === "success") {
+    return <p className="text-green-400 text-sm">{message}</p>;
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="flex gap-2 max-w-xs">
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="you@email.com"
+        required
+        className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm min-w-0 flex-1 focus:outline-none focus:border-blue-500"
+      />
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 text-white px-3 py-2 rounded-lg text-sm font-medium transition shrink-0"
+      >
+        {status === "loading" ? "..." : "Join"}
+      </button>
+      {status === "error" && (
+        <p className="text-red-400 text-xs mt-1">{message}</p>
+      )}
+    </form>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-800 mt-20 py-12">
@@ -99,16 +161,7 @@ export default function Footer() {
             <p className="text-gray-400 text-sm mb-3">
               Get the best new AI tools in your inbox weekly.
             </p>
-            <form className="flex gap-2 max-w-xs">
-              <input
-                type="email"
-                placeholder="you@email.com"
-                className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm min-w-0 flex-1 focus:outline-none focus:border-blue-500"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition shrink-0">
-                Join
-              </button>
-            </form>
+            <NewsletterForm />
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
