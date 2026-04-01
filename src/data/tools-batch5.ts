@@ -1447,5 +1447,33 @@ export const toolsBatch5: Tool[] = [
     alternatives: ["jasper", "copy-ai", "writesonic"],
     addedDate: "2026-02-23",
   },
+
+  // Antigravity (Google's multi-agent AI IDE)
+  {
+    name: "Antigravity",
+    slug: "antigravity",
+    description:
+      "Google's multi-agent AI development platform powered by Gemini 3 Pro. Antigravity coordinates multiple specialized agents (Manager, Writer, Critic, Tester) to handle complex coding tasks with built-in browser testing, workflow automation, and human-in-the-loop verification through Artifacts.",
+    shortDescription: "Google's multi-agent AI IDE with in-browser testing",
+    url: "https://antigravity.google.com",
+    category: "coding",
+    subcategory: "Code Generation",
+    tags: ["coding", "ai ide", "multi-agent", "google", "gemini", "web development"],
+    pricing: "freemium",
+    pricingDetails:
+      "Free tier with rate limits. Pro $20/mo, Ultra $249.99/mo. Pay-as-you-go $25 for 2,500 AI credits",
+    featured: false,
+    sponsored: false,
+    features: [
+      "Multi-agent coordination (Manager View)",
+      "In-browser testing environment",
+      "Workflows and automation rules",
+      "Artifacts for code review",
+      "Supports Gemini 3.1 Pro, Claude models, GPT-OSS",
+      "Web-based IDE interface",
+    ],
+    alternatives: ["cursor", "windsurf", "claude-code", "codex-openai", "bolt-new", "lovable"],
+    addedDate: "2026-04-01",
+  },
 ];
 
