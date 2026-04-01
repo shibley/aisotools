@@ -163,21 +163,22 @@ export default async function ToolPage({ params }: Props) {
 
       {/* Claim Your Listing CTA */}
       <section className="mb-8">
-        <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
-          <div className="flex items-start gap-4">
-            <span className="text-2xl flex-shrink-0 mt-0.5">✨</span>
+        <div className="relative bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-blue-600/5 border border-blue-500/20 rounded-xl p-6 overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="flex items-start gap-4 relative">
+            <span className="text-2xl flex-shrink-0 mt-0.5">🏷️</span>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold mb-1">Do you work at {tool.name}?</h3>
+              <h3 className="text-lg font-semibold mb-1">Is this your tool?</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Claim your listing to get a Featured badge, priority placement, and a dofollow backlink. Trusted by 518+ AI tools.
+                Claim your listing to get a <span className="text-blue-400 font-medium">Featured badge</span>, edit your description, and stand out from competitors.
+                All plans include a permanent dofollow backlink to your site.
               </p>
-              <a
+              <Link
                 href={`/advertise?tool=${tool.slug}&ref=claim`}
-                rel="nofollow"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition shadow-md shadow-blue-600/20 hover:shadow-blue-600/30"
               >
-                Claim This Listing →
-              </a>
+                Claim Now →
+              </Link>
             </div>
           </div>
         </div>

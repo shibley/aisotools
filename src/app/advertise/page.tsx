@@ -62,9 +62,9 @@ const plans = [
 
 const stats = [
   { value: `${tools.length}+`, label: "AI Tools Listed" },
+  { value: "5,000+", label: "Monthly Visitors" },
+  { value: "186%", label: "Traffic Growth (MoM)" },
   { value: `${categories.length}`, label: "Categories" },
-  { value: "Growing Daily", label: "Traffic" },
-  { value: "100%", label: "Organic Traffic" },
 ];
 
 function CheckoutButton({
@@ -207,8 +207,9 @@ function AdvertiseContent() {
             </h1>
             <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
               AISO Tools is one of the fastest-growing AI tool directories with{" "}
-              <strong className="text-white">{tools.length}+ curated tools</strong> and{" "}
-              <strong className="text-white">100% organic traffic</strong> from developers,
+              <strong className="text-white">{tools.length}+ curated tools</strong>,{" "}
+              <strong className="text-white">5,000+ monthly visitors</strong>, and traffic from{" "}
+              <strong className="text-white">ChatGPT, Google, and Perplexity</strong> — developers,
               marketers, and creators actively searching for AI solutions.
             </p>
             <a
@@ -236,6 +237,30 @@ function AdvertiseContent() {
               <div className="text-gray-500 text-sm">{stat.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Traffic Sources */}
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="bg-gray-900/60 border border-gray-800 rounded-xl p-8">
+          <h3 className="text-xl font-semibold text-center mb-6">Where Our Visitors Come From</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { source: "ChatGPT", detail: "#1 referrer", icon: "🤖" },
+              { source: "Google", detail: "Organic search", icon: "🔍" },
+              { source: "Perplexity", detail: "AI search", icon: "⚡" },
+              { source: "Direct", detail: "Returning users", icon: "🔁" },
+            ].map((item) => (
+              <div key={item.source} className="flex flex-col items-center gap-1">
+                <span className="text-2xl">{item.icon}</span>
+                <span className="text-white font-medium">{item.source}</span>
+                <span className="text-gray-500 text-xs">{item.detail}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-6">
+            AI platforms are actively recommending tools listed on AISO Tools to their users.
+          </p>
         </div>
       </section>
 

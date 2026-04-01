@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "eslint",
     "enrich": "node scripts/enrich-tools.js",
-    "apply-enrichment": "node scripts/apply-enrichment.js"
+    "apply-enrichment": "node scripts/apply-enrichment.js",
+    "outreach": "npx tsx scripts/sponsor-outreach.ts",
+    "outreach:dry": "npx tsx scripts/sponsor-outreach.ts --dry-run"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
