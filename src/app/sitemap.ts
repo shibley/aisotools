@@ -51,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/notebooklm-vs-chatgpt`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone alternatives pages
     { url: `${base}/chatgpt-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/claude-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/canva-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/copilot-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
