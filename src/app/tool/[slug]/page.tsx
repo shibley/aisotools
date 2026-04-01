@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import NewsletterBanner from "@/components/NewsletterBanner";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -41,6 +42,9 @@ export default async function ToolPage({ params }: Props) {
     ?.map((altSlug) => tools.find((t) => t.slug === altSlug))
     .filter(Boolean);
 
+  const categoryToolCount = tools.filter((t) => t.category === tool.category).length;
+  const totalToolCount = tools.length;
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Breadcrumb */}
@@ -55,6 +59,21 @@ export default async function ToolPage({ params }: Props) {
         )}
         <span className="text-gray-300">{tool.name}</span>
       </nav>
+
+      {/* Social Proof */}
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mb-6">
+        {category && (
+          <span>
+            Listed in{" "}
+            <Link href={`/category/${category.slug}`} className="text-blue-400 hover:text-blue-300">
+              {category.name}
+            </Link>{" "}
+            with {categoryToolCount - 1} other tools
+          </span>
+        )}
+        <span className="hidden sm:inline">•</span>
+        <span>Part of {totalToolCount}+ curated AI tools on AISO</span>
+      </div>
 
       {/* Screenshot/Preview */}
       {enrichment?.screenshotUrl && (
@@ -182,6 +201,11 @@ export default async function ToolPage({ params }: Props) {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <section className="mb-8">
+        <NewsletterBanner categoryName={category?.name} />
       </section>
 
       {/* Alternatives */}

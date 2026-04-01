@@ -5,6 +5,9 @@ import SearchBar from "@/components/SearchBar";
 import HomeToolTabs from "@/components/HomeToolTabs";
 import CategoryIcon from "@/components/CategoryIcon";
 import NewsletterInline from "@/components/NewsletterInline";
+import ToolLogo from "@/components/ToolLogo";
+
+const TRENDING_SLUGS = ["chatgpt", "midjourney", "claude", "cursor", "perplexity", "deepseek"];
 
 export default function Home() {
   const featuredTools = tools.filter((t) => t.featured || t.sponsored);
@@ -15,6 +18,12 @@ export default function Home() {
     acc[category.slug] = category.name;
     return acc;
   }, {});
+
+  const trendingTools = TRENDING_SLUGS
+    .map((slug) => tools.find((t) => t.slug === slug))
+    .filter(Boolean);
+
+  const recentlyAdded = tools.slice(-6).reverse();
 
   const categoryToolCounts = tools.reduce<Record<string, number>>((acc, tool) => {
     acc[tool.category] = (acc[tool.category] || 0) + 1;
@@ -62,6 +71,73 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Trending This Week */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 pb-8">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-3xl font-bold">🔥 Trending This Week</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {trendingTools.map((tool) => tool && (
+            <Link
+              key={tool.slug}
+              href={`/tool/${tool.slug}`}
+              className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition group"
+            >
+              <div className="flex items-start gap-3 mb-3">
+                <ToolLogo name={tool.name} url={tool.url} logoUrl={tool.logoUrl} size={36} />
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold group-hover:text-blue-400 transition">{tool.name}</h3>
+                  <p className="text-gray-400 text-sm mt-1 line-clamp-2">{tool.shortDescription}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded-full">
+                  {categoryLabels[tool.category] || tool.category}
+                </span>
+                <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">
+                  {tool.pricing}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Recently Added */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-3xl font-bold">🆕 Recently Added</h2>
+          <Link href="/category" className="text-blue-400 hover:text-blue-300 text-sm">
+            View all →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {recentlyAdded.map((tool) => tool && (
+            <Link
+              key={tool.slug}
+              href={`/tool/${tool.slug}`}
+              className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition group"
+            >
+              <div className="flex items-start gap-3 mb-3">
+                <ToolLogo name={tool.name} url={tool.url} logoUrl={tool.logoUrl} size={36} />
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-semibold group-hover:text-blue-400 transition">{tool.name}</h3>
+                  <p className="text-gray-400 text-sm mt-1 line-clamp-2">{tool.shortDescription}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded-full">
+                  {categoryLabels[tool.category] || tool.category}
+                </span>
+                <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">
+                  {tool.pricing}
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

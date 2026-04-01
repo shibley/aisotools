@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import CategoryIcon from "@/components/CategoryIcon";
 import ToolLogo from "@/components/ToolLogo";
+import NewsletterBanner from "@/components/NewsletterBanner";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -108,33 +109,72 @@ export default async function CategoryPage({ params }: Props) {
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regularTools.map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/tool/${tool.slug}`}
-                className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition group"
-              >
-                <div className="flex items-start gap-3 mb-3">
-                  <ToolLogo name={tool.name} url={tool.url} logoUrl={tool.logoUrl} size={36} />
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold group-hover:text-blue-400 transition">
-                      {tool.name}
-                    </h3>
-                    <p className="text-gray-400 text-sm mt-1">{tool.shortDescription}</p>
+          <>
+            {/* First batch of tools */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {regularTools.slice(0, 12).map((tool) => (
+                <Link
+                  key={tool.slug}
+                  href={`/tool/${tool.slug}`}
+                  className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition group"
+                >
+                  <div className="flex items-start gap-3 mb-3">
+                    <ToolLogo name={tool.name} url={tool.url} logoUrl={tool.logoUrl} size={36} />
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-semibold group-hover:text-blue-400 transition">
+                        {tool.name}
+                      </h3>
+                      <p className="text-gray-400 text-sm mt-1">{tool.shortDescription}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">{tool.pricing}</span>
-                  <div className="flex gap-1">
-                    {tool.tags.slice(0, 2).map((tag) => (
-                      <span key={tag} className="text-xs text-gray-600">{tag}</span>
-                    ))}
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">{tool.pricing}</span>
+                    <div className="flex gap-1">
+                      {tool.tags.slice(0, 2).map((tag) => (
+                        <span key={tag} className="text-xs text-gray-600">{tag}</span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Inline newsletter CTA after first 12 tools */}
+            {regularTools.length > 6 && (
+              <NewsletterBanner />
+            )}
+
+            {/* Remaining tools */}
+            {regularTools.length > 12 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {regularTools.slice(12).map((tool) => (
+                  <Link
+                    key={tool.slug}
+                    href={`/tool/${tool.slug}`}
+                    className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 transition group"
+                  >
+                    <div className="flex items-start gap-3 mb-3">
+                      <ToolLogo name={tool.name} url={tool.url} logoUrl={tool.logoUrl} size={36} />
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-semibold group-hover:text-blue-400 transition">
+                          {tool.name}
+                        </h3>
+                        <p className="text-gray-400 text-sm mt-1">{tool.shortDescription}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs bg-gray-800 text-gray-500 px-2 py-0.5 rounded-full">{tool.pricing}</span>
+                      <div className="flex gap-1">
+                        {tool.tags.slice(0, 2).map((tag) => (
+                          <span key={tag} className="text-xs text-gray-600">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </>
         )}
       </section>
     </div>
