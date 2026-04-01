@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-visible">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.15),_transparent_55%),radial-gradient(circle_at_20%_20%,_rgba(168,85,247,0.12),_transparent_40%)]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
           <div className="text-center max-w-3xl mx-auto">
