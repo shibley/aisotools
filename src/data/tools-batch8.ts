@@ -1452,6 +1452,23 @@ export const toolsBatch8: Tool[] = [
     alternatives: ["grammarly", "wordtune", "copy-ai"],
     addedDate: "2026-03-18",
   },
+  {
+    name: "DeepL",
+    slug: "deepl",
+    description: "AI-powered translation service known for highly accurate and natural-sounding translations. DeepL uses neural networks to translate text and documents across 33 languages, with context-aware translations that preserve tone and nuance better than traditional machine translation.",
+    shortDescription: "AI translation service with natural, accurate results",
+    url: "https://www.deepl.com",
+    category: "writing",
+    subcategory: "Translation",
+    tags: ["translation", "ai-translation", "multilingual", "documents", "language", "localization"],
+    pricing: "freemium",
+    pricingDetails: "Free tier (5,000 characters/translation). Starter €10.49/mo, Advanced €34.49/mo, Ultimate €67.49/mo",
+    featured: false,
+    sponsored: false,
+    features: ["33 language support", "Document translation", "Glossary support", "Formality control", "Data security", "CAT tool integration"],
+    alternatives: ["grammarly", "wordtune", "quillbot"],
+    addedDate: "2026-04-01",
+  },
 
   // ============================================
   // AI INFRASTRUCTURE (12+ tools)
