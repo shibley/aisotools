@@ -102,7 +102,7 @@ export const tools: Tool[] = [
     featured: true,
     sponsored: false,
     features: ["AI code generation", "Codebase understanding", "Multi-file editing", "Chat with codebase", "Tab completion", "Bug detection"],
-    alternatives: ["github-copilot", "windsurf", "claude-code", "cline"],
+    alternatives: ["github-copilot", "windsurf", "claude-code", "cline", "trae"],
     addedDate: "2026-02-14",
   },
   {

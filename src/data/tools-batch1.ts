@@ -639,7 +639,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Agentic flows", "Real-time suggestions", "Multi-file edits", "Terminal integration", "Context awareness", "Fast autocomplete"],
-    alternatives: ["cursor", "github-copilot", "claude-code", "cline"],
+    alternatives: ["cursor", "github-copilot", "claude-code", "cline", "trae"],
     addedDate: "2026-02-14",
   },
   {
