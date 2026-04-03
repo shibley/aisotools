@@ -73,10 +73,28 @@ export const AFFILIATE_LINKS: Record<string, {
     status: "active",
   },
   "consensus": {
-    url: "",
+    url: "https://get.consensus.app/rjusyyxmi02p",
     program: "PartnerStack",
     commission: "30% first 12 months (~$36/signup)",
-    status: "applied",
+    status: "active",
+  },
+  "buffer": {
+    url: "https://join.buffer.com/shibley-api-status-check",
+    program: "dub.co/Buffer",
+    commission: "25% per sale for 1 year",
+    status: "active",
+  },
+  "1password": {
+    url: "https://1password.partnerlinks.io/6t8opdyq764m",
+    program: "PartnerStack",
+    commission: "25% first year",
+    status: "active",
+  },
+  "optery": {
+    url: "https://get.optery.com/jm6y39t1u70x",
+    program: "PartnerStack",
+    commission: "30% for first 12 months",
+    status: "active",
   },
   "hume-ai": {
     url: "",
