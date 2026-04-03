@@ -258,7 +258,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Gen-2 video generation", "Motion brush", "Inpainting", "Green screen", "Super-slow motion", "30+ AI tools"],
-    alternatives: ["pika", "synthesia", "heygen"],
+    alternatives: ["pika", "sora", "veo", "kling-ai", "synthesia", "heygen"],
     addedDate: "2026-02-14",
   },
   {
@@ -275,7 +275,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["Text-to-video", "Image-to-video", "Modify region", "Extend video", "Camera controls", "Lip sync"],
-    alternatives: ["runway", "heygen", "synthesia"],
+    alternatives: ["runway", "sora", "veo", "kling-ai", "heygen", "synthesia"],
     addedDate: "2026-02-14",
   },
   {
@@ -292,7 +292,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["140+ AI avatars", "120+ languages", "Custom avatars", "Screen recording", "Video templates", "Team collaboration"],
-    alternatives: ["heygen", "descript", "runway"],
+    alternatives: ["heygen", "sora", "veo", "descript", "runway"],
     addedDate: "2026-02-14",
   },
   {
@@ -309,7 +309,7 @@ export const toolsBatch1: Tool[] = [
     featured: false,
     sponsored: false,
     features: ["100+ AI avatars", "Voice cloning", "Video translation", "Custom avatars", "Templates", "API access"],
-    alternatives: ["synthesia", "descript", "runway"],
+    alternatives: ["synthesia", "sora", "veo", "descript", "runway"],
     addedDate: "2026-02-14",
   },
   {

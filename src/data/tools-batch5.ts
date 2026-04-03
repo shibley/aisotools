@@ -763,7 +763,7 @@ export const toolsBatch5: Tool[] = [
       "Cinematic effects",
       "1080p output",
     ],
-    alternatives: ["runway", "pika", "hailuo"],
+    alternatives: ["runway", "sora", "veo", "pika", "hailuo"],
     addedDate: "2026-02-23",
   },
 
@@ -791,7 +791,7 @@ export const toolsBatch5: Tool[] = [
       "720p output",
       "Fast generation",
     ],
-    alternatives: ["runway", "pika", "kling-ai"],
+    alternatives: ["runway", "sora", "veo", "pika", "kling-ai"],
     addedDate: "2026-02-23",
   },
 
