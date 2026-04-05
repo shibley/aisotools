@@ -332,6 +332,41 @@ export const useCases: UseCase[] = [
     ],
   },
   {
+    name: "Presentations",
+    slug: "presentations",
+    title: "Best AI Presentation Tools in 2026",
+    description: "AI slide deck generators and presentation builders",
+    metaDescription:
+      "Compare the best AI presentation tools in 2026. From Gamma and Tome to Beautiful.AI and Pitch — find AI that creates stunning slide decks from a single prompt.",
+    icon: "📊",
+    matchCategories: ["design", "Presentation Tools", "Presentations", "Presentation"],
+    matchTags: ["presentations", "slides", "pitch-deck", "ai-generation", "slide deck", "storytelling"],
+    intro:
+      "AI presentation tools have eliminated the hardest part of slide creation — starting with a blank canvas. Tools like Gamma, Tome, and Beautiful.AI can generate a polished, professional slide deck from a single prompt in under a minute. Whether you need an investor pitch deck, a business report, a sales presentation, or a classroom lesson, there's an AI presentation tool that fits your workflow and budget. The best tools in 2026 combine AI content generation with smart design automation, so every slide looks professional without design skills.",
+    faqs: [
+      {
+        question: "What is the best AI tool for making presentations?",
+        answer:
+          "Gamma is the top pick for most users — it generates beautiful, fully editable presentations from a text prompt in seconds and has the best free tier. Tome excels at narrative-driven storytelling and investor decks. Beautiful.AI is the best choice for sales teams that need brand-consistent decks at scale. Pitch offers the best real-time collaboration features for teams.",
+      },
+      {
+        question: "Can AI make a PowerPoint presentation automatically?",
+        answer:
+          "Yes — tools like Gamma and Beautiful.AI can export to PowerPoint (PPTX) after generating your deck from a prompt. You get the speed of AI generation with the flexibility of editing in PowerPoint. Decktopus and Tome also offer similar export options.",
+      },
+      {
+        question: "Are AI presentation tools free?",
+        answer:
+          "Several AI presentation tools offer free tiers: Gamma offers unlimited AI generation on its free plan (with a credit limit), Pitch is free for unlimited personal decks, and Decktopus offers a free plan with limited AI credits. Most tools are freemium — the free tier covers basic use, while paid plans unlock custom branding, analytics, and advanced AI features.",
+      },
+      {
+        question: "How do AI presentation tools work?",
+        answer:
+          "AI presentation tools use large language models to generate slide content (titles, bullet points, speaker notes) from your prompt or outline, then apply smart design templates to lay everything out automatically. Some tools like Gamma also use AI to match imagery and choose color schemes. You get a complete, designed presentation that you can edit and customize.",
+      },
+    ],
+  },
+  {
     name: "Productivity",
     slug: "productivity",
     title: "Best AI Productivity Tools in 2026",

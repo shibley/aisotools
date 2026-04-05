@@ -51,7 +51,7 @@ export default function UseCasePage() {
     {
       title: "Content & Creative",
       useCases: useCases.filter((uc) =>
-        ["writing", "video-editing", "image-generation", "music-production", "design"].includes(uc.slug)
+        ["writing", "video-editing", "image-generation", "music-production", "design", "presentations"].includes(uc.slug)
       ),
     },
     {
