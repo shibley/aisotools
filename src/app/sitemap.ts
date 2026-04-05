@@ -83,6 +83,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/runway-ml-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/elevenlabs-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/perplexity-pro-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    // Blog posts
+    { url: `${base}/blog/best-ai-tools-for-freelancers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({

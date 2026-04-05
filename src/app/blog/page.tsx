@@ -201,6 +201,16 @@ const blogPosts: BlogPost[] = [
     categorySlug: "hr",
     date: "April 5, 2026",
     readTime: "16 min read",
+  },
+  {
+    slug: "best-ai-tools-for-freelancers-2026",
+    title: "Best AI Tools for Freelancers in 2026: Work Smarter, Earn More",
+    description:
+      "The complete AI toolkit for freelancers — writers, designers, developers, consultants. Save 10+ hours/week, deliver better work, and scale your income without burning out.",
+    category: "Freelance",
+    categorySlug: "freelance",
+    date: "April 5, 2026",
+    readTime: "16 min read",
     badge: "New",
   },
 ];
@@ -216,6 +226,7 @@ const categoryColors: Record<string, string> = {
   education: "bg-teal-600/20 text-teal-400",
   legal: "bg-indigo-600/20 text-indigo-400",
   hr: "bg-emerald-600/20 text-emerald-400",
+  freelance: "bg-violet-600/20 text-violet-400",
 };
 
 export default function BlogIndexPage() {
