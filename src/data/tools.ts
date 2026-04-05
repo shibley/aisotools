@@ -36,6 +36,9 @@ export interface Tool {
   lastVerified?: string;
   websiteStatus?: "active" | "dead" | "redirect";
   affiliateUrl?: string; // Affiliate/referral tracking URL (use instead of url for CTAs)
+  pros?: string[]; // Key advantages / strengths
+  cons?: string[]; // Limitations / drawbacks
+  bestFor?: string[]; // Who benefits most from this tool
 }
 
 // Seed data — initial tools to launch with
@@ -56,6 +59,9 @@ export const tools: Tool[] = [
     features: ["Natural language conversation", "Code generation", "Image generation (DALL-E)", "File analysis", "Web browsing", "Custom GPTs"],
     alternatives: ["claude", "gemini", "perplexity", "grok", "deepseek"],
     addedDate: "2026-02-14",
+    pros: ["Largest ecosystem of plugins and integrations", "Strong code generation with GPT-4o", "DALL-E image generation built-in", "Massive free tier capability", "Custom GPT builder for specialized workflows"],
+    cons: ["Usage limits on free tier", "Can hallucinate facts confidently", "Memory limited across sessions", "No source citations by default"],
+    bestFor: ["General-purpose AI assistance", "Developers and programmers", "Content creators and marketers", "Students and researchers"],
   },
   {
     name: "Claude",
@@ -73,6 +79,9 @@ export const tools: Tool[] = [
     features: ["200K+ token context", "Document analysis", "Code generation", "Vision/image understanding", "Artifacts", "Projects"],
     alternatives: ["chatgpt", "gemini", "perplexity", "grok", "deepseek"],
     addedDate: "2026-02-14",
+    pros: ["Longest context window (200K tokens)", "Best for nuanced writing and analysis", "More careful and honest about uncertainty", "Strong at following complex multi-step instructions", "Projects feature for persistent context"],
+    cons: ["Fewer integrations than ChatGPT", "No built-in image generation", "Rate limits can be frustrating on free tier", "Less plugin/tool ecosystem"],
+    bestFor: ["Long document analysis", "Writers who want quality over speed", "Legal and compliance teams", "Anyone needing careful, precise reasoning"],
   },
   {
     name: "Midjourney",
@@ -90,6 +99,9 @@ export const tools: Tool[] = [
     features: ["Text-to-image", "Image variations", "Upscaling", "Style control", "Web editor", "Describe feature"],
     alternatives: ["dall-e", "stable-diffusion", "leonardo-ai"],
     addedDate: "2026-02-14",
+    pros: ["Best aesthetic quality of any AI image tool", "Highly stylizable with detailed prompting", "Active community and shared prompts", "New web interface (no Discord required)", "Consistent brand-safe outputs"],
+    cons: ["No free tier", "Requires prompt engineering to get best results", "Limited control over exact compositions", "Cannot generate text in images reliably"],
+    bestFor: ["Designers and illustrators", "Marketing teams creating visual assets", "Artists exploring AI-assisted creation", "Social media content creators"],
   },
   {
     name: "Cursor",
@@ -107,6 +119,9 @@ export const tools: Tool[] = [
     features: ["AI code generation", "Codebase understanding", "Multi-file editing", "Chat with codebase", "Tab completion", "Bug detection"],
     alternatives: ["github-copilot", "windsurf", "claude-code", "cline", "trae"],
     addedDate: "2026-02-14",
+    pros: ["Best-in-class codebase awareness", "Multi-file edits in one prompt", "Built on VS Code (familiar UX)", "Excellent tab completion (Cursor Tab)", "Works with any language or framework"],
+    cons: ["Monthly subscription required for full power", "Can burn through fast requests on complex tasks", "Occasionally over-edits when asked for targeted changes", "Privacy mode required for sensitive code"],
+    bestFor: ["Full-stack developers", "Teams building production software", "Developers working with large codebases", "Anyone transitioning from VS Code"],
   },
   {
     name: "Perplexity",
@@ -124,6 +139,9 @@ export const tools: Tool[] = [
     features: ["Real-time web search", "Source citations", "Follow-up questions", "Collections", "File upload", "API access"],
     alternatives: ["chatgpt", "you-com", "phind"],
     addedDate: "2026-02-14",
+    pros: ["Every answer is sourced with clickable citations", "Real-time web data (not a training cutoff)", "Great for quick fact-checking", "Generous free tier", "Collections for organized research projects"],
+    cons: ["Depth of reasoning less than Claude or GPT-4", "Sources can occasionally be low-quality", "Not ideal for creative tasks", "Pro required for image generation"],
+    bestFor: ["Researchers and journalists", "Students writing papers", "Anyone who needs verified, sourced answers", "Replacing traditional Google searches"],
   },
   ...toolsBatch1,
   ...toolsBatch2,

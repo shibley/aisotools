@@ -168,6 +168,60 @@ export default async function ToolPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Pros & Cons */}
+      {(tool.pros?.length || tool.cons?.length) && (
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">{tool.name} Pros &amp; Cons</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {tool.pros && tool.pros.length > 0 && (
+              <div className="bg-green-500/5 border border-green-500/20 rounded-xl p-5">
+                <h3 className="font-semibold text-green-400 mb-3 flex items-center gap-2">
+                  <span>✅</span> Pros
+                </h3>
+                <ul className="space-y-2">
+                  {tool.pros.map((pro) => (
+                    <li key={pro} className="flex items-start gap-2 text-sm text-gray-300">
+                      <span className="text-green-400 mt-0.5 flex-shrink-0">+</span>
+                      {pro}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {tool.cons && tool.cons.length > 0 && (
+              <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-5">
+                <h3 className="font-semibold text-red-400 mb-3 flex items-center gap-2">
+                  <span>⚠️</span> Cons
+                </h3>
+                <ul className="space-y-2">
+                  {tool.cons.map((con) => (
+                    <li key={con} className="flex items-start gap-2 text-sm text-gray-300">
+                      <span className="text-red-400 mt-0.5 flex-shrink-0">−</span>
+                      {con}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* Best For */}
+      {tool.bestFor && tool.bestFor.length > 0 && (
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Who Is {tool.name} Best For?</h2>
+          <div className="flex flex-wrap gap-3">
+            {tool.bestFor.map((audience) => (
+              <div key={audience} className="flex items-center gap-2 bg-blue-500/5 border border-blue-500/20 rounded-lg px-4 py-2">
+                <span className="text-blue-400">👤</span>
+                <span className="text-sm text-gray-300">{audience}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Tags */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Tags</h2>
