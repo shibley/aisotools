@@ -31,6 +31,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// ---------------------------------------------------------------------------
+// Star rating helper
+// ---------------------------------------------------------------------------
+function StarRating({ rating, reviewCount }: { rating: number; reviewCount: number }) {
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating - fullStars >= 0.5;
+  const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+
+  return (
+    <div className="flex items-center gap-2">
+      <div className="flex items-center gap-0.5">
+        {Array.from({ length: fullStars }).map((_, i) => (
+          <span key={`full-${i}`} className="text-yellow-400 text-base">★</span>
+        ))}
+        {hasHalf && <span className="text-yellow-400 text-base">½</span>}
+        {Array.from({ length: emptyStars }).map((_, i) => (
+          <span key={`empty-${i}`} className="text-gray-600 text-base">★</span>
+        ))}
+      </div>
+      <span className="text-yellow-400 font-semibold text-sm">{rating.toFixed(1)}</span>
+      <span className="text-gray-500 text-sm">({reviewCount.toLocaleString()} reviews)</span>
+    </div>
+  );
+}
+
 export default async function ToolPage({ params }: Props) {
   const { slug } = await params;
   const tool = tools.find((t) => t.slug === slug);
@@ -108,6 +133,11 @@ export default async function ToolPage({ params }: Props) {
               )}
             </div>
             <p className="text-xl text-gray-400 mt-1">{tool.shortDescription}</p>
+            {tool.rating && tool.reviewCount && (
+              <div className="mt-2">
+                <StarRating rating={tool.rating} reviewCount={tool.reviewCount} />
+              </div>
+            )}
             <div className="flex items-center gap-3 mt-3 flex-wrap">
               <span className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
                 {tool.pricing}
@@ -317,6 +347,30 @@ export default async function ToolPage({ params }: Props) {
             Check {tool.name} Status →
           </a>
         </section>
+      )}
+
+      {/* AggregateRating JSON-LD schema */}
+      {tool.rating && tool.reviewCount && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: tool.name,
+              url: tool.url,
+              applicationCategory: "WebApplication",
+              description: tool.shortDescription,
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: tool.rating.toFixed(1),
+                reviewCount: tool.reviewCount,
+                bestRating: "5",
+                worstRating: "1",
+              },
+            }),
+          }}
+        />
       )}
     </div>
   );
