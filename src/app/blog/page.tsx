@@ -182,6 +182,27 @@ const blogPosts: BlogPost[] = [
     date: "March 20, 2026",
     readTime: "13 min read",
   },
+  {
+    slug: "best-ai-tools-for-lawyers-2026",
+    title: "Best AI Tools for Lawyers & Legal Professionals in 2026",
+    description:
+      "Discover the best AI tools for lawyers in 2026. From AI legal research with Harvey AI and Casetext to contract review, document drafting, and client intake automation — cut admin time and bill more high-value hours.",
+    category: "Legal",
+    categorySlug: "legal",
+    date: "April 5, 2026",
+    readTime: "18 min read",
+  },
+  {
+    slug: "best-ai-tools-for-hr-professionals-2026",
+    title: "Best AI Tools for HR Professionals in 2026",
+    description:
+      "Discover the best AI tools for HR professionals in 2026. From AI recruiting and resume screening to onboarding automation, employee engagement, and performance management — save 15+ hours per week on HR admin.",
+    category: "HR & People Ops",
+    categorySlug: "hr",
+    date: "April 5, 2026",
+    readTime: "16 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -193,6 +214,8 @@ const categoryColors: Record<string, string> = {
   "data-analytics": "bg-cyan-600/20 text-cyan-400",
   business: "bg-amber-600/20 text-amber-400",
   education: "bg-teal-600/20 text-teal-400",
+  legal: "bg-indigo-600/20 text-indigo-400",
+  hr: "bg-emerald-600/20 text-emerald-400",
 };
 
 export default function BlogIndexPage() {
