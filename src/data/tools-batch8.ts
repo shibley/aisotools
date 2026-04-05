@@ -1973,6 +1973,9 @@ export const toolsBatch8: Tool[] = [
     features: ["Thread editor", "Scheduling", "Analytics", "AI writing", "Auto-retweet", "Team collaboration"],
     alternatives: ["buffer", "hootsuite-ai", "hypefury"],
     addedDate: "2026-03-18",
+    pros: ["Best-in-class thread editor with visual preview", "AI writing suggestions trained on viral tweets", "Scheduling with auto-threads and optimal timing", "Analytics show engagement patterns over time", "Team collaboration with approval workflows"],
+    cons: ["X/Twitter only — no other platforms", "Free tier limited to 10 scheduled tweets", "No Instagram, TikTok, or LinkedIn support", "AI suggestions require refinement for brand voice"],
+    bestFor: ["X/Twitter creators building audience", "Thread writers and thought leaders", "Social media managers focused on X", "Newsletter writers repurposing content"],
   },
   {
     name: "Taplio",
