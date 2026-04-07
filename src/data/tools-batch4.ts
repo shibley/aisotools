@@ -434,6 +434,11 @@ export const toolsBatch4: Tool[] = [
     features: ["Research synthesis", "Evidence extraction", "Paper summaries", "Citation quality", "Study snapshots", "Consensus meter"],
     alternatives: ["elicit", "semantic-scholar", "scite"],
     addedDate: "2026-02-14",
+    rating: 4.4,
+    reviewCount: 1234,
+    pros: ["Consensus meter shows scientific agreement at a glance", "Study snapshots extract key findings instantly", "Searches only peer-reviewed literature (no noise)", "Affordable Premium plan at $8.99/mo"],
+    cons: ["Smaller paper database than Google Scholar", "Consensus meter can oversimplify nuanced topics", "Limited to English-language papers", "No full-text access — still need institutional subscriptions"],
+    bestFor: ["Students writing evidence-based papers", "Health professionals checking medical evidence", "Policy researchers needing quick literature synthesis", "Anyone wanting AI-verified scientific answers"],
   },
   {
     name: "Elicit",

@@ -173,6 +173,11 @@ export const toolsBatch5: Tool[] = [
     ],
     alternatives: ["bolt", "v0", "replit"],
     addedDate: "2026-02-23",
+    rating: 4.4,
+    reviewCount: 1567,
+    pros: ["Full-stack apps with auth and database in minutes", "Supabase integration handles backend complexity", "GitHub sync keeps code accessible and editable", "Clean, modern UI for the builder experience"],
+    cons: ["Locked into React + Supabase stack", "Free tier message limit very restrictive", "Complex business logic often needs manual coding", "Scaling costs add up quickly on higher tiers"],
+    bestFor: ["Non-technical founders validating SaaS ideas", "Solo developers building internal tools fast", "Agencies creating client prototypes", "Anyone wanting full-stack apps without backend expertise"],
   },
 
   // 8. Hugging Face — 37M/mo

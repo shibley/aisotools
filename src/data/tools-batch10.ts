@@ -177,6 +177,11 @@ export const toolsBatch10: Tool[] = [
     features: ["Full-stack in browser", "No local setup", "npm/package management", "One-click deploy", "WebContainers runtime", "Multiple frameworks", "Real-time preview", "Git integration"],
     alternatives: ["v0", "replit", "cursor", "lovable"],
     addedDate: "2026-04-04",
+    rating: 4.5,
+    reviewCount: 2034,
+    pros: ["Zero local setup — full dev environment runs in browser", "Fastest path from idea to deployed app", "Supports React, Next.js, Vite, and more frameworks", "WebContainers tech means real npm, real servers"],
+    cons: ["Complex apps hit browser memory limits", "Free tier usage caps reached quickly", "Limited debugging tools compared to local IDE", "Generated code quality varies — needs experienced review"],
+    bestFor: ["Non-technical founders building MVPs", "Developers rapidly prototyping ideas", "Hackathon participants needing speed", "Freelancers building client projects quickly"],
   },
 
   // --- DESIGN & WEBSITE ---
@@ -338,5 +343,10 @@ export const toolsBatch10: Tool[] = [
     features: ["Text-to-video", "Image-to-video", "Up to 2 min videos", "Realistic physics", "Character consistency", "Multiple aspect ratios", "HD output"],
     alternatives: ["runway", "pika", "luma-ai"],
     addedDate: "2026-04-04",
+    rating: 4.4,
+    reviewCount: 1678,
+    pros: ["Up to 2-minute videos — longest in the market", "Impressive physics simulation and motion realism", "Strong character consistency across scenes", "Generous free daily credits"],
+    cons: ["Queue times can be very long (especially free tier)", "English UI has rough edges (originally Chinese)", "Less creative flexibility than Runway's toolset", "Output quality inconsistent on complex multi-character scenes"],
+    bestFor: ["Creators needing longer AI-generated video clips", "Filmmakers experimenting with AI-assisted production", "Social media creators making viral content", "Anyone wanting a free alternative to Sora"],
   },
 ];

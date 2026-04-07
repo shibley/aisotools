@@ -218,6 +218,11 @@ export const toolsBatch6: Tool[] = [
     ],
     alternatives: ["perplexity", "you-com", "kagi"],
     addedDate: "2026-03-18",
+    rating: 4.2,
+    reviewCount: 534,
+    pros: ["Sparkpages produce genuinely useful research reports", "Multi-LLM orchestration tackles complex queries well", "Phone call agent is a unique differentiator", "Free tier generous at 200 credits/day"],
+    cons: ["Less polished than Perplexity for quick searches", "Agent tasks can be slow and unpredictable", "Smaller knowledge base than established search engines", "UI can feel overwhelming with so many features"],
+    bestFor: ["Researchers needing deep multi-source reports", "Business analysts automating market research", "Content creators wanting AI-assisted slide decks", "Anyone wanting agentic search beyond simple Q&A"],
   },
 
   // 7. Fellou — Agentic AI Browser

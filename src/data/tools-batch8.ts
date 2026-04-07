@@ -2560,6 +2560,11 @@ export const toolsBatch8: Tool[] = [
     features: ["Text-to-video generation", "Image-to-video animation", "Video-to-video editing", "Up to 1080p resolution", "Multiple aspect ratios", "Storyboard mode", "Remix and re-cut tools", "Consistent characters across scenes", "Realistic physics simulation", "API access"],
     alternatives: ["runway", "pika", "kling-ai", "hailuo-ai", "luma-ai", "synthesia", "heygen"],
     addedDate: "2026-04-03",
+    rating: 4.4,
+    reviewCount: 2156,
+    pros: ["Best-in-class realistic motion and physics", "Integrated directly into ChatGPT ecosystem", "Storyboard mode for precise creative control", "Consistent characters across multiple scenes"],
+    cons: ["Strict content filters limit creative freedom", "Generation queue times can be long at peak hours", "50 videos/mo on Plus plan feels limiting for creators", "No fine-tuning or custom model training yet"],
+    bestFor: ["Content creators making short-form social videos", "Marketers needing quick promotional clips", "Filmmakers prototyping scenes and storyboards", "Educators creating visual explanations"],
   },
   {
     name: "Veo",
