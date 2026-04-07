@@ -14,7 +14,7 @@ const SUBMISSIONS_PATH = join(process.cwd(), "data", "submissions.json");
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const REVIEW_TOKEN = process.env.SUBMIT_REVIEW_TOKEN;
 const FROM_EMAIL = "shibley@aisotools.com";
-const REVIEW_EMAIL = "shibley@aisotools.com";
+const REVIEW_EMAIL = "ai@saasintegrate.com";
 const BASE_URL = "https://aisotools.com";
 
 // Simple in-memory rate limiting (resets on cold start — fine for basic spam protection)

@@ -64,7 +64,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         from: "AISO Tools <shibley@aisotools.com>",
-        to: ["shibley@aisotools.com"],
+        to: ["ai@saasintegrate.com"],
         subject: `New newsletter subscriber: ${email}`,
         html: `<p>New subscriber: <strong>${email}</strong></p><p>Time: ${new Date().toISOString()}</p>`,
       }),
