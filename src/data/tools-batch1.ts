@@ -618,6 +618,11 @@ export const toolsBatch1: Tool[] = [
     features: ["Multiple AI models", "Model comparison", "Create custom bots", "Bot marketplace", "API access", "Mobile apps"],
     alternatives: ["chatgpt", "claude", "gemini"],
     addedDate: "2026-02-14",
+    rating: 4.3,
+    reviewCount: 634,
+    pros: ["Access GPT-4, Claude, Gemini, and open-source models in one app", "Create and share custom bots with system prompts", "Great for comparing model outputs side by side", "Generous free tier with daily message limits per model"],
+    cons: ["Heavy users burn through free limits quickly", "Custom bots are limited to prompt engineering (no RAG or tools)", "No file upload or image generation on free tier"],
+    bestFor: ["Users who want to try multiple AI models without separate subscriptions", "Bot creators and prompt engineers", "Casual AI users exploring different models"],
   },
   {
     name: "Replika",
@@ -1456,6 +1461,11 @@ export const toolsBatch1: Tool[] = [
     features: ["AI chat search", "Source citations", "Code mode", "Writing mode", "App integrations", "Personalization"],
     alternatives: ["perplexity", "phind", "kagi"],
     addedDate: "2026-02-14",
+    rating: 4.2,
+    reviewCount: 412,
+    pros: ["Multiple AI modes (Research, Code, Writing) in one platform", "Source citations on every answer", "YouPro gives access to GPT-4 and Claude models", "Privacy-focused with no ads on paid tier"],
+    cons: ["Free tier results noticeably weaker than Perplexity", "Brand recognition still low — many users unaware it exists", "UI can feel cluttered with too many modes"],
+    bestFor: ["Users who want one platform for search, code help, and writing", "Privacy-conscious searchers", "Developers who use AI search for coding questions"],
   },
   {
     name: "Phind",

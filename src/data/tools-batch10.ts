@@ -134,6 +134,11 @@ export const toolsBatch10: Tool[] = [
     features: ["Predictive performance score", "Brand voice customization", "Copy intelligence", "A/B testing", "Multi-channel copy", "Website copy", "Team workflows"],
     alternatives: ["jasper", "copy-ai", "writesonic"],
     addedDate: "2026-04-04",
+    rating: 4.1,
+    reviewCount: 287,
+    pros: ["Unique predictive performance scoring — know which copy will convert before publishing", "Strong brand voice training from your existing content", "Data-driven A/B testing built into the workflow", "Covers ads, email, landing pages, and social in one tool"],
+    cons: ["Expensive — Starter at $49/mo is pricey for solo creators", "Predictive scores can feel opaque (hard to understand the 'why')", "Less creative flair compared to Jasper or Copy.ai"],
+    bestFor: ["Performance marketers optimizing ad copy", "Marketing teams running multi-channel campaigns", "Data-driven content teams who want conversion predictions"],
   },
 
   // --- IMAGE GENERATION ---
