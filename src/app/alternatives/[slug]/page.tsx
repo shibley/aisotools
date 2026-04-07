@@ -394,6 +394,42 @@ function getWhyLookForAlternatives(tool: Tool): string {
   return reasons.join(". ") + ".";
 }
 
+function getWhySwitchReasons(tool: Tool): { reason: string; detail: string }[] {
+  const cat = getCategoryLabel(tool.category).toLowerCase();
+  const isPaid = tool.pricing === "paid";
+  const isFreemium = tool.pricing === "freemium";
+  const reasons: { reason: string; detail: string }[] = [];
+
+  if (isPaid || isFreemium) {
+    reasons.push({
+      reason: "💰 Pricing doesn't match your usage",
+      detail: `${tool.name}'s pricing may not align with how your team actually uses it. If you're paying for features you rarely touch, a more focused (and often cheaper) alternative could save you hundreds per year without sacrificing what matters.`,
+    });
+  }
+
+  reasons.push({
+    reason: "🔧 Missing features you need",
+    detail: `No single ${cat} tool covers every workflow perfectly. If ${tool.name} lacks a specific integration, feature, or workflow you need, competitors may have built exactly that as their differentiator.`,
+  });
+
+  reasons.push({
+    reason: "🚀 Performance or reliability concerns",
+    detail: `If ${tool.name} has been slow, unreliable, or has had breaking changes that disrupted your workflow, switching to a more stable alternative can save your team significant frustration and lost productivity.`,
+  });
+
+  reasons.push({
+    reason: "🔒 Privacy or compliance requirements",
+    detail: `Your data handling requirements may have changed — whether it's GDPR, SOC 2, HIPAA, or internal policies. Some alternatives offer self-hosting, on-premise deployment, or stricter data residency controls that ${tool.name} may not provide.`,
+  });
+
+  reasons.push({
+    reason: "👥 Better team collaboration",
+    detail: `As teams grow, collaboration needs evolve. If ${tool.name}'s sharing, permissions, or real-time collaboration features don't keep up with your team size, alternatives designed for larger teams may be a better fit.`,
+  });
+
+  return reasons;
+}
+
 function getHowToChooseGuide(tool: Tool): string[] {
   const cat = getCategoryLabel(tool.category).toLowerCase();
   return [
@@ -519,6 +555,32 @@ export default async function AlternativesPage({ params }: Props) {
             options, here are the {alternatives.length} best alternatives to{" "}
             {tool.name} in {year}.
           </p>
+        </section>
+
+        {/* ============================================================ */}
+        {/* 2b. WHY SWITCH FROM [TOOL] */}
+        {/* ============================================================ */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold mb-4">
+            Why Switch from {tool.name}?
+          </h2>
+          <p className="text-gray-400 mb-6">
+            Thinking about moving away from {tool.name}? Here are the most common
+            reasons teams make the switch — and what to look for in a replacement.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {getWhySwitchReasons(tool).map((item, i) => (
+              <div
+                key={i}
+                className="bg-gray-900 border border-gray-800 rounded-xl p-5"
+              >
+                <h3 className="font-semibold text-lg mb-2">{item.reason}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* ============================================================ */}
