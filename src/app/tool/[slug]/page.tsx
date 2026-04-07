@@ -349,18 +349,20 @@ export default async function ToolPage({ params }: Props) {
         </section>
       )}
 
-      {/* AggregateRating JSON-LD schema */}
-      {tool.rating && tool.reviewCount && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: tool.name,
-              url: tool.url,
-              applicationCategory: "WebApplication",
-              description: tool.shortDescription,
+      {/* Product/SoftwareApplication JSON-LD schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: tool.name,
+            url: tool.url,
+            applicationCategory: "WebApplication",
+            description: tool.shortDescription,
+            operatingSystem: "Web, iOS, Android",
+            ...(tool.pricing === "free" ? { offers: { "@type": "Offer", price: "0", priceCurrency: "USD" } } : tool.pricingDetails ? { offers: { "@type": "Offer", description: tool.pricingDetails, priceCurrency: "USD" } } : {}),
+            ...(tool.rating && tool.reviewCount ? {
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: tool.rating.toFixed(1),
@@ -368,10 +370,63 @@ export default async function ToolPage({ params }: Props) {
                 bestRating: "5",
                 worstRating: "1",
               },
-            }),
-          }}
-        />
-      )}
+            } : {}),
+          }),
+        }}
+      />
+
+      {/* BreadcrumbList schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://aisotools.com" },
+              ...(category ? [{ "@type": "ListItem", position: 2, name: category.name, item: `https://aisotools.com/category/${category.slug}` }] : []),
+              { "@type": "ListItem", position: category ? 3 : 2, name: tool.name, item: `https://aisotools.com/tool/${tool.slug}` },
+            ],
+          }),
+        }}
+      />
+
+      {/* FAQ schema — generated from common questions about the tool */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: `What is ${tool.name}?`,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: tool.description,
+                },
+              },
+              {
+                "@type": "Question",
+                name: `How much does ${tool.name} cost?`,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: tool.pricingDetails || `${tool.name} is ${tool.pricing}. Visit the tool's website for detailed pricing information.`,
+                },
+              },
+              ...(alternatives && alternatives.length > 0 ? [{
+                "@type": "Question",
+                name: `What are the best alternatives to ${tool.name}?`,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: `The best alternatives to ${tool.name} include ${alternatives.slice(0, 5).map(a => a!.name).join(", ")}. Each offers unique features for different use cases.`,
+                },
+              }] : []),
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
