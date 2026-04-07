@@ -18,6 +18,7 @@ import { toolsBatch17 } from "./tools-batch17";
 import { toolsBatch18 } from "./tools-batch18";
 import { toolsBatch19 } from "./tools-batch19";
 import { toolsBatch20 } from "./tools-batch20";
+import { toolsBatch21 } from "./tools-batch21";
 import { getAffiliateUrl } from "./affiliate-links";
 
 export interface Tool {
@@ -182,6 +183,7 @@ export const tools: Tool[] = [
   ...toolsBatch18,
   ...toolsBatch19,
   ...toolsBatch20,
+  ...toolsBatch21,
 ].map((tool) => {
   // Apply centralized affiliate links (won't override manually set ones)
   const t = tool as Tool;

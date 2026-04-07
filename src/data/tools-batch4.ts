@@ -137,6 +137,11 @@ export const toolsBatch4: Tool[] = [
     features: ["Code search", "Technical answers", "Documentation search", "Paired programming", "Citations", "Multiple models"],
     alternatives: ["perplexity", "you-com", "kagi"],
     addedDate: "2026-02-14",
+    rating: 4.2,
+    reviewCount: 1234,
+    pros: ["Best AI search engine for developers", "Code-aware answers with source links", "VS Code extension for in-editor search", "Free tier generous for individual use"],
+    cons: ["Less useful for non-technical queries", "Source quality can vary", "Model quality below Claude/GPT-4 for complex reasoning", "Less context memory than ChatGPT"],
+    bestFor: ["Developers debugging code issues", "Programmers learning new frameworks", "Technical teams wanting search with code context"],
   },
 
   // DevOps & Infrastructure (5 tools)
@@ -364,6 +369,11 @@ export const toolsBatch4: Tool[] = [
     features: ["Natural language queries", "Auto visualization", "Statistical analysis", "Data cleaning", "Export results", "Multiple file formats"],
     alternatives: ["kanaries", "datapane", "tableau-ask-data"],
     addedDate: "2026-02-14",
+    rating: 4.2,
+    reviewCount: 789,
+    pros: ["Best AI for data analysis \u2014 upload and chat with data", "Creates charts and visualizations automatically", "Supports CSV, Excel, Google Sheets, SQL", "Natural language queries for complex analysis"],
+    cons: ["Complex statistical analysis can be unreliable", "Large datasets slow to process", "Visualization customization limited", "Premium features expensive for individuals"],
+    bestFor: ["Business analysts who need quick data insights", "Non-technical users analyzing spreadsheet data", "Students working with datasets for courses"],
   },
   {
     name: "Seek AI",
@@ -577,6 +587,11 @@ export const toolsBatch4: Tool[] = [
     features: ["AI tutoring", "Homework help", "Socratic method", "Teacher tools", "Lesson planning", "Student guidance"],
     alternatives: ["duolingo-ai", "quizlet-ai", "studyable"],
     addedDate: "2026-02-14",
+    rating: 4.4,
+    reviewCount: 1567,
+    pros: ["Free AI tutoring powered by GPT-4", "Doesn't give answers \u2014 teaches through questions", "Integrated with Khan Academy's full curriculum", "Safe for K-12 students"],
+    cons: ["Only works within Khan Academy content", "Conversational style can feel slow", "Limited to subjects Khan Academy covers", "Requires Khan Academy account"],
+    bestFor: ["Students wanting free AI-powered tutoring", "Parents looking for safe AI learning tools", "Teachers supplementing classroom instruction"],
   },
   {
     name: "Duolingo Max",

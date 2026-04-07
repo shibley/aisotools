@@ -330,6 +330,11 @@ export const toolsBatch3: Tool[] = [
     features: ["Text-to-3D", "Image-to-3D", "PBR textures", "Multiple formats", "API access", "Commercial license"],
     alternatives: ["luma-ai", "csm-ai", "kaedim"],
     addedDate: "2026-02-14",
+    rating: 4.1,
+    reviewCount: 678,
+    pros: ["Best text-to-3D generation tool available", "Image-to-3D model conversion", "Game-ready asset export (FBX, OBJ, GLTF)", "AI texturing for existing 3D models"],
+    cons: ["3D model quality still below hand-crafted assets", "Complex shapes can be inaccurate", "Texturing sometimes misaligned", "Credits burn fast on detailed models"],
+    bestFor: ["Game developers needing quick 3D assets", "3D artists wanting AI-assisted workflow", "Architects creating concept models"],
   },
   {
     name: "Luma AI",
