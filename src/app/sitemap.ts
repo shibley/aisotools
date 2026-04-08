@@ -100,6 +100,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-tools-for-marketing-agencies-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-tools-for-designers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-tools-for-doctors-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-lawyers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/compare/claude-vs-perplexity`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/compare/deepseek-vs-perplexity`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/compare/perplexity-vs-youcom`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/compare/midjourney-vs-flux`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/compare/sora-vs-luma-dream-machine`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    // aiso-taaft-gaps use case pages
+    { url: `${base}/use-case/ai-for-writing-seo-content`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-video-editing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-coding-assistants`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-social-media-automation`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-academic-research`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-meeting-summarization`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-customer-support-automation`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-presentation-design`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-voice-cloning`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/use-case/ai-for-data-analysis`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({

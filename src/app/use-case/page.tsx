@@ -51,25 +51,25 @@ export default function UseCasePage() {
     {
       title: "Content & Creative",
       useCases: useCases.filter((uc) =>
-        ["writing", "video-editing", "image-generation", "music-production", "design", "presentations"].includes(uc.slug)
+        ["writing", "video-editing", "image-generation", "music-production", "design", "presentations", "ai-for-writing-seo-content", "ai-for-video-editing", "ai-for-voice-cloning", "ai-for-presentation-design"].includes(uc.slug)
       ),
     },
     {
       title: "Development & Technical",
       useCases: useCases.filter((uc) =>
-        ["coding", "automation", "3d-modeling", "data-analysis"].includes(uc.slug)
+        ["coding", "automation", "3d-modeling", "data-analysis", "ai-for-coding-assistants", "ai-for-data-analysis"].includes(uc.slug)
       ),
     },
     {
       title: "Business & Growth",
       useCases: useCases.filter((uc) =>
-        ["marketing", "business", "customer-support"].includes(uc.slug)
+        ["marketing", "business", "customer-support", "ai-for-social-media-automation", "ai-for-customer-support-automation"].includes(uc.slug)
       ),
     },
     {
       title: "Learning & Research",
       useCases: useCases.filter((uc) =>
-        ["education", "research", "productivity"].includes(uc.slug)
+        ["education", "research", "productivity", "ai-for-academic-research", "ai-for-meeting-summarization"].includes(uc.slug)
       ),
     },
   ];
