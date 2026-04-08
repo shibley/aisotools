@@ -85,6 +85,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/perplexity-pro-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     // Blog posts
     { url: `${base}/blog/best-ai-tools-for-freelancers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-crm-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/miro-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-collaboration-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({
