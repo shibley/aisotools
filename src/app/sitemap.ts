@@ -88,6 +88,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-crm-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/miro-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-collaboration-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-product-managers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-healthcare-professionals-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-agent-frameworks-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({
