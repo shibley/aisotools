@@ -92,8 +92,14 @@ async function sendEmail(to: string, subject: string, html: string) {
 }
 
 function buildReviewEmailHtml(sub: Submission): string {
-  const approveUrl = `${BASE_URL}/api/submit/approve?id=${sub.id}&action=approve&token=${REVIEW_TOKEN}`;
-  const rejectUrl = `${BASE_URL}/api/submit/approve?id=${sub.id}&action=reject&token=${REVIEW_TOKEN}`;
+  const params = new URLSearchParams({
+    id: sub.id,
+    token: REVIEW_TOKEN || "",
+    name: sub.tool_name,
+    email: sub.email,
+  });
+  const approveUrl = `${BASE_URL}/api/submit/approve?${params.toString()}&action=approve`;
+  const rejectUrl = `${BASE_URL}/api/submit/approve?${params.toString()}&action=reject`;
 
   return `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; background: #0f172a; color: #e2e8f0; padding: 32px; border-radius: 12px;">

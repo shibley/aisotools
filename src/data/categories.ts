@@ -106,11 +106,18 @@ export const categories: Category[] = [
     subcategories: ["AI Search", "Knowledge Management", "Q&A", "Fact Checking", "Summarization", "Web Scraping"],
   },
   {
-    name: "Automation & Integration",
-    slug: "automation",
-    description: "AI automation platforms, workflow builders, and API integrations",
-    icon: "🔄",
-    subcategories: ["Workflow Automation", "Zapier Alternatives", "API Tools", "RPA", "No-Code", "Integration"],
+    name: "AI Agent Infrastructure",
+    slug: "agent-infrastructure",
+    description: "Frameworks, memory systems, and orchestration tools for autonomous AI agents",
+    icon: "🤖",
+    subcategories: ["Agent Frameworks", "Agent Memory", "Orchestration", "Task Planning", "Agent Tooling"],
+  },
+  {
+    name: "AI Security & Testing",
+    slug: "security-testing",
+    description: "Red-teaming, prompt injection testing, and AI safety evaluation tools",
+    icon: "🛡️",
+    subcategories: ["Red Teaming", "Prompt Injection", "AI Safety", "Model Evaluation", "Vulnerability Scanning"],
   },
   {
     name: "3D & Spatial",

@@ -117,61 +117,53 @@ export async function GET(req: NextRequest) {
     return htmlResponse("⛔ Error", "Invalid action. Use 'approve' or 'reject'.", "#ef4444");
   }
 
-  // Read submissions
-  let submissions: Submission[];
+  // Try to get tool_name and email from URL params (Vercel-safe fallback)
+  const urlToolName = searchParams.get("name");
+  const urlEmail = searchParams.get("email");
+
+  // Attempt to read submissions.json (local dev only — won't exist on Vercel)
+  let submission: Submission | undefined;
   try {
     const data = await readFile(SUBMISSIONS_PATH, "utf-8");
-    submissions = JSON.parse(data);
+    const submissions: Submission[] = JSON.parse(data);
+    submission = submissions.find((s) => s.id === id);
   } catch {
-    return htmlResponse(
-      "⚠️ File Not Found",
-      "submissions.json not found. The email is the primary record — you can manage this manually.",
-      "#f59e0b"
-    );
+    // File not found — expected on Vercel. Fall through to URL params.
   }
 
-  // Find submission
-  const index = submissions.findIndex((s) => s.id === id);
-  if (index === -1) {
+  // Fall back to URL params if no file record found
+  const toolName = submission?.tool_name || urlToolName;
+  const recipientEmail = submission?.email || urlEmail;
+
+  if (!toolName || !recipientEmail) {
     return htmlResponse(
-      "⚠️ Not Found",
-      `Submission ${id} not found in local store. It may have been cleared. Check your email for the original details.`,
+      "⚠️ Missing Data",
+      "Could not find submission details. Please check your email for the original submission and handle manually.",
       "#f59e0b"
     );
-  }
-
-  const submission = submissions[index];
-  const newStatus = action === "approve" ? "approved" : "rejected";
-
-  // Update status
-  submissions[index] = { ...submission, status: newStatus };
-  try {
-    await writeFile(SUBMISSIONS_PATH, JSON.stringify(submissions, null, 2));
-  } catch (err) {
-    console.error("Failed to update submissions.json:", err);
   }
 
   // Send email to submitter
   if (action === "approve") {
     await sendEmail(
-      submission.email,
-      `🎉 ${submission.tool_name} has been approved! — AISO Tools`,
-      buildApprovalEmailHtml(submission.tool_name)
+      recipientEmail,
+      `🎉 ${toolName} has been approved! — AISO Tools`,
+      buildApprovalEmailHtml(toolName)
     );
     return htmlResponse(
       "✅ Approved!",
-      `${submission.tool_name} has been approved. Notification sent to ${submission.email}.`,
+      `${toolName} has been approved. Notification sent to ${recipientEmail}.`,
       "#22c55e"
     );
   } else {
     await sendEmail(
-      submission.email,
-      `Update on your ${submission.tool_name} submission — AISO Tools`,
-      buildRejectionEmailHtml(submission.tool_name)
+      recipientEmail,
+      `Update on your ${toolName} submission — AISO Tools`,
+      buildRejectionEmailHtml(toolName)
     );
     return htmlResponse(
       "❌ Rejected",
-      `${submission.tool_name} has been rejected. A polite notification was sent to ${submission.email}.`,
+      `${toolName} has been rejected. A polite notification was sent to ${recipientEmail}.`,
       "#ef4444"
     );
   }
