@@ -24,7 +24,9 @@ import { toolsBatch23 } from "./tools-batch23";
 import { toolsBatch25 } from "./tools-batch25";
 import { toolsBatch26 } from "./tools-batch26";
 import { toolsBatch27 } from "./tools-batch27";
+import { toolsBatch28 } from "./tools-batch28";
 import { getAffiliateUrl } from "./affiliate-links";
+import { toolUseCaseScenarios } from "./use-case-enrichments";
 
 export interface Tool {
   name: string;
@@ -54,6 +56,7 @@ export interface Tool {
   pros?: string[]; // Key advantages / strengths
   cons?: string[]; // Limitations / drawbacks
   bestFor?: string[]; // Who benefits most from this tool
+  useCaseScenarios?: { title: string; description: string }[]; // Deeper real-world use-case scenarios
 }
 
 // Seed data — initial tools to launch with
@@ -194,14 +197,23 @@ export const tools: Tool[] = [
   ...toolsBatch25,
   ...toolsBatch26,
   ...toolsBatch27,
+  ...toolsBatch28,
 ].map((tool) => {
   // Apply centralized affiliate links (won't override manually set ones)
   const t = tool as Tool;
-  if (!t.affiliateUrl) {
-    const affiliateUrl = getAffiliateUrl(t.slug);
+  let result = t;
+
+  // Apply use-case scenario enrichments for high-traffic tools
+  const useCaseScenarios = toolUseCaseScenarios[t.slug];
+  if (useCaseScenarios && !t.useCaseScenarios) {
+    result = { ...result, useCaseScenarios };
+  }
+
+  if (!result.affiliateUrl) {
+    const affiliateUrl = getAffiliateUrl(result.slug);
     if (affiliateUrl) {
-      return { ...t, affiliateUrl };
+      return { ...result, affiliateUrl };
     }
   }
-  return t;
+  return result;
 });

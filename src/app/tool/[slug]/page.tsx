@@ -252,6 +252,24 @@ export default async function ToolPage({ params }: Props) {
         </section>
       )}
 
+      {/* Use Case Scenarios */}
+      {tool.useCaseScenarios && tool.useCaseScenarios.length > 0 && (
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">{tool.name} Use Cases</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {tool.useCaseScenarios.map((scenario) => (
+              <div key={scenario.title} className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/30 transition">
+                <h3 className="font-semibold text-white mb-2 flex items-center gap-2">
+                  <span className="text-blue-400">💡</span>
+                  {scenario.title}
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{scenario.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Tags */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Tags</h2>

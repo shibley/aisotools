@@ -91,6 +91,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-tools-for-product-managers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-tools-for-healthcare-professionals-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-agent-frameworks-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    // Batch 28 blog posts
+    { url: `${base}/blog/best-ai-tools-for-academic-research-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-accountants-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-software-architects-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-real-estate-agents-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({
