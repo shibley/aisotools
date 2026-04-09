@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import NewsletterBanner from "@/components/NewsletterBanner";
+import RecommendedToolsCTA from "@/components/pricing/RecommendedToolsCTA";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -84,6 +85,11 @@ export default async function ToolPage({ params }: Props) {
         )}
         <span className="text-gray-300">{tool.name}</span>
       </nav>
+
+      {/* Recommended Tools CTA */}
+      <div className="mb-8">
+        <RecommendedToolsCTA />
+      </div>
 
       {/* Social Proof */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mb-6">
