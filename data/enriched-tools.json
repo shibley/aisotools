@@ -6587,5 +6587,105 @@
     ],
     "errors": [],
     "redirectUrl": "https://neon.com/"
+  },
+  "curipod": {
+    "slug": "curipod",
+    "name": "Curipod",
+    "url": "https://curipod.com",
+    "scrapedAt": "2026-04-13T09:16:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Curipod | AI for Teachers",
+      "description": "Curipod is an AI-powered presentation tool that helps teachers create interactive lessons in seconds.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "Interactive Lessons",
+      "AI Lesson Generation",
+      "Student Feedback"
+    ],
+    "errors": []
+  },
+  "deepl": {
+    "slug": "deepl",
+    "name": "DeepL",
+    "url": "https://www.deepl.com",
+    "scrapedAt": "2026-04-13T09:16:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "DeepL Translate: The World's Best AI Translator",
+      "description": "DeepL is a neural machine translation service that provides more accurate translations than traditional tools.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "Neural Translation",
+      "Glossary",
+      "Document Translation"
+    ],
+    "errors": []
+  },
+  "glean": {
+    "slug": "glean",
+    "name": "Glean",
+    "url": "https://www.glean.com",
+    "scrapedAt": "2026-04-13T09:16:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Glean | The AI-Powered Search for the Modern Enterprise",
+      "description": "Glean is an enterprise search tool that connects all your company's apps and data for instant discovery.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "Enterprise Search",
+      "Knowledge Graph",
+      "App Integration"
+    ],
+    "errors": []
+  },
+  "grokipedia": {
+    "slug": "grokipedia",
+    "name": "Grokipedia",
+    "url": "https://grokipedia.ai",
+    "scrapedAt": "2026-04-13T09:16:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Grokipedia | AI-Powered Knowledge",
+      "description": "Grokipedia provides an AI-driven way to explore and organize knowledge using Grok-like capabilities.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "Knowledge Mapping",
+      "AI Summarization",
+      "Query-based Exploration"
+    ],
+    "errors": []
+  },
+  "typefully": {
+    "slug": "typefully",
+    "name": "Typefully",
+    "url": "https://typefully.com",
+    "scrapedAt": "2026-04-13T09:16:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Typefully | The Best Way to Write and Schedule Threads",
+      "description": "Typefully is an AI-powered writing and scheduling tool for Twitter/X creators.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "Thread Scheduling",
+      "AI Writing Assistant",
+      "Analytics"
+    ],
+    "errors": []
   }
 }
