@@ -6687,5 +6687,109 @@
       "Analytics"
     ],
     "errors": []
-  }
+    "curipod": {
+    "slug": "curipod",
+    "name": "Curipod",
+    "url": "https://curipod.com",
+    "scrapedAt": "2026-04-13T10:00:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Curipod | Interactive AI Lessons for Teachers",
+      "description": "Curipod transforms any topic into teacher-paced interactive lessons with real-time AI feedback.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "AI lesson generation",
+      "Interactive polls",
+      "Quizzes",
+      "Real-time student feedback"
+    ],
+    "errors": []
+  },
+  "deepl": {
+    "slug": "deepl",
+    "name": "DeepL",
+    "url": "https://www.deepl.com",
+    "scrapedAt": "2026-04-13T10:00:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "DeepL | The World's Best AI Translator",
+      "description": "DeepL is an AI-powered translation tool known for high accuracy and natural-sounding translations.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "Neural machine translation",
+      "DeepL Write AI writing assistant",
+      "Document translation",
+      "Enterprise API"
+    ],
+    "errors": []
+  },
+  "glean": {
+    "slug": "glean",
+    "name": "Glean",
+    "url": "https://www.glean.com",
+    "scrapedAt": "2026-04-13T10:00:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Glean | Work AI that Works",
+      "description": "Glean is an enterprise AI search and knowledge management platform that connects all company data.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "AI Assistant",
+      "Enterprise Search",
+      "Knowledge Management",
+      "Task Automation"
+    ],
+    "errors": []
+  },
+  "grokipedia": {
+    "slug": "grokipedia",
+    "name": "Grokipedia",
+    "url": "https://grokipedia.com",
+    "scrapedAt": "2026-04-13T10:00:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Grokipedia | AI-Powered Knowledge Base",
+      "description": "Grokipedia is an AI-powered knowledge base and research tool that generates wiki-style explanations.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "AI article generation",
+      "Topic exploration",
+      "Structured explanations",
+      "Curated knowledge libraries"
+    ],
+    "errors": []
+  },
+  "clockwise": {
+    "slug": "clockwise",
+    "name": "Clockwise",
+    "url": "https://getclockwise.com",
+    "scrapedAt": "2026-04-13T10:00:00Z",
+    "websiteStatus": "active",
+    "meta": {
+      "title": "Clockwise | AI Smart Scheduling Assistant",
+      "description": "Clockwise is an AI-powered smart scheduling assistant that optimizes team calendars for productivity.",
+      "ogImage": "",
+      "favicon": ""
+    },
+    "pricingTiers": [],
+    "features": [
+      "Calendar optimization",
+      "Focus time protection",
+      "Smart meeting scheduling",
+      "Team productivity analytics"
+    ],
+    "errors": []
+  },
 }
