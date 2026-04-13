@@ -1,0 +1,28 @@
+export const toolsBatch33: Tool[] = [
+  {
+    name: "Guidde",
+    slug: "guidde",
+    description: "AI-powered video documentation tool that turns your screen captures into professional how-to videos and step-by-step guides. Guidde uses AI to automatically generate voiceovers, clean up visuals, and create written instructions from a single recording, making onboarding and knowledge transfer seamless for teams.",
+    url: "https://guidde.com",
+    category: "productivity",
+    alternatives: ["scribe", "tango", "loom"],
+    bestFor: "Operations and HR teams creating training materials, and product managers documenting new features for users.",
+    pros: ["Automatic voiceover generation", "Converts video to written steps", "Fast production time"],
+    cons: ["Free tier is limited", "Voiceovers can sometimes feel robotic"],
+    rating: 4.7,
+    reviewCount: 420,
+  },
+  {
+    name: "Browse AI",
+    slug: "browse-ai",
+    description: "No-code web scraping and monitoring tool that allows you to extract data from any website and monitor changes in real-time. Browse AI lets you train a 'robot' to extract data by simply interacting with the page, then schedules the extraction to a Google Sheet or via API.",
+    url: "https://www.browse.ai",
+    category: "data-extraction",
+    alternatives: ["axiom", "bardeen", "import.io"],
+    bestFor: "Marketers monitoring competitor pricing, and data analysts needing structured data from sites without an API.",
+    pros: ["Zero coding required", "Excellent monitoring for site changes", "Easy API integration"],
+    cons: ["Pricing can scale quickly with many robots", "Complex site structures can be tricky to map"],
+    rating: 4.5,
+    reviewCount: 290,
+  },
+];
