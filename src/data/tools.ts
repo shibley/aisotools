@@ -61,6 +61,7 @@ export interface Tool {
   cons?: string[]; // Limitations / drawbacks
   bestFor?: string[]; // Who benefits most from this tool
   useCaseScenarios?: { title: string; description: string }[]; // Deeper real-world use-case scenarios
+  whySwitchFrom?: { reason: string; detail: string }[]; // Specific reasons to switch from this tool
 }
 
 // Seed data — initial tools to launch with
