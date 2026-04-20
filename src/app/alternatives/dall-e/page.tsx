@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: "DALL-E Alternatives: Best AI Image Generators 2026",
     description:
       "Compare the best DALL-E alternatives. In-depth reviews of Midjourney, Stable Diffusion, Adobe Firefly, Leonardo.ai, Ideogram, Flux, and more AI image generators.",
-    url: "https://aisotools.com/dall-e-alternatives",
+    url: "https://aisotools.com/alternatives/dall-e",
     type: "article",
   },
   alternates: {
-    canonical: "https://aisotools.com/dall-e-alternatives",
+    canonical: "https://aisotools.com/alternatives/dall-e",
   },
 };
 
