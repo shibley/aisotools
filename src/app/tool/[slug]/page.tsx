@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import NewsletterBanner from "@/components/NewsletterBanner";
-import RecommendedToolsCTA from "@/components/pricing/RecommendedToolsCTA";
+import { RecommendedToolsCTA } from "@/components/pricing/RecommendedToolsCTA";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -88,7 +88,7 @@ export default async function ToolPage({ params }: Props) {
 
       {/* Recommended Tools CTA */}
       <div className="mb-8">
-        <RecommendedToolsCTA />
+        <RecommendedToolsCTA currentToolCategory={tool.category} currentToolName={tool.name} />
       </div>
 
       {/* Social Proof */}

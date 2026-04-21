@@ -302,7 +302,7 @@ export default function DeepLAlternativesPage() {
           <span className="mx-2">›</span>
           <Link href="/alternatives" className="hover:text-white transition">Alternatives</Link>
           <span className="mx-2">›</span>
-          <span className="text-gray-300">DeepL Alternatives</span
+          <span className="text-gray-300">DeepL Alternatives</span>
         </nav>
 
         {/* Hero */}

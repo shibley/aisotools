@@ -296,7 +296,7 @@ export default function GitHubCopilotAlternativesPage() {
           <h2 className="text-2xl font-bold mb-6">Quick Comparison: Copilot vs Alternatives</h2>
           <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-x-auto">
             <table className="w-full text-sm">
-              <thead
+              <thead>
                 <tr className="bg-gray-800/50 text-left">
                   <th className="p-4 font-medium text-gray-400">#</th>
                   <th className="p-4 font-medium text-gray-400">Tool</th>
@@ -347,7 +347,7 @@ export default function GitHubCopilotAlternativesPage() {
                       <h3 className="text-xl font-bold">{alt.rank}. {alt.name}</h3>
                       <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${alt.pricingColor}`}>
                         {alt.pricing}
-                      </span
+                      </span>
                       {alt.freeTier && (
                         <span className="bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full text-xs font-medium">
                           Free tier

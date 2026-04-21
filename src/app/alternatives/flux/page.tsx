@@ -492,7 +492,7 @@ export default function FluxAlternativesPage() {
           <h2 className="text-2xl font-bold mb-6">Quick Comparison: Flux vs Alternatives</h2>
           <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-x-auto">
             <table className="w-full text-sm">
-              <thead
+              <thead>
                 <tr className="bg-gray-800/50 text-left">
                   <th className="p-4 font-medium text-gray-400">#</th>
                   <th className="p-4 font-medium text-gray-400">Tool</th>

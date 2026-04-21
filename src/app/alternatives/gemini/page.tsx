@@ -363,7 +363,7 @@ export default function GeminiAlternativesPage() {
                   <ul className="space-y-1">
                     {alt.whySwitchReasons.map((reason, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                        <span className="text-blue-400 mt-0.5 flex-shrink-0">→</</span>
+                        <span className="text-blue-400 mt-0.5 flex-shrink-0">→</span>
                         {reason}
                       </li>
                     ))}

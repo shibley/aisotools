@@ -450,11 +450,11 @@ export default function PerplexityAlternativesPage() {
             <h3 className="text-xl font-semibold mb-3">For Deep Research & Reasoning</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">ChatGPT:</strong> Best for multi-step reasoning and GPT-5 capabilities</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Claude:</strong> Unbeatable for long-document analysis and analytical nuance</span>
               </li>
             </ul>
@@ -464,11 +464,11 @@ export default function PerplexityAlternativesPage() {
             <h3 className="text-xl font-semibold mb-3">For Multimodal & Ecosystems</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Google Gemini:</strong> Best for images, video, and Google Workspace integration</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Microsoft Copilot:</strong> Seamless for Windows, Edge, and Enterprise users</span>
               </li>
             </ul>
@@ -478,11 +478,11 @@ export default function PerplexityAlternativesPage() {
             <h3 className="text-xl font-semibold mb-3">For Privacy & Open Source</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Brave Search:</strong> 100% free, ad-free, and zero tracking</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Perplexica:</strong> Total control via self-hosting and local LLMs</span>
               </li>
             </ul>
@@ -492,15 +492,15 @@ export default function PerplexityAlternativesPage() {
             <h3 className="text-xl font-semibold mb-3">For Specialized Workflows</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Phind:</strong> Purpose-built for developers and technical documentation</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Exa:</strong> Best for semantic discovery and finding similar content</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span><strong className="text-gray-300">Komo.ai:</strong> Minimalist, fast, and account-free search</span>
               </li>
             </ul>

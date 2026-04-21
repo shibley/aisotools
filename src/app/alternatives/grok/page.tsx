@@ -296,7 +296,7 @@ export default function GrokAlternativesPage() {
           <h2 className="text-2xl font-bold mb-6">Quick Comparison: Grok vs Alternatives</h2>
           <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-x-auto">
             <table className="w-full text-sm">
-              <thead
+              <thead>
                 <tr className="bg-gray-800/50 text-left">
                   <th className="p-4 font-medium text-gray-400">#</th>
                   <th className="p-4 font-medium text-gray-400">Tool</th>
@@ -363,7 +363,7 @@ export default function GrokAlternativesPage() {
                   <ul className="space-y-1">
                     {alt.whySwitchReasons.map((reason, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                        <span className="text-blue-400 mt-0.5 flex-shrink-0">→</</span>
+                        <span className="text-blue-400 mt-0.5 flex-shrink-0">→</span>
                         {reason}
                       </li>
                     ))}

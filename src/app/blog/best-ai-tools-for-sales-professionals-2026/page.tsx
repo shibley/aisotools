@@ -242,9 +242,9 @@ export default function BestAIToolsForSalesProfessionals() {
         </p>
         <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
           <p className="text-sm text-gray-600">
-            <strong>Pro Tip:</strong> The most successful AI sales stacks follow a <em]Research → Enrich → Outreach → Analyze[</em> loop. If you only use one tool for outreach, you&apos;re missing the intelligence layer that actually drives win rates.
+            <strong>Pro Tip:</strong> The most successful AI sales stacks follow a <em>Research → Enrich → Outreach → Analyze</em> loop. If you only use one tool for outreach, you&apos;re missing the intelligence layer that actually drives win rates.
           </p>
-        </div}
+        </div>
       </section>
 
       {/* Tools */}

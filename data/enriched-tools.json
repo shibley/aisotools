@@ -6687,7 +6687,8 @@
       "Analytics"
     ],
     "errors": []
-    "curipod": {
+  },
+  "curipod": {
     "slug": "curipod",
     "name": "Curipod",
     "url": "https://curipod.com",
@@ -6791,5 +6792,5 @@
       "Team productivity analytics"
     ],
     "errors": []
-  },
+  }
 }

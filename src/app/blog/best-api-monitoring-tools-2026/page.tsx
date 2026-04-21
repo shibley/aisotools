@@ -483,7 +483,7 @@ export default function BestApiMonitoringTools2026Page() {
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span>
                   <strong>Postman:</strong> Use your existing test collections for simple health checks.
                 </span>
@@ -495,13 +495,13 @@ export default function BestApiMonitoringTools2026Page() {
             <h3 className="text-xl font-semibold mb-3">For Deep Observability (APM)</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span>
                   <strong>Datadog:</strong> The gold standard for distributed tracing and infra visibility.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span>
                   <strong>New Relic:</strong> Great for runtime-specific performance tuning.
                 </span>
@@ -513,13 +513,13 @@ export default function BestApiMonitoringTools2026Page() {
             <h3 className="text-xl font-semibold mb-3">For Open-Source & Privacy</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span>
                   <strong>SigNoz:</strong> OpenTelemetry-native observability without the vendor lock-in.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span>
                   <strong>Prometheus:</strong> The industrial-strength metric standard for Kubernetes.
                 </span>
@@ -531,13 +531,13 @@ export default function BestApiMonitoringTools2026Page() {
             <h3 className="text-xl font-semibold mb-3">For API Security & Governance</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span>
                   <strong>Levo.ai:</strong> Detect shadow APIs and contract drift via eBPF.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-400 mr-2">→</</span>
+                <span className="text-blue-400 mr-2">→</span>
                 <span>
                   <strong>Traceable.ai:</strong> Full visibility and threat protection for enterprise APIs.
                 </span>
