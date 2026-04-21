@@ -126,4 +126,25 @@ export const categories: Category[] = [
     icon: "🧊",
     subcategories: ["3D Modeling", "Game Assets", "AR/VR", "Architecture", "Product Visualization"],
   },
+  {
+    name: "SEO Tools",
+    slug: "seo",
+    description: "AI-powered SEO, keyword research, content optimization, and ranking tools",
+    icon: "🔎",
+    subcategories: ["Keyword Research", "Content Optimization", "Rank Tracking", "Link Building", "SERP Analysis"],
+  },
+  {
+    name: "Real Estate",
+    slug: "real-estate",
+    description: "AI tools for real estate agents, investors, and property management",
+    icon: "🏡",
+    subcategories: ["Lead Nurturing", "CRM", "Due Diligence", "Property Analysis", "Commercial"],
+  },
+  {
+    name: "Data Extraction",
+    slug: "data-extraction",
+    description: "AI-powered web scraping, data collection, and automated data extraction tools",
+    icon: "🗃️",
+    subcategories: ["Web Scraping", "Data Monitoring", "No-Code Automation", "API Integration"],
+  },
 ];
