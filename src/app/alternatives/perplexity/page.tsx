@@ -4,21 +4,21 @@ import type { Metadata } from "next";
 const year = 2026;
 
 export const metadata: Metadata = {
-  title: `Best Perplexity Alternatives (${year}) — Top 5 AI Search Engines | AISO Tools`,
-  description: `Looking for Perplexity AI alternatives? Compare the 5 best AI search engines and answer engines with features, pricing, and pros & cons in ${year}.`,
+  title: `Best Perplexity Alternatives (${year}) — Top 10 AI Search Engines | AISO Tools`,
+  description: `Looking for Perplexity AI alternatives? Compare the 10 best AI search engines and answer engines with features, pricing, and pros & cons in ${year}.`,
   alternates: {
     canonical: "https://aisotools.com/alternatives/perplexity",
   },
   openGraph: {
-    title: `Best Perplexity Alternatives (${year}) — Top 5 AI Search Engines`,
-    description: `Compare the 5 best Perplexity alternatives for AI-powered research, web search, and agentic discovery.`,
+    title: `Best Perplexity Alternatives (${year}) — Top 10 AI Search Engines`,
+    description: `Compare the 10 best Perplexity alternatives for AI-powered research, web search, and agentic discovery.`,
     url: "https://aisotools.com/alternatives/perplexity",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
     title: `Best Perplexity Alternatives (${year})`,
-    description: `Top 5 Perplexity alternatives for AI search and real-time information retrieval.`,
+    description: `Top 10 Perplexity alternatives for AI search and real-time information retrieval.`,
   },
 };
 
@@ -163,13 +163,153 @@ const alternatives = [
     bestFor: "General purpose search, local discovery, and users heavily invested in the Google ecosystem.",
     compareUrl: "/compare/perplexity-vs-google",
   },
+  {
+    rank: 6,
+    name: "ChatGPT",
+    slug: "chatgpt",
+    url: "https://chat.openai.com",
+    pricing: "Freemium",
+    pricingColor: "bg-blue-500/10 text-blue-400",
+    freeTier: true,
+    startingPrice: "Free. Plus $20/mo",
+    tagline: "Advanced reasoning and multi-step research",
+    description:
+      "ChatGPT offers a more robust ecosystem than Perplexity, including GPT-5's advanced reasoning and a massive library of Custom GPTs. While Perplexity is a search engine first, ChatGPT is a reasoning engine that can search the web to supplement its vast knowledge base.",
+    features: [
+      "Multi-step research across many sources",
+      "Custom GPTs for specialized search workflows",
+      "Canvas mode for research document creation",
+      "SOTA reasoning (GPT-5)",
+      "Integrated DALL-E 3 for visual research",
+      "Voice-first interaction mode",
+    ],
+    whySwitchReasons: [
+      "Need deeper analytical reasoning and multi-step synthesis",
+      "Want to use specialized Custom GPTs for research",
+      "Prefer a tool that can create and edit documents (Canvas) while searching",
+    ],
+    bestFor: "Deep research, complex technical synthesis, and iterative document creation.",
+    compareUrl: "/compare/chatgpt-vs-perplexity",
+  },
+  {
+    rank: 7,
+    name: "Brave Search",
+    slug: "brave-search",
+    url: "https://search.brave.com",
+    pricing: "Free",
+    pricingColor: "bg-green-500/10 text-green-400",
+    freeTier: true,
+    startingPrice: "Free",
+    tagline: "Privacy-first AI search with an independent index",
+    description:
+      "Brave Search is the gold standard for those who want Perplexity-like summaries without the tracking. It uses its own independent search index rather than relying on Google or Bing, ensuring a truly unbiased and private AI search experience.",
+    features: [
+      "100% privacy (no tracking or data collection)",
+      "Independent search index (not Google/Bing)",
+      "Fast, ad-free AI summaries",
+      "No account required to use AI features",
+      "Brave Browser native integration",
+      "Lightweight and fast interface",
+    ],
+    whySwitchReasons: [
+      "Priority on privacy and avoiding data collection",
+      "Want an independent search index to avoid 'filter bubbles'",
+      "Need a fast, free alternative that doesn't require a login",
+    ],
+    bestFor: "Privacy-conscious users and those seeking a fast, free, ad-free search experience.",
+    compareUrl: "/compare/perplexity-vs-brave",
+  },
+  {
+    rank: 8,
+    name: "Microsoft Copilot",
+    slug: "microsoft-copilot",
+    url: "https://copilot.microsoft.com",
+    pricing: "Freemium",
+    pricingColor: "bg-blue-500/10 text-blue-400",
+    freeTier: true,
+    startingPrice: "Free. Pro $20/mo",
+    tagline: "Enterprise-grade search with Microsoft 365 integration",
+    description:
+      "Copilot combines the power of GPT-5 with the Bing search index. Its main advantage over Perplexity is the deep integration with the Windows OS and Microsoft 365 suite, making it the best choice for corporate environments and enterprise research.",
+    features: [
+      "Native integration with Windows and Edge",
+      "Direct access to Microsoft 365 data (Docs, Email)",
+      "Enterprise-grade security and compliance",
+      "Bing Search integration for real-time data",
+      "Built-in DALL-E 3 image generation",
+      "Professional document synthesis",
+    ],
+    whySwitchReasons: [
+      "Deeply embedded in the Microsoft/Office ecosystem",
+      "Requirement for enterprise-level security and SSO",
+      "Prefer a tool integrated directly into the OS and browser",
+    ],
+    bestFor: "Enterprise users and those heavily embedded in the Microsoft ecosystem.",
+    compareUrl: "/compare/perplexity-vs-copilot",
+  },
+  {
+    rank: 9,
+    name: "Exa",
+    slug: "exa",
+    url: "https://exa.ai",
+    pricing: "Paid",
+    pricingColor: "bg-blue-500/10 text-blue-400",
+    freeTier: false,
+    startingPrice: "Starter $30/mo",
+    tagline: "Semantic search engine for discovery and patterns",
+    description:
+      "Exa is a fundamentally different kind of search. While Perplexity finds answers, Exa finds content. It uses a semantic neural index to find pages that are 'similar' in meaning to a query, making it a powerful tool for discovery and finding hidden gems on the web.",
+    features: [
+      "Neural search based on semantic meaning",
+      "URL similarity (find pages like this one)",
+      "Real-time web crawling and indexing",
+      "Powerful API for AI agent developers",
+      "Discovery-focused interface",
+      "High-precision filtering for quality sources",
+    ],
+    whySwitchReasons: [
+      "Need to find similar content/sources rather than just a summary",
+      "Building AI agents that require high-quality semantic data",
+      "Looking for serendipity and discovery over direct Q&A",
+    ],
+    bestFor: "Content researchers, trend hunters, and developers building AI search apps.",
+    compareUrl: "/compare/perplexity-vs-exa",
+  },
+  {
+    rank: 10,
+    name: "Perplexica",
+    slug: "perplexica",
+    url: "https://github.com/ItzCodename/Perplexica",
+    pricing: "Free",
+    pricingColor: "bg-green-500/10 text-green-400",
+    freeTier: true,
+    startingPrice: "Free (Self-hosted)",
+    tagline: "The open-source, self-hosted Perplexity alternative",
+    description:
+      "Perplexica is the leading open-source alternative for those who want total control over their search data. By self-hosting Perplexica, you can use local models via Ollama or your own API keys, ensuring that your research history and queries never leave your own hardware.",
+    features: [
+      "100% open-source (MIT License)",
+      "Local LLM support via Ollama",
+      "Total data privacy and control",
+      "Self-hosted via Docker",
+      "Customizable search agents",
+      "No subscription fees (pay only for API/Compute)",
+    ],
+    whySwitchReasons: [
+      "Maximum privacy advocates who refuse cloud-based search",
+      "Developers who want to experiment with different local models",
+      "Users who want a completely free, non-commercial search tool",
+    ],
+    bestFor: "Developers, self-hosting enthusiasts, and maximum privacy advocates.",
+    compareUrl: "/compare/perplexity-vs-perplexica",
+  },
 ];
 
 const faqs = [
   {
     question: "What is the best free alternative to Perplexity AI?",
     answer:
-      "Genspark and Arc Search provide the best free experiences. Genspark is superior for deep research due to its 'SparkPages', while Arc Search is the fastest way to get AI-synthesized answers on a mobile device. Google's AI Overviews are also free and integrated into standard search.",
+      "Genspark and Arc Search provide the best free experiences. Genspark is superior for deep research due to its 'SparkPages', while Arc Search is the fastest way to get AI-synthesized answers on a mobile device. Brave Search is also a top choice for those prioritizing privacy.",
   },
   {
     question: "Is Genspark better than Perplexity?",
@@ -198,7 +338,7 @@ const schemas = [
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: `Best Perplexity Alternatives (${year})`,
-    description: `Top 5 alternatives to Perplexity AI for AI search, answer engines, and research.`,
+    description: `Top 10 alternatives to Perplexity AI for AI search, answer engines, and research.`,
     numberOfItems: alternatives.length,
     itemListElement: alternatives.map((alt, i) => ({
       "@type": "ListItem",
@@ -409,6 +549,69 @@ export default function PerplexityAlternativesPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Decision Framework */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold mb-6">Which Perplexity Alternative Should You Choose?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-3">For Deep Research & Reasoning</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">ChatGPT:</strong> Best for multi-step reasoning and GPT-5 capabilities</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Genspark:</strong> Unbeatable for building structured, wiki-style research reports</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-3">For Multimodal & Ecosystems</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Google Gemini:</strong> Best for images, video, and Google Workspace integration</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Microsoft Copilot:</strong> Seamless for Windows, Edge, and Enterprise users</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-3">For Privacy & Open Source</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Brave Search:</strong> 100% free, ad-free, and zero tracking</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Perplexica:</strong> Total control via self-hosting and local LLMs</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gray-900 border border-gray-800 rounded-xl p-6">
+              <h3 className="text-xl font-semibold mb-3">For Specialized Workflows</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Phind:</strong> Purpose-built for developers and technical documentation</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Exa:</strong> Best for semantic discovery and finding similar content</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-400 mr-2">→</span>
+                  <span><strong className="text-gray-300">Arc Search:</strong> The fastest AI-synthesized answers on mobile</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
