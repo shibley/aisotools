@@ -225,4 +225,8 @@ export const tools: Tool[] = [
     }
   }
   return result;
+}).filter((tool, index, arr) => {
+  // Deduplicate by slug — keep the LAST occurrence (batch entries override base)
+  const lastIdx = arr.map((t) => t.slug).lastIndexOf(tool.slug);
+  return index === lastIdx;
 });
