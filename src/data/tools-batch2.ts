@@ -477,6 +477,7 @@ export const toolsBatch2: Tool[] = [
     description: "AI-powered presentation maker that creates beautiful decks from text prompts. Gamma generates complete presentations with layouts, images, and content in seconds, no design skills required.",
     shortDescription: "Create AI presentations from text prompts",
     url: "https://gamma.app",
+    affiliateUrl: "https://try.gamma.app/iu7k55m0qa0c",
     category: "productivity",
     subcategory: "Presentation",
     tags: ["presentations", "slides", "ai design", "content creation", "productivity"],

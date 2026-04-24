@@ -813,6 +813,7 @@ export const toolsBatch8: Tool[] = [
     description: "Social media management platform for scheduling and analyzing content. Buffer helps individuals and teams plan, publish, and measure performance across social channels with AI-powered tools.",
     shortDescription: "Social media scheduling and analytics",
     url: "https://buffer.com",
+    affiliateUrl: "https://join.buffer.com/shibley-api-status-check",
     category: "marketing",
     subcategory: "Social Media",
     tags: ["social-media", "scheduling", "analytics", "content-planning", "multi-channel", "ai"],

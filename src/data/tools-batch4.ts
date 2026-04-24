@@ -434,6 +434,7 @@ export const toolsBatch4: Tool[] = [
     description: "AI-powered academic search engine that finds and synthesizes research papers. Consensus uses AI to extract findings from scientific literature and provide evidence-based answers to research questions.",
     shortDescription: "AI search for scientific research papers",
     url: "https://consensus.app",
+    affiliateUrl: "https://get.consensus.app/rjusyyxmi02p",
     category: "research",
     subcategory: "Academic Research",
     tags: ["research", "academic", "scientific papers", "ai search", "evidence-based"],

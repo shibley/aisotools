@@ -63,6 +63,7 @@ export const toolsBatch25: Tool[] = [
     description: "ActiveCampaign is a customer experience automation platform combining email marketing, CRM, and sales automation in one tool. Known for its powerful visual automation builder, it helps businesses create complex multi-step customer journeys triggered by behavior, tags, lead scores, and CRM data. With 185,000+ customers, it's a top choice for SMBs needing marketing automation beyond basic email.",
     shortDescription: "Customer experience automation: email marketing + CRM + sales automation",
     url: "https://activecampaign.com",
+    affiliateUrl: "https://try.activecampaign.com/vw1jw6s8z6qi",
     category: "marketing",
     subcategory: "Email Marketing",
     tags: ["email marketing", "crm", "marketing automation", "activecampaign", "lead scoring", "sales automation"],

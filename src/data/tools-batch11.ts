@@ -145,6 +145,7 @@ export const toolsBatch11: Tool[] = [
     description: "Murf AI is a professional AI voice generator that creates studio-quality voiceovers from text in 120+ voices and 20+ languages. Used by 16M+ users for e-learning, YouTube narration, corporate videos, and product demos. Murf lets you fine-tune pitch, speed, and emphasis, and sync voiceovers directly to video or presentations.",
     shortDescription: "AI voice generator — studio-quality voiceovers in 120+ voices",
     url: "https://murf.ai",
+    affiliateUrl: "https://get.murf.ai/kveyd98v1qu6",
     category: "audio",
     subcategory: "AI Voice Generation",
     tags: ["voice", "text-to-speech", "voiceover", "e-learning", "narration", "ai"],
