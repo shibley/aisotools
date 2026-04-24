@@ -102,6 +102,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-tools-for-designers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-tools-for-doctors-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-tools-for-lawyers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    // aiso-taaft-gaps batch 30: profession blog expansion
+    { url: `${base}/blog/best-ai-tools-for-engineers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-social-media-managers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-data-scientists-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-photographers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/compare/claude-vs-perplexity`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/compare/deepseek-vs-perplexity`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/compare/perplexity-vs-youcom`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
