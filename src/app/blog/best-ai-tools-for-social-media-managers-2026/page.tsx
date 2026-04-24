@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
+import { tools as allTools } from "@/data/tools";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Social Media Managers in 2026: Create More, Stress Less",
@@ -281,20 +283,37 @@ export default function BestAIToolsForSocialMediaManagers() {
               <span className="text-gray-500">🎯 {tool.bestFor}</span>
             </div>
 
-            <div className="mt-4 flex gap-3">
-              <Link
-                href={`/tool/${tool.slug}`}
-                className="inline-flex items-center rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
-              >
-                Full Review →
-              </Link>
-              <Link
-                href={`/alternatives/${tool.slug}`}
-                className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                Alternatives
-              </Link>
-            </div>
+            {(() => {
+              const toolData = allTools.find((t) => t.slug === tool.slug);
+              const affiliateUrl = getAffiliateUrl(tool.slug);
+              const visitUrl = affiliateUrl || toolData?.url;
+              return (
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {visitUrl && (
+                    <a
+                      href={visitUrl}
+                      target="_blank"
+                      rel={`noopener noreferrer${affiliateUrl ? " sponsored" : ""}`}
+                      className="inline-flex items-center rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
+                    >
+                      Try {tool.name} →
+                    </a>
+                  )}
+                  <Link
+                    href={`/tool/${tool.slug}`}
+                    className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    Full Review
+                  </Link>
+                  <Link
+                    href={`/alternatives/${tool.slug}`}
+                    className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    Alternatives
+                  </Link>
+                </div>
+              );
+            })()}
           </div>
         ))}
       </section>
@@ -358,11 +377,11 @@ export default function BestAIToolsForSocialMediaManagers() {
           Start with <strong>Buffer AI</strong> for scheduling and <strong>Canva AI</strong> for visual content — those two tools alone handle 80% of most social media workflows. Add <strong>ChatGPT</strong> for bulk caption generation and <strong>Opus Clip</strong> if you&apos;re doing any video content. That&apos;s a complete AI social media stack for under $50/month that saves 15+ hours per week.
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link href="/category/social-media" className="inline-flex items-center rounded-lg bg-white px-6 py-3 font-semibold text-purple-600 transition-colors hover:bg-gray-100">
+          <a href="https://join.buffer.com/shibley-api-status-check" target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center rounded-lg bg-white px-6 py-3 font-semibold text-purple-600 transition-colors hover:bg-gray-100">
+            Try Buffer AI Free →
+          </a>
+          <Link href="/category/social-media" className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-purple-600">
             Browse All Social Media AI Tools →
-          </Link>
-          <Link href="/blog/best-ai-tools-for-content-marketers-2026" className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-purple-600">
-            AI for Content Marketers →
           </Link>
         </div>
       </section>
