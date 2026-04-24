@@ -73,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/wordtune-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/alternatives/deepseek`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/gemini-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/alternatives/zapier`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone pricing pages
     { url: `${base}/chatgpt-plus-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
