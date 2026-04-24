@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI CRM Tools 2026: HubSpot vs Pipedrive vs Salesforce Compared",
@@ -307,9 +308,18 @@ export default function BestAICRMTools2026() {
                   </ul>
                 </div>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-3">
                 <span className="text-sm text-gray-500">Best for: <strong className="text-gray-700 dark:text-gray-200">{tool.bestFor}</strong></span>
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
+                  {(() => {
+                    const affUrl = getAffiliateUrl(tool.slug);
+                    const visitUrl = affUrl || tool.url;
+                    return (
+                      <a href={visitUrl} target="_blank" rel={`noopener noreferrer${affUrl ? " sponsored" : ""}`} className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-1.5 rounded-lg transition">
+                        Try {tool.name} →
+                      </a>
+                    );
+                  })()}
                   <Link href={`/tool/${tool.slug}`} className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
                     Full profile →
                   </Link>
