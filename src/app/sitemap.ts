@@ -123,6 +123,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/use-case/ai-for-presentation-design`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/use-case/ai-for-voice-cloning`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/use-case/ai-for-data-analysis`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    // aiso-taaft-gaps batch: 5 new blog posts (Apr 24 2026)
+    { url: `${base}/blog/best-ai-tools-for-podcasters-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-music-generators-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-copywriters-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-video-editors-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-recruiters-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({

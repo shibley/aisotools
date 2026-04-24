@@ -213,6 +213,59 @@ const blogPosts: BlogPost[] = [
     readTime: "16 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-tools-for-podcasters-2026",
+    title: "Best AI Tools for Podcasters in 2026: Record, Edit & Grow",
+    description:
+      "Discover the best AI tools for podcasters in 2026. From AI transcription with Otter.ai to automated editing with Descript and show notes with Castmagic — save 5-10 hours per episode.",
+    category: "Audio & Podcasting",
+    categorySlug: "podcasting",
+    date: "April 24, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-music-generators-2026",
+    title: "Best AI Music Generators in 2026: Suno, Udio & More Compared",
+    description:
+      "Compare Suno AI, Udio, Soundraw, and AIVA — the top AI music generators for creating royalty-free songs, beats, and soundtracks from text prompts.",
+    category: "Audio & Music",
+    categorySlug: "music",
+    date: "April 24, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-copywriters-2026",
+    title: "Best AI Tools for Copywriters in 2026: Write More, Earn More",
+    description:
+      "From Jasper to Anyword, discover the AI tools top copywriters use to write 10x faster, optimize conversion rates, and scale their freelance or agency income.",
+    category: "Writing & Content",
+    categorySlug: "writing",
+    date: "April 24, 2026",
+    readTime: "13 min read",
+  },
+  {
+    slug: "best-ai-tools-for-video-editors-2026",
+    title: "Best AI Tools for Video Editors in 2026: Edit Faster, Create More",
+    description:
+      "From Runway Gen-3 to Descript's text-based editing — discover the AI tools professional video editors use to cut post-production time by 60-80%.",
+    category: "Video",
+    categorySlug: "video",
+    date: "April 24, 2026",
+    readTime: "15 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-recruiters-2026",
+    title: "Best AI Tools for Recruiters in 2026: Hire Faster, Hire Better",
+    description:
+      "The complete guide to AI tools for talent acquisition. Compare tools for sourcing, interview notes, and automation — all cutting time-to-hire in half.",
+    category: "HR & People Ops",
+    categorySlug: "hr",
+    date: "April 24, 2026",
+    readTime: "14 min read",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -227,6 +280,9 @@ const categoryColors: Record<string, string> = {
   legal: "bg-indigo-600/20 text-indigo-400",
   hr: "bg-emerald-600/20 text-emerald-400",
   freelance: "bg-violet-600/20 text-violet-400",
+  podcasting: "bg-rose-600/20 text-rose-400",
+  music: "bg-fuchsia-600/20 text-fuchsia-400",
+  video: "bg-red-600/20 text-red-400",
 };
 
 export default function BlogIndexPage() {
