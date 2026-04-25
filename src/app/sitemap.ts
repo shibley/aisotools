@@ -56,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/canva-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/copilot-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/alternatives/dall-e`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/dall-e-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/alternatives/windsurf`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/elevenlabs-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/github-copilot-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
