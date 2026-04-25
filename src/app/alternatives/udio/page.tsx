@@ -237,80 +237,80 @@ export default function UdioAlternativesPage() {
   return (
     <>
       {schemas.map((schema, i) => (
-        <<scriptscript
+        <script
           key={i}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       ))}
 
-      <<divdiv className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
-        <<navnav className="text-sm text-gray-500 mb-6">
-          <<LinkLink href="/" className="hover:text-white transition">Home</Link>
-          <<spanspan className="mx-2">›</span>
-          <<LinkLink href="/alternatives" className="hover:text-white transition">Alternatives</Link>
-          <<spanspan className="mx-2">›</span>
-          <<spanspan className="text-gray-300">Udio Alternatives</span>
+        <nav className="text-sm text-gray-500 mb-6">
+          <Link href="/" className="hover:text-white transition">Home</Link>
+          <span className="mx-2">›</span>
+          <Link href="/alternatives" className="hover:text-white transition">Alternatives</Link>
+          <span className="mx-2">›</span>
+          <span className="text-gray-300">Udio Alternatives</span>
         </nav>
 
         {/* Hero */}
-        <<divdiv className="text-center mb-12">
-          <<divdiv className="w-16 h-16 rounded-xl bg-blue-600/20 flex items-center justify-center text-2xl font-bold text-blue-400 mx-auto mb-6">
+        <div className="text-center mb-12">
+          <div className="w-16 h-16 rounded-xl bg-blue-600/20 flex items-center justify-center text-2xl font-bold text-blue-400 mx-auto mb-6">
             🎵
           </div>
-          <<hh1 className="text-4xl font-bold mb-4">Best Udio Alternatives ({year})</h1>
-          <<pp className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Best Udio Alternatives ({year})</h1>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Comparing the top AI music generators for song creation, background tracks, and cinematic scores. Find the perfect alternative to Udio for your creative workflow.
           </p>
         </div>
 
         {/* Alternatives List */}
-        <<sectionsection className="mb-16">
-          <<divdiv className="grid grid-cols-1 gap-8">
+        <section className="mb-16">
+          <div className="grid grid-cols-1 gap-8">
             {alternatives.map((alt) => (
-              <<divdiv key={alt.slug} className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500/50 transition group">
-                <<divdiv className="flex flex-col md:flex-row gap-8">
-                  <<divdiv className="md:w-1/3 space-y-4">
-                    <<divdiv className="flex items-center gap-3">
-                      <<spanspan className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-sm font-bold text-white">
+              <div key={alt.slug} className="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-blue-500/50 transition group">
+                <div className="flex flex-col md:flex-row gap-8">
+                  <div className="md:w-1/3 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-sm font-bold text-white">
                         {alt.rank}
                       </span>
-                      <<hh3 className="text-2xl font-bold group-hover:text-blue-400 transition">{alt.name}</h3>
+                      <h3 className="text-2xl font-bold group-hover:text-blue-400 transition">{alt.name}</h3>
                     </div>
-                    <<pp className="text-blue-400 font-medium text-sm">{alt.tagline}</p>
-                    <<divdiv className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${alt.pricingColor}`}>
+                    <p className="text-blue-400 font-medium text-sm">{alt.tagline}</p>
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${alt.pricingColor}`}>
                       {alt.pricing}
                     </div>
                   </div>
                   
-                  <<divdiv className="md:w-2/3">
-                    <<pp className="text-gray-300 leading-relaxed mb-6">
+                  <div className="md:w-2/3">
+                    <p className="text-gray-300 leading-relaxed mb-6">
                       {alt.description}
                     </p>
                     
-                    <<divdiv className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                      <<divdiv className="space-y-3">
-                        <<hh4 className="font-semibold text-gray-300 flex items-center gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                      <div className="space-y-3">
+                        <h4 className="font-semibold text-gray-300 flex items-center gap-2">
                           ✨ Key Features
                         </h4>
-                        <<ulul className="space-y-2">
+                        <ul className="space-y-2">
                           {alt.features.map((feature, i) => (
-                            <<lili key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                              <<spanspan className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
+                            <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
+                              <span className="text-green-400 mt-0.5 flex-shrink-0">✓</span>
                               <span>{feature}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                      <<divdiv className="space-y-3">
-                        <<hh4 className="font-semibold text-gray-300 flex items-center gap-2">
+                      <div className="space-y-3">
+                        <h4 className="font-semibold text-gray-300 flex items-center gap-2">
                           🔄 Why Switch?
                         </h4>
-                        <<ulul className="space-y-2">
+                        <ul className="space-y-2">
                           {alt.whySwitchReasons.map((reason, i) => (
-                            <<lili key={i} className="flex items-start gap-2 text-sm text-gray-400">
-                              <<spanspan className="text-blue-400 mt-0.5 flex-shrink-0">→</span>
+                            <li key={i} className="flex items-start gap-2 text-sm text-gray-400">
+                              <span className="text-blue-400 mt-0.5 flex-shrink-0">→</span>
                               <span>{reason}</span>
                             </li>
                           ))}
@@ -318,8 +318,8 @@ export default function UdioAlternativesPage() {
                       </div>
                     </div>
 
-                    <<divdiv className="flex flex-wrap items-center gap-4 pt-4 border-t border-gray-800">
-                      <<aa
+                    <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-gray-800">
+                      <a
                         href={alt.url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -327,10 +327,10 @@ export default function UdioAlternativesPage() {
                       >
                         Try {alt.name} →
                       </a>
-                      <<LinkLink href={`/tool/${alt.slug}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium transition">
+                      <Link href={`/tool/${alt.slug}`} className="text-blue-400 hover:text-blue-300 text-sm font-medium transition">
                         📋 Full Review →
                       </Link>
-                      <<divdiv className="ml-auto text-xs text-gray-500">
+                      <div className="ml-auto text-xs text-gray-500">
                         Starting at {alt.startingPrice}
                       </div>
                     </div>
@@ -342,41 +342,41 @@ export default function UdioAlternativesPage() {
         </section>
 
         {/* FAQ */}
-        <<sectionsection className="mb-16">
-          <<hh2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-          <<divdiv className="space-y-4">
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <<divdiv key={i} className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-                <<hh3 className="font-semibold text-lg mb-2">{faq.question}</h3>
-                <<pp className="text-gray-400 leading-relaxed">{faq.answer}</p>
+              <div key={i} className="bg-gray-900 border border-gray-800 rounded-xl p-5">
+                <h3 className="font-semibold text-lg mb-2">{faq.question}</h3>
+                <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Cross-links */}
-        <<sectionsection className="mb-10">
-          <<hh2 className="text-2xl font-bold mb-4">Learn More</h2>
-          <<divdiv className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <<LinkLink href="/tool/udio" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
-              <<hh3 className="font-semibold mb-1">📋 Udio Review</h3>
-              <<pp className="text-gray-400 text-sm">Full review with features, pros & cons</p>
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold mb-4">Learn More</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Link href="/tool/udio" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
+              <h3 className="font-semibold mb-1">📋 Udio Review</h3>
+              <p className="text-gray-400 text-sm">Full review with features, pros & cons</p>
             </Link>
-            <<LinkLink href="/tool/suno" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
-              <<hh3 className="font-semibold mb-1">🎵 Suno</h3>
-              <<pp className="text-gray-400 text-sm">The most popular AI song generator</p>
+            <Link href="/tool/suno" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
+              <h3 className="font-semibold mb-1">🎵 Suno</h3>
+              <p className="text-gray-400 text-sm">The most popular AI song generator</p>
             </Link>
-            <<LinkLink href="/tool/soundraw" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
-              <<hh3 className="font-semibold mb-1">🛠️ Soundraw</h3>
-              <<pp className="text-gray-400 text-sm">Customizable background music for creators</p>
+            <Link href="/tool/soundraw" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
+              <h3 className="font-semibold mb-1">🛠️ Soundraw</h3>
+              <p className="text-gray-400 text-sm">Customizable background music for creators</p>
             </Link>
-            <<LinkLink href="/compare/suno-vs-udio" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
-              <<hh3 className="font-semibold mb-1">⚖️ Suno vs Udio</h3>
-              <<pp className="text-gray-400 text-sm">The battle of the AI music giants</p>
+            <Link href="/compare/suno-vs-udio" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
+              <h3 className="font-semibold mb-1">⚖️ Suno vs Udio</h3>
+              <p className="text-gray-400 text-sm">The battle of the AI music giants</p>
             </Link>
-            <<LinkLink href="/category/audio" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
-              <<hh3 className="font-semibold mb-1">🎧 AI Audio Tools</h3>
-              <<pp className="text-gray-400 text-sm">Browse all AI music and audio tools</p>
+            <Link href="/category/audio" className="bg-gray-900 border border-gray-800 rounded-xl p-5 hover:border-blue-500/50 transition">
+              <h3 className="font-semibold mb-1">🎧 AI Audio Tools</h3>
+              <p className="text-gray-400 text-sm">Browse all AI music and audio tools</p>
             </Link>
           </div>
         </section>

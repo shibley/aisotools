@@ -1,6 +1,7 @@
 import { tools } from "@/data/tools";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Music Generators in 2026: Suno, Udio & More Compared",
@@ -474,12 +475,27 @@ export default function BestAIMusicGeneratorsPage() {
                       <span className="text-xs font-medium text-gray-500">Best for: </span>
                       <span className="text-xs text-gray-600">{tool.bestFor}</span>
                     </div>
-                    <Link
-                      href={`/tool/${tool.slug}`}
-                      className="text-sm font-medium text-blue-600 hover:text-blue-800"
-                    >
-                      View Details →
-                    </Link>
+                    <div className="flex items-center gap-3">
+                      {(() => {
+                        const affUrl = getAffiliateUrl(tool.slug);
+                        return affUrl ? (
+                          <a
+                            href={affUrl}
+                            target="_blank"
+                            rel="noopener noreferrer sponsored"
+                            className="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-lg transition"
+                          >
+                            Try Free →
+                          </a>
+                        ) : null;
+                      })()}
+                      <Link
+                        href={`/tool/${tool.slug}`}
+                        className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                      >
+                        View Details →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}

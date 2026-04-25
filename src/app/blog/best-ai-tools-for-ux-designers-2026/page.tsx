@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for UX Designers in 2026: Design Faster & Smarter",
@@ -273,20 +274,44 @@ export default function BestAIToolsForUXDesigners2026() {
               <span className="text-gray-500">🎯 {tool.bestFor}</span>
             </div>
 
-            <div className="mt-4 flex gap-3">
-              <Link
-                href={`/tool/${tool.slug}`}
-                className="inline-flex items-center rounded-lg bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700"
-              >
-                Full Review →
-              </Link>
-              <Link
-                href={`/alternatives/${tool.slug}`}
-                className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                Alternatives
-              </Link>
-            </div>
+            {(() => {
+              const affUrl = getAffiliateUrl(tool.slug);
+              return (
+                <div className="mt-4 flex gap-3">
+                  {affUrl ? (
+                    <a
+                      href={affUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="inline-flex items-center rounded-lg bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700"
+                    >
+                      Try {tool.name} →
+                    </a>
+                  ) : (
+                    <Link
+                      href={`/tool/${tool.slug}`}
+                      className="inline-flex items-center rounded-lg bg-pink-600 px-4 py-2 text-sm font-medium text-white hover:bg-pink-700"
+                    >
+                      Full Review →
+                    </Link>
+                  )}
+                  {affUrl && (
+                    <Link
+                      href={`/tool/${tool.slug}`}
+                      className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                    >
+                      Full Review
+                    </Link>
+                  )}
+                  <Link
+                    href={`/alternatives/${tool.slug}`}
+                    className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    Alternatives
+                  </Link>
+                </div>
+              );
+            })()}
           </div>
         ))}
       </section>
