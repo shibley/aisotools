@@ -144,6 +144,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-tools-for-devops-engineers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-tools-for-ux-designers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/blog/best-ai-tools-for-translators-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-nurses-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-therapists-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/blog/best-ai-tools-for-personal-trainers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
   ];
 
   const toolPages = tools.map((tool) => ({

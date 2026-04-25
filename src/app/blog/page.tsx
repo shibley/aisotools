@@ -648,6 +648,39 @@ const blogPosts: BlogPost[] = [
     readTime: "14 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-tools-for-nurses-2026",
+    title: "Best AI Tools for Nurses in 2026: Save Time, Improve Patient Care",
+    description:
+      "Nurses spend 40% of their shift on documentation. AI tools cut that in half. The 8 best AI tools for nurses in 2026 — from ambient charting to clinical decision support.",
+    category: "Healthcare",
+    categorySlug: "healthcare",
+    date: "April 25, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-therapists-2026",
+    title: "Best AI Tools for Therapists & Counselors in 2026",
+    description:
+      "Reduce documentation time by 60%, grow your practice, and prevent burnout. The 8 best AI tools for therapists and mental health professionals in 2026.",
+    category: "Healthcare",
+    categorySlug: "healthcare",
+    date: "April 25, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-personal-trainers-2026",
+    title: "Best AI Tools for Personal Trainers in 2026: Grow Your Client Base",
+    description:
+      "Save 10+ hours per week on program design, content creation, and admin. The 8 best AI tools for personal trainers and fitness coaches in 2026.",
+    category: "Fitness",
+    categorySlug: "fitness",
+    date: "April 25, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -675,6 +708,7 @@ const categoryColors: Record<string, string> = {
   "ai-dev": "bg-purple-700/20 text-purple-300",
   "photo-video": "bg-red-700/20 text-red-300",
   collaboration: "bg-blue-500/20 text-blue-300",
+  fitness: "bg-orange-500/20 text-orange-300",
 };
 
 export default function BlogIndexPage() {
