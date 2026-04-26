@@ -55,10 +55,10 @@ export const AFFILIATE_LINKS: Record<string, {
     status: "active",
   },
   "quillbot": {
-    url: "",
+    url: "https://try.quillbot.com/lxppa7cxlgq6",
     program: "PartnerStack",
     commission: "10-20% based on plan length",
-    status: "applied",
+    status: "active",
   },
   "adcreative": {
     url: "https://free-trial.adcreative.ai/yh4dtwq3dst0",
