@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Sales Professionals in 2026: Close More Deals, Faster",
@@ -288,12 +289,12 @@ export default function BestAIToolsForSalesProfessionals() {
 
             <div className="mt-4 flex gap-3">
               <a
-                href={`https://${tool.slug.replace("-", "").replace(".io", "")}.com`}
+                href={getAffiliateUrl(tool.slug) || `https://${tool.slug.replace("-", "").replace(".io", "")}.com`}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel={`noopener noreferrer${getAffiliateUrl(tool.slug) ? " sponsored" : ""}`}
                 className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
               >
-                Visit {tool.name} →
+                {getAffiliateUrl(tool.slug) ? `Try ${tool.name} →` : `Visit ${tool.name} →`}
               </a>
               <Link
                 href={`/tool/${tool.slug}`}

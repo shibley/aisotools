@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "7 Best Miro Alternatives in 2026 (Free & Paid Options Compared)",
@@ -335,6 +336,16 @@ export default function MiroAlternatives2026() {
               </div>
 
               <div className="flex gap-3">
+                {getAffiliateUrl(tool.slug) && (
+                  <a
+                    href={getAffiliateUrl(tool.slug)!}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="text-sm text-green-600 dark:text-green-400 hover:underline font-medium"
+                  >
+                    Try {tool.name} →
+                  </a>
+                )}
                 <Link href={`/tool/${tool.slug}`} className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
                   Full profile →
                 </Link>

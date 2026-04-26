@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Customer Service Tools 2026: Complete Comparison Guide",
@@ -568,6 +569,16 @@ export default function BestAICustomerServiceToolsPage() {
               </div>
 
               <div className="mt-3 flex gap-3">
+                {getAffiliateUrl(tool.slug) && (
+                  <a
+                    href={getAffiliateUrl(tool.slug)!}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="text-green-400 hover:text-green-300 text-sm font-medium"
+                  >
+                    Try {tool.name} →
+                  </a>
+                )}
                 <Link
                   href={`/tool/${tool.slug}`}
                   className="text-purple-400 hover:text-purple-300 text-sm font-medium"

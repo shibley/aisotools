@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Finance & Accounting in 2026: CFO Guide",
@@ -543,6 +544,16 @@ export default function BestAIToolsForFinanceAccounting() {
                     <div className="text-sm text-gray-500">
                       <strong className="text-gray-700">Best for:</strong> {tool.bestFor}
                     </div>
+                    {getAffiliateUrl(tool.slug) && (
+                      <a
+                        href={getAffiliateUrl(tool.slug)!}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="text-green-600 hover:text-green-800 text-sm font-medium"
+                      >
+                        Try {tool.name} →
+                      </a>
+                    )}
                     <Link
                       href={`/tool/${tool.slug}`}
                       className="text-blue-600 hover:text-blue-800 text-sm font-medium"

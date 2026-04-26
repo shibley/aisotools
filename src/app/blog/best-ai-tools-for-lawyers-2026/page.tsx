@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Lawyers & Legal Professionals in 2026",
@@ -571,7 +572,17 @@ export default function BestAIToolsForLawyers2026() {
                   </div>
                 </div>
 
-                <div className="mt-4 border-t pt-4">
+                <div className="mt-4 border-t pt-4 flex items-center gap-4">
+                  {getAffiliateUrl(tool.slug) && (
+                    <a
+                      href={getAffiliateUrl(tool.slug)!}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="text-sm font-medium text-green-600 hover:text-green-800"
+                    >
+                      Try {tool.name} →
+                    </a>
+                  )}
                   <Link
                     href={`/tool/${tool.slug}`}
                     className="text-sm font-medium text-indigo-600 hover:text-indigo-800"

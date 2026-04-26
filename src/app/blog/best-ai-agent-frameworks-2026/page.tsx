@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Agent Frameworks in 2026: Build Autonomous AI Agents",
@@ -390,6 +391,16 @@ export default function BestAIAgentFrameworks() {
             <div className="mt-1 text-sm text-red-600">✗ Not for: {fw.notFor}</div>
 
             <div className="mt-4 flex gap-3">
+              {getAffiliateUrl(fw.slug) && (
+                <a
+                  href={getAffiliateUrl(fw.slug)!}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-flex items-center rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700"
+                >
+                  Try {fw.name} →
+                </a>
+              )}
               <Link
                 href={`/tool/${fw.slug}`}
                 className="inline-flex items-center rounded-lg bg-gray-800 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"

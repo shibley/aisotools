@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for HR Professionals in 2026",
@@ -528,12 +529,12 @@ export default function BestAIToolsForHRPage() {
                         </div>
                       </div>
                       <a
-                        href={tool.url}
+                        href={getAffiliateUrl(tool.slug) || tool.url}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel={`noopener noreferrer${getAffiliateUrl(tool.slug) ? " sponsored" : ""}`}
                         className="shrink-0 text-sm bg-blue-600 hover:bg-blue-500 text-white px-4 py-1.5 rounded-lg transition-colors"
                       >
-                        Visit →
+                        {getAffiliateUrl(tool.slug) ? `Try ${tool.name} →` : "Visit →"}
                       </a>
                     </div>
 

@@ -1,6 +1,7 @@
 import { tools } from "@/data/tools";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Recruiters in 2026: Hire Faster, Hire Better",
@@ -465,6 +466,16 @@ export default function BestAIToolsForRecruitersPage() {
                       <span className="text-xs font-medium text-gray-500">Best for: </span>
                       <span className="text-xs text-gray-600">{tool.bestFor}</span>
                     </div>
+                    {getAffiliateUrl(tool.slug) && (
+                      <a
+                        href={getAffiliateUrl(tool.slug)!}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="text-sm font-medium text-green-600 hover:text-green-800"
+                      >
+                        Try {tool.name} →
+                      </a>
+                    )}
                     <Link
                       href={`/tool/${tool.slug}`}
                       className="text-sm font-medium text-blue-600 hover:text-blue-800"
