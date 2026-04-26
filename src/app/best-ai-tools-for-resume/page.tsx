@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Resume Tools 2026: 10 AI Resume Builders & Optimizers Compared",
@@ -30,6 +31,8 @@ export const metadata: Metadata = {
 interface ResumeTool {
   name: string;
   slug: string;
+  affiliateSlug?: string;
+  website: string;
   category: string;
   description: string;
   pricing: string;
@@ -45,6 +48,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Teal",
     slug: "teal",
+    website: "https://www.tealhq.com",
     category: "Resume Optimization",
     description: "AI-powered career platform that helps job seekers create ATS-optimized resumes tailored to specific job descriptions. Teal's AI analyzes job postings, identifies matching keywords, and suggests improvements to increase your chances of passing applicant tracking systems.",
     pricing: "Freemium",
@@ -58,6 +62,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Kickresume",
     slug: "kickresume",
+    website: "https://www.kickresume.com",
     category: "Resume Builder",
     description: "AI resume and cover letter builder with 40+ professional templates designed by typographers. Kickresume's AI writes bullet points, generates cover letters, and creates personal websites — making it the most complete AI-powered career document platform.",
     pricing: "Freemium",
@@ -71,6 +76,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Resume.io",
     slug: "resume-io",
+    website: "https://resume.io",
     category: "Resume Builder",
     description: "Popular AI-enhanced resume builder used by 25+ million job seekers. Offers professional templates, AI suggestions for bullet points, and built-in formatting that ensures ATS compatibility. Simple, fast, and effective for most job seekers.",
     pricing: "Freemium",
@@ -84,6 +90,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Rezi",
     slug: "rezi",
+    website: "https://www.rezi.ai",
     category: "ATS Optimization",
     description: "AI resume builder focused specifically on ATS optimization. Rezi's AI analyzes your resume against ATS parsing algorithms, identifies formatting issues, keyword gaps, and content weaknesses — then fixes them automatically. Also generates AI-written resumes from scratch based on job descriptions.",
     pricing: "Freemium",
@@ -97,6 +104,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "ChatGPT",
     slug: "chatgpt",
+    website: "https://chat.openai.com",
     category: "AI Writing",
     description: "While not a resume builder, ChatGPT is the most versatile AI tool for resume content writing. Use it to rewrite bullet points with stronger action verbs, tailor your resume to specific job descriptions, generate cover letters, and practice interview answers.",
     pricing: "Freemium",
@@ -110,6 +118,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Jobscan",
     slug: "jobscan",
+    website: "https://www.jobscan.co",
     category: "ATS Optimization",
     description: "AI-powered resume scanner that compares your resume against specific job descriptions to calculate a match score. Jobscan identifies missing keywords, formatting issues, and skill gaps — showing you exactly what to change to get past ATS filters.",
     pricing: "Freemium",
@@ -123,6 +132,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Enhancv",
     slug: "enhancv",
+    website: "https://enhancv.com",
     category: "Resume Builder",
     description: "Modern AI resume builder that combines beautiful design with AI content assistance. Enhancv offers unique resume sections (mini-projects, day-in-my-life, strengths chart) and AI-powered suggestions that help your resume stand out beyond standard templates.",
     pricing: "Freemium",
@@ -136,6 +146,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Novoresume",
     slug: "novoresume",
+    website: "https://novoresume.com",
     category: "Resume Builder",
     description: "Clean, professional AI resume builder popular with European job seekers. Novoresume offers ATS-tested templates, content suggestions based on your profession, and real-time content optimization — all with an emphasis on clean, minimalist design.",
     pricing: "Freemium",
@@ -149,6 +160,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Resumaker.ai",
     slug: "resumaker-ai",
+    website: "https://resumaker.ai",
     category: "Quick Builder",
     description: "AI-powered resume generator that creates a complete resume in minutes from your LinkedIn profile or basic information. Resumaker uses AI to write professional bullet points, suggest skills, and format everything into clean, ATS-friendly templates automatically.",
     pricing: "Paid",
@@ -162,6 +174,7 @@ const resumeTools: ResumeTool[] = [
   {
     name: "Zety",
     slug: "zety",
+    website: "https://zety.com",
     category: "Resume Builder",
     description: "One of the most popular resume builders with AI-powered content suggestions and 20+ professional templates. Zety walks you through the resume creation process step-by-step with industry-specific tips and pre-written bullet points you can customize.",
     pricing: "Paid",
@@ -274,9 +287,40 @@ export default function BestAIResumeToolsPage() {
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-400 mb-4">
                   <strong className="text-gray-300">Best for:</strong> {tool.bestFor}
                 </p>
+
+                <div className="flex gap-3 pt-4 border-t border-gray-800">
+                  {(() => {
+                    const affiliateHref = tool.affiliateSlug ? getAffiliateUrl(tool.affiliateSlug) : null;
+                    return affiliateHref ? (
+                      <a
+                        href={affiliateHref}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="flex-1 bg-violet-600 hover:bg-violet-700 text-white text-center px-4 py-2 rounded-lg text-sm font-medium transition"
+                      >
+                        Try {tool.name} →
+                      </a>
+                    ) : (
+                      <a
+                        href={tool.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-violet-600 hover:bg-violet-700 text-white text-center px-4 py-2 rounded-lg text-sm font-medium transition"
+                      >
+                        Visit {tool.name} →
+                      </a>
+                    );
+                  })()}
+                  <Link
+                    href={`/tool/${tool.slug}`}
+                    className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+                  >
+                    Full Review
+                  </Link>
+                </div>
               </div>
             </article>
           ))}

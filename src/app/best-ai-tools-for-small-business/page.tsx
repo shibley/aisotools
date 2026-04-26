@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Small Business 2026 — 15 Tools with Real ROI",
@@ -28,6 +29,8 @@ export const metadata: Metadata = {
 interface BusinessTool {
   name: string;
   slug?: string;
+  affiliateSlug?: string;
+  website: string;
   category: string;
   description: string;
   businessFunction: string;
@@ -46,6 +49,8 @@ const businessTools: BusinessTool[] = [
   {
     name: "Jasper",
     slug: "jasper",
+    affiliateSlug: "jasper",
+    website: "https://www.jasper.ai",
     category: "Marketing",
     description: "AI writing assistant for marketing copy, blog posts, and social media content",
     businessFunction: "Content marketing at scale",
@@ -66,6 +71,8 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "Canva AI",
+    affiliateSlug: "canva-ai",
+    website: "https://www.canva.com",
     category: "Marketing",
     description: "Design platform with AI features for creating marketing materials",
     businessFunction: "Professional design without hiring designers",
@@ -86,6 +93,8 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "Buffer AI",
+    affiliateSlug: "buffer",
+    website: "https://buffer.com",
     category: "Marketing",
     description: "Social media management with AI-powered content creation and scheduling",
     businessFunction: "Social media marketing automation",
@@ -107,6 +116,7 @@ const businessTools: BusinessTool[] = [
   // Sales
   {
     name: "HubSpot AI",
+    website: "https://www.hubspot.com",
     category: "Sales",
     description: "CRM with AI-powered sales automation and content generation",
     businessFunction: "Sales pipeline management and automation",
@@ -127,6 +137,7 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "Apollo.ai",
+    website: "https://www.apollo.io",
     category: "Sales",
     description: "Sales intelligence platform with contact database and outreach automation",
     businessFunction: "Lead generation and outreach at scale",
@@ -149,6 +160,7 @@ const businessTools: BusinessTool[] = [
   // Customer Service
   {
     name: "Intercom Fin",
+    website: "https://www.intercom.com",
     category: "Customer Service",
     description: "AI customer service chatbot that resolves 50% of support queries instantly",
     businessFunction: "Automated customer support",
@@ -169,6 +181,7 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "Tidio AI",
+    website: "https://www.tidio.com",
     category: "Customer Service",
     description: "Affordable AI chatbot and live chat for small businesses",
     businessFunction: "Customer service automation on a budget",
@@ -191,6 +204,7 @@ const businessTools: BusinessTool[] = [
   {
     name: "Notion AI",
     slug: "notion-ai",
+    website: "https://www.notion.so",
     category: "Operations",
     description: "All-in-one workspace with AI writing and organization features",
     businessFunction: "Knowledge management and team collaboration",
@@ -211,6 +225,7 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "Motion",
+    website: "https://www.usemotion.com",
     category: "Operations",
     description: "AI-powered calendar and project management that auto-schedules tasks",
     businessFunction: "Intelligent task and time management",
@@ -230,6 +245,7 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "Zapier AI",
+    website: "https://zapier.com",
     category: "Operations",
     description: "Workflow automation platform with AI-powered integrations",
     businessFunction: "Business process automation without coding",
@@ -252,6 +268,7 @@ const businessTools: BusinessTool[] = [
   // Finance
   {
     name: "QuickBooks AI",
+    website: "https://quickbooks.intuit.com",
     category: "Finance",
     description: "Accounting software with AI-powered bookkeeping and insights",
     businessFunction: "Automated bookkeeping and financial management",
@@ -271,6 +288,7 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "Expensify",
+    website: "https://www.expensify.com",
     category: "Finance",
     description: "Expense management with AI receipt scanning and auto-categorization",
     businessFunction: "Automated expense tracking and reimbursement",
@@ -292,6 +310,7 @@ const businessTools: BusinessTool[] = [
   // HR
   {
     name: "Gusto",
+    website: "https://gusto.com",
     category: "HR",
     description: "Payroll and HR platform with automated compliance and benefits",
     businessFunction: "Payroll processing and HR administration",
@@ -311,6 +330,7 @@ const businessTools: BusinessTool[] = [
   },
   {
     name: "BambooHR",
+    website: "https://www.bamboohr.com",
     category: "HR",
     description: "HR information system with AI-powered people analytics",
     businessFunction: "Employee data and performance management",
@@ -604,20 +624,34 @@ export default function BestAIToolsForSmallBusinessPage() {
                 </div>
 
                 <div className="flex gap-3 pt-4 border-t border-gray-800">
-                  <a
-                    href={`https://${tool.name.toLowerCase().replace(/\s+/g, "")}.com`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-lg text-sm font-medium transition"
-                  >
-                    Visit {tool.name} →
-                  </a>
+                  {(() => {
+                    const affiliateHref = tool.affiliateSlug ? getAffiliateUrl(tool.affiliateSlug) : null;
+                    return affiliateHref ? (
+                      <a
+                        href={affiliateHref}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center px-4 py-2 rounded-lg text-sm font-medium transition"
+                      >
+                        Try {tool.name} Free →
+                      </a>
+                    ) : (
+                      <a
+                        href={tool.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center px-4 py-2 rounded-lg text-sm font-medium transition"
+                      >
+                        Visit {tool.name} →
+                      </a>
+                    );
+                  })()}
                   {tool.slug && (
                     <Link
                       href={`/tool/${tool.slug}`}
                       className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
                     >
-                      Read Review
+                      Full Review
                     </Link>
                   )}
                 </div>
