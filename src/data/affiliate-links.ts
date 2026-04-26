@@ -144,8 +144,44 @@ export const AFFILIATE_LINKS: Record<string, {
     status: "pending",
   },
 
+  "canva": {
+    url: "", // Apply via canva.com/affiliates (Impact.com) — 25-80% commission
+    program: "Impact.com (Canva Affiliate)",
+    commission: "25-80% on Canva Pro upgrades, 30-day cookie",
+    status: "pending",
+  },
+  "adobe-firefly": {
+    url: "", // Apply via impact.com (Adobe Affiliate) — 85% first month, 8.33% recurring
+    program: "Impact.com (Adobe)",
+    commission: "85% first month sub, then 8.33%/mo recurring",
+    status: "pending",
+  },
+  "semrush": {
+    url: "", // semrush.com/partner — use existing semrush-ai link as template
+    program: "Impact.com (BeRush / SEMrush affiliate)",
+    commission: "$200 per new sale, $10 per trial",
+    status: "pending",
+  },
+  "jasper": {
+    url: "", // jasper.ai/affiliates via Impact.com — $0.50 trial + 25% first year
+    program: "Impact.com (Jasper)",
+    commission: "$0.50/trial, 25% first 12 months (up to $6K/yr per referral)",
+    status: "pending",
+  },
+  "opus-clip": {
+    url: "", // Apply at partners.opus.pro — video repurposing niche
+    program: "Opus Clip Direct",
+    commission: "20% recurring for 12 months",
+    status: "pending",
+  },
+  "veed-io": {
+    url: "", // Apply via ShareASale or veed.io affiliate page
+    program: "ShareASale / VEED Direct",
+    commission: "TBD — popular video editor, high conversion",
+    status: "pending",
+  },
+
   // ── No public affiliate program ──────────
-  // Jasper — No public affiliate program found
   // Synthesia — No partner page found
   // Notion — Not accepting new affiliates
   // Cursor — No affiliate program found
