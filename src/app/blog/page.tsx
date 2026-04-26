@@ -681,6 +681,61 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-voice-generators-2026",
+    title: "Best AI Voice Generators 2026: Text-to-Speech Compared",
+    description:
+      "Compare the best AI voice generators in 2026. From ElevenLabs and Murf to Play.ht and Resemble AI — find the top text-to-speech tools for podcasts, videos, and voiceovers.",
+    category: "Audio & Music",
+    categorySlug: "music",
+    date: "April 26, 2026",
+    readTime: "16 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-free-ai-tools-2026",
+    title: "Best Free AI Tools 2026: Top AI Apps That Cost $0",
+    description:
+      "The best completely free AI tools in 2026 — ChatGPT, Claude, Gemini, Canva AI, Perplexity, NotebookLM, and 20+ more. No credit card required. Tested with real free tier limits.",
+    category: "Chatbots & Assistants",
+    categorySlug: "chatbots",
+    date: "April 26, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-seo-2026",
+    title: "Best AI Tools for SEO 2026: Rank Faster with AI",
+    description:
+      "The best AI SEO tools in 2026 — Surfer SEO, Semrush AI, Clearscope, Frase, Ahrefs AI, and more. Compare features, pricing, and find the right AI for keyword research and content optimization.",
+    category: "Marketing",
+    categorySlug: "marketing",
+    date: "April 26, 2026",
+    readTime: "15 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-chatbots-2026",
+    title: "Best AI Chatbots 2026: Top Conversational AI Compared",
+    description:
+      "Compare the best AI chatbots in 2026 — ChatGPT, Claude, Gemini, Perplexity, Grok, Mistral, DeepSeek, and more. Find the right AI assistant for writing, coding, and research.",
+    category: "Chatbots & Assistants",
+    categorySlug: "chatbots",
+    date: "April 26, 2026",
+    readTime: "18 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-productivity-tools-2026",
+    title: "Best AI Productivity Tools 2026: Work Smarter with AI",
+    description:
+      "The best AI productivity tools in 2026 — AI meeting notes, email writers, task managers, knowledge tools, and automation. Save 2+ hours per day with the right AI stack.",
+    category: "Business",
+    categorySlug: "business",
+    date: "April 26, 2026",
+    readTime: "16 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
