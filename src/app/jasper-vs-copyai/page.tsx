@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Jasper vs Copy.ai (2026): Enterprise Brand AI vs GTM Automation",
@@ -100,6 +101,11 @@ const jsonLd = {
 };
 
 export default function JasperVsCopyaiPage() {
+  const jasperHref = getAffiliateUrl("jasper") ?? "/tool/jasper";
+  const jasperExternal = jasperHref.startsWith("http");
+  const copyaiHref = getAffiliateUrl("copy-ai") ?? "/tool/copy-ai";
+  const copyaiExternal = copyaiHref.startsWith("http");
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <script
@@ -161,6 +167,7 @@ export default function JasperVsCopyaiPage() {
                   • You want purpose-built marketing AI, not general-purpose
                 </li>
               </ul>
+              <a href={jasperHref} target={jasperExternal ? "_blank" : undefined} rel={jasperExternal ? "noopener noreferrer sponsored" : undefined} className="inline-block mt-4 bg-purple-600 hover:bg-purple-700 text-white px-5 py-2.5 rounded-lg font-medium transition text-sm">Try Jasper →</a>
             </div>
             <div className="bg-black/30 rounded-lg p-5">
               <h3 className="text-lg font-semibold text-blue-300 mb-2">
@@ -181,6 +188,7 @@ export default function JasperVsCopyaiPage() {
                   • You need AI across sales, marketing, and operations
                 </li>
               </ul>
+              <a href={copyaiHref} target={copyaiExternal ? "_blank" : undefined} rel={copyaiExternal ? "noopener noreferrer sponsored" : undefined} className="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition text-sm">Try Copy.ai →</a>
             </div>
           </div>
         </div>
