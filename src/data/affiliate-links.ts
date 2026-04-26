@@ -144,7 +144,7 @@ export const AFFILIATE_LINKS: Record<string, {
     status: "pending",
   },
 
-  "canva": {
+  "canva-ai": {
     url: "", // Apply via canva.com/affiliates (Impact.com) — 25-80% commission
     program: "Impact.com (Canva Affiliate)",
     commission: "25-80% on Canva Pro upgrades, 30-day cookie",
