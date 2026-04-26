@@ -174,6 +174,12 @@ export const AFFILIATE_LINKS: Record<string, {
     commission: "20% recurring for 12 months",
     status: "pending",
   },
+  "opusclip": {
+    url: "", // Alias for opus-clip (slug used in some blog pages)
+    program: "Opus Clip Direct",
+    commission: "20% recurring for 12 months",
+    status: "pending",
+  },
   "veed-io": {
     url: "", // Apply via ShareASale or veed.io affiliate page
     program: "ShareASale / VEED Direct",

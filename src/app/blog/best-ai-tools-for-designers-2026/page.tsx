@@ -1,3 +1,4 @@
+import { getAffiliateUrl } from "@/data/affiliate-links";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -326,7 +327,9 @@ export default function BestAIToolsForDesigners2026() {
 
         {/* Tool Reviews */}
         <section className="space-y-10 mb-16">
-          {designTools.map((tool, index) => (
+          {designTools.map((tool, index) => {
+            const affiliateUrl = getAffiliateUrl(tool.slug);
+            return (
             <article
               key={tool.slug}
               id={tool.slug}
@@ -350,12 +353,24 @@ export default function BestAIToolsForDesigners2026() {
                       {tool.pricing} · {tool.pricingDetails}
                     </p>
                   </div>
-                  <Link
-                    href={`/tool/${tool.slug}`}
-                    className="shrink-0 bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-pink-700 transition-colors"
-                  >
-                    View Details →
-                  </Link>
+                  <div className="flex flex-col gap-2 items-end shrink-0">
+                    {affiliateUrl && (
+                      <a
+                        href={affiliateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                      >
+                        Try Free →
+                      </a>
+                    )}
+                    <Link
+                      href={`/tool/${tool.slug}`}
+                      className="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-pink-700 transition-colors"
+                    >
+                      {affiliateUrl ? "Full Review →" : "View Details →"}
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -393,7 +408,8 @@ export default function BestAIToolsForDesigners2026() {
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </section>
 
         {/* Designer AI Stack Guide */}
