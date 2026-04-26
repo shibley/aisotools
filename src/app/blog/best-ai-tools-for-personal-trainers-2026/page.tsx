@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Personal Trainers in 2026: Grow Your Client Base",
@@ -265,7 +266,9 @@ export default function BestAIToolsForPersonalTrainers() {
 
       <section className="space-y-12">
         <h2 className="text-3xl font-bold text-gray-900">The 8 Best AI Tools for Personal Trainers</h2>
-        {trainerTools.map((tool, i) => (
+        {trainerTools.map((tool, i) => {
+          const affiliateUrl = getAffiliateUrl(tool.slug);
+          return (
           <div key={tool.slug} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
             <div className="mb-4">
               <div className="mb-1 inline-block rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-700">
@@ -300,11 +303,21 @@ export default function BestAIToolsForPersonalTrainers() {
             </div>
 
             <div className="mt-4 flex flex-wrap gap-3">
+              {affiliateUrl && (
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-flex items-center rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700"
+                >
+                  Try {tool.name} →
+                </a>
+              )}
               <Link
                 href={`/tool/${tool.slug}`}
                 className="inline-flex items-center rounded-lg bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-700"
               >
-                View {tool.name} →
+                {affiliateUrl ? "Full Review →" : `View ${tool.name} →`}
               </Link>
               <Link
                 href={`/alternatives/${tool.slug}`}
@@ -314,7 +327,8 @@ export default function BestAIToolsForPersonalTrainers() {
               </Link>
             </div>
           </div>
-        ))}
+          );
+        })}
       </section>
 
       <section className="my-12">

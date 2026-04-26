@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Game Developers in 2026: Build Games Faster",
@@ -246,7 +247,9 @@ export default function BestAIToolsForGameDevelopers2026() {
       {/* Tools */}
       <section className="space-y-12">
         <h2 className="text-3xl font-bold text-gray-900">The 8 Best AI Tools for Game Developers</h2>
-        {gameDevTools.map((tool, i) => (
+        {gameDevTools.map((tool, i) => {
+          const affiliateUrl = getAffiliateUrl(tool.slug);
+          return (
           <div key={tool.slug} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
             <div className="mb-4 flex items-start justify-between">
               <div>
@@ -282,7 +285,17 @@ export default function BestAIToolsForGameDevelopers2026() {
               <span className="text-gray-500">🎯 {tool.bestFor}</span>
             </div>
 
-            <div className="mt-4 flex gap-3">
+            <div className="mt-4 flex gap-3 flex-wrap">
+              {affiliateUrl && (
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className="inline-flex items-center rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700"
+                >
+                  Try {tool.name} →
+                </a>
+              )}
               <Link
                 href={`/tool/${tool.slug}`}
                 className="inline-flex items-center rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
@@ -297,7 +310,8 @@ export default function BestAIToolsForGameDevelopers2026() {
               </Link>
             </div>
           </div>
-        ))}
+          );
+        })}
       </section>
 
       {/* Comparison Table */}

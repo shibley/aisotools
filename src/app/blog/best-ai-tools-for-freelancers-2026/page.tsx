@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Freelancers in 2026: Work Smarter, Earn More",
@@ -548,7 +549,9 @@ export default function BestAIToolsForFreelancers() {
           <p className="text-gray-400 mb-8">{category.description}</p>
 
           <div className="space-y-6">
-            {category.tools.map((tool) => (
+            {category.tools.map((tool) => {
+              const affiliateUrl = getAffiliateUrl(tool.slug);
+              return (
               <div
                 key={tool.name}
                 className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition"
@@ -609,18 +612,29 @@ export default function BestAIToolsForFreelancers() {
                       Best For
                     </h4>
                     <p className="text-sm text-gray-300">{tool.bestFor}</p>
-                    <div className="mt-4">
+                    <div className="mt-4 flex items-center gap-3">
+                      {affiliateUrl && (
+                        <a
+                          href={affiliateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer sponsored"
+                          className="inline-flex items-center gap-1 text-sm text-green-400 hover:text-green-300 transition font-medium"
+                        >
+                          Try {tool.name} →
+                        </a>
+                      )}
                       <Link
                         href={`/tool/${tool.slug}`}
                         className="inline-flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300 transition"
                       >
-                        View full profile →
+                        {affiliateUrl ? "Full Review →" : "View full profile →"}
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </section>
       ))}
