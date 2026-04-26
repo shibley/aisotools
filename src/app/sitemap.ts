@@ -76,6 +76,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/gemini-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/alternatives/zapier`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/figma-alternatives`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/alternatives/loom`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/alternatives/tome`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/alternatives/beautiful-ai`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     // Standalone pricing pages
     { url: `${base}/chatgpt-plus-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${base}/midjourney-pricing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
