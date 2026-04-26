@@ -427,7 +427,9 @@ export default function BestAIToolsForPodcastersPage() {
             <p className="text-gray-600 mb-6">{category.description}</p>
 
             <div className="space-y-6">
-              {category.tools.map((tool) => (
+              {category.tools.map((tool) => {
+                const affiliateUrl = getAffiliateUrl(tool.slug);
+                return (
                 <div
                   key={tool.slug}
                   className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors"
@@ -479,15 +481,28 @@ export default function BestAIToolsForPodcastersPage() {
                       <span className="text-xs font-medium text-gray-500">Best for: </span>
                       <span className="text-xs text-gray-600">{tool.bestFor}</span>
                     </div>
-                    <Link
-                      href={`/tool/${tool.slug}`}
-                      className="text-sm font-medium text-blue-600 hover:text-blue-800"
-                    >
-                      View Details →
-                    </Link>
+                    <div className="flex items-center gap-2">
+                      {affiliateUrl && (
+                        <a
+                          href={affiliateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer sponsored"
+                          className="text-sm font-medium text-green-600 hover:text-green-800"
+                        >
+                          Try {tool.name} →
+                        </a>
+                      )}
+                      <Link
+                        href={`/tool/${tool.slug}`}
+                        className="text-sm font-medium text-blue-600 hover:text-blue-800"
+                      >
+                        {affiliateUrl ? "Full Review →" : "View Details →"}
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         ))}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best AI Tools for Marketing Agencies in 2026: Scale Output, Not Headcount",
@@ -347,7 +348,9 @@ export default function BestAIToolsForMarketingAgencies2026() {
 
         {/* Individual Tool Reviews */}
         <section className="space-y-12 mb-16">
-          {agencyTools.map((tool, index) => (
+          {agencyTools.map((tool, index) => {
+            const affiliateUrl = getAffiliateUrl(tool.slug);
+            return (
             <article
               key={tool.slug}
               id={tool.slug}
@@ -371,12 +374,23 @@ export default function BestAIToolsForMarketingAgencies2026() {
                       {tool.pricing} · {tool.pricingDetails}
                     </p>
                   </div>
-                  <Link
-                    href={`/tool/${tool.slug}`}
-                    className="shrink-0 bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-violet-700 transition-colors"
-                  >
-                    View Details →
-                  </Link>
+                  {affiliateUrl ? (
+                    <a
+                      href={affiliateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="shrink-0 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                    >
+                      Try {tool.name} →
+                    </a>
+                  ) : (
+                    <Link
+                      href={`/tool/${tool.slug}`}
+                      className="shrink-0 bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-violet-700 transition-colors"
+                    >
+                      View Details →
+                    </Link>
+                  )}
                 </div>
               </div>
 
@@ -414,7 +428,8 @@ export default function BestAIToolsForMarketingAgencies2026() {
                 </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </section>
 
         {/* How to Build Your Agency AI Stack */}
