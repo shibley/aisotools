@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Grammarly vs QuillBot (2026): Which Writing Tool is Better?",
@@ -100,6 +101,9 @@ const jsonLd = {
 };
 
 export default function GrammarlyVsQuillBotPage() {
+  const grammarlyHref = getAffiliateUrl("grammarly") ?? "https://www.grammarly.com";
+  const quillbotHref = getAffiliateUrl("quillbot") ?? "https://quillbot.com";
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <script
@@ -1140,9 +1144,9 @@ export default function GrammarlyVsQuillBotPage() {
             Best for grammar checking, tone, and professional writing
           </p>
           <a
-            href="https://www.grammarly.com"
+            href={grammarlyHref}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={`noopener noreferrer${getAffiliateUrl("grammarly") ? " sponsored" : ""}`}
             className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition"
           >
             Start with Grammarly →
@@ -1155,9 +1159,9 @@ export default function GrammarlyVsQuillBotPage() {
             Best for paraphrasing, rewriting, and AI content tools
           </p>
           <a
-            href="https://quillbot.com"
+            href={quillbotHref}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={`noopener noreferrer${getAffiliateUrl("quillbot") ? " sponsored" : ""}`}
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition"
           >
             Start with QuillBot →

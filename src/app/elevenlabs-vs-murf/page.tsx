@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "ElevenLabs vs Murf (2026): Best AI Voice Generator Compared",
@@ -15,6 +16,11 @@ export const metadata: Metadata = {
 };
 
 export default function ElevenLabsVsMurfPage() {
+  const elevenLabsHref = getAffiliateUrl("elevenlabs") ?? "/tool/elevenlabs";
+  const elevenLabsExternal = elevenLabsHref.startsWith("http");
+  const murfHref = getAffiliateUrl("murf-ai") ?? "/tool/murf-ai";
+  const murfExternal = murfHref.startsWith("http");
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <nav className="text-sm text-gray-500 mb-6">
@@ -95,7 +101,7 @@ export default function ElevenLabsVsMurfPage() {
                 <li key={item} className="flex items-start gap-2 text-gray-300"><span className="text-blue-400 mt-0.5">✓</span> {item}</li>
               ))}
             </ul>
-            <Link href="/tool/elevenlabs" className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition">Try ElevenLabs →</Link>
+            <a href={elevenLabsHref} target={elevenLabsExternal ? "_blank" : undefined} rel={elevenLabsExternal ? "noopener noreferrer sponsored" : undefined} className="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg font-medium transition">Try ElevenLabs →</a>
           </div>
           <div className="bg-pink-500/5 border border-pink-500/20 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-pink-400 mb-4">Choose Murf When...</h3>
@@ -104,7 +110,7 @@ export default function ElevenLabsVsMurfPage() {
                 <li key={item} className="flex items-start gap-2 text-gray-300"><span className="text-pink-400 mt-0.5">✓</span> {item}</li>
               ))}
             </ul>
-            <Link href="/tool/murf" className="inline-block mt-6 bg-pink-600 hover:bg-pink-700 text-white px-5 py-2.5 rounded-lg font-medium transition">Try Murf →</Link>
+            <a href={murfHref} target={murfExternal ? "_blank" : undefined} rel={murfExternal ? "noopener noreferrer sponsored" : undefined} className="inline-block mt-6 bg-pink-600 hover:bg-pink-700 text-white px-5 py-2.5 rounded-lg font-medium transition">Try Murf →</a>
           </div>
         </div>
       </section>
