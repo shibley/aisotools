@@ -118,6 +118,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/compare/perplexity-vs-youcom`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/compare/midjourney-vs-flux`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/compare/sora-vs-luma-dream-machine`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
+    { url: `${base}/compare/chatgpt-vs-claude`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/compare/chatgpt-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/compare/cursor-vs-github-copilot`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${base}/compare/elevenlabs-vs-murf-ai`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     // aiso-taaft-gaps use case pages
     { url: `${base}/use-case/ai-for-writing-seo-content`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
     { url: `${base}/use-case/ai-for-video-editing`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.85 },
