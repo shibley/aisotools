@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: "Best Free Midjourney Alternatives in 2026 (No Subscription Needed)",
@@ -362,7 +363,20 @@ export default function FreeMidjourneyAlternativesPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 flex-wrap items-center">
+                  {(() => {
+                    const affiliateUrl = getAffiliateUrl(alt.slug);
+                    return affiliateUrl ? (
+                      <a
+                        href={affiliateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        className="inline-flex items-center rounded-lg bg-purple-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-purple-700"
+                      >
+                        Try {alt.name} →
+                      </a>
+                    ) : null;
+                  })()}
                   <Link href={`/tool/${alt.slug}`} className="text-sm text-blue-400 hover:text-blue-300 transition">
                     View tool details →
                   </Link>
