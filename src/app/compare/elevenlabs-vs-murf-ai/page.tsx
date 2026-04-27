@@ -372,9 +372,9 @@ export default function ElevenLabsVsMurfPage() {
                 ))}
               </ul>
               <a
-                href="https://elevenlabs.io"
+                href="https://try.elevenlabs.io/7j98rr4eeebw?utm_source=aisotools&utm_medium=affiliate&utm_campaign=elevenlabs&utm_content=compare-vs-murf"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer sponsored"
                 className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
               >
                 Try ElevenLabs →
@@ -399,9 +399,9 @@ export default function ElevenLabsVsMurfPage() {
                 ))}
               </ul>
               <a
-                href="https://murf.ai"
+                href="https://get.murf.ai/kveyd98v1qu6?utm_source=aisotools&utm_medium=affiliate&utm_campaign=murf-ai&utm_content=compare-vs-elevenlabs"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer sponsored"
                 className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
               >
                 Try Murf AI →
