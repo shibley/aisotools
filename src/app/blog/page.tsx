@@ -736,6 +736,51 @@ const blogPosts: BlogPost[] = [
     readTime: "16 min read",
     badge: "New",
   },
+  // aiso-taaft-gaps sprint: SEO gap posts targeting high-volume keywords
+  {
+    slug: "free-chatgpt-alternatives-2026",
+    title: "Best Free ChatGPT Alternatives in 2026 (Tested & Ranked)",
+    description:
+      "The best free ChatGPT alternatives in 2026 — Claude, Gemini, Copilot, Perplexity, DeepSeek, and more. All tested on free tier with honest limits and recommendations.",
+    category: "Chatbots & Assistants",
+    categorySlug: "chatbots",
+    date: "April 27, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "free-midjourney-alternatives-2026",
+    title: "Best Free Midjourney Alternatives in 2026 (No Subscription Needed)",
+    description:
+      "Top free Midjourney alternatives — Stable Diffusion, DALL-E 3, Adobe Firefly, Ideogram, Leonardo AI, and more. Image quality compared with honest free tier limits.",
+    category: "Image Generation",
+    categorySlug: "image-generation",
+    date: "April 27, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "claude-vs-gemini",
+    title: "Claude vs Gemini: Which AI Assistant is Better in 2026?",
+    description:
+      "Anthropic Claude vs Google Gemini — head-to-head on writing, coding, context window, pricing, and real-world use cases. Which AI wins?",
+    category: "Chatbots & Assistants",
+    categorySlug: "chatbots",
+    date: "April 27, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "perplexity-vs-chatgpt-vs-google",
+    title: "Perplexity vs ChatGPT vs Google: Best AI Search Tool in 2026?",
+    description:
+      "Which is better for research — Perplexity AI, ChatGPT, or Google Search? Honest three-way comparison with use case recommendations.",
+    category: "Chatbots & Assistants",
+    categorySlug: "chatbots",
+    date: "April 27, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {

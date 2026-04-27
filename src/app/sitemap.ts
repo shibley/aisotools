@@ -155,6 +155,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-tools-for-seo-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.88 },
     { url: `${base}/blog/best-ai-chatbots-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
     { url: `${base}/blog/best-ai-productivity-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.88 },
+    // aiso-taaft-gaps sprint: SEO gap posts
+    { url: `${base}/blog/free-chatgpt-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/free-midjourney-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    { url: `${base}/blog/claude-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    { url: `${base}/blog/perplexity-vs-chatgpt-vs-google`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
   ];
 
   const toolPages = tools.map((tool) => ({
