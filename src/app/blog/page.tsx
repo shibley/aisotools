@@ -779,6 +779,49 @@ const blogPosts: BlogPost[] = [
     categorySlug: "chatbots",
     date: "April 27, 2026",
     readTime: "12 min read",
+  },
+  {
+    slug: "free-grammarly-alternatives-2026",
+    title: "7 Best Free Grammarly Alternatives in 2026 (Tested)",
+    description:
+      "The best free Grammarly alternatives: QuillBot, LanguageTool, Hemingway Editor, Microsoft Editor, Wordtune, Claude, and ChatGPT. Tested with real writing samples.",
+    category: "Writing & Content",
+    categorySlug: "writing",
+    date: "April 27, 2026",
+    readTime: "8 min read",
+    badge: "New",
+  },
+  {
+    slug: "free-github-copilot-alternatives-2026",
+    title: "7 Best Free GitHub Copilot Alternatives in 2026 (Tested)",
+    description:
+      "The best free GitHub Copilot alternatives: Codeium, GitHub Copilot Free, Tabnine, Amazon Q Developer, Continue, Supermaven, and Replit. Tested on real coding workflows.",
+    category: "Coding & Development",
+    categorySlug: "coding",
+    date: "April 27, 2026",
+    readTime: "9 min read",
+    badge: "New",
+  },
+  {
+    slug: "free-jasper-alternatives-2026",
+    title: "8 Best Free Jasper Alternatives in 2026 (Tested)",
+    description:
+      "The best free Jasper AI alternatives: Claude, ChatGPT, Copy.ai, Writesonic, Rytr, Gemini, Microsoft Copilot, and Perplexity. Tested with real marketing copy tasks.",
+    category: "Writing & Content",
+    categorySlug: "writing",
+    date: "April 27, 2026",
+    readTime: "9 min read",
+    badge: "New",
+  },
+  {
+    slug: "free-cursor-alternatives-2026",
+    title: "7 Best Free Cursor Alternatives in 2026 (Tested)",
+    description:
+      "The best free Cursor alternatives: Windsurf, Continue + VS Code, PearAI, GitHub Copilot Free, Zed, Codeium, and Replit. Tested on real agentic coding workflows.",
+    category: "Coding & Development",
+    categorySlug: "coding",
+    date: "April 27, 2026",
+    readTime: "8 min read",
     badge: "New",
   },
 ];

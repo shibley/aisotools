@@ -164,6 +164,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/free-midjourney-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/blog/claude-vs-gemini`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/blog/perplexity-vs-chatgpt-vs-google`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
+    { url: `${base}/blog/free-grammarly-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/free-github-copilot-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/free-jasper-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    { url: `${base}/blog/free-cursor-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
   ];
 
   const toolPages = tools.map((tool) => ({
