@@ -176,6 +176,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/alternatives/airtable`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/compare/cursor-vs-windsurf`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/compare/n8n-vs-zapier`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    // aiso-taaft-gaps sprint Apr 28 2026: high-SV alternatives blog posts
+    { url: `${base}/blog/free-claude-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/notion-ai-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/canva-ai-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
   ];
 
   const toolPages = tools.map((tool) => ({

@@ -824,6 +824,40 @@ const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     badge: "New",
   },
+  // aiso-taaft-gaps sprint Apr 28 2026: high-SV alternatives blog posts
+  {
+    slug: "free-claude-alternatives-2026",
+    title: "Best Free Claude AI Alternatives in 2026 (Tested & Ranked)",
+    description:
+      "The best free Claude AI alternatives — ChatGPT, Gemini, Copilot, DeepSeek, Perplexity, and more. Tested on free tiers with use-case recommendations.",
+    category: "Chatbots & Assistants",
+    categorySlug: "chatbots",
+    date: "April 28, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "notion-ai-alternatives-2026",
+    title: "Best Notion AI Alternatives in 2026 (Free & Paid)",
+    description:
+      "Top Notion AI alternatives: ClickUp AI, Mem AI, Obsidian, Coda, Tana, and more. Compared on AI features, pricing, and use cases.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "April 28, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "canva-ai-alternatives-2026",
+    title: "Best Canva AI Alternatives in 2026 (Free & Paid)",
+    description:
+      "Top Canva AI alternatives: Adobe Express, Microsoft Designer, Recraft AI, Picsart, Simplified, and more. Compared on AI features, templates, and pricing.",
+    category: "Design Tools",
+    categorySlug: "design",
+    date: "April 28, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
