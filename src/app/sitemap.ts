@@ -168,6 +168,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/free-github-copilot-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/blog/free-jasper-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/blog/free-cursor-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    // aiso-taaft-gaps sprint Apr 28 2026: 5 alternatives + 2 compare pages
+    { url: `${base}/alternatives/figma`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/alternatives/notion`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/alternatives/trello`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/alternatives/slack`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/alternatives/airtable`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/compare/cursor-vs-windsurf`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    { url: `${base}/compare/n8n-vs-zapier`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
   ];
 
   const toolPages = tools.map((tool) => ({
