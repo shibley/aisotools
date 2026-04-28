@@ -1442,6 +1442,7 @@ export const toolsBatch8: Tool[] = [
     description: "AI paraphrasing tool and writing assistant for students and professionals. QuillBot rewrites sentences while preserving meaning, with grammar checking, summarization, and citation generation.",
     shortDescription: "AI paraphrasing and writing assistant",
     url: "https://quillbot.com",
+    affiliateUrl: "https://try.quillbot.com/lxppa7cxlgq6",
     category: "writing",
     subcategory: "Copywriting",
     tags: ["paraphrasing", "writing", "grammar", "summarization", "citations", "ai-writer"],

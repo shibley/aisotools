@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
   title: 'Best Wordtune Alternatives in 2026: 12 AI Writing & Rewriting Tools Compared',
@@ -107,6 +108,7 @@ const breadcrumbJsonLd = {
 };
 
 export default function WordtuneAlternativesPage() {
+  const quillbotAffUrl = getAffiliateUrl("quillbot") || "https://quillbot.com";
   return (
     <>
       <script
@@ -297,6 +299,16 @@ export default function WordtuneAlternativesPage() {
               mode-based rewriting rather than Wordtune&apos;s multi-suggestion approach. At $8.33/mo annual vs
               Wordtune Unlimited at $6.99/mo annual, QuillBot costs slightly more but includes plagiarism detection.
             </p>
+          </div>
+          <div className="mt-4">
+            <a
+              href={quillbotAffUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition"
+            >
+              Try QuillBot Free →
+            </a>
           </div>
         </section>
 
