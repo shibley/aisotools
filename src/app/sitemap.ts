@@ -180,6 +180,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/free-claude-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/blog/notion-ai-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/blog/canva-ai-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    // aiso-taaft-gaps sprint Apr 29 2026: writers guide + Gemini/Perplexity alternatives
+    { url: `${base}/blog/best-ai-tools-for-writers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/gemini-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/perplexity-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
   ];
 
   const toolPages = tools.map((tool) => ({

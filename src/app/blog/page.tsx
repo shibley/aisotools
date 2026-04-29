@@ -824,6 +824,40 @@ const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     badge: "New",
   },
+  // aiso-taaft-gaps sprint Apr 29 2026: writers guide + Gemini/Perplexity alternatives
+  {
+    slug: "best-ai-tools-for-writers-2026",
+    title: "Best AI Tools for Writers in 2026 (Fiction, Blogging & Copywriting)",
+    description:
+      "The best AI tools for writers in 2026 — Claude, ChatGPT, Jasper, Sudowrite, Grammarly compared by writer type. Fiction, blogging, journalism, copywriting.",
+    category: "Writing & Content",
+    categorySlug: "writing",
+    date: "April 29, 2026",
+    readTime: "16 min read",
+    badge: "New",
+  },
+  {
+    slug: "gemini-alternatives-2026",
+    title: "Best Google Gemini Alternatives in 2026 (Free & Paid)",
+    description:
+      "Not happy with Google Gemini? Claude, ChatGPT, Copilot, Perplexity, and Mistral compared — better writing quality, privacy, and research tools.",
+    category: "Chatbots & Assistants",
+    categorySlug: "chatbots",
+    date: "April 29, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "perplexity-alternatives-2026",
+    title: "Best Perplexity AI Alternatives in 2026 (Free & Paid)",
+    description:
+      "The best Perplexity alternatives: Microsoft Copilot, Claude, Gemini, You.com, Kagi, Arc Search. Compared on research quality, citations, and pricing.",
+    category: "Research Tools",
+    categorySlug: "research",
+    date: "April 29, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
   // aiso-taaft-gaps sprint Apr 28 2026: high-SV alternatives blog posts
   {
     slug: "free-claude-alternatives-2026",
