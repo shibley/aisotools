@@ -892,6 +892,39 @@ const blogPosts: BlogPost[] = [
     readTime: "14 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-meeting-assistant-tools-2026",
+    title: "Best AI Meeting Assistant Tools in 2026",
+    description:
+      "The 9 best AI meeting assistants: Otter.ai, Fireflies, Grain, MeetGeek, Read AI, Fellow, Sembly, Laxis, and Airgram. Transcribe, summarize, and extract action items automatically.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-presentation-tools-2026",
+    title: "Best AI Presentation Tools in 2026",
+    description:
+      "The 8 best AI presentation tools: Gamma, Tome, Beautiful.ai, Pitch, Canva AI, Prezi, SlidesAI, and Copilot. Create professional decks in minutes from a single prompt.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "11 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-note-taking-apps-2026",
+    title: "Best AI Note Taking Apps in 2026",
+    description:
+      "The 8 best AI note taking apps: Notion AI, Obsidian, Mem AI, Heptabase, Capacities, Rewind AI, Tana, and Limitless. Build your second brain with AI-powered organization and search.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
