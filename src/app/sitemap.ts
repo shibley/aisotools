@@ -220,6 +220,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-meeting-assistant-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
     { url: `${base}/blog/best-ai-presentation-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
     { url: `${base}/blog/best-ai-note-taking-apps-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
+    { url: `${base}/blog/best-ai-email-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
+    { url: `${base}/blog/best-ai-search-engines-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
+    { url: `${base}/blog/best-ai-automation-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.90 },
   ];
 
   const toolPages = tools.map((tool) => ({

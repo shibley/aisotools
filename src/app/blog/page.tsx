@@ -925,6 +925,39 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-email-tools-2026",
+    title: "Best AI Email Tools in 2026",
+    description:
+      "The 8 best AI email tools: Superhuman, Shortwave, SaneBox, Spark, Lavender AI, Missive, and more. Cut inbox time in half with AI that drafts, prioritizes, and summarizes your email automatically.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "11 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-search-engines-2026",
+    title: "Best AI Search Engines in 2026",
+    description:
+      "The 8 best AI search engines: Perplexity, You.com, Phind, Brave Search, Genspark, ChatGPT Search, Consensus, and Elicit. Get answers with citations — not just a list of links.",
+    category: "AI Tools",
+    categorySlug: "chatbots",
+    date: "April 29, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-automation-tools-2026",
+    title: "Best AI Automation Tools in 2026",
+    description:
+      "The 8 best AI automation tools: Zapier AI, Make.com, n8n, Bardeen, Clay, and more. Automate repetitive workflows and build AI-powered processes without writing code.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
