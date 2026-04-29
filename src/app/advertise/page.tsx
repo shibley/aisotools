@@ -62,8 +62,8 @@ const plans = [
 
 const stats = [
   { value: `${tools.length}+`, label: "AI Tools Listed" },
-  { value: "5,000+", label: "Monthly Visitors" },
-  { value: "186%", label: "Traffic Growth (MoM)" },
+  { value: "4,000+", label: "Monthly Organic Visitors" },
+  { value: "1,100+", label: "Ranked Keywords" },
   { value: `${categories.length}`, label: "Categories" },
 ];
 
@@ -206,11 +206,11 @@ function AdvertiseContent() {
               </span>
             </h1>
             <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              AISO Tools is one of the fastest-growing AI tool directories with{" "}
+              AISO Tools is a fast-growing AI tool directory with{" "}
               <strong className="text-white">{tools.length}+ curated tools</strong>,{" "}
-              <strong className="text-white">5,000+ monthly visitors</strong>, and traffic from{" "}
-              <strong className="text-white">ChatGPT, Google, and Perplexity</strong> — developers,
-              marketers, and creators actively searching for AI solutions.
+              <strong className="text-white">4,000+ monthly organic visitors</strong>, and{" "}
+              <strong className="text-white">1,100+ ranked keywords</strong> — developers,
+              marketers, and creators actively searching for AI solutions via Google, ChatGPT, and Perplexity.
             </p>
             <a
               href="#pricing"
