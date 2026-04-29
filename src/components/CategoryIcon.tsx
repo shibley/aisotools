@@ -17,6 +17,11 @@ import {
   Search,
   Workflow,
   Box,
+  Bot,
+  Shield,
+  Globe,
+  Building2,
+  Database,
 } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 import type { ComponentType } from "react";
@@ -107,6 +112,31 @@ const iconConfig: Record<string, IconConfig> = {
     icon: Box,
     color: "text-fuchsia-400",
     bg: "bg-fuchsia-500/10",
+  },
+  "agent-infrastructure": {
+    icon: Bot,
+    color: "text-sky-400",
+    bg: "bg-sky-500/10",
+  },
+  "security-testing": {
+    icon: Shield,
+    color: "text-green-400",
+    bg: "bg-green-500/10",
+  },
+  seo: {
+    icon: Globe,
+    color: "text-lime-400",
+    bg: "bg-lime-500/10",
+  },
+  "real-estate": {
+    icon: Building2,
+    color: "text-amber-400",
+    bg: "bg-amber-500/10",
+  },
+  "data-extraction": {
+    icon: Database,
+    color: "text-cyan-400",
+    bg: "bg-cyan-500/10",
   },
 };
 
