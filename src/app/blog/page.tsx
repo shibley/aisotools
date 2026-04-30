@@ -958,6 +958,39 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-pdf-tools-2026",
+    title: "Best AI PDF Tools in 2026",
+    description:
+      "The 8 best AI PDF tools: ChatPDF, Adobe Acrobat AI, Unriddle, Elicit, PDF.ai, Humata, and more. Chat with any document, extract insights, and summarize in seconds.",
+    category: "AI Tools",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-transcription-tools-2026",
+    title: "Best AI Transcription Tools in 2026",
+    description:
+      "The 8 best AI transcription tools: Otter.ai, Rev, Descript, Notta, Sonix, Trint, Whisper, and Transkriptor. Convert audio and video to accurate text for podcasts, interviews, and more.",
+    category: "AI Tools",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-youtubers-2026",
+    title: "Best AI Tools for YouTubers in 2026",
+    description:
+      "The 9 best AI tools for YouTubers: VidIQ, TubeBuddy, Opus Clip, Descript, HeyGen, CapCut AI, Pictory, Canva, and Notion AI. Grow your channel, edit faster, and repurpose content automatically.",
+    category: "AI Tools",
+    categorySlug: "productivity",
+    date: "April 29, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
