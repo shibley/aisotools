@@ -991,6 +991,39 @@ const blogPosts: BlogPost[] = [
     readTime: "14 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-detector-tools-2026",
+    title: "Best AI Detector Tools in 2026: Catch AI-Written Content",
+    description:
+      "The 8 best AI detector tools: GPTZero, Originality.ai, Copyleaks, Winston AI, Sapling, Turnitin, ZeroGPT, and Writer.com. Compare accuracy rates, false positives, and pricing.",
+    category: "AI Detection",
+    categorySlug: "writing",
+    date: "April 30, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-resume-builders-2026",
+    title: "Best AI Resume Builders in 2026: Land More Interviews",
+    description:
+      "The 8 best AI resume builders: Teal, Kickresume, Rezi, Enhancv, Jobscan, Resume.io, Zety, and Resumaker.ai. ATS optimization, keyword tailoring, and AI writing compared.",
+    category: "Career & Jobs",
+    categorySlug: "business",
+    date: "April 30, 2026",
+    readTime: "15 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-humanizer-tools-2026",
+    title: "Best AI Humanizer Tools in 2026: Make AI Text Sound Human",
+    description:
+      "The 8 best AI humanizer tools: Undetectable.ai, BypassGPT, HIX Bypass, Stealthwriter, WriteHuman, Humanize AI, QuillBot, and Phrasly. Bypass AI detectors and sound naturally human.",
+    category: "AI Writing",
+    categorySlug: "writing",
+    date: "April 30, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {

@@ -264,6 +264,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/miro-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/blog/free-notion-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
     { url: `${base}/blog/chatgpt-vs-perplexity`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-detector-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-resume-builders-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    { url: `${base}/blog/best-ai-humanizer-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
   ];
 
   const toolPages = tools.map((tool) => ({
