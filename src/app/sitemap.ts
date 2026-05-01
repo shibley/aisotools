@@ -267,6 +267,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-detector-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/blog/best-ai-resume-builders-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/blog/best-ai-humanizer-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    // aiso-taaft-gaps sprint May 1 2026: 5 new task-based blog posts
+    { url: `${base}/blog/best-ai-logo-generators-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-summarizers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-thumbnail-makers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    { url: `${base}/blog/best-ai-cold-email-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
+    { url: `${base}/blog/best-ai-background-removers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
   ];
 
   const toolPages = tools.map((tool) => ({
