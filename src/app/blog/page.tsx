@@ -1079,6 +1079,50 @@ const blogPosts: BlogPost[] = [
     readTime: "13 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-tools-for-event-planners-2026",
+    title: "Best AI Tools for Event Planners in 2026: Plan Faster, Execute Better",
+    description:
+      "Compare Gamma, Copy.ai, Canva AI, Otter.ai, and Jasper — the best AI tools for event proposals, marketing, vendor coordination, and content creation.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "May 2, 2026",
+    readTime: "11 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-interior-designers-2026",
+    title: "Best AI Tools for Interior Designers in 2026: Visualize, Present, Win Clients",
+    description:
+      "Compare Midjourney, Adobe Firefly, Canva AI, Gamma, and Grammarly — the best AI tools for interior concept visualization, client proposals, and communications.",
+    category: "Design",
+    categorySlug: "design",
+    date: "May 2, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-pr-professionals-2026",
+    title: "Best AI Tools for PR Professionals in 2026: Pitch Faster, Earn More Coverage",
+    description:
+      "Compare Jasper, Copy.ai, Grammarly, ElevenLabs, and Canva AI — the best AI tools for press releases, media pitches, multimedia content, and PR campaigns.",
+    category: "Marketing & PR",
+    categorySlug: "marketing",
+    date: "May 2, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-affiliate-marketers-2026",
+    title: "Best AI Tools for Affiliate Marketers in 2026: Scale Content, Rank Higher, Earn More",
+    description:
+      "Compare Jasper, Surfer SEO, SEMrush AI, Copy.ai, and Writesonic — the best AI tools for affiliate content creation, SEO optimization, and keyword research.",
+    category: "Marketing",
+    categorySlug: "marketing",
+    date: "May 2, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
