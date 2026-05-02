@@ -1123,6 +1123,50 @@ const blogPosts: BlogPost[] = [
     readTime: "13 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-tools-for-web-developers-2026",
+    title: "Best AI Tools for Web Developers in 2026: Ship Code Faster",
+    description:
+      "Compare Cursor, GitHub Copilot, v0, Warp, and Mintlify — the best AI tools for web developers who want to write code faster, generate UI, and ship more.",
+    category: "Coding & Development",
+    categorySlug: "coding",
+    date: "May 2, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-email-marketers-2026",
+    title: "Best AI Tools for Email Marketers in 2026: Write, Send, Convert",
+    description:
+      "Compare ActiveCampaign, Jasper, Copy.ai, Phrasee, and Klaviyo AI — the best AI tools for email marketers who want higher open rates, better copy, and smarter automation.",
+    category: "Marketing",
+    categorySlug: "marketing",
+    date: "May 2, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-course-creators-2026",
+    title: "Best AI Tools for Course Creators in 2026: Build, Record, Launch",
+    description:
+      "Compare Synthesia, ElevenLabs, Descript, Gamma, and Canva AI — the best AI tools for course creators who want to produce professional lessons faster.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "May 2, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-life-coaches-2026",
+    title: "Best AI Tools for Life Coaches in 2026: Coach Smarter, Scale Faster",
+    description:
+      "Compare Notion AI, Otter.ai, Jasper, Copy.ai, and ChatGPT — the best AI tools for life coaches who want to serve clients better and grow their business faster.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "May 2, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
