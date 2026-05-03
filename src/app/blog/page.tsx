@@ -1167,6 +1167,28 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-essay-writers-2026",
+    title: "Best AI Essay Writers in 2026: Top Tools for Students & Professionals",
+    description:
+      "Compare the best AI essay writers: Claude, ChatGPT, Jasper, Writesonic, QuillBot, and Grammarly. Find the right AI writing tool for essays, research papers, and academic writing.",
+    category: "Writing",
+    categorySlug: "writing",
+    date: "May 3, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-video-editors-2026",
+    title: "Best AI Video Editors in 2026: Top Tools for Fast, Smart Video Editing",
+    description:
+      "Compare Descript, Runway, CapCut AI, Adobe Premiere, InVideo, and Filmora. Find the right AI-powered video editor for YouTube, TikTok, and professional workflows.",
+    category: "Video",
+    categorySlug: "video",
+    date: "May 3, 2026",
+    readTime: "15 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
