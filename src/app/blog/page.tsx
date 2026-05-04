@@ -1267,6 +1267,29 @@ const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     badge: "New",
   },
+  // aiso-taaft-gaps SEO gap sprint May 4 2026 (cycle 27 slot 4): excel/sheets + twitter/x
+  {
+    slug: "best-ai-tools-for-excel-spreadsheets-2026",
+    title: "Best AI Tools for Excel & Google Sheets in 2026",
+    description:
+      "The 8 best AI tools for Excel and Google Sheets in 2026. Microsoft Copilot, Gemini, Formula Bot, Julius AI, Rows, Sheet AI, Airtable AI, and ChatGPT — stop writing formulas manually.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "May 4, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-twitter-x-2026",
+    title: "Best AI Tools for Twitter/X in 2026: Grow Faster, Post Smarter",
+    description:
+      "The 8 best AI tools for Twitter/X in 2026. TweetHunter, Typefully, Hypefury, Tribescaler, FeedHive, and more — write better threads, schedule consistently, and grow your audience.",
+    category: "Social Media",
+    categorySlug: "marketing",
+    date: "May 4, 2026",
+    readTime: "11 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {

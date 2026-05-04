@@ -282,6 +282,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // aiso-taaft-gaps sprint May 4 2026 (cycle 27 slot 3): chatgpt alternatives + headshots
     { url: `${base}/blog/chatgpt-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.95 },
     { url: `${base}/blog/best-ai-headshot-generators-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    // aiso-taaft-gaps sprint May 4 2026 (cycle 27 slot 4): SEO gap posts — excel/sheets + twitter/x
+    { url: `${base}/blog/best-ai-tools-for-excel-spreadsheets-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.94 },
+    { url: `${base}/blog/best-ai-tools-for-twitter-x-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
     // aiso-taaft-gaps sprint May 4 2026: 5 new task-based blog posts
     { url: `${base}/blog/best-ai-photo-editing-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
     { url: `${base}/blog/best-ai-language-learning-apps-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
