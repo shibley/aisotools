@@ -1189,6 +1189,29 @@ const blogPosts: BlogPost[] = [
     readTime: "15 min read",
     badge: "New",
   },
+  // aiso-taaft-gaps sprint May 3 2026 PM: high-SV alternatives posts
+  {
+    slug: "character-ai-alternatives-2026",
+    title: "7 Best Character AI Alternatives in 2026 (Tested & Ranked)",
+    description:
+      "Looking for Character AI alternatives? Janitor AI, Replika, Venice AI, SpicyChat AI, Poe, and NovelAI compared on features, content policies, and pricing.",
+    category: "Chatbots & AI",
+    categorySlug: "chatbots",
+    date: "May 3, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "suno-alternatives-2026",
+    title: "7 Best Suno AI Alternatives in 2026 (Free & Paid Compared)",
+    description:
+      "The best Suno alternatives: Udio, AIVA, Beatoven.ai, Soundraw, Mubert, Boomy, and Loudly compared. Find the right AI music generator for your needs.",
+    category: "Audio & Music",
+    categorySlug: "music",
+    date: "May 3, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {

@@ -273,6 +273,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-thumbnail-makers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/blog/best-ai-cold-email-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.91 },
     { url: `${base}/blog/best-ai-background-removers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    // aiso-taaft-gaps sprint May 3 2026 AM: writing + video editorial posts
+    { url: `${base}/blog/best-ai-essay-writers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-video-editors-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    // aiso-taaft-gaps sprint May 3 2026 PM: high-SV alternatives posts
+    { url: `${base}/blog/character-ai-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.94 },
+    { url: `${base}/blog/suno-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
   ];
 
   const toolPages = tools.map((tool) => ({
