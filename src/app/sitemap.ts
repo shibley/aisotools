@@ -279,6 +279,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // aiso-taaft-gaps sprint May 3 2026 PM: high-SV alternatives posts
     { url: `${base}/blog/character-ai-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.94 },
     { url: `${base}/blog/suno-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    // aiso-taaft-gaps sprint May 4 2026: 5 new task-based blog posts
+    { url: `${base}/blog/best-ai-photo-editing-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-language-learning-apps-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-interview-prep-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-investing-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-fitness-apps-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
   ];
 
   const toolPages = tools.map((tool) => ({
