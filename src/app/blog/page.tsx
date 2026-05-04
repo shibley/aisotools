@@ -1212,6 +1212,61 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-tools-for-tiktok-2026",
+    title: "Best AI Tools for TikTok in 2026: Create Viral Content Faster",
+    description:
+      "The 8 best AI tools for TikTok creators in 2026. From CapCut auto-captions and Opus Clip repurposing to ChatGPT hooks and Perplexity trend research.",
+    category: "Social Media",
+    categorySlug: "marketing",
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-dropshipping-2026",
+    title: "Best AI Tools for Dropshipping in 2026: Scale Your Store Faster",
+    description:
+      "The 8 best AI tools for dropshipping businesses in 2026. Product research, store copy, print-on-demand fulfillment, and ad creative — all covered.",
+    category: "E-commerce",
+    categorySlug: "ecommerce",
+    date: "May 4, 2026",
+    readTime: "10 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-travel-planning-2026",
+    title: "Best AI Tools for Travel Planning in 2026: Plan Smarter Trips",
+    description:
+      "The 8 best AI tools for travel planning in 2026. AI itinerary generators, research with cited sources, trip organizers, and travel content creation tools.",
+    category: "Travel",
+    categorySlug: "lifestyle",
+    date: "May 4, 2026",
+    readTime: "10 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-cooking-2026",
+    title: "Best AI Tools for Cooking in 2026: Recipes, Meal Plans & More",
+    description:
+      "The 8 best AI tools for cooking in 2026. AI recipe generators from ingredients on hand, meal planners, nutrition research, and food blog content creation.",
+    category: "Lifestyle",
+    categorySlug: "lifestyle",
+    date: "May 4, 2026",
+    readTime: "9 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-linkedin-2026",
+    title: "Best AI Tools for LinkedIn in 2026: Grow Your Professional Presence",
+    description:
+      "The 8 best AI tools for LinkedIn in 2026. Post generators, carousel designers, thought leadership writers, profile optimizers, and outreach automation.",
+    category: "Professional Growth",
+    categorySlug: "marketing",
+    date: "May 4, 2026",
+    readTime: "10 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -1240,6 +1295,7 @@ const categoryColors: Record<string, string> = {
   "photo-video": "bg-red-700/20 text-red-300",
   collaboration: "bg-blue-500/20 text-blue-300",
   fitness: "bg-orange-500/20 text-orange-300",
+  lifestyle: "bg-green-500/20 text-green-300",
 };
 
 export default function BlogIndexPage() {
