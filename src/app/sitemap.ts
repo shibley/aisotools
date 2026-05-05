@@ -297,6 +297,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-tools-for-travel-planning-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
     { url: `${base}/blog/best-ai-tools-for-cooking-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/blog/best-ai-tools-for-linkedin-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    // aiso-taaft-gaps sprint May 5 2026 (cycle 29 slot 4): ecommerce + ad creative blog posts
+    { url: `${base}/blog/best-ai-ecommerce-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.94 },
+    { url: `${base}/blog/best-ai-ad-creative-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.94 },
   ];
 
   const toolPages = tools.map((tool) => ({
