@@ -1323,7 +1323,6 @@ const blogPosts: BlogPost[] = [
     categorySlug: "productivity",
     date: "May 4, 2026",
     readTime: "12 min read",
-    badge: "New",
   },
   {
     slug: "best-ai-tools-for-twitter-x-2026",
@@ -1334,6 +1333,28 @@ const blogPosts: BlogPost[] = [
     categorySlug: "marketing",
     date: "May 4, 2026",
     readTime: "11 min read",
+  },
+  // aiso-taaft-gaps blog expansion sprint May 5 2026 (cycle 30 slot 4): remote work + lead generation
+  {
+    slug: "best-ai-tools-for-remote-work-2026",
+    title: "8 Best AI Tools for Remote Work in 2026 (Tested & Ranked)",
+    description:
+      "The best AI tools for remote teams in 2026. Compare Notion AI, Otter.ai, Krisp, Loom AI, Motion, Fireflies, Fellow, and Zoom AI Companion — async video, meeting transcription, scheduling, and noise cancellation.",
+    category: "Productivity",
+    categorySlug: "productivity",
+    date: "May 5, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-lead-generation-2026",
+    title: "8 Best AI Tools for Lead Generation in 2026 (Ranked by Sales Teams)",
+    description:
+      "The best AI lead generation tools in 2026. Compare Apollo.io, Clay, Seamless.ai, ZoomInfo, Hunter.io, Lusha, Instantly, and LinkedIn Sales Navigator — with real-world stack recommendations.",
+    category: "Sales & Marketing",
+    categorySlug: "marketing",
+    date: "May 5, 2026",
+    readTime: "15 min read",
     badge: "New",
   },
 ];
