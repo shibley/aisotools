@@ -1267,6 +1267,29 @@ const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     badge: "New",
   },
+  // aiso-taaft-gaps blog expansion sprint May 4 2026 (cycle 28 slot 4): chatbot builders + image upscalers
+  {
+    slug: "best-ai-chatbot-builders-2026",
+    title: "10 Best AI Chatbot Builders in 2026 (Reviewed & Ranked)",
+    description:
+      "Compare Tidio, Intercom Fin, Drift, ManyChat, Botpress, Landbot, Voiceflow, and more. Find the best AI chatbot platform for customer support, lead gen, and marketing automation.",
+    category: "Chatbots & Automation",
+    categorySlug: "chatbots",
+    date: "May 4, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-image-upscaler-tools-2026",
+    title: "8 Best AI Image Upscaler Tools in 2026 (Tested & Compared)",
+    description:
+      "Turn low-res photos into high-resolution images. Compare Topaz Gigapixel AI, Magnific AI, Upscayl, Let's Enhance, Adobe Super Resolution, and more.",
+    category: "Image Tools",
+    categorySlug: "image-generation",
+    date: "May 4, 2026",
+    readTime: "12 min read",
+    badge: "New",
+  },
   // aiso-taaft-gaps SEO gap sprint May 4 2026 (cycle 27 slot 4): excel/sheets + twitter/x
   {
     slug: "best-ai-tools-for-excel-spreadsheets-2026",
