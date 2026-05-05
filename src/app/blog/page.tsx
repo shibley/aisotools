@@ -1290,6 +1290,29 @@ const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     badge: "New",
   },
+  // aiso-taaft-gaps sprint May 5 2026 (cycle 29 slot 3): landing page builders + script generators
+  {
+    slug: "best-ai-landing-page-builders-2026",
+    title: "8 Best AI Landing Page Builders in 2026 (Reviewed & Ranked)",
+    description:
+      "Generate high-converting landing pages with AI. Compare Framer AI, Unbounce, Leadpages, Instapage, Durable, Sitekick AI, and more — with pricing, A/B testing, and real-world results.",
+    category: "Marketing",
+    categorySlug: "marketing",
+    date: "May 5, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-script-generators-2026",
+    title: "9 Best AI Script Generators in 2026 (YouTube, Video & Sales Scripts)",
+    description:
+      "The best AI script generators for YouTube videos, sales calls, ad scripts, and podcasts. Compare ChatGPT, Jasper, Writesonic, InVideo AI, Descript, Fliki, and more.",
+    category: "Content Creation",
+    categorySlug: "writing",
+    date: "May 5, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
   // aiso-taaft-gaps SEO gap sprint May 4 2026 (cycle 27 slot 4): excel/sheets + twitter/x
   {
     slug: "best-ai-tools-for-excel-spreadsheets-2026",
