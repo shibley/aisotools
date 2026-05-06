@@ -332,6 +332,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/best-ai-tools-for-technical-writers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/blog/best-ai-tools-for-supply-chain-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
     { url: `${base}/blog/best-ai-tools-for-real-estate-investors-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    // content:aisotools sprint May 6 2026 (cycle 32 slot 3): 5 new blog posts
+    { url: `${base}/blog/best-ai-tools-for-bloggers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/elevenlabs-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-tools-for-entrepreneurs-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/runway-alternatives-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-tools-for-personal-finance-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
   ];
 
   const toolPages = tools.map((tool) => ({
