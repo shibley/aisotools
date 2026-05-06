@@ -1,457 +1,186 @@
+import { tools } from "@/data/tools";
+import { getAffiliateUrl } from "@/data/affiliate-links";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAffiliateUrl } from "@/data/affiliate-links";
 
 export const metadata: Metadata = {
-  title: "Best AI Tools for Nurses in 2026: Save Time, Improve Patient Care",
-  description:
-    "The 8 best AI tools for nurses in 2026. Reduce documentation burden by 50%, stay current on clinical evidence, and spend more time with patients. From AI charting assistants to clinical decision support.",
-  keywords: [
-    "best ai tools for nurses",
-    "ai for nurses",
-    "ai nursing tools 2026",
-    "ai charting software for nurses",
-    "ai clinical documentation nursing",
-    "ai for nursing education",
-    "ai patient education tools",
-    "nursing ai assistant",
-    "ai for bedside nurses",
-    "clinical ai tools nurses",
-  ],
+  title: "Best AI Tools for Nurses in 2026: Documentation, Learning & Care",
+  description: "Discover the best AI tools for nurses in 2026. From AI clinical documentation to medical education — reduce charting time, study smarter, and improve patient communication.",
+  keywords: ["best ai tools for nurses", "ai tools for nurses", "ai clinical documentation", "ai nursing tools 2026", "ai for healthcare nursing"],
   openGraph: {
-    title: "Best AI Tools for Nurses in 2026: Save Time, Improve Patient Care",
-    description:
-      "Cut documentation time in half and get back to what matters — patient care. The 8 AI tools every nurse should know in 2026.",
+    title: "Best AI Tools for Nurses in 2026",
+    description: "Guide to AI tools for nurses. Compare AI documentation tools, medical reference apps, and education platforms.",
     url: "https://aisotools.com/blog/best-ai-tools-for-nurses-2026",
     type: "article",
   },
-  alternates: {
-    canonical: "https://aisotools.com/blog/best-ai-tools-for-nurses-2026",
-  },
+  alternates: { canonical: "https://aisotools.com/blog/best-ai-tools-for-nurses-2026" },
 };
 
-interface NurseTool {
-  name: string;
-  slug: string;
-  description: string;
-  pricing: string;
-  pricingDetails: string;
-  strengths: string[];
-  bestFor: string;
-  rating: number;
-  useCase: string;
+const toolCategories = [
+  {
+    category: "Clinical Documentation",
+    icon: "📋",
+    description: "AI tools that reduce charting time and improve documentation accuracy",
+    tools: [
+      { name: "Nuance DAX", slug: "nuance-dax", description: "Microsoft's AI clinical documentation tool (Dragon Ambient eXperience). Listens to patient encounters and automatically generates clinical notes, reducing documentation time by up to 50% and reducing after-hours charting.", pricing: "Paid (Enterprise)", pricingDetails: "Enterprise licensing through health systems; contact for pricing", strengths: ["Real-time ambient note capture", "EHR integration (Epic, Cerner, etc.)", "50% reduction in documentation time", "Clinical accuracy review workflow", "Specialty-specific templates", "Reduces after-shift charting burden"], bestFor: "Nurses and clinicians in health systems using Epic, Cerner, or other major EHRs", freeFeatures: ["Demo available", "Pilot program for qualifying health systems"], rating: 4.7 },
+      { name: "ChatGPT", slug: "chatgpt", description: "Nurses use ChatGPT for drafting patient education materials, care plan components, shift handoff documentation, and professional communication — with important caveats about never inputting patient-identifiable information.", pricing: "Freemium", pricingDetails: "Free tier, Plus $20/mo", strengths: ["Patient education materials in plain language", "Discharge instruction drafting", "Shift handoff note structure", "Clinical concept explanations", "Policy and protocol summaries", "Professional email drafting"], bestFor: "Creating patient education content and professional nursing documentation (de-identified)", freeFeatures: ["GPT-4o mini", "Unlimited use", "File uploads"], rating: 4.5 },
+    ],
+  },
+  {
+    category: "Clinical Reference & Decision Support",
+    icon: "🏥",
+    description: "AI-enhanced reference tools for medication information, drug interactions, and clinical decision support",
+    tools: [
+      { name: "Epocrates", slug: "epocrates", description: "Clinical decision support app used by over 1 million healthcare providers. Provides drug information, interaction checking, dosing calculators, and clinical guidelines — now enhanced with AI for faster natural language queries.", pricing: "Freemium", pricingDetails: "Free basic, Plus $16.99/mo with AI features", strengths: ["Drug dosing and interaction checks", "Natural language clinical queries", "Dosing calculators (renal adjustment, peds)", "Clinical practice guidelines", "ICD-10 coding assistance", "Offline access for low-signal areas"], bestFor: "Bedside clinical reference for medication verification, dosing, and interaction checking", freeFeatures: ["Basic drug database", "Interaction checker", "Pill ID tool"], rating: 4.6 },
+      { name: "Perplexity", slug: "perplexity", description: "AI search with citations for clinical evidence questions, nursing research, and evidence-based practice queries. Useful for quickly finding the evidence behind clinical decisions with source links.", pricing: "Freemium", pricingDetails: "Free, Pro $20/mo", strengths: ["Evidence-based practice research", "Clinical guideline summaries with sources", "Nursing research topic exploration", "Continuing education research", "Policy and regulation lookups", "Quick clinical question answers"], bestFor: "Evidence-based practice research and continuing education outside the clinical setting", freeFeatures: ["Unlimited queries", "Source citations", "Web access"], rating: 4.4 },
+    ],
+  },
+  {
+    category: "Nursing Education & NCLEX Prep",
+    icon: "📚",
+    description: "AI tools that help nursing students pass NCLEX and support continuing education",
+    tools: [
+      { name: "Claude", slug: "claude", description: "Nursing students and educators use Claude to create NCLEX-style practice questions, explain complex pathophysiology, build study guides for pharmacology, and create mnemonics for clinical concepts.", pricing: "Freemium", pricingDetails: "Free tier, Pro $20/mo", strengths: ["NCLEX-style question generation by topic", "Pathophysiology explanations with clinical application", "Drug class mnemonics", "Care plan templates and examples", "Nursing theory summaries", "Critical thinking scenario development"], bestFor: "Nursing students studying for NCLEX and nurses building CEU educational materials", freeFeatures: ["Claude Sonnet access", "Long context for complex topics", "Projects for study organization"], rating: 4.7 },
+      { name: "Osmosis", slug: "osmosis", description: "Medical education platform with AI-enhanced content for nursing students. Visual learning approach with illustrated concepts, spaced repetition flashcards, and NCLEX prep questions targeting nursing-specific content.", pricing: "Freemium", pricingDetails: "Free basic, Prime $35/mo, institutional plans", strengths: ["Visual concept illustrations", "Spaced repetition learning system", "NCLEX-targeted practice questions", "Video explanations of complex concepts", "Clinical reasoning case studies", "Pharmacology and pathophysiology focus"], bestFor: "Nursing students who learn visually and need NCLEX prep aligned with current exam format", freeFeatures: ["Basic video library", "Limited flashcards", "Some practice questions"], rating: 4.5 },
+    ],
+  },
+  {
+    category: "Patient Communication & Education",
+    icon: "💬",
+    description: "AI tools that improve patient understanding and support nurse-patient communication",
+    tools: [
+      { name: "Grammarly", slug: "grammarly", description: "Used by nurses for patient-facing written communication — discharge instructions, care materials, and professional emails. Ensures documents are readable, clear, and at appropriate reading levels for patients.", pricing: "Freemium", pricingDetails: "Free tier, Premium $12/mo", strengths: ["Reading level adjustment for patient materials", "Clarity and simplicity improvements", "Tone adjustment (professional vs. warm)", "Grammar and spelling for professional documents", "Browser extension for EHR-adjacent tools", "Accessibility improvements"], bestFor: "Nurses writing patient education materials, discharge instructions, and professional communications", freeFeatures: ["Grammar checking", "Basic clarity suggestions", "Browser extension"], rating: 4.4 },
+    ],
+  },
+];
+
+function StarRating({ rating }: { rating: number }) {
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.3;
+  return (
+    <div className="flex items-center gap-1">
+      {Array.from({ length: 5 }).map((_, i) => <span key={i} className="text-lg">{i < fullStars ? "⭐" : i === fullStars && hasHalf ? "⭐" : "☆"}</span>)}
+      <span className="ml-1 text-sm font-medium text-gray-600">{rating}/5</span>
+    </div>
+  );
 }
 
-const nurseTools: NurseTool[] = [
-  {
-    name: "Nuance DAX (Microsoft)",
-    slug: "nuance-dax",
-    description:
-      "Nuance DAX (Dragon Ambient eXperience) is the leading AI clinical documentation assistant used in hospitals and health systems across the US. It listens to patient-nurse interactions and auto-generates structured clinical notes, saving nurses 2-3 hours of documentation per shift. DAX integrates directly with Epic, Cerner, and most major EHR systems. Now part of Microsoft Azure Health, it's deployed in over 550 healthcare organizations.",
-    pricing: "Paid",
-    pricingDetails: "Enterprise pricing (per organization). Contact for quote.",
-    strengths: [
-      "Ambient listening — documents while you care for patients",
-      "Direct EHR integration (Epic, Cerner, Meditech, Allscripts)",
-      "HIPAA-compliant with end-to-end encryption",
-      "Reduces charting time by 50% on average",
-      "Generates nursing assessments, care plans, and notes",
-      "Used by 55,000+ clinicians in 550+ organizations",
-    ],
-    bestFor: "Hospital nurses and clinic RNs using Epic or Cerner EHR",
-    rating: 4.6,
-    useCase: "Clinical Documentation",
-  },
-  {
-    name: "UpToDate",
-    slug: "uptodate",
-    description:
-      "UpToDate is the gold standard for evidence-based clinical decision support used by over 2 million clinicians globally. Its AI-powered search and recommendation engine surfaces the most current peer-reviewed evidence at the point of care — a nurse can query 'IV vancomycin dosing for renal impairment' and get graded, expert-reviewed guidance instantly. The 2026 version includes an AI assistant that synthesizes multi-topic queries and flags drug interactions.",
-    pricing: "Paid",
-    pricingDetails: "Individual $599/yr, Institutional (per seat, contact for quote)",
-    strengths: [
-      "10,000+ evidence-based clinical topics with daily updates",
-      "AI-powered clinical decision support at point of care",
-      "Drug interaction checker with severity grading",
-      "Dosing calculators for pediatric, renal, and hepatic adjustments",
-      "Graded recommendations (A-D) by strength of evidence",
-      "Mobile app for bedside and home care nurses",
-    ],
-    bestFor: "ICU, ED, and specialty nurses needing current clinical evidence",
-    rating: 4.8,
-    useCase: "Clinical Decision Support",
-  },
-  {
-    name: "Nabla Copilot",
-    slug: "nabla",
-    description:
-      "Nabla is an AI medical scribe that captures and transcribes clinical conversations in real time, then generates structured notes in the nurse's or provider's style. Unlike Nuance DAX (enterprise-only), Nabla is accessible to individual nurses and clinic settings without a large IT integration project. It works on any device and generates SOAP notes, assessment summaries, and discharge instructions automatically.",
-    pricing: "Freemium",
-    pricingDetails: "Free (limited notes/mo). Individual $119/mo, Team pricing available",
-    strengths: [
-      "Real-time transcription and note generation",
-      "Works without EHR integration — copy-paste into any system",
-      "Generates SOAP notes, discharge summaries, care plans",
-      "Accessible to individual nurses, not just enterprises",
-      "Customizable note templates per specialty",
-      "iOS and Android apps for mobile use",
-    ],
-    bestFor: "Clinic nurses, home health, and nurses at facilities without Nuance",
-    rating: 4.4,
-    useCase: "AI Medical Scribe",
-  },
-  {
-    name: "ChatGPT (Clinical Use)",
-    slug: "chatgpt",
-    description:
-      "For nurses, ChatGPT is a powerful tool for drafting patient education materials, explaining complex conditions in plain language, and researching nursing interventions. Ask it to 'write patient discharge instructions for a new CHF diagnosis at 5th-grade reading level' and get a printable draft in 30 seconds. Use it to prep for difficult conversations, summarize research articles, or quickly understand a medication you haven't given before. Always verify clinical details against authoritative sources.",
-    pricing: "Freemium",
-    pricingDetails: "Free tier. Plus $20/mo, Team $25/user/mo",
-    strengths: [
-      "Patient education materials at any reading level",
-      "Quick summaries of unfamiliar medications or conditions",
-      "Care plan drafting from assessment data",
-      "Nursing study aids and NCLEX prep explanations",
-      "Prep scripts for difficult patient conversations",
-      "Discharge instruction generation by diagnosis",
-    ],
-    bestFor: "All nurses — versatile daily productivity tool",
-    rating: 4.5,
-    useCase: "General AI Assistant",
-  },
-  {
-    name: "Elsevier ClinicalKey Nursing",
-    slug: "elsevier-clinicalkey",
-    description:
-      "ClinicalKey Nursing is Elsevier's AI-powered clinical knowledge platform purpose-built for nurses. It provides instant access to nursing-specific drug information, patient education handouts (500+ conditions, 20 languages), evidence-based nursing procedures (Mosby's Nursing Procedures), and clinical calculators. The AI search understands nursing terminology and returns nursing-focused results rather than physician-oriented content.",
-    pricing: "Paid",
-    pricingDetails: "Institutional licensing (per facility). Individual access via Elsevier subscriptions.",
-    strengths: [
-      "Nursing-specific clinical knowledge (not physician-focused)",
-      "500+ patient education handouts in 20 languages",
-      "Mosby's Nursing Procedures — evidence-based step-by-step",
-      "Drug information with nursing-specific considerations",
-      "Clinical calculators (GFR, BMI, wound staging, pain scales)",
-      "Integrates with major hospital EHR systems",
-    ],
-    bestFor: "Hospital nurses, nursing educators, and clinical nurse specialists",
-    rating: 4.5,
-    useCase: "Clinical Knowledge & Patient Education",
-  },
-  {
-    name: "Perplexity AI",
-    slug: "perplexity",
-    description:
-      "Perplexity is a nurse's fastest tool for evidence-based research at the bedside. Ask 'what are the current AHA guidelines for sepsis management' or 'what does a Braden score of 14 indicate' and get cited, sourced answers from peer-reviewed journals and clinical guidelines in seconds. Unlike Google, Perplexity synthesizes multiple sources into a direct answer with links to verify. The Pro version accesses real-time information including recent guideline updates.",
-    pricing: "Freemium",
-    pricingDetails: "Free tier. Pro $20/mo with unlimited advanced searches",
-    strengths: [
-      "Evidence-based answers with source citations",
-      "Current clinical guideline lookups (AHA, CDC, WHO, AACN)",
-      "Real-time access to recent research and updates",
-      "Natural language queries work ('what does low BNP mean?')",
-      "Collections for organizing research by specialty or unit",
-      "Faster than PubMed for bedside quick-reference",
-    ],
-    bestFor: "All nurses for quick evidence-based reference during shifts",
-    rating: 4.6,
-    useCase: "Evidence-Based Research",
-  },
-  {
-    name: "Dovetail (Patient Feedback)",
-    slug: "dovetail",
-    description:
-      "For nurse managers, charge nurses, and clinical educators, Dovetail's AI synthesis tools transform patient survey data, HCAHPS scores, and feedback into actionable insights. Instead of manually reading 200 patient comments, Dovetail AI clusters themes, identifies recurring complaints, and generates unit improvement summaries. Used by health system quality improvement teams to identify care gaps and training needs at scale.",
-    pricing: "Freemium",
-    pricingDetails: "Free tier. Professional $29/user/mo, Enterprise custom",
-    strengths: [
-      "AI synthesis of patient feedback and survey data",
-      "HCAHPS comment analysis and theme identification",
-      "Recurring issue detection across large data sets",
-      "Unit-level insights for quality improvement initiatives",
-      "Integrates with survey tools and EHR patient portals",
-      "Shareable dashboards for unit managers and CNOs",
-    ],
-    bestFor: "Nurse managers, charge nurses, and quality improvement teams",
-    rating: 4.5,
-    useCase: "Patient Feedback Analysis",
-  },
-  {
-    name: "Notion AI",
-    slug: "notion-ai",
-    description:
-      "Nurses in education, management, or research roles use Notion AI to build their entire knowledge base — unit policies, care protocols, shift handoff templates, orientation materials, and continuing education trackers. Ask Notion AI to generate a competency assessment checklist, draft a unit policy update, or summarize a continuing education article. For nurse educators, it dramatically speeds up curriculum development and creates searchable knowledge repositories.",
-    pricing: "Freemium",
-    pricingDetails: "Free for personal. Plus $10/mo, Business $18/mo. AI add-on $10/member/mo",
-    strengths: [
-      "Build searchable unit policy and protocol databases",
-      "Generate competency assessment checklists",
-      "Draft continuing education summaries and study guides",
-      "Create shift handoff templates and care plan frameworks",
-      "NCLEX question generation for nursing students and educators",
-      "Collaborative workspaces for nursing teams",
-    ],
-    bestFor: "Nurse educators, nurse managers, and nursing students",
-    rating: 4.5,
-    useCase: "Knowledge Management & Education",
-  },
-];
-
-const faqs = [
-  {
-    question: "Is it safe for nurses to use AI tools for clinical documentation?",
-    answer:
-      "Clinical AI documentation tools like Nuance DAX and Nabla are built specifically for healthcare with HIPAA compliance, data encryption, and clinical validation. They assist with documentation drafts that nurses review and approve before entering into the EHR — AI generates, nurses verify. Never use general AI tools (like ChatGPT) to document actual patient information with identifying details; use them only for templates, education materials, and research.",
-  },
-  {
-    question: "Can AI replace nurses?",
-    answer:
-      "No. AI automates the administrative burden of nursing — documentation, research, and education materials — but cannot replace the clinical judgment, emotional intelligence, physical assessment skills, and human connection that define nursing care. The nurses most at risk are those who resist learning AI tools, not those who use them. AI-augmented nurses do more, document better, and experience less burnout.",
-  },
-  {
-    question: "What's the best free AI tool for nurses?",
-    answer:
-      "For daily use, ChatGPT (free tier) is the most versatile — patient education materials, care plan frameworks, NCLEX prep, and research summaries. Perplexity AI (free tier) is better for quick evidence-based lookups with source citations. For documentation, Nabla has a limited free tier for individual nurses.",
-  },
-  {
-    question: "How do nurses use AI for patient education?",
-    answer:
-      "Nurses use ChatGPT or Claude to generate condition-specific discharge instructions at the patient's reading level (specify '5th grade reading level' or 'Spanish'), create FAQ sheets for common diagnoses, and adapt generic education materials to specific patient circumstances. ClinicalKey Nursing has pre-built patient education handouts in 20 languages that can be printed or shared digitally.",
-  },
-];
-
-export default function BestAIToolsForNurses() {
+export default function BestAIToolsForNurses2026() {
+  const totalTools = toolCategories.reduce((sum, cat) => sum + cat.tools.length, 0);
   return (
-    <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-      {/* Breadcrumb */}
-      <nav className="mb-4 flex items-center gap-2 text-sm text-gray-500">
-        <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-        <span>/</span>
-        <span>Nursing</span>
-      </nav>
-
-      {/* Hero */}
+    <article className="mx-auto max-w-4xl px-4 py-8">
       <header className="mb-12">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-          Best AI Tools for Nurses in 2026
-        </h1>
-        <p className="text-xl leading-relaxed text-gray-600">
-          Nurses spend up to <strong>40% of their shift on documentation</strong> — time stolen from patients. AI tools are changing that. From ambient charting assistants that auto-generate SOAP notes to clinical decision support that surfaces evidence in seconds, here are the 8 AI tools every nurse should know in 2026.
-        </p>
-        <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
-          <span>Updated April 2026</span>
-          <span>•</span>
-          <span>12 min read</span>
+        <div className="mb-4 flex items-center gap-2 text-sm text-gray-500">
+          <Link href="/blog" className="hover:text-blue-600">Blog</Link><span>→</span><span>AI Tools for Nurses</span>
+        </div>
+        <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">Best AI Tools for Nurses in 2026</h1>
+        <p className="mb-6 text-xl leading-relaxed text-gray-600">{totalTools} AI tools that reduce documentation burden, improve clinical decision-making, and support nursing education — so nurses can focus more on patients.</p>
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+          <span>📅 Updated May 2026</span><span>•</span><span>⏱️ 14 min read</span><span>•</span><span>🏥 {totalTools} tools reviewed</span>
         </div>
       </header>
-
-      {/* Quick Picks */}
-      <section className="mb-12 rounded-lg border border-blue-200 bg-blue-50 p-6">
-        <h2 className="mb-4 text-xl font-bold text-blue-900">⚡ Quick Picks</h2>
-        <ul className="space-y-2 text-blue-800">
-          <li><strong>Best for charting:</strong> <Link href="/tool/nuance-dax" className="underline">Nuance DAX</Link> — ambient AI that documents while you care</li>
-          <li><strong>Best clinical reference:</strong> <Link href="/tool/uptodate" className="underline">UpToDate</Link> — evidence-based decision support</li>
-          <li><strong>Best for individuals (no IT needed):</strong> <Link href="/tool/nabla" className="underline">Nabla Copilot</Link> — AI scribe without EHR integration</li>
-          <li><strong>Best for patient education:</strong> <Link href="/tool/chatgpt" className="underline">ChatGPT</Link> — discharge instructions in any language/level</li>
-          <li><strong>Best free research tool:</strong> <Link href="/tool/perplexity" className="underline">Perplexity AI</Link> — cited evidence at the bedside</li>
-        </ul>
+      <section className="mb-12 rounded-lg bg-blue-50 p-6">
+        <h2 className="mb-3 text-2xl font-bold text-gray-900">AI and Nursing: Reducing Burden, Not Replacing Care</h2>
+        <p className="mb-4 leading-relaxed text-gray-700">Nurses spend <strong>up to 49% of their time on documentation</strong> rather than direct patient care. AI tools like Nuance DAX are reducing that burden — health systems using ambient AI documentation report nurses spending <strong>more time at the bedside</strong> and experiencing lower burnout rates.</p>
+        <p className="leading-relaxed text-gray-700">Critical note: AI in clinical settings must be used with caution. <strong>Never input patient-identifiable information into public AI tools</strong> (ChatGPT, Claude, etc.). Use these for de-identified educational and administrative tasks only. System-approved AI tools (Nuance DAX, Epocrates) are designed for HIPAA-compliant clinical use.</p>
       </section>
-
-      {/* Why Nurses Need AI */}
-      <section className="mb-12">
-        <h2 className="mb-4 text-3xl font-bold text-gray-900">Why Nurses Need AI in 2026</h2>
-        <p className="mb-4 leading-relaxed text-gray-700">
-          Nursing shortages are hitting crisis levels globally — the WHO projects a shortfall of <strong>13 million nurses by 2030</strong>. The math is brutal: more patients, fewer nurses, same documentation requirements. AI doesn&apos;t add nurses, but it gives existing nurses back hours they&apos;re losing to paperwork.
-        </p>
-        <p className="mb-4 leading-relaxed text-gray-700">
-          The average hospital nurse spends <strong>25-40% of their shift on documentation</strong>. Studies show AI documentation tools reduce charting time by 50%, which translates to 1-2 extra hours per shift available for direct patient care. That&apos;s not a productivity metric — it&apos;s the difference between catching a deteriorating patient early and missing it.
-        </p>
-        <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
-          <p className="text-sm text-amber-800">
-            <strong>Important:</strong> Always verify AI-generated clinical documentation before submitting to the EHR. AI assists — nurses remain clinically responsible for accuracy and patient safety.
-          </p>
-        </div>
-      </section>
-
-      {/* Tools */}
-      <section className="space-y-12">
-        <h2 className="text-3xl font-bold text-gray-900">The 8 Best AI Tools for Nurses</h2>
-        {nurseTools.map((tool, i) => (
-          <div key={tool.slug} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-            <div className="mb-4 flex items-start justify-between">
-              <div>
-                <div className="mb-1 inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
-                  {tool.useCase}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {i + 1}. {tool.name}
-                </h3>
-                <div className="mt-1 flex items-center gap-3 text-sm text-gray-500">
-                  <span>⭐ {tool.rating}/5</span>
-                  <span>•</span>
-                  <span>{tool.pricing}</span>
-                </div>
-              </div>
-            </div>
-
-            <p className="mb-4 leading-relaxed text-gray-700">{tool.description}</p>
-
-            <div className="mb-4">
-              <h4 className="mb-2 font-semibold text-gray-900">Key Strengths:</h4>
-              <ul className="grid gap-1 sm:grid-cols-2">
-                {tool.strengths.map((s) => (
-                  <li key={s} className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="text-green-500">✓</span> {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-4 border-t border-gray-100 pt-4 text-sm">
-              <span className="text-gray-500">💰 {tool.pricingDetails}</span>
-              <span className="text-gray-500">🎯 {tool.bestFor}</span>
-            </div>
-
-            <div className="mt-4 flex flex-wrap gap-3">
-              {getAffiliateUrl(tool.slug) && (
-                <a
-                  href={getAffiliateUrl(tool.slug)!}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="inline-flex items-center rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700"
-                >
-                  Try {tool.name} →
-                </a>
-              )}
-              <Link
-                href={`/tool/${tool.slug}`}
-                className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-              >
-                View {tool.name} →
-              </Link>
-              <Link
-                href={`/alternatives/${tool.slug}`}
-                className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                Alternatives
-              </Link>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      {/* Comparison Table */}
-      <section className="my-12">
-        <h2 className="mb-6 text-3xl font-bold text-gray-900">Nursing AI Tools Comparison</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="border-b-2 border-gray-200 bg-gray-50">
-                <th className="px-4 py-3 text-left font-semibold">Tool</th>
-                <th className="px-4 py-3 text-left font-semibold">Best For</th>
-                <th className="px-4 py-3 text-left font-semibold">Cost</th>
-                <th className="px-4 py-3 text-center font-semibold">Rating</th>
-              </tr>
-            </thead>
-            <tbody>
-              {nurseTools.map((tool) => (
-                <tr key={tool.slug} className="border-b border-gray-100 hover:bg-gray-50">
-                  <td className="px-4 py-3 font-medium">
-                    <Link href={`/tool/${tool.slug}`} className="text-blue-600 hover:underline">{tool.name}</Link>
-                  </td>
-                  <td className="px-4 py-3 text-gray-600">{tool.useCase}</td>
-                  <td className="px-4 py-3 text-gray-600">{tool.pricing}</td>
-                  <td className="px-4 py-3 text-center">{tool.rating}/5</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      {/* How to Choose */}
-      <section className="my-12">
-        <h2 className="mb-6 text-3xl font-bold text-gray-900">Which AI Tool is Right for Your Nursing Role?</h2>
-        <div className="space-y-4">
-          <div className="rounded-lg border border-gray-200 p-4">
-            <h3 className="mb-1 font-semibold text-gray-900">🏥 Bedside/Hospital Nurse</h3>
-            <p className="text-gray-700">Start with <strong>Nuance DAX</strong> (if your hospital has it) for documentation, <strong>UpToDate</strong> for clinical reference, and <strong>Perplexity</strong> for quick evidence lookups. <Link href="/tool/chatgpt" className="text-blue-600 hover:underline">ChatGPT</Link> for patient education materials.</p>
-          </div>
-          <div className="rounded-lg border border-gray-200 p-4">
-            <h3 className="mb-1 font-semibold text-gray-900">🏠 Home Health / Clinic Nurse</h3>
-            <p className="text-gray-700">Use <strong>Nabla Copilot</strong> for AI scribing (no EHR integration needed), <Link href="/tool/perplexity" className="text-blue-600 hover:underline">Perplexity</Link> for clinical research, and <strong>ChatGPT</strong> for patient education tailored to home settings.</p>
-          </div>
-          <div className="rounded-lg border border-gray-200 p-4">
-            <h3 className="mb-1 font-semibold text-gray-900">📚 Nurse Educator / CNS</h3>
-            <p className="text-gray-700"><strong>Notion AI</strong> for curriculum development and competency frameworks, <strong>ClinicalKey Nursing</strong> for evidence-based procedure references, <strong>ChatGPT</strong> for generating case studies and NCLEX-style questions.</p>
-          </div>
-          <div className="rounded-lg border border-gray-200 p-4">
-            <h3 className="mb-1 font-semibold text-gray-900">📊 Nurse Manager / CNO</h3>
-            <p className="text-gray-700"><strong>Dovetail</strong> for patient feedback analysis, <strong>Notion AI</strong> for policy writing and reporting, <strong>ChatGPT</strong> for drafting team communications and performance improvement plans.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="my-12">
-        <h2 className="mb-6 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-        <div className="space-y-6">
-          {faqs.map((faq) => (
-            <div key={faq.question}>
-              <h3 className="mb-2 text-xl font-semibold text-gray-900">{faq.question}</h3>
-              <p className="leading-relaxed text-gray-700">{faq.answer}</p>
-            </div>
+      <nav className="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+        <h2 className="mb-4 text-lg font-bold text-gray-900">Jump to Category</h2>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {toolCategories.map((cat) => (
+            <a key={cat.category} href={`#${cat.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="flex items-center gap-2 rounded-md p-2 text-sm transition-colors hover:bg-white hover:shadow-sm">
+              <span>{cat.icon}</span><span className="text-blue-600 hover:underline">{cat.category}</span><span className="text-gray-400">({cat.tools.length})</span>
+            </a>
           ))}
         </div>
+      </nav>
+      {toolCategories.map((category, catIndex) => (
+        <section key={category.category} id={category.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")} className="mb-16">
+          <div className="mb-8">
+            <h2 className="mb-2 text-3xl font-bold text-gray-900"><span className="mr-2">{category.icon}</span>{category.category}</h2>
+            <p className="text-lg text-gray-600">{category.description}</p>
+          </div>
+          <div className="space-y-8">
+            {category.tools.map((tool, toolIndex) => {
+              const globalIndex = toolCategories.slice(0, catIndex).reduce((sum, c) => sum + c.tools.length, 0) + toolIndex + 1;
+              const toolData = tools.find((t) => t.slug === tool.slug || t.name.toLowerCase() === tool.name.toLowerCase());
+              const affiliateUrl = getAffiliateUrl(tool.slug) || toolData?.affiliateUrl;
+              const toolUrl = toolData ? `/tool/${toolData.slug}` : `/tools?q=${encodeURIComponent(tool.name)}`;
+              return (
+                <div key={tool.name} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <div className="mb-1 flex items-center gap-3">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700">{globalIndex}</span>
+                        <h3 className="text-2xl font-bold text-gray-900"><Link href={toolUrl} className="hover:text-blue-600">{tool.name}</Link></h3>
+                      </div>
+                      <StarRating rating={tool.rating} />
+                    </div>
+                    <div className="text-right">
+                      <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">{tool.pricing}</span>
+                      <p className="mt-1 text-xs text-gray-500">{tool.pricingDetails}</p>
+                    </div>
+                  </div>
+                  <p className="mb-4 leading-relaxed text-gray-700">{tool.description}</p>
+                  <div className="mb-4 grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <h4 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Key Strengths</h4>
+                      <ul className="space-y-1">{tool.strengths.map((s: string) => <li key={s} className="flex items-start gap-2 text-sm text-gray-700"><span className="mt-0.5 text-green-500">✓</span>{s}</li>)}</ul>
+                    </div>
+                    <div>
+                      <h4 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Free Features</h4>
+                      <ul className="space-y-1">{tool.freeFeatures.map((f: string) => <li key={f} className="flex items-start gap-2 text-sm text-gray-700"><span className="mt-0.5 text-blue-500">★</span>{f}</li>)}</ul>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3 border-t border-gray-100 pt-4">
+                    <span className="text-sm text-gray-500"><strong>Best for:</strong> {tool.bestFor}</span>
+                    <div className="ml-auto flex gap-2">
+                      {affiliateUrl && <a href={affiliateUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700">Try {tool.name} →</a>}
+                      <Link href={toolUrl} className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50">Full Review</Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+      <section className="mb-12 rounded-lg bg-red-50 p-6">
+        <h2 className="mb-3 text-2xl font-bold text-gray-900">⚠️ AI Privacy and HIPAA Reminders for Nurses</h2>
+        <ul className="space-y-2 text-gray-700">
+          <li className="flex items-start gap-2"><span className="text-red-500 font-bold">•</span> Never input patient names, DOBs, MRNs, or other PHI into public AI tools (ChatGPT, Claude, Perplexity)</li>
+          <li className="flex items-start gap-2"><span className="text-red-500 font-bold">•</span> Only use AI documentation tools that your health system has approved and that are HIPAA-compliant</li>
+          <li className="flex items-start gap-2"><span className="text-red-500 font-bold">•</span> Always verify AI-generated clinical information against authoritative clinical references</li>
+          <li className="flex items-start gap-2"><span className="text-red-500 font-bold">•</span> AI is a decision support tool — clinical judgment always takes precedence</li>
+        </ul>
       </section>
-
-      {/* Bottom CTA */}
-      <section className="rounded-lg bg-gradient-to-r from-teal-600 to-blue-600 p-8 text-white">
-        <h2 className="mb-4 text-3xl font-bold">The Bottom Line for Nurses</h2>
-        <p className="mb-6 text-lg leading-relaxed text-teal-50">
-          The best nursing AI stack: <strong>Nuance DAX or Nabla</strong> for charting, <strong>UpToDate</strong> for clinical evidence, <strong>Perplexity</strong> for bedside research, and <strong>ChatGPT</strong> for patient education. Start with the documentation tool — it delivers the biggest time ROI and the quickest path back to patient care.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Link href="/tools" className="inline-flex items-center rounded-lg bg-white px-6 py-3 font-semibold text-teal-600 transition-colors hover:bg-gray-100">
-            Explore All AI Tools →
-          </Link>
-          <Link href="/blog/best-ai-tools-for-healthcare-professionals-2026" className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-teal-600">
-            AI for Healthcare Pros →
-          </Link>
+      <section className="mb-12">
+        <h2 className="mb-6 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+        <div className="space-y-5">
+          <div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900">Is it safe for nurses to use AI tools?</h3>
+            <p className="leading-relaxed text-gray-700">With appropriate safeguards, yes. The key rules: never input patient-identifiable information into non-approved AI tools, always verify clinical information against authoritative sources, and use AI as support for — not a replacement for — clinical judgment. System-approved tools like Nuance DAX are designed for HIPAA-compliant clinical use.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900">Can AI help with NCLEX preparation?</h3>
+            <p className="leading-relaxed text-gray-700">Yes, significantly. Claude and ChatGPT can generate unlimited NCLEX-style practice questions, explain why answers are correct or incorrect, and create study guides for any topic. Osmosis provides structured nursing education content. Combined with official NCLEX review materials, AI tools can dramatically accelerate exam preparation.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900">What is the most useful free AI tool for nurses?</h3>
+            <p className="leading-relaxed text-gray-700">For nursing students, Claude's free tier is invaluable for NCLEX prep and concept explanation. For practicing nurses, Epocrates' free version provides critical clinical reference and drug interaction checking. ChatGPT free tier works well for de-identified educational and documentation tasks.</p>
+          </div>
         </div>
       </section>
-
-      {/* Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "Best AI Tools for Nurses in 2026: Save Time, Improve Patient Care",
-            description: "Comprehensive guide to the 8 best AI tools for nurses in 2026, covering clinical documentation, decision support, patient education, and research.",
-            author: { "@type": "Organization", name: "AISO Tools" },
-            publisher: { "@type": "Organization", name: "AISO Tools", url: "https://aisotools.com" },
-            datePublished: "2026-04-25",
-            dateModified: "2026-04-25",
-            url: "https://aisotools.com/blog/best-ai-tools-for-nurses-2026",
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: { "@type": "Answer", text: faq.answer },
-            })),
-          }),
-        }}
-      />
-    </main>
+      <section className="rounded-lg bg-gradient-to-r from-blue-600 to-teal-600 p-8 text-white">
+        <h2 className="mb-4 text-3xl font-bold">More Time for What Matters Most</h2>
+        <p className="mb-6 text-lg leading-relaxed text-blue-50">AI handles documentation and research so nurses can spend more time on patient care — the work only humans can do.</p>
+        <div className="flex flex-wrap gap-4">
+          <Link href="/tools" className="inline-flex items-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-600 transition-colors hover:bg-gray-100">Explore All AI Tools →</Link>
+          <Link href="/blog/best-ai-tools-for-healthcare-professionals-2026" className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-blue-600">AI for Healthcare →</Link>
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: "Best AI Tools for Nurses in 2026", description: "Guide to AI tools for nurses including Nuance DAX, Epocrates, Claude, and Osmosis.", author: { "@type": "Organization", name: "AISOTools" }, publisher: { "@type": "Organization", name: "AISOTools", logo: { "@type": "ImageObject", url: "https://aisotools.com/logo.png" } }, datePublished: "2026-05-05", dateModified: "2026-05-05", mainEntityOfPage: { "@type": "WebPage", "@id": "https://aisotools.com/blog/best-ai-tools-for-nurses-2026" } })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "Is it safe for nurses to use AI tools?", acceptedAnswer: { "@type": "Answer", text: "Yes with safeguards: never input PHI into non-approved tools, verify clinical info in authoritative sources, and use AI as decision support not replacement for clinical judgment." } }, { "@type": "Question", name: "Can AI help with NCLEX preparation?", acceptedAnswer: { "@type": "Answer", text: "Yes significantly. Claude and ChatGPT generate unlimited NCLEX-style practice questions, explain rationales, and create custom study guides for any nursing topic." } }] })}} />
+    </article>
   );
 }

@@ -4,472 +4,258 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Best AI Tools for Copywriters in 2026: Write More, Earn More",
-  description:
-    "The best AI tools for copywriters in 2026. Compare Jasper, Anyword, Frase, and more to write faster copy, optimize for conversions, and scale your freelance business.",
-  keywords: [
-    "best ai tools for copywriters",
-    "ai for copywriting",
-    "ai copywriting tools 2026",
-    "jasper ai copywriter",
-    "anyword ai",
-    "frase ai",
-    "ai writing tools for freelancers",
-    "ai ad copy generator",
-    "ai sales copy",
-    "best ai for copywriting",
-  ],
+  title: "Best AI Tools for Copywriters in 2026: Write Faster, Convert More",
+  description: "Discover the best AI tools for copywriters in 2026. From AI writing with Claude and Jasper to ad creative tools and SEO copy — write higher-converting copy in less time.",
+  keywords: ["best ai tools for copywriters", "ai copywriting tools", "ai for copywriting", "ai ad copy generator", "copywriting ai tools 2026"],
   openGraph: {
-    title: "Best AI Tools for Copywriters in 2026: Write More, Earn More",
-    description:
-      "From Jasper to Anyword, discover the AI tools top copywriters use to write 10x faster, optimize conversion rates, and scale their freelance or agency income.",
+    title: "Best AI Tools for Copywriters in 2026",
+    description: "The ultimate guide to AI tools for copywriters. Compare Claude, Jasper, Copy.ai, and more.",
     url: "https://aisotools.com/blog/best-ai-tools-for-copywriters-2026",
     type: "article",
   },
-  alternates: {
-    canonical: "https://aisotools.com/blog/best-ai-tools-for-copywriters-2026",
-  },
+  alternates: { canonical: "https://aisotools.com/blog/best-ai-tools-for-copywriters-2026" },
 };
 
-interface CopyToolCategory {
-  category: string;
-  icon: string;
-  description: string;
-  tools: CopyAITool[];
-}
+interface CopyTool { name: string; slug: string; description: string; pricing: string; pricingDetails: string; strengths: string[]; bestFor: string; freeFeatures: string[]; rating: number; }
+interface CopyCategory { category: string; icon: string; description: string; tools: CopyTool[]; }
 
-interface CopyAITool {
-  name: string;
-  slug: string;
-  description: string;
-  pricing: string;
-  pricingDetails: string;
-  strengths: string[];
-  bestFor: string;
-  freeFeatures: string[];
-  rating: number;
-  copyTypes?: string[];
-}
-
-const toolCategories: CopyToolCategory[] = [
+const toolCategories: CopyCategory[] = [
   {
-    category: "AI Copywriting Platforms",
+    category: "Long-Form Copy & Content",
     icon: "✍️",
-    description:
-      "Full-suite AI writing platforms built specifically for commercial copy — ads, landing pages, emails, and long-form content",
+    description: "AI writing assistants for sales pages, email sequences, blog content, and long-form copy",
     tools: [
       {
-        name: "Jasper AI",
-        slug: "jasper",
-        description:
-          "The market-leading AI copywriting platform trusted by 100,000+ marketers and copywriters. Jasper's trained on high-converting marketing copy and includes 50+ templates for every copy type — from Facebook ads to long-form blog posts — with brand voice controls that keep your output consistent.",
-        pricing: "Paid",
-        pricingDetails: "Creator $49/mo, Teams $125/mo, Business (custom)",
-        strengths: [
-          "50+ copy templates (ads, emails, landing pages, blogs)",
-          "Brand voice training — Jasper learns your style",
-          "Campaign mode: generate entire campaigns in one workflow",
-          "SEO mode with Surfer SEO integration",
-          "Team collaboration with brand asset library",
-          "Jasper Chat for conversational copy refinement",
-          "Browser extension for copy anywhere",
-        ],
-        bestFor:
-          "Marketing agencies, in-house teams, and freelancers who need volume copy with consistent brand voice",
-        freeFeatures: ["7-day free trial"],
-        rating: 4.7,
-        copyTypes: ["Facebook/Google Ads", "Email sequences", "Landing pages", "Product descriptions", "Blog posts", "Social media"],
-      },
-      {
-        name: "Anyword",
-        slug: "anyword",
-        description:
-          "The only AI copywriting tool with a Predictive Performance Score — it estimates how well your copy will convert before you publish. Anyword analyzes millions of ad campaigns to predict CTR and conversion rates, then generates copy variants optimized for your specific audience and channel.",
-        pricing: "Paid",
-        pricingDetails: "Starter $49/mo, Data-Driven $99/mo, Business $499/mo",
-        strengths: [
-          "Predictive Performance Score for each copy variant",
-          "Data-driven copy optimization with real campaign benchmarks",
-          "Audience targeting: generates copy for specific demographics",
-          "A/B test mode: 10+ variants with performance predictions",
-          "Custom AI model trained on your past best-performing copy",
-          "Channel-specific optimization (Facebook, Google, Email)",
-          "Copy analytics dashboard",
-        ],
-        bestFor:
-          "Performance marketers and conversion copywriters who want data-backed predictions before running ads",
-        freeFeatures: ["7-day free trial", "Performance scores on trial"],
-        rating: 4.6,
-        copyTypes: ["Ad copy", "Email subject lines", "Landing page headlines", "Push notifications", "Product descriptions"],
-      },
-      {
-        name: "Writesonic",
-        slug: "writesonic",
-        description:
-          "GPT-4-powered writing platform that balances quality with affordability. Writesonic covers the full content spectrum — from short ad copy to long-form articles — with a generous free tier and real-time web search integration that keeps copy current and factual.",
+        name: "Claude",
+        slug: "claude",
+        description: "The copywriter's secret weapon. Claude writes in nuanced, human-sounding voices and excels at long-form sales copy, email sequences, brand storytelling, and ad scripts. Best AI for tone consistency and avoiding generic outputs.",
         pricing: "Freemium",
-        pricingDetails: "Free (10,000 words/mo), Small $16/mo, Large $33/mo",
-        strengths: [
-          "Generous free tier with 10,000 words/month",
-          "Real-time web search integration for accurate facts",
-          "AI Article Writer 6.0 for long-form SEO content",
-          "100+ templates including landing pages, ads, emails",
-          "Chatsonic: conversational AI with web access",
-          "Built-in plagiarism checker",
-          "API access on all paid plans",
-        ],
-        bestFor:
-          "Freelance copywriters and small agencies who need affordable volume copy with a strong free tier to start",
-        freeFeatures: [
-          "10,000 words/month",
-          "All templates",
-          "Chatsonic with web access",
-          "GPT-3.5 quality on free tier",
-        ],
-        rating: 4.4,
-        copyTypes: ["Blog posts", "Ad copy", "Email campaigns", "Product pages", "Social media", "Startups pitches"],
-      },
-    ],
-  },
-  {
-    category: "SEO-Optimized Copy & Content Briefs",
-    icon: "🔍",
-    description:
-      "AI tools that combine keyword research with copy generation — helping copywriters create content that ranks AND converts",
-    tools: [
-      {
-        name: "Frase",
-        slug: "frase",
-        description:
-          "The best AI tool for copywriters who write SEO content. Frase analyzes your target keyword's top 20 SERP results, generates a content brief, then helps you write copy optimized to outrank competitors. Its AI content editor shows you exactly which topics to cover and which keywords to include.",
-        pricing: "Paid",
-        pricingDetails: "Solo $15/mo (4 articles), Basic $45/mo (30 articles), Team $115/mo (unlimited)",
-        strengths: [
-          "SERP analysis: analyzes top 20 Google results for any keyword",
-          "AI-generated content briefs with topic clusters",
-          "Content score showing how well you cover the topic",
-          "AI writer trained on your niche's top-ranking pages",
-          "Answer target questions searchers are asking",
-          "Internal linking suggestions",
-          "Instant outline generation",
-        ],
-        bestFor:
-          "Copywriters and content strategists who write SEO content and need to outrank competitors in Google",
-        freeFeatures: ["5-day free trial (1 article)"],
-        rating: 4.6,
-        copyTypes: ["Blog posts", "Landing pages", "Pillar pages", "FAQ content", "Product category pages"],
+        pricingDetails: "Free tier, Pro $20/mo, Team $30/mo",
+        strengths: ["Most human-sounding AI writing", "Long-form sales page writing", "Email sequence drafting (5-7 email flows)", "Brand voice matching from examples", "Story-driven copywriting", "Avoids clichés better than competitors"],
+        bestFor: "Copywriters who need nuanced, brand-voice-matched copy that doesn't sound like AI",
+        freeFeatures: ["Claude Sonnet access", "Long context window", "Projects for brand voice storage"],
+        rating: 4.8,
       },
       {
-        name: "Koala Writer",
-        slug: "koala-writer",
-        description:
-          "The best value AI writer for long-form SEO articles in 2026. Koala Writer uses GPT-4 to generate complete, publish-ready articles with real-time web search, SERP analysis, and auto-generated images — producing content that would take a human copywriter 3-4 hours in under 5 minutes.",
+        name: "Jasper",
+        slug: "jasper",
+        description: "Enterprise AI writing platform purpose-built for marketing teams. Jasper's brand voice feature learns your company's tone, and its 50+ templates cover every copywriting use case — from Google Ads to white papers.",
         pricing: "Paid",
-        pricingDetails: "Essentials $9/mo (5 articles), Starter $25/mo (15 articles), Professional $49/mo (40 articles)",
-        strengths: [
-          "Generates full 2,000-4,000 word articles in one click",
-          "Real-time web search for current, accurate information",
-          "SERP-based structure matching top-ranking content",
-          "Auto-generated featured images (DALL-E integration)",
-          "Amazon affiliate product integration",
-          "Direct publish to WordPress",
-          "Exceptionally affordable vs. Jasper/Writesonic",
-        ],
-        bestFor:
-          "Affiliate copywriters, content agencies, and solo operators who need high-volume SEO content at low cost",
-        freeFeatures: ["Free article trial on signup"],
+        pricingDetails: "Creator $39/mo, Pro $59/mo, Business custom",
+        strengths: ["Brand voice learning and consistency", "50+ copywriting templates", "SEO mode with Surfer integration", "Team collaboration and approval workflows", "Campaign planning workspace", "Product description generator (bulk)"],
+        bestFor: "In-house copywriters and agencies managing multiple brand voices with team workflows",
+        freeFeatures: ["7-day free trial", "All templates access during trial"],
         rating: 4.5,
-        copyTypes: ["SEO blog posts", "Affiliate reviews", "Product comparisons", "Listicle articles", "How-to guides"],
+      },
+      {
+        name: "Copy.ai",
+        slug: "copy-ai",
+        description: "AI copywriting tool with a GTM (Go-to-Market) AI platform for sales and marketing teams. Excellent for outbound sequences, social copy, product descriptions, and conversion-focused short-form copy.",
+        pricing: "Freemium",
+        pricingDetails: "Free (2,000 words/mo), Pro $36/mo, Team $186/mo",
+        strengths: ["GTM AI platform for sales + marketing alignment", "Outbound email sequence generation", "Product description bulk generation", "Social media copy across platforms", "Sales call talk tracks", "CRM integrations (Salesforce, HubSpot)"],
+        bestFor: "Sales-focused copywriters writing outbound sequences, cold email, and GTM content",
+        freeFeatures: ["2,000 words/month", "90+ templates", "Basic tools"],
+        rating: 4.4,
       },
     ],
   },
   {
-    category: "AI Grammar & Style Enhancement",
-    icon: "💎",
-    description:
-      "AI editing tools that polish your copy — catching errors, improving clarity, adjusting tone, and ensuring every word earns its place",
+    category: "Ad Copy & Performance Marketing",
+    icon: "📢",
+    description: "AI tools specialized for paid advertising copy that converts",
     tools: [
+      {
+        name: "AdCreative.ai",
+        slug: "adcreative-ai",
+        description: "AI-powered ad creative platform that generates complete ad sets — headlines, body copy, and visuals — optimized for performance. Trained on top-performing ad creative data across industries.",
+        pricing: "Paid",
+        pricingDetails: "Starter $21/mo, Premium $141/mo, Ultimate $299/mo",
+        strengths: ["Ad creative trained on performance data", "Complete ad sets (copy + visual) in one click", "A/B testing variation generation", "Platform-specific copy (Facebook, Google, LinkedIn)", "Performance score prediction", "Brand kit integration"],
+        bestFor: "Performance marketers and copywriters who write paid advertising copy and need rapid iteration",
+        freeFeatures: ["7-day free trial", "10 credits on signup"],
+        rating: 4.5,
+      },
+      {
+        name: "ChatGPT",
+        slug: "chatgpt",
+        description: "Copywriters use ChatGPT to generate dozens of headline variations, test different angles, write AIDA frameworks, create urgency-driven CTAs, and repurpose one piece of copy across multiple platforms.",
+        pricing: "Freemium",
+        pricingDetails: "Free tier, Plus $20/mo",
+        strengths: ["Rapid headline and hook generation (50 variations in minutes)", "Framework-based copy (AIDA, PAS, BAB)", "CTA variation testing", "Platform repurposing (blog → email → social → ad)", "Objection-handling copy", "A/B test copy variants"],
+        bestFor: "Copywriters who need rapid variation generation for testing and repurposing across channels",
+        freeFeatures: ["GPT-4o mini", "Unlimited questions", "Custom instructions"],
+        rating: 4.6,
+      },
+    ],
+  },
+  {
+    category: "SEO & Content Optimization",
+    icon: "🔍",
+    description: "AI tools that combine copywriting with SEO to rank and convert",
+    tools: [
+      {
+        name: "Surfer SEO",
+        slug: "surfer-seo",
+        description: "SEO content optimization platform with AI writing. Analyzes the top 10 ranking pages for your keyword and tells you exactly what to include — then AI writes copy optimized to rank. Jasper and Surfer integrate natively.",
+        pricing: "Paid",
+        pricingDetails: "Essential $89/mo, Scale $129/mo, Scale AI $219/mo",
+        strengths: ["Content score vs. top competitors", "AI article outline generation from SERP data", "NLP keyword recommendations", "Content editor with real-time scoring", "Internal linking suggestions", "SERP analysis for topic coverage"],
+        bestFor: "Copywriters writing blog and landing page content that needs to rank in Google",
+        freeFeatures: ["Free Chrome extension", "Keyword research trial"],
+        rating: 4.6,
+      },
       {
         name: "Grammarly",
         slug: "grammarly",
-        description:
-          "The world's most popular AI writing assistant. For copywriters, Grammarly Business goes beyond spell-check — it suggests stronger word choices, adjusts tone for audience, identifies passive voice, and now includes GrammarlyGO for full AI copy rewrites and generation. Works everywhere you write.",
+        description: "Writing assistant that elevates copy quality — improving clarity, engagement, and tone. Grammarly Business learns your brand voice and ensures consistency across all team copy. Essential for polishing AI-generated first drafts.",
         pricing: "Freemium",
-        pricingDetails:
-          "Free, Premium $12/mo, Business $15/user/mo",
-        strengths: [
-          "Works in 500K+ apps via browser extension",
-          "Tone detector and adjuster",
-          "Clarity and conciseness suggestions",
-          "GrammarlyGO: AI rewrites and generation",
-          "Plagiarism checker (Premium)",
-          "Brand tone style guide (Business)",
-          "Word choice suggestions for stronger copy",
-        ],
-        bestFor:
-          "Every copywriter — Grammarly is essential insurance that catches errors and polishes copy at the final stage",
-        freeFeatures: [
-          "Unlimited grammar/spell check",
-          "Basic tone detection",
-          "Works in most browsers and apps",
-          "Desktop app",
-        ],
-        rating: 4.7,
-        copyTypes: ["All copy types — editing and polishing layer"],
+        pricingDetails: "Free tier, Premium $12/mo, Business $15/mo per user",
+        strengths: ["Real-time grammar and clarity checks", "Tone adjustment for brand consistency", "Readability scoring", "Works in all writing environments (browser, Word, Google Docs)", "Plagiarism detection", "Brand voice guide (Business plan)"],
+        bestFor: "Copywriters who need to polish AI drafts and ensure brand voice consistency across outputs",
+        freeFeatures: ["Grammar checking", "Basic tone detection", "Browser extension"],
+        rating: 4.5,
+      },
+    ],
+  },
+  {
+    category: "Research & Brief Creation",
+    icon: "🔎",
+    description: "AI tools that help copywriters research topics, understand audiences, and build briefs faster",
+    tools: [
+      {
+        name: "Perplexity",
+        slug: "perplexity",
+        description: "AI research tool copywriters use to understand product categories, find customer language (voice of customer), research competitors' messaging, and gather stats for persuasive copy — all with sources.",
+        pricing: "Freemium",
+        pricingDetails: "Free, Pro $20/mo",
+        strengths: ["Customer language research with sources", "Competitor messaging analysis", "Statistic and data sourcing for copy", "Industry trend identification", "Audience pain point research", "Product category research"],
+        bestFor: "Pre-writing research, understanding customer language, and gathering credibility-building data points",
+        freeFeatures: ["Unlimited queries", "Source citations", "Pro search (2/day)"],
+        rating: 4.5,
       },
     ],
   },
 ];
 
-export default function BestAIToolsForCopywritersPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "Best AI Tools for Copywriters in 2026",
-    description:
-      "Compare the top AI copywriting tools — Jasper, Anyword, Frase, and more. Find the best AI for your copy type, budget, and workflow.",
-    author: { "@type": "Organization", name: "AISOTools" },
-    publisher: { "@type": "Organization", name: "AISOTools", url: "https://aisotools.com" },
-    datePublished: "2026-04-24",
-    dateModified: "2026-04-24",
-    url: "https://aisotools.com/blog/best-ai-tools-for-copywriters-2026",
-  };
-
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Will AI replace copywriters?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "AI is changing copywriting, not replacing copywriters. AI tools excel at first drafts, research, and volume production — but strategic thinking, emotional resonance, brand understanding, and conversion optimization still require human expertise. The copywriters thriving in 2026 use AI to work 5-10x faster, not to replace their thinking.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the best AI tool for writing ad copy?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Anyword is the best for performance-focused ad copy — it predicts conversion rates before you run ads. Jasper AI is the most popular for volume ad copy across channels. For budget-conscious copywriters, Writesonic offers strong ad copy templates at a lower price point.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the best free AI tool for copywriters?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Writesonic offers the most generous free tier with 10,000 words per month — enough for significant copy volume. Grammarly's free plan is essential for all copywriters as a polishing layer. Claude and ChatGPT both have free tiers that can handle copy tasks with the right prompts.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can AI write SEO copy that ranks?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, when used correctly. Frase and Koala Writer specifically analyze SERP results to generate copy structured to rank. The key is treating AI as a starting point — supplement with unique insights, expert quotes, and original examples that pure AI can't generate. Google ranks helpful content, not AI-generated content per se.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How much can copywriters earn using AI?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "AI allows copywriters to handle 5-10x more client work without increasing hours. A freelance copywriter earning $5,000/month can potentially scale to $15,000-25,000/month by using AI for research and first drafts while focusing human time on strategy and editing. Many agencies are now building AI-assisted copy services as a new revenue stream.",
-        },
-      },
-    ],
-  };
-
+function StarRating({ rating }: { rating: number }) {
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.3;
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-            <Link href="/blog" className="hover:text-blue-600">Blog</Link>
-            <span>›</span>
-            <span>Best AI Tools for Copywriters</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Best AI Tools for Copywriters in 2026: Write More, Earn More
-          </h1>
-          <p className="text-xl text-gray-600 mb-4">
-            The copywriters winning in 2026 aren&apos;t writing less — they&apos;re using AI to write 10x more. Here&apos;s the complete toolkit, organized by what you actually need to produce.
-          </p>
-          <div className="flex flex-wrap gap-3 text-sm text-gray-500">
-            <span>📅 Updated April 2026</span>
-            <span>•</span>
-            <span>✍️ 7 AI tools reviewed</span>
-            <span>•</span>
-            <span>💰 Options from free to $499/mo</span>
-          </div>
+    <div className="flex items-center gap-1">
+      {Array.from({ length: 5 }).map((_, i) => <span key={i} className="text-lg">{i < fullStars ? "⭐" : i === fullStars && hasHalf ? "⭐" : "☆"}</span>)}
+      <span className="ml-1 text-sm font-medium text-gray-600">{rating}/5</span>
+    </div>
+  );
+}
+
+export default function BestAIToolsForCopywriters2026() {
+  const totalTools = toolCategories.reduce((sum, cat) => sum + cat.tools.length, 0);
+  return (
+    <article className="mx-auto max-w-4xl px-4 py-8">
+      <header className="mb-12">
+        <div className="mb-4 flex items-center gap-2 text-sm text-gray-500">
+          <Link href="/blog" className="hover:text-blue-600">Blog</Link><span>→</span><span>AI Tools for Copywriters</span>
         </div>
-
-        {/* Quick Picks */}
-        <div className="bg-blue-50 rounded-xl p-6 mb-8">
-          <h2 className="text-lg font-bold text-blue-900 mb-4">🏆 Best AI for Each Copy Type</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {[
-              { use: "Best for ad copy with predictions", tool: "Anyword", slug: "anyword" },
-              { use: "Best for full copy platform", tool: "Jasper AI", slug: "jasper" },
-              { use: "Best for SEO content", tool: "Frase", slug: "frase" },
-              { use: "Best value long-form", tool: "Koala Writer", slug: "koala-writer" },
-              { use: "Best for affordable volume", tool: "Writesonic", slug: "writesonic" },
-              { use: "Best for polishing copy", tool: "Grammarly", slug: "grammarly" },
-            ].map((pick) => (
-              <div key={pick.slug} className="flex items-center gap-2">
-                <span className="text-blue-600 font-medium text-sm">{pick.use}:</span>
-                <Link
-                  href={`/tool/${pick.slug}`}
-                  className="text-sm font-bold text-blue-800 hover:underline"
-                >
-                  {pick.tool}
-                </Link>
-              </div>
-            ))}
-          </div>
+        <h1 className="mb-4 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">Best AI Tools for Copywriters in 2026</h1>
+        <p className="mb-6 text-xl leading-relaxed text-gray-600">{totalTools} AI tools that make copywriters more productive — from sales pages and email sequences to ad copy and SEO content.</p>
+        <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+          <span>📅 Updated May 2026</span><span>•</span><span>⏱️ 14 min read</span><span>•</span><span>✍️ {totalTools} tools reviewed</span>
         </div>
-
-        {/* Tool Categories */}
-        {toolCategories.map((category) => (
-          <div key={category.category} className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              {category.icon} {category.category}
-            </h2>
-            <p className="text-gray-600 mb-6">{category.description}</p>
-
-            <div className="space-y-6">
-              {category.tools.map((tool) => {
-                const affiliateUrl = getAffiliateUrl(tool.slug);
-                return (
-                <div
-                  key={tool.slug}
-                  className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors"
-                >
-                  <div className="flex items-start justify-between mb-3">
+      </header>
+      <section className="mb-12 rounded-lg bg-orange-50 p-6">
+        <h2 className="mb-3 text-2xl font-bold text-gray-900">How Smart Copywriters Use AI in 2026</h2>
+        <p className="mb-4 leading-relaxed text-gray-700">The best copywriters aren't threatened by AI — they're using it to <strong>3-5x their output</strong>. AI handles first drafts, variation generation, and research. Copywriters handle strategy, voice, and the nuanced human understanding that makes copy convert.</p>
+        <p className="leading-relaxed text-gray-700">The winning approach: use AI to generate 10 angles in 5 minutes, pick the best 2, refine with your expertise. You go from staring at a blank page to editing strong concepts — the part of copywriting that's actually skilled work.</p>
+      </section>
+      <nav className="mb-12 rounded-lg border border-gray-200 bg-gray-50 p-6">
+        <h2 className="mb-4 text-lg font-bold text-gray-900">Jump to Category</h2>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {toolCategories.map((cat) => (
+            <a key={cat.category} href={`#${cat.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="flex items-center gap-2 rounded-md p-2 text-sm transition-colors hover:bg-white hover:shadow-sm">
+              <span>{cat.icon}</span><span className="text-blue-600 hover:underline">{cat.category}</span><span className="text-gray-400">({cat.tools.length})</span>
+            </a>
+          ))}
+        </div>
+      </nav>
+      {toolCategories.map((category, catIndex) => (
+        <section key={category.category} id={category.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")} className="mb-16">
+          <div className="mb-8">
+            <h2 className="mb-2 text-3xl font-bold text-gray-900"><span className="mr-2">{category.icon}</span>{category.category}</h2>
+            <p className="text-lg text-gray-600">{category.description}</p>
+          </div>
+          <div className="space-y-8">
+            {category.tools.map((tool, toolIndex) => {
+              const globalIndex = toolCategories.slice(0, catIndex).reduce((sum, c) => sum + c.tools.length, 0) + toolIndex + 1;
+              const toolData = tools.find((t) => t.slug === tool.slug || t.name.toLowerCase() === tool.name.toLowerCase());
+              const affiliateUrl = getAffiliateUrl(tool.slug) || toolData?.affiliateUrl;
+              const toolUrl = toolData ? `/tool/${toolData.slug}` : `/tools?q=${encodeURIComponent(tool.name)}`;
+              return (
+                <div key={tool.name} className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                  <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
                     <div>
-                      <Link
-                        href={`/tool/${tool.slug}`}
-                        className="text-xl font-bold text-gray-900 hover:text-blue-600"
-                      >
-                        {tool.name}
-                      </Link>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
-                          {tool.pricing}
-                        </span>
-                        <span className="text-sm text-gray-500">{tool.pricingDetails}</span>
+                      <div className="mb-1 flex items-center gap-3">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700">{globalIndex}</span>
+                        <h3 className="text-2xl font-bold text-gray-900"><Link href={toolUrl} className="hover:text-blue-600">{tool.name}</Link></h3>
                       </div>
+                      <StarRating rating={tool.rating} />
                     </div>
-                    <div className="flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded">
-                      <span className="text-yellow-500">★</span>
-                      <span className="text-sm font-bold text-gray-800">{tool.rating}</span>
+                    <div className="text-right">
+                      <span className="inline-block rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">{tool.pricing}</span>
+                      <p className="mt-1 text-xs text-gray-500">{tool.pricingDetails}</p>
                     </div>
                   </div>
-
-                  <p className="text-gray-700 mb-4">{tool.description}</p>
-
-                  {tool.copyTypes && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tool.copyTypes.map((type) => (
-                        <span
-                          key={type}
-                          className="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-full"
-                        >
-                          {type}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-1">
-                      {tool.strengths.map((s) => (
-                        <li key={s} className="flex items-start gap-2 text-sm text-gray-600">
-                          <span className="text-green-500 mt-0.5 flex-shrink-0">✓</span>
-                          {s}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between">
+                  <p className="mb-4 leading-relaxed text-gray-700">{tool.description}</p>
+                  <div className="mb-4 grid gap-4 sm:grid-cols-2">
                     <div>
-                      <span className="text-xs font-medium text-gray-500">Best for: </span>
-                      <span className="text-xs text-gray-600">{tool.bestFor}</span>
+                      <h4 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Key Strengths</h4>
+                      <ul className="space-y-1">{tool.strengths.map((s) => <li key={s} className="flex items-start gap-2 text-sm text-gray-700"><span className="mt-0.5 text-green-500">✓</span>{s}</li>)}</ul>
                     </div>
-                    <div className="flex items-center gap-3">
-                      {affiliateUrl && (
-                        <a
-                          href={affiliateUrl}
-                          target="_blank"
-                          rel="noopener noreferrer sponsored"
-                          className="text-sm font-medium text-green-600 hover:text-green-800"
-                        >
-                          Try {tool.name} →
-                        </a>
-                      )}
-                      <Link
-                        href={`/tool/${tool.slug}`}
-                        className="text-sm font-medium text-blue-600 hover:text-blue-800"
-                      >
-                        {affiliateUrl ? "Full Review →" : "View Details →"}
-                      </Link>
+                    <div>
+                      <h4 className="mb-2 text-sm font-semibold uppercase tracking-wide text-gray-500">Free Features</h4>
+                      <ul className="space-y-1">{tool.freeFeatures.map((f) => <li key={f} className="flex items-start gap-2 text-sm text-gray-700"><span className="mt-0.5 text-blue-500">★</span>{f}</li>)}</ul>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3 border-t border-gray-100 pt-4">
+                    <span className="text-sm text-gray-500"><strong>Best for:</strong> {tool.bestFor}</span>
+                    <div className="ml-auto flex gap-2">
+                      {affiliateUrl && <a href={affiliateUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700">Try {tool.name} →</a>}
+                      <Link href={toolUrl} className="inline-flex items-center rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50">Full Review</Link>
                     </div>
                   </div>
                 </div>
-                );
-              })}
-            </div>
+              );
+            })}
           </div>
-        ))}
-
-        {/* FAQ */}
-        <div className="mt-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            {faqJsonLd.mainEntity.map((faq) => (
-              <div key={faq.name} className="border border-gray-200 rounded-lg p-5">
-                <h3 className="text-base font-semibold text-gray-900 mb-2">{faq.name}</h3>
-                <p className="text-gray-600 text-sm">{faq.acceptedAnswer.text}</p>
-              </div>
-            ))}
+        </section>
+      ))}
+      <section className="mb-12">
+        <h2 className="mb-6 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
+        <div className="space-y-5">
+          <div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900">Will AI replace copywriters?</h3>
+            <p className="leading-relaxed text-gray-700">AI generates words, but copywriting is about understanding psychology, strategy, and persuasion. AI can write 10,000 words — it takes a copywriter to choose the 100 that convert. The copywriters most at risk are those writing generic commodity content; those with specialized expertise and strategic thinking will remain in demand.</p>
           </div>
-        </div>
-
-        {/* Related */}
-        <div className="mt-10 bg-gray-50 rounded-xl p-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-4">Related Guides</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {[
-              { href: "/blog/best-ai-writing-tools-comparison-2026", label: "Best AI Writing Tools 2026" },
-              { href: "/blog/best-ai-tools-for-content-marketers-2026", label: "Best AI for Content Marketers" },
-              { href: "/blog/best-ai-tools-for-freelancers-2026", label: "Best AI for Freelancers" },
-              { href: "/blog/best-ai-marketing-tools-2026", label: "Best AI Marketing Tools 2026" },
-              { href: "/alternatives/jasper", label: "Jasper AI Alternatives" },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-blue-600 hover:underline text-sm"
-              >
-                → {link.label}
-              </Link>
-            ))}
+          <div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900">What is the best AI for writing sales copy?</h3>
+            <p className="leading-relaxed text-gray-700">Claude is the most human-sounding for long-form sales pages and email sequences. ChatGPT is fastest for generating multiple short-form variations to test. Jasper is best if you need consistent brand voice across a large team. Start with Claude for quality, ChatGPT for speed.</p>
+          </div>
+          <div>
+            <h3 className="mb-2 text-xl font-semibold text-gray-900">How do copywriters use AI without making copy sound robotic?</h3>
+            <p className="leading-relaxed text-gray-700">The key is treating AI output as a first draft, not a final product. Give AI examples of your best-converting copy and ask it to write in that style. Then edit heavily — add specific customer language, cut generic phrases, inject personality and specificity. The final copy should sound nothing like raw AI output.</p>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+      <section className="rounded-lg bg-gradient-to-r from-orange-500 to-red-600 p-8 text-white">
+        <h2 className="mb-4 text-3xl font-bold">Write Copy That Converts</h2>
+        <p className="mb-6 text-lg leading-relaxed text-orange-50">AI handles the first draft. You handle the strategy and persuasion that turns readers into buyers.</p>
+        <div className="flex flex-wrap gap-4">
+          <Link href="/tools" className="inline-flex items-center rounded-lg bg-white px-6 py-3 font-semibold text-orange-600 transition-colors hover:bg-gray-100">Explore All AI Tools →</Link>
+          <Link href="/blog/best-ai-writing-tools-comparison-2026" className="inline-flex items-center rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-orange-600">Best AI Writing Tools →</Link>
+        </div>
+      </section>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: "Best AI Tools for Copywriters in 2026", description: "Guide to AI copywriting tools including Claude, Jasper, Copy.ai, AdCreative.ai, and more.", author: { "@type": "Organization", name: "AISOTools" }, publisher: { "@type": "Organization", name: "AISOTools", logo: { "@type": "ImageObject", url: "https://aisotools.com/logo.png" } }, datePublished: "2026-05-05", dateModified: "2026-05-05", mainEntityOfPage: { "@type": "WebPage", "@id": "https://aisotools.com/blog/best-ai-tools-for-copywriters-2026" } })}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "Will AI replace copywriters?", acceptedAnswer: { "@type": "Answer", text: "AI generates words, but copywriting requires psychology, strategy, and persuasion expertise that AI cannot replicate. Specialized copywriters with strategic thinking remain in high demand." } }, { "@type": "Question", name: "What is the best AI for writing sales copy?", acceptedAnswer: { "@type": "Answer", text: "Claude is best for human-sounding long-form sales pages. ChatGPT is fastest for multiple short-form variations. Jasper for brand voice consistency across teams." } }] })}} />
+    </article>
   );
 }
