@@ -300,6 +300,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // aiso-taaft-gaps sprint May 5 2026 (cycle 29 slot 4): ecommerce + ad creative blog posts
     { url: `${base}/blog/best-ai-ecommerce-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.94 },
     { url: `${base}/blog/best-ai-ad-creative-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.94 },
+    // sitemap catch-up: 23 posts missing from sitemap (added May 6 2026)
+    { url: `${base}/blog/best-ai-art-generators-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-chatbot-builders-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-chrome-extensions-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-code-review-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-content-repurposing-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-grammar-checkers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-image-upscaler-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-landing-page-builders-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-paraphrasing-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-scheduling-tools-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-script-generators-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-affiliate-marketers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-course-creators-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-email-marketers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-event-planners-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-instagram-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-interior-designers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-lead-generation-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-tools-for-life-coaches-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-pr-professionals-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-remote-work-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-tools-for-solopreneurs-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-web-developers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    // aiso-taaft-gaps sprint May 6 2026 (cycle 32 slot 1): 5 new profession blog posts
+    { url: `${base}/blog/best-ai-tools-for-amazon-sellers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
+    { url: `${base}/blog/best-ai-tools-for-customer-success-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-technical-writers-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-supply-chain-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.92 },
+    { url: `${base}/blog/best-ai-tools-for-real-estate-investors-2026`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.93 },
   ];
 
   const toolPages = tools.map((tool) => ({

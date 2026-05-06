@@ -1357,6 +1357,61 @@ const blogPosts: BlogPost[] = [
     readTime: "15 min read",
     badge: "New",
   },
+  {
+    slug: "best-ai-tools-for-amazon-sellers-2026",
+    title: "Best AI Tools for Amazon Sellers in 2026: FBA Research, Listing & PPC",
+    description:
+      "The best AI tools for Amazon FBA sellers in 2026. Compare Helium 10, Jungle Scout, ChatGPT, and Perpetua for product research, listing optimization, and PPC automation.",
+    category: "Ecommerce",
+    categorySlug: "ecommerce",
+    date: "May 6, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-customer-success-2026",
+    title: "Best AI Tools for Customer Success Managers in 2026",
+    description:
+      "Top AI tools for CS teams to reduce churn and scale coverage. Compare Gainsight, ChurnZero, Gong, Totango, and Pendo for health scoring, conversation intelligence, and onboarding.",
+    category: "Business",
+    categorySlug: "business",
+    date: "May 6, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-technical-writers-2026",
+    title: "Best AI Tools for Technical Writers in 2026: Docs, Diagrams & API Docs",
+    description:
+      "The best AI tools for technical writers in 2026. Compare Claude, Mintlify, GitHub Copilot, Swimm, and Grammarly for documentation, API docs, and code documentation.",
+    category: "Writing & Content",
+    categorySlug: "writing",
+    date: "May 6, 2026",
+    readTime: "13 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-supply-chain-2026",
+    title: "Best AI Tools for Supply Chain Management in 2026",
+    description:
+      "AI tools transforming supply chain operations. Compare Blue Yonder, o9 Solutions, project44, FourKites, and Coupa for demand forecasting, logistics visibility, and procurement.",
+    category: "Business",
+    categorySlug: "business",
+    date: "May 6, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
+  {
+    slug: "best-ai-tools-for-real-estate-investors-2026",
+    title: "Best AI Tools for Real Estate Investors in 2026",
+    description:
+      "AI tools giving real estate investors a data edge. Compare Mashvisor, PropStream, DealMachine, Claude, and Buildium for deal analysis, off-market sourcing, and due diligence.",
+    category: "Business",
+    categorySlug: "business",
+    date: "May 6, 2026",
+    readTime: "14 min read",
+    badge: "New",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
